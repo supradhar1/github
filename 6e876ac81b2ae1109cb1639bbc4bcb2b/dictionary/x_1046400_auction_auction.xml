@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="cce9a28c1b2ae1109cb1639bbc4bcb00" max_length="40" name="x_1046400_auction_auction" type="collection">
+        <element label="End Time" max_length="40" name="end_time" type="glide_date_time"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="Start Time" max_length="40" name="start_time" type="glide_date_time"/>
+    </element>
+</database>

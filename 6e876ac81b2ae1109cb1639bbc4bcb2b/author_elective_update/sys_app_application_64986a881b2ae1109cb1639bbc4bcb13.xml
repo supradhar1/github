@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="">Custom Applications</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name/>
+        <order/>
+        <roles>admin,x_1046400_auction.buyer,x_1046400_auction.seller,x_1046400_auction.appraiser</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-04-27 06:58:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>64986a881b2ae1109cb1639bbc4bcb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AuctionArc</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_app_application_64986a881b2ae1109cb1639bbc4bcb13</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-04-27 06:58:51</sys_updated_on>
+        <title>AuctionArc</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sys_app_application_64986a881b2ae1109cb1639bbc4bcb13</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="">Custom Applications</category><description/><device_type>browser</device_type><hint/><name/><order/><roles>admin,x_1046400_auction.buyer,x_1046400_auction.seller,x_1046400_auction.appraiser</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>CC-Supradhar</sys_created_by><sys_created_on>2023-04-27 06:58:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>64986a881b2ae1109cb1639bbc4bcb13</sys_id><sys_mod_count>0</sys_mod_count><sys_name>AuctionArc</sys_name><sys_overrides/><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sys_app_application_64986a881b2ae1109cb1639bbc4bcb13</sys_update_name><sys_updated_by>CC-Supradhar</sys_updated_by><sys_updated_on>2023-04-27 06:58:51</sys_updated_on><title>AuctionArc</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>-521107176</payload_hash>
+        <record_name>AuctionArc</record_name>
+        <reverted_from/>
+        <source>aa876ac81b2ae1109cb1639bbc4bcb2d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-04-27 06:58:51</sys_created_on>
+        <sys_id>64986a0c1b2ae1109cb1639bbc4bcb8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187c181f0560000001</sys_recorded_at>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-04-27 06:58:51</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>a8986a88f92ae110e34f0e03fdf32016</update_guid>
+        <update_guid_history>a8986a88f92ae110e34f0e03fdf32016:-521107176</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AuctionArc">7e345f081beae1109cb1639bbc4bcbfd</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-04-27 10:09:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>2eceaaef2035478690eaffc746558969</sys_id>
+        <sys_metadata>64986a881b2ae1109cb1639bbc4bcb13</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AuctionArc</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sys_app_application_64986a881b2ae1109cb1639bbc4bcb13</sys_update_name>
+        <sys_update_version display_value="sys_app_application_64986a881b2ae1109cb1639bbc4bcb13">64986a0c1b2ae1109cb1639bbc4bcb8b</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-04-27 10:09:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
