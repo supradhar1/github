@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="86405bd51b2221109cb1639bbc4bcb05" label="My Bid" max_length="40" name="x_1046400_auction_my_bid" type="collection">
+        <element label="Amount" max_length="20" name="amount" type="currency"/>
+        <element label="Item" max_length="32" name="item" reference="x_1046400_auction_my_bid" type="reference"/>
+        <element choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="item"/>
+        </index>
+    </element>
+</database>

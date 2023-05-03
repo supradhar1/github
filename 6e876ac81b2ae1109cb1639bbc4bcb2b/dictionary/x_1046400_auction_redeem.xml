@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="17a0dbd51b2221109cb1639bbc4bcbe3" label="Redeem" max_length="40" name="x_1046400_auction_redeem" type="collection">
+        <element label="Point" max_length="40" name="point" type="integer"/>
+        <element label="Total points" max_length="40" name="total_points" type="integer"/>
+    </element>
+</database>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="dd8ec3951b2221109cb1639bbc4bcb14" label=" Item" max_length="40" name="x_1046400_auction_all_item" type="collection">
+        <element label="Apppraisal Score" max_length="40" name="apppraisal_score" type="integer"/>
+        <element label="Auctioned By" max_length="32" name="auctioned_by" reference="x_1046400_auction_auction" type="reference"/>
+        <element label="Charity Name" max_length="32" name="charity_name" reference="x_1046400_auction_charity" type="reference"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" label="Ranking" max_length="40" name="ranking" type="choice">
+            <choice/>
+        </element>
+        <element label="Starting Bid" mandatory="true" max_length="20" name="starting_bid" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" label="Number" max_length="40" name="u_string_1" type="string"/>
+        <index name="index">
+            <element name="auctioned_by"/>
+        </index>
+        <index name="index2">
+            <element name="charity_name"/>
+        </index>
+    </element>
+</database>

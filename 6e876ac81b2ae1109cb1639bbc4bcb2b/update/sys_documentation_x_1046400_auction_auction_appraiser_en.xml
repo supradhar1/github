@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="appraiser" label="Appraiser" language="en" table="x_1046400_auction_auction">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>appraiser</element>
+            <help/>
+            <hint/>
+            <label>Appraiser</label>
+            <language>en</language>
+            <name>x_1046400_auction_auction</name>
+            <plural>Appraisers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>CC-Supradhar</sys_created_by>
+            <sys_created_on>2023-04-27 07:22:45</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Appraiser</sys_name>
+            <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+            <sys_update_name>sys_documentation_x_1046400_auction_auction_appraiser_en</sys_update_name>
+            <sys_updated_by>CC-Supradhar</sys_updated_by>
+            <sys_updated_on>2023-04-27 07:22:45</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

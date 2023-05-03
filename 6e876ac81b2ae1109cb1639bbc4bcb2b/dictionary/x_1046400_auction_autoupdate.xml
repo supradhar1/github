@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="93f65c7d1ba261109cb1639bbc4bcb42" max_length="40" name="x_1046400_auction_autoupdate" type="collection">
+        <element label="currency" mandatory="true" max_length="20" name="currency" type="decimal"/>
+        <element label="final" max_length="20" name="final_amount" type="currency"/>
+    </element>
+</database>

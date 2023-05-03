@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_css_include">
+    <sp_css_include action="INSERT_OR_UPDATE">
+        <name>Auctionarclinks</name>
+        <source>local</source>
+        <sp_css display_value="homepage.css">2b01b8f51b2661109cb1639bbc4bcb7d</sp_css>
+        <sys_class_name>sp_css_include</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-02 08:49:47</sys_created_on>
+        <sys_id>abc174391b2661109cb1639bbc4bcbaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auctionarclinks</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_css_include_abc174391b2661109cb1639bbc4bcbaf</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-02 08:49:47</sys_updated_on>
+        <url/>
+    </sp_css_include>
+</record_update>

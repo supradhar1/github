@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="AuctionArc">64986a881b2ae1109cb1639bbc4bcb13</application>
+        <application/>
         <assessment/>
         <device_type/>
         <filter/>
         <hint/>
         <homepage/>
         <image/>
-        <link_type>NEW</link_type>
+        <link_type>LIST</link_type>
         <map_page/>
-        <mobile_title>Create New</mobile_title>
+        <mobile_title>All</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>sys_user</name>
-        <order>2</order>
+        <name>x_1046400_auction_auction</name>
+        <order>5</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
         <roles/>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
-        <sys_created_on>2023-04-27 06:58:51</sys_created_on>
+        <sys_created_on>2023-04-27 10:01:16</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>6c986a0c1b2ae1109cb1639bbc4bcb8e</sys_id>
+        <sys_id>c80297841beae1109cb1639bbc4bcbca</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Create New</sys_name>
+        <sys_name>All</sys_name>
         <sys_overrides/>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
-        <sys_update_name>sys_app_module_6c986a0c1b2ae1109cb1639bbc4bcb8e</sys_update_name>
+        <sys_update_name>sys_app_module_c80297841beae1109cb1639bbc4bcbca</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-04-27 06:58:51</sys_updated_on>
+        <sys_updated_on>2023-04-27 10:01:16</sys_updated_on>
         <timeline_page/>
-        <title>Create New</title>
+        <title>All</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>

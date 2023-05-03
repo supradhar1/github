@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>archsignup</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Archsignup</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-02 03:37:48</sys_created_on>
+        <sys_id>148a23a11b2261109cb1639bbc4bcb50</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Archsignup</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_148a23a11b2261109cb1639bbc4bcb50</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-02 03:46:48</sys_updated_on>
+        <template><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html class="supernova"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="alternate" type="application/json+oembed" href="https://www.jotform.com/oembed/?format=json&amp;url=https%3A%2F%2Fform.jotform.com%2F231209345914454" title="oEmbed Form">
+<link rel="alternate" type="text/xml+oembed" href="https://www.jotform.com/oembed/?format=xml&amp;url=https%3A%2F%2Fform.jotform.com%2F231209345914454" title="oEmbed Form">
+<meta property="og:title" content="Auction Item Registration Form" >
+<meta property="og:url" content="https://form.jotform.com/231209345914454" >
+<meta property="og:description" content="Please click the link to complete this form." >
+<meta name="slack-app-id" content="AHNMASS8M">
+<meta property="og:image" content="https://cdn.jotfor.ms/assets/img/landing/opengraph.png" />
+<link rel="shortcut icon" href="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-light%402x.png">
+<script>
+          var favicon = document.querySelector('link[rel="shortcut icon"]');
+          window.isDarkMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if(favicon && window.isDarkMode) {
+              favicon.href = favicon.href.replaceAll('favicon-2021-light%402x.png', 'favicon-2021-dark%402x.png');
+          }
+      </script><link rel="canonical" href="https://form.jotform.com/231209345914454" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
+<meta name="HandheldFriendly" content="true" />
+<title>Auction Item Registration Form</title>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.41399&themeRevisionID=5f7ed99c2c2c7240ba580251"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.41399" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.41399" />
+
+
+</head>
+<body>
+<form class="jotform-form" action="https://submit.jotform.com/submit/231209345914454" method="post" enctype="multipart/form-data" name="form_231209345914454" id="231209345914454" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="231209345914454" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-large">
+          <div class="header-text httal htvam">
+            <h1 id="header_1" class="form-header" data-component="header">Auction Item Registration Form</h1>
+            <div id="subHeader_1" class="form-subHeader">Please register your item giving full description of it to be auctioned</div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_fullname" id="id_13"><label class="form-label form-label-top form-label-auto" id="label_13" for="first_13"> Your Name<span class="form-required">*</span> </label>
+        <div id="cid_13" class="form-input-wide jf-required" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_13" name="q13_yourName[first]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_13 given-name" size="10" value="" data-component="first" aria-labelledby="label_13 sublabel_13_first" required="" /><label class="form-sub-label" for="first_13" id="sublabel_13_first" style="min-height:13px" aria-hidden="false">First Name</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_13" name="q13_yourName[last]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_13 family-name" size="15" value="" data-component="last" aria-labelledby="label_13 sublabel_13_last" required="" /><label class="form-sub-label" for="last_13" id="sublabel_13_last" style="min-height:13px" aria-hidden="false">Last Name</label></span></div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_email" id="id_16"><label class="form-label form-label-top form-label-auto" id="label_16" for="input_16"> E-mail<span class="form-required">*</span> </label>
+        <div id="cid_16" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_16" name="q16_email16" class="form-textbox validate[required, Email]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder="ex: myname@example.com" data-component="email" aria-labelledby="label_16 sublabel_input_16" required="" /><label class="form-sub-label" for="input_16" id="sublabel_input_16" style="min-height:13px" aria-hidden="false">example@example.com</label></span> </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_phone" id="id_15"><label class="form-label form-label-top form-label-auto" id="label_15" for="input_15_full"> Phone Number<span class="form-required">*</span> </label>
+        <div id="cid_15" class="form-input-wide jf-required" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_15_full" name="q15_phoneNumber15[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue="" autoComplete="section-input_15 tel-national" style="width:310px" data-masked="true" value="" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_15" required="" /></span> </div>
+      </li>
+      <li class="form-line" data-type="control_address" id="id_14"><label class="form-label form-label-top form-label-auto" id="label_14" for="input_14_addr_line1"> Address </label>
+        <div id="cid_14" class="form-input-wide" data-layout="full">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_14_addr_line1" name="q14_address14[addr_line1]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_14 address-line1" value="" data-component="address_line_1" aria-labelledby="label_14 sublabel_14_addr_line1" required="" /><label class="form-sub-label" for="input_14_addr_line1" id="sublabel_14_addr_line1" style="min-height:13px" aria-hidden="false">Street Address</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_14_addr_line2" name="q14_address14[addr_line2]" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_14 address-line2" value="" data-component="address_line_2" aria-labelledby="label_14 sublabel_14_addr_line2" /><label class="form-sub-label" for="input_14_addr_line2" id="sublabel_14_addr_line2" style="min-height:13px" aria-hidden="false">Street Address Line 2</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_14_city" name="q14_address14[city]" class="form-textbox form-address-city" data-defaultvalue="" autoComplete="section-input_14 address-level2" value="" data-component="city" aria-labelledby="label_14 sublabel_14_city" required="" /><label class="form-sub-label" for="input_14_city" id="sublabel_14_city" style="min-height:13px" aria-hidden="false">City</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_14_state" name="q14_address14[state]" class="form-textbox form-address-state" data-defaultvalue="" autoComplete="section-input_14 address-level1" value="" data-component="state" aria-labelledby="label_14 sublabel_14_state" required="" /><label class="form-sub-label" for="input_14_state" id="sublabel_14_state" style="min-height:13px" aria-hidden="false">State / Province</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="input_14_postal" name="q14_address14[postal]" class="form-textbox form-address-postal" data-defaultvalue="" autoComplete="section-input_14 postal-code" value="" data-component="zip" aria-labelledby="label_14 sublabel_14_postal" required="" /><label class="form-sub-label" for="input_14_postal" id="sublabel_14_postal" style="min-height:13px" aria-hidden="false">Postal / Zip Code</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      <li id="cid_10" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-small">
+          <div class="header-text httal htvam">
+            <h3 id="header_10" class="form-header" data-component="header">Detailed Description of the Item</h3>
+          </div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_textbox" id="id_8"><label class="form-label form-label-top form-label-auto" id="label_8" for="input_8"> Name of Offering:<span class="form-required">*</span> </label>
+        <div id="cid_8" class="form-input-wide jf-required" data-layout="half"> <input type="text" id="input_8" name="q8_nameOf" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" style="width:310px" size="310" value="" placeholder=" " data-component="textbox" aria-labelledby="label_8" required="" /> </div>
+      </li>
+      <li class="form-line" data-type="control_textbox" id="id_9"><label class="form-label form-label-top form-label-auto" id="label_9" for="input_9"> Estimated Value: </label>
+        <div id="cid_9" class="form-input-wide" data-layout="half"> <input type="text" id="input_9" name="q9_estimatedValue" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px" size="310" value="" placeholder=" " data-component="textbox" aria-labelledby="label_9" /> </div>
+      </li>
+      <li class="form-line" data-type="control_fileupload" id="id_17"><label class="form-label form-label-top form-label-auto" id="label_17" for="input_17"> Photo[s]: </label>
+        <div id="cid_17" class="form-input-wide" data-layout="full">
+          <div class="jfQuestion-fields" data-wrapper-react="true">
+            <div class="jfField isFilled">
+              <div class="jfUpload-wrapper">
+                <div class="jfUpload-container">
+                  <div class="jfUpload-button-container">
+                    <div class="jfUpload-button" aria-hidden="true" tabindex="0" style="display:none" data-version="v2">Upload a File<div class="jfUpload-heading forDesktop">Drag and drop files here</div>
+                      <div class="jfUpload-heading forMobile">Choose a file</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="jfUpload-files-container">
+                  <div class="validate[multipleUpload]"><input type="file" id="input_17" name="q17_photos17[]" multiple="" class="form-upload-multiple" data-imagevalidate="yes" data-file-accept="pdf, doc, docx, xls, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" data-file-maxsize="10240" data-file-minsize="0" data-file-limit="0" data-component="fileupload" aria-label="Upload a File" /></div>
+                </div>
+              </div>
+              <div data-wrapper-react="true"></div>
+            </div><span style="display:none" class="cancelText">Cancel</span><span style="display:none" class="ofText">of</span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_textarea" id="id_12"><label class="form-label form-label-top form-label-auto" id="label_12" for="input_12"> Detailed description: </label>
+        <div id="cid_12" class="form-input-wide" data-layout="full"> <textarea id="input_12" class="form-textarea" name="q12_detailedDescription12" style="width:648px;height:163px" data-component="textarea" aria-labelledby="label_12"></textarea> </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide" data-layout="full">
+          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_white submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+    </ul>
+  </div>
+  
+  <div class="formFooter-heightMask"></div>
+  <div class="formFooter f6 branding21">
+  </div>
+</form></body>
+</html>]]></template>
+    </sp_widget>
+</record_update>
