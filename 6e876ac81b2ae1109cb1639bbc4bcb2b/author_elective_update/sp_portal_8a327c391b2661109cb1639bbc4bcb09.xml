@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="DELETE">
+        <css_variables/>
+        <default>false</default>
+        <enable_ais>false</enable_ais>
+        <enable_favorites>false</enable_favorites>
+        <hide_portal_name>false</hide_portal_name>
+        <homepage/>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page/>
+        <login_page/>
+        <logo/>
+        <notfound_page/>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <search_application/>
+        <search_results_configuration/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu/>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-02 08:52:44</sys_created_on>
+        <sys_id>8a327c391b2661109cb1639bbc4bcb09</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>AuctionArc</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_portal_8a327c391b2661109cb1639bbc4bcb09</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-09 04:49:18</sys_updated_on>
+        <theme display_value="Auctionarc">a361fcf51b2661109cb1639bbc4bcbfb</theme>
+        <title>AuctionArc</title>
+        <ts_index_group/>
+        <url_suffix>arc</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="DELETE" query="documentkey=8a327c391b2661109cb1639bbc4bcb09"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_portal_8a327c391b2661109cb1639bbc4bcb09</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal"><sp_portal action="INSERT_OR_UPDATE"><css_variables/><default>false</default><enable_ais>false</enable_ais><enable_favorites>false</enable_favorites><hide_portal_name>false</hide_portal_name><homepage/><icon/><kb_knowledge_base/><kb_knowledge_page/><login_page/><logo/><notfound_page/><quick_start_config/><sc_catalog/><sc_catalog_page/><sc_category_page/><search_application/><search_results_configuration/><sp_chat_queue/><sp_rectangle_menu/><sys_class_name>sp_portal</sys_class_name><sys_created_by>CC-Supradhar</sys_created_by><sys_created_on>2023-05-02 08:52:44</sys_created_on><sys_id>8a327c391b2661109cb1639bbc4bcb09</sys_id><sys_mod_count>1</sys_mod_count><sys_name>AuctionArc</sys_name><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sp_portal_8a327c391b2661109cb1639bbc4bcb09</sys_update_name><sys_updated_by>CC-Supradhar</sys_updated_by><sys_updated_on>2023-05-09 04:49:18</sys_updated_on><theme display_value="Auctionarc">a361fcf51b2661109cb1639bbc4bcbfb</theme><title>AuctionArc</title><ts_index_group/><url_suffix>arc</url_suffix></sp_portal><sys_translated_text action="delete_multiple" query="documentkey=8a327c391b2661109cb1639bbc4bcb09"/></record_update>]]></payload>
+        <payload_hash>-1363118864</payload_hash>
+        <record_name>AuctionArc</record_name>
+        <reverted_from/>
+        <source>4fb9ee4c1b2ae1109cb1639bbc4bcbb2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-09 04:49:19</sys_created_on>
+        <sys_id>8c0e7f731be261109cb1639bbc4bcb0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187fed7a9880000001</sys_recorded_at>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-09 04:49:19</sys_updated_on>
+        <type>Service Portal</type>
+        <update_guid>c40e7f73d0e26110b3e6f8646905070b</update_guid>
+        <update_guid_history>c40e7f73d0e26110b3e6f8646905070b:-1363118864,0e92b0798c266110cb4136e51a2f6a65:-314168730</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="AuctionArc">3a1f37f31be261109cb1639bbc4bcb0f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-09 04:54:09</sys_created_on>
+        <sys_db_object display_value="" name="sp_portal">sp_portal</sys_db_object>
+        <sys_id>26e066da51ea4e6e930cc174b8c80944</sys_id>
+        <sys_metadata>8a327c391b2661109cb1639bbc4bcb09</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AuctionArc</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_portal_8a327c391b2661109cb1639bbc4bcb09</sys_update_name>
+        <sys_update_version display_value="sp_portal_8a327c391b2661109cb1639bbc4bcb09">8c0e7f731be261109cb1639bbc4bcb0b</sys_update_version>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-09 04:54:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[(function() {
+	var data = ${datwa }; // Access the data passed from the server-side script
+
+	// Client-side code to populate the table with data
+	var table = document.getElementById('myTable');
+	data.forEach(function(rowData) {
+		var row = document.createElement('tr');
+		for (var key in rowData) {
+			if (rowData.hasOwnProperty(key)) {
+				var cell = document.createElement('td');
+				cell.textContent = rowData[key];
+				row.appendChild(cell);
+			}
+		}
+		table.appendChild(row);
+	});
+})();
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>item</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Item</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  var tableName = 'x_1046400_auction_all_item'; // Replace with your table name
+
+  var gr = new GlideRecord('tableName');
+  gr.query();
+
+  var data = [];
+  while (gr.next()) {
+    var rowData = {
+      column1: gr.getValue('number'), // Replace 'column1' with the actual column name
+      column2: gr.getValue('name'), // Replace 'column2' with the actual column name
+      // Add more columns as needed
+    };
+
+    data.push(rowData);
+  }
+
+  // Set the data as an output value for the widget
+
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-22 10:56:50</sys_created_on>
+        <sys_id>a2ce80dc974721102d93fcd0f053af94</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Item</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_a2ce80dc974721102d93fcd0f053af94</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-22 11:45:29</sys_updated_on>
+        <template><![CDATA[<table id="myTable">
+  <!-- Table headers -->
+  <tr>
+    <th>Column 1</th>
+    <th>Column 2</th>
+    <!-- Add more columns as needed -->
+  </tr>
+  <!-- Table rows will be dynamically populated -->
+  <tbody>
+    <g:foreach var="row" in="data">
+      <tr>
+        <td>${row.number}</td>
+        <td>${row.name}</td>
+        <!-- Add more columns as needed -->
+      </tr>
+    </g:foreach>
+  </tbody>
+</table>
+]]></template>
+    </sp_widget>
+</record_update>

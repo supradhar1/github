@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format>JPEG</format>
+        <height>1800</height>
+        <image>8854773497b221102d93fcd0f053afc1</image>
+        <name>Homee.jpg</name>
+        <size_bytes>137867</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-12 05:58:53</sys_created_on>
+        <sys_id>379a63b8977221102d93fcd0f053af64</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Homee.jpg</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>db_image_379a63b8977221102d93fcd0f053af64</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-12 06:40:55</sys_updated_on>
+        <thumbnail/>
+        <width>1800</width>
+    </db_image>
+</record_update>

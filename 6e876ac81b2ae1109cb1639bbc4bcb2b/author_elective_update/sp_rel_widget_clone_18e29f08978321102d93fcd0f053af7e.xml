@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone">
+    <sp_rel_widget_clone action="DELETE">
+        <child display_value="samplearrc">d8e29f08978321102d93fcd0f053af7a</child>
+        <cloned>2023-05-22 06:35:05</cloned>
+        <last_validated>2023-05-22 06:35:05</last_validated>
+        <parent display_value="User Profile">6e6ac664d710120023c84f80de610318</parent>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;standard&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function ($scope, $element, $window, $location, $rootScope, $timeout, snAttachmentHandler, $http, spUtil, userPreferences, $filter, i18n, $uibModal, spAriaUtil) {
+
+	// Many of these fields are more configuration-type fields than profile fields. We still want to display
+	// these to a user who is configuring their 'settings', but we shouldn't show them on a user profile page.
+	// We need to handle this better.
+	var fieldExcludes = {
+		sys_user: ['name', 'introduction', 'title', 'department', 'location', 'photo',
+							 'manager', 'company'],
+		live_profile: ['short_description', 'photo']
+	}
+
+	$scope.openConnectConversation = function() {
+		$window.open('/$c.do#?user=' + $scope.data.liveProfileID, '_blank');
+	}
+
+	$scope.$watch('data.dateTimeFormat', function() {
+		if ($scope.data.dateTimeFormat != g_user_date_time_format)
+			$scope.data.dateTimeFormatChanged = true;
+	});
+
+	$scope.uploadNewProfilePicture = function($event) {
+		$event.stopPropagation();
+		var $el = $element.find('input[type=file]');
+		$el.click();
+	}
+
+	$scope.attachFiles = function(files) {
+		if (!files.files.length)
+			return;
+
+		var file = files.files[0];
+
+		var validImage = false;
+
+		switch(file.type) {
+			case 'image/jpeg':
+			case 'image/png':
+			case 'image/bmp':
+			case 'image/x-windows-bmp':
+			case 'image/gif':
+			case 'image/x-icon':
+			case 'image/svg+xml':
+				validImage = true;
+				break;
+			default:
+				break;
+		}
+
+		if(!validImage) {
+			alert(file.name + " " + i18n.getMessage("isn't a recognized image file format"));
+			return;
+		}
+
+		snAttachmentHandler.create("live_profile", $scope.data.liveProfileID).uploadAttachment(file, {
+			sysparm_fieldname: "photo"
+		}).then(function(response) {
+			var obj = {};
+			obj.newAvatarId = response.sys_id;
+			$scope.avatarPicture = {
+				'background-image': "url('" + response.sys_id + ".iix')",
+				'color': 'transparent'
+			};
+			$rootScope.$broadcast("sp.avatar_changed", obj);
+			// timeout is required for screen reader to pick up the message once file upload prompt is dismissed
+			$timeout(function() {
+			   spAriaUtil.sendLiveMessage(i18n.getMessage('Profile picture updated successfully'));
+			}, 500);
+		});
+	}
+
+	$scope.avatarPicture = "";
+
+	$http.get('/api/now/live/profiles/sys_user.' + $scope.data.sysUserID).then(function (response) {
+		if (response.data.result &amp;&amp; response.data.result.avatar){
+			var avatarPicture = response.data.result.avatar.replace("?t=small", "");
+			$scope.avatarPicture = {
+				'background-image': "url('" + avatarPicture + "')",
+				'color': 'transparent'
+			};
+		}
+	});
+
+	spUtil.recordWatch($scope, "sys_user", "sys_id=" + $scope.data.sysUserID);
+	spUtil.recordWatch($scope, "live_profile", "sys_id=" + $scope.data.liveProfileID);
+
+	$scope.connectEnabled = function() {
+		return $scope.data.connectEnabled &amp;&amp; !$scope.data.isLoggedInUsersProfile;
+	}
+
+	$scope.openUserProfile = function($event, userID) {
+		$event.stopPropagation();
+		$event.preventDefault();
+		$location.search("id=user_profile&amp;sys_id=" + userID);
+	}
+
+	$scope.getSysUserModelFields = function() {
+		if ($scope.data.userExists) {
+			return $scope.data.sysUserModelList
+							.filter(function(field) {
+								return $scope.displayField("sys_user", field.name);
+							});
+		}
+		return [];
+	}
+	
+
+	$scope.reloadPage = function() {
+			$window.location.reload(true);
+	};
+
+	$scope.teamExists = function() {
+		return $scope.data.teamData.direct_reports.length &gt; 0 ||
+			$scope.data.teamData.members.length &gt; 0 ||
+			$scope.data.teamData.manager;
+	}
+
+	var models = {
+		sys_user: $scope.data.sysUserModel,
+		live_profile: $scope.data.liveProfileModel
+	}
+
+	$scope.displayField = function(tableName, field, isHeader) {
+		if (!isHeader &amp;&amp; fieldExcludes[tableName].indexOf(field) &gt; -1) return false;
+
+		if (models[tableName][field] &amp;&amp; models[tableName][field].type === "boolean") return false;
+
+		if ($scope.data.isLoggedInUsersProfile) {
+			if (models[tableName][field] &amp;&amp; models[tableName][field].readonly)
+				return models[tableName][field].displayValue;
+			else
+				return models[tableName][field];
+		} else {
+			return models[tableName][field] &amp;&amp; models[tableName][field].displayValue;
+		}
+	}
+
+	$timeout(function(){
+		$rootScope.$broadcast('finishedChanged', {profile: $scope.data.teamData});
+	});
+
+	$scope.sysUserModelFields = $scope.getSysUserModelFields();
+
+}]]&gt;&lt;/client_script&gt;&lt;controller_as/&gt;&lt;css&gt;.list-group-item {
+  border: none;
+  padding: 5px 15px;
+
+  .btn-link {
+  	padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.user-details {
+  word-wrap: break-word; // ie support
+  overflow-wrap: break-word;
+}
+
+.select2-container.select2-allowclear .select2-choice .select2-chosen {
+  margin-right: 60px;
+}
+
+.mia i {
+  font-size: 6rem;
+}
+
+.mia {
+  color: #808080;
+}
+
+.popover {
+  z-index: 1049;
+}
+
+.user-profile-container {
+  width: 100%;
+  max-width: 755px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+.input-switch input[type=checkbox]:checked ~ .switch {
+	background-color: $brand-primary;
+}
+
+// accessible accessibility toggle
+@media screen and (-ms-high-contrast: active) {
+  .input-switch input.ng-not-empty+label.switch[for="accessibility-enabled"] {
+    background-color: highlight;
+    border: none;
+
+    &amp;amp;:before {
+      background-color: highlightText;
+    }
+  }
+
+  .input-switch input.ng-empty+label[for="accessibility-enabled"] {
+    background-color: window;
+    border: 1px solid windowText;
+
+    &amp;amp;:before {
+      background-color: windowText;
+    }
+  }
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;user-profile&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link/&gt;&lt;name&gt;User Profile&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+		if (input &amp;&amp; input.action === "update_session_tracking_info") {
+		gs.getSession().putProperty("usage_tracking_allowed_for_session", input.user_tracking);
+		return;
+		
+	}
+
+	// populate the 'data' object
+	// e.g., data.table = $sp.getValue('table');
+	data.sysUserID = $sp.getParameter("sys_id");
+	if (!data.sysUserID)
+			data.sysUserID = gs.getUser().getID();
+	var sysUserGR = new GlideRecord("sys_user");
+	data.userExists = sysUserGR.get(data.sysUserID) &amp;&amp; sysUserGR.canRead();
+
+	if (data.userExists) {
+		sysUserGR = GlideScriptRecordUtil.get(sysUserGR).getRealRecord();
+		data.table = sysUserGR.getRecordClassName();
+		data.name = sysUserGR.getValue("name");
+		var loggedInSysUserID = gs.getUser().getID();
+		data.connectEnabled = GlidePluginManager().isActive('com.glide.connect');
+		data.liveProfileID = "";
+		data.dateTimeFormat = gs.getDateTimeFormat();
+
+		//get live profile id for sending connect messages
+		if (GlidePluginManager().isActive('com.glideapp.live_common')) {
+			var liveProfileGR = new GlideRecord("live_profile");
+			liveProfileGR.addQuery("document", data.sysUserID);
+			liveProfileGR.query();
+			if (liveProfileGR.next()) {
+				data.liveProfileID = liveProfileGR.getValue("sys_id");
+				data.liveProfileModel = $sp.getForm("live_profile", data.liveProfileID)._fields;
+				// live_profile short_description is shown here as "Bio", so popup label/hint must reflect that
+				if (data.liveProfileModel.short_description) {
+					data.liveProfileModel.short_description.label = gs.getMessage("Bio");
+					data.liveProfileModel.short_description.hint = gs.getMessage("Biography");
+				}
+			} else
+				data.connectEnabled = false; //can't find a live profile for this user, so lets not integrate Connect
+		}
+
+		data.isLoggedInUsersProfile = loggedInSysUserID.equals(data.sysUserID);
+		var sysUserForm = $sp.getForm(data.table, data.sysUserID);
+		data.sysUserView = sysUserForm._view;
+		data.sysUserModel = sysUserForm._fields;
+		data.sysUserModelList = [];
+
+		for (var i = 0; i &lt; data.sysUserView.length; i++) {
+			data.sysUserModelList.push(data.sysUserModel[data.sysUserView[i].name]);
+		}
+
+		data.directReports = [];
+		data.teamData = {};
+		data.teamData.direct_reports = [];
+		data.teamData.members = [];
+
+		if (!data.isLoggedInUsersProfile) {
+			data.teamData.user = {
+				sys_id: data.sysUserID
+			}
+		}
+
+		//Calculate manager
+		var managerGR = new GlideRecord("sys_user");
+		if (managerGR.get(sysUserGR.getValue("manager"))) {
+			data.teamData.manager = buildUser(managerGR);
+		}
+
+		//Calculate team
+		if (data.teamData.manager) {
+			var teamGR = new GlideRecord("sys_user");
+			teamGR.addActiveQuery();
+			teamGR.orderBy("name");
+			teamGR.addQuery("manager", data.teamData.manager.sys_id);
+			teamGR.addQuery("sys_id", "!=", data.sysUserID);
+			teamGR.query();
+			while(teamGR.next())
+				data.teamData.members.push(buildUser(teamGR));
+		}
+
+		//Calculate direct reports
+		var directReportGR = new GlideRecord("sys_user");
+		directReportGR.addActiveQuery();
+		directReportGR.orderBy("name");
+		directReportGR.addQuery("manager", data.sysUserID);
+		directReportGR.query();
+
+		while(directReportGR.next())
+			data.teamData.direct_reports.push(buildUser(directReportGR));
+
+		data.teamWidget = $sp.getWidget('sp-my-team', {glyph: 'user', color: 'primary'});
+		if(!input)
+			data.userPreferencesWidget = $sp.getWidget('user-preferences', {glyph: 'user', color: 'primary'});
+
+		}
+
+	function buildUser(userGR) {
+		return {
+			email: userGR.getValue("email") || "",
+			first_name: userGR.getValue("first_name"),
+			last_name: userGR.getValue("last_name"),
+			name: userGR.getValue("name"),
+			phone: userGR.getValue("phone") || "",
+			sys_id: userGR.getValue("sys_id")
+		}
+	}
+
+
+	})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;true&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-12-09 23:18:31&lt;/sys_created_on&gt;&lt;sys_id&gt;6e6ac664d710120023c84f80de610318&lt;/sys_id&gt;&lt;sys_mod_count&gt;932&lt;/sys_mod_count&gt;&lt;sys_name&gt;User Profile&lt;/sys_name&gt;&lt;sys_package display_value="Service Portal - Core" source="com.glide.service-portal"&gt;f82ec40324f021108c8bc6863d3fad5f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_6e6ac664d710120023c84f80de610318&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-06-28 08:01:52&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="default-focus-outline user-profile-container"&gt;
+  &lt;div ng-if="!data.userExists" class="panel panel-default"&gt;
+      &lt;div class="panel-body wrapper-lg text-center"&gt;
+        &lt;p&gt;${Requested user not found}&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div ng-if="data.userExists"&gt;
+    &lt;div class="panel panel-default"&gt;
+      &lt;div class="panel-body"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-xs-12 col-sm-4 text-center"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="avatar-extra-large avatar-container" style="cursor:default;"&gt;
+                &lt;div class="avatar soloAvatar bottom"&gt;
+                  &lt;div class="sub-avatar mia" ng-style="avatarPicture"&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+              &lt;button ng-if="::connectEnabled()" ng-click="openConnectConversation()" type="button"
+                      class="btn btn-primary send-message"&gt;&lt;span class="glyphicon glyphicon-comment pad-right"&gt;&lt;/span&gt;${Message}&lt;/button&gt;
+              &lt;!-- file upload --&gt;
+              &lt;span ng-if="::data.isLoggedInUsersProfile"&gt;
+                &lt;input ng-show="false" type="file" accept="image/jpeg,image/png,image/bmp,image/x-windows-bmp,image/gif,image/x-icon,image/svg+xml" ng-file-select="attachFiles({files: $files})" /&gt;
+                &lt;button ng-click="uploadNewProfilePicture($event)"
+                        type="button"
+                        class="btn btn-default send-message"&gt;${Upload Picture}&lt;/button&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-8 user-details"&gt;
+            &lt;h2&gt;{{data.name}}&lt;/h2&gt;
+            &lt;p ng-if="::displayField('sys_user', 'company', true)"&gt;&lt;strong class="pad-right"&gt;${Company}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="sys_user" table-id="data.sysUserID" field-model="data.sysUserModel.company"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+            &lt;p ng-if="::displayField('sys_user', 'title', true)"&gt;&lt;strong class="pad-right"&gt;${Title}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="sys_user" table-id="data.sysUserID" field-model="data.sysUserModel.title"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+            &lt;p ng-if="::displayField('sys_user', 'department', true)"&gt;&lt;strong class="pad-right"&gt;${Department}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="sys_user" table-id="data.sysUserID" field-model="data.sysUserModel.department"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+            &lt;p ng-if="::displayField('sys_user', 'location', true)"&gt;&lt;strong class="pad-right"&gt;${Location}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="sys_user" table-id="data.sysUserID" field-model="data.sysUserModel.location"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+            &lt;p ng-if="::(data.liveProfileID &amp;&amp; displayField('live_profile', 'short_description', true))"&gt;&lt;strong class="pad-right"&gt;${Bio}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="live_profile" table-id="data.liveProfileID" field-model="data.liveProfileModel.short_description"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;div ng-class="{'col-md-6': teamExists(), 'col-md-12': !teamExists()}" class="col-sm-12 col-xs-12"&gt;
+        &lt;div class="panel panel-default b" ng-if="getSysUserModelFields().length &gt; 0"&gt;
+          &lt;div class="panel-heading"&gt;
+            &lt;h2 class="panel-title"&gt;
+              &lt;i class="fa fa-info-circle m-r-sm"&gt;&lt;/i&gt;${About}
+            &lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;div class="body padder-xs"&gt;
+            &lt;div class="list-group"&gt;
+              &lt;div ng-repeat="fieldModel in sysUserModelFields"&gt;
+                &lt;div class="list-group-item"&gt;
+                  &lt;div&gt;
+                    &lt;sp-editable-field block="true" table="{{data.table}}" editable-by-user="data.isLoggedInUsersProfile" table-id="data.sysUserID" field-model="fieldModel"&gt;&lt;/sp-editable-field&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="panel-footer clearfix" ng-if="data.dateTimeFormatChanged"&gt;
+            &lt;a id="refresh-to-complete-date-format-change" href="javascript:void(0)"
+               ng-click="reloadPage()" class="pull-right btn btn-primary"&gt;&lt;i class="fa fa-refresh m-r-sm" aria-hidden="true"&gt;&lt;/i&gt;${Refresh page to complete date/time format change}&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div ng-if="teamExists()" class="col-md-6 col-sm-12 col-xs-12"&gt;
+        &lt;sp-widget widget="data.teamWidget"&gt;&lt;/sp-widget&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;sp-widget widget="data.userPreferencesWidget"&gt;&lt;/sp-widget&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload>
+        <sys_class_name>sp_rel_widget_clone</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-22 06:35:05</sys_created_on>
+        <sys_id>18e29f08978321102d93fcd0f053af7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d8e29f08978321102d93fcd0f053af7a</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_rel_widget_clone_18e29f08978321102d93fcd0f053af7e</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-22 06:35:05</sys_updated_on>
+    </sp_rel_widget_clone>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_rel_widget_clone_18e29f08978321102d93fcd0f053af7e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_rel_widget_clone"><sp_rel_widget_clone action="INSERT_OR_UPDATE"><child display_value="samplearrc">d8e29f08978321102d93fcd0f053af7a</child><cloned>2023-05-22 06:35:05</cloned><last_validated>2023-05-22 06:35:05</last_validated><parent display_value="User Profile">6e6ac664d710120023c84f80de610318</parent><payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sp_widget&gt;&lt;category&gt;standard&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function ($scope, $element, $window, $location, $rootScope, $timeout, snAttachmentHandler, $http, spUtil, userPreferences, $filter, i18n, $uibModal, spAriaUtil) {
+
+	// Many of these fields are more configuration-type fields than profile fields. We still want to display
+	// these to a user who is configuring their 'settings', but we shouldn't show them on a user profile page.
+	// We need to handle this better.
+	var fieldExcludes = {
+		sys_user: ['name', 'introduction', 'title', 'department', 'location', 'photo',
+							 'manager', 'company'],
+		live_profile: ['short_description', 'photo']
+	}
+
+	$scope.openConnectConversation = function() {
+		$window.open('/$c.do#?user=' + $scope.data.liveProfileID, '_blank');
+	}
+
+	$scope.$watch('data.dateTimeFormat', function() {
+		if ($scope.data.dateTimeFormat != g_user_date_time_format)
+			$scope.data.dateTimeFormatChanged = true;
+	});
+
+	$scope.uploadNewProfilePicture = function($event) {
+		$event.stopPropagation();
+		var $el = $element.find('input[type=file]');
+		$el.click();
+	}
+
+	$scope.attachFiles = function(files) {
+		if (!files.files.length)
+			return;
+
+		var file = files.files[0];
+
+		var validImage = false;
+
+		switch(file.type) {
+			case 'image/jpeg':
+			case 'image/png':
+			case 'image/bmp':
+			case 'image/x-windows-bmp':
+			case 'image/gif':
+			case 'image/x-icon':
+			case 'image/svg+xml':
+				validImage = true;
+				break;
+			default:
+				break;
+		}
+
+		if(!validImage) {
+			alert(file.name + " " + i18n.getMessage("isn't a recognized image file format"));
+			return;
+		}
+
+		snAttachmentHandler.create("live_profile", $scope.data.liveProfileID).uploadAttachment(file, {
+			sysparm_fieldname: "photo"
+		}).then(function(response) {
+			var obj = {};
+			obj.newAvatarId = response.sys_id;
+			$scope.avatarPicture = {
+				'background-image': "url('" + response.sys_id + ".iix')",
+				'color': 'transparent'
+			};
+			$rootScope.$broadcast("sp.avatar_changed", obj);
+			// timeout is required for screen reader to pick up the message once file upload prompt is dismissed
+			$timeout(function() {
+			   spAriaUtil.sendLiveMessage(i18n.getMessage('Profile picture updated successfully'));
+			}, 500);
+		});
+	}
+
+	$scope.avatarPicture = "";
+
+	$http.get('/api/now/live/profiles/sys_user.' + $scope.data.sysUserID).then(function (response) {
+		if (response.data.result &amp;&amp; response.data.result.avatar){
+			var avatarPicture = response.data.result.avatar.replace("?t=small", "");
+			$scope.avatarPicture = {
+				'background-image': "url('" + avatarPicture + "')",
+				'color': 'transparent'
+			};
+		}
+	});
+
+	spUtil.recordWatch($scope, "sys_user", "sys_id=" + $scope.data.sysUserID);
+	spUtil.recordWatch($scope, "live_profile", "sys_id=" + $scope.data.liveProfileID);
+
+	$scope.connectEnabled = function() {
+		return $scope.data.connectEnabled &amp;&amp; !$scope.data.isLoggedInUsersProfile;
+	}
+
+	$scope.openUserProfile = function($event, userID) {
+		$event.stopPropagation();
+		$event.preventDefault();
+		$location.search("id=user_profile&amp;sys_id=" + userID);
+	}
+
+	$scope.getSysUserModelFields = function() {
+		if ($scope.data.userExists) {
+			return $scope.data.sysUserModelList
+							.filter(function(field) {
+								return $scope.displayField("sys_user", field.name);
+							});
+		}
+		return [];
+	}
+	
+
+	$scope.reloadPage = function() {
+			$window.location.reload(true);
+	};
+
+	$scope.teamExists = function() {
+		return $scope.data.teamData.direct_reports.length &gt; 0 ||
+			$scope.data.teamData.members.length &gt; 0 ||
+			$scope.data.teamData.manager;
+	}
+
+	var models = {
+		sys_user: $scope.data.sysUserModel,
+		live_profile: $scope.data.liveProfileModel
+	}
+
+	$scope.displayField = function(tableName, field, isHeader) {
+		if (!isHeader &amp;&amp; fieldExcludes[tableName].indexOf(field) &gt; -1) return false;
+
+		if (models[tableName][field] &amp;&amp; models[tableName][field].type === "boolean") return false;
+
+		if ($scope.data.isLoggedInUsersProfile) {
+			if (models[tableName][field] &amp;&amp; models[tableName][field].readonly)
+				return models[tableName][field].displayValue;
+			else
+				return models[tableName][field];
+		} else {
+			return models[tableName][field] &amp;&amp; models[tableName][field].displayValue;
+		}
+	}
+
+	$timeout(function(){
+		$rootScope.$broadcast('finishedChanged', {profile: $scope.data.teamData});
+	});
+
+	$scope.sysUserModelFields = $scope.getSysUserModelFields();
+
+}]]&gt;&lt;/client_script&gt;&lt;controller_as/&gt;&lt;css&gt;.list-group-item {
+  border: none;
+  padding: 5px 15px;
+
+  .btn-link {
+  	padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.user-details {
+  word-wrap: break-word; // ie support
+  overflow-wrap: break-word;
+}
+
+.select2-container.select2-allowclear .select2-choice .select2-chosen {
+  margin-right: 60px;
+}
+
+.mia i {
+  font-size: 6rem;
+}
+
+.mia {
+  color: #808080;
+}
+
+.popover {
+  z-index: 1049;
+}
+
+.user-profile-container {
+  width: 100%;
+  max-width: 755px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+.input-switch input[type=checkbox]:checked ~ .switch {
+	background-color: $brand-primary;
+}
+
+// accessible accessibility toggle
+@media screen and (-ms-high-contrast: active) {
+  .input-switch input.ng-not-empty+label.switch[for="accessibility-enabled"] {
+    background-color: highlight;
+    border: none;
+
+    &amp;amp;:before {
+      background-color: highlightText;
+    }
+  }
+
+  .input-switch input.ng-empty+label[for="accessibility-enabled"] {
+    background-color: window;
+    border: 1px solid windowText;
+
+    &amp;amp;:before {
+      background-color: windowText;
+    }
+  }
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;false&lt;/has_preview&gt;&lt;id&gt;user-profile&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link/&gt;&lt;name&gt;User Profile&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+		if (input &amp;&amp; input.action === "update_session_tracking_info") {
+		gs.getSession().putProperty("usage_tracking_allowed_for_session", input.user_tracking);
+		return;
+		
+	}
+
+	// populate the 'data' object
+	// e.g., data.table = $sp.getValue('table');
+	data.sysUserID = $sp.getParameter("sys_id");
+	if (!data.sysUserID)
+			data.sysUserID = gs.getUser().getID();
+	var sysUserGR = new GlideRecord("sys_user");
+	data.userExists = sysUserGR.get(data.sysUserID) &amp;&amp; sysUserGR.canRead();
+
+	if (data.userExists) {
+		sysUserGR = GlideScriptRecordUtil.get(sysUserGR).getRealRecord();
+		data.table = sysUserGR.getRecordClassName();
+		data.name = sysUserGR.getValue("name");
+		var loggedInSysUserID = gs.getUser().getID();
+		data.connectEnabled = GlidePluginManager().isActive('com.glide.connect');
+		data.liveProfileID = "";
+		data.dateTimeFormat = gs.getDateTimeFormat();
+
+		//get live profile id for sending connect messages
+		if (GlidePluginManager().isActive('com.glideapp.live_common')) {
+			var liveProfileGR = new GlideRecord("live_profile");
+			liveProfileGR.addQuery("document", data.sysUserID);
+			liveProfileGR.query();
+			if (liveProfileGR.next()) {
+				data.liveProfileID = liveProfileGR.getValue("sys_id");
+				data.liveProfileModel = $sp.getForm("live_profile", data.liveProfileID)._fields;
+				// live_profile short_description is shown here as "Bio", so popup label/hint must reflect that
+				if (data.liveProfileModel.short_description) {
+					data.liveProfileModel.short_description.label = gs.getMessage("Bio");
+					data.liveProfileModel.short_description.hint = gs.getMessage("Biography");
+				}
+			} else
+				data.connectEnabled = false; //can't find a live profile for this user, so lets not integrate Connect
+		}
+
+		data.isLoggedInUsersProfile = loggedInSysUserID.equals(data.sysUserID);
+		var sysUserForm = $sp.getForm(data.table, data.sysUserID);
+		data.sysUserView = sysUserForm._view;
+		data.sysUserModel = sysUserForm._fields;
+		data.sysUserModelList = [];
+
+		for (var i = 0; i &lt; data.sysUserView.length; i++) {
+			data.sysUserModelList.push(data.sysUserModel[data.sysUserView[i].name]);
+		}
+
+		data.directReports = [];
+		data.teamData = {};
+		data.teamData.direct_reports = [];
+		data.teamData.members = [];
+
+		if (!data.isLoggedInUsersProfile) {
+			data.teamData.user = {
+				sys_id: data.sysUserID
+			}
+		}
+
+		//Calculate manager
+		var managerGR = new GlideRecord("sys_user");
+		if (managerGR.get(sysUserGR.getValue("manager"))) {
+			data.teamData.manager = buildUser(managerGR);
+		}
+
+		//Calculate team
+		if (data.teamData.manager) {
+			var teamGR = new GlideRecord("sys_user");
+			teamGR.addActiveQuery();
+			teamGR.orderBy("name");
+			teamGR.addQuery("manager", data.teamData.manager.sys_id);
+			teamGR.addQuery("sys_id", "!=", data.sysUserID);
+			teamGR.query();
+			while(teamGR.next())
+				data.teamData.members.push(buildUser(teamGR));
+		}
+
+		//Calculate direct reports
+		var directReportGR = new GlideRecord("sys_user");
+		directReportGR.addActiveQuery();
+		directReportGR.orderBy("name");
+		directReportGR.addQuery("manager", data.sysUserID);
+		directReportGR.query();
+
+		while(directReportGR.next())
+			data.teamData.direct_reports.push(buildUser(directReportGR));
+
+		data.teamWidget = $sp.getWidget('sp-my-team', {glyph: 'user', color: 'primary'});
+		if(!input)
+			data.userPreferencesWidget = $sp.getWidget('user-preferences', {glyph: 'user', color: 'primary'});
+
+		}
+
+	function buildUser(userGR) {
+		return {
+			email: userGR.getValue("email") || "",
+			first_name: userGR.getValue("first_name"),
+			last_name: userGR.getValue("last_name"),
+			name: userGR.getValue("name"),
+			phone: userGR.getValue("phone") || "",
+			sys_id: userGR.getValue("sys_id")
+		}
+	}
+
+
+	})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;true&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-12-09 23:18:31&lt;/sys_created_on&gt;&lt;sys_id&gt;6e6ac664d710120023c84f80de610318&lt;/sys_id&gt;&lt;sys_mod_count&gt;932&lt;/sys_mod_count&gt;&lt;sys_name&gt;User Profile&lt;/sys_name&gt;&lt;sys_package display_value="Service Portal - Core" source="com.glide.service-portal"&gt;f82ec40324f021108c8bc6863d3fad5f&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_6e6ac664d710120023c84f80de610318&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-06-28 08:01:52&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="default-focus-outline user-profile-container"&gt;
+  &lt;div ng-if="!data.userExists" class="panel panel-default"&gt;
+      &lt;div class="panel-body wrapper-lg text-center"&gt;
+        &lt;p&gt;${Requested user not found}&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div ng-if="data.userExists"&gt;
+    &lt;div class="panel panel-default"&gt;
+      &lt;div class="panel-body"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-xs-12 col-sm-4 text-center"&gt;
+            &lt;div class="row"&gt;
+              &lt;div class="avatar-extra-large avatar-container" style="cursor:default;"&gt;
+                &lt;div class="avatar soloAvatar bottom"&gt;
+                  &lt;div class="sub-avatar mia" ng-style="avatarPicture"&gt;&lt;i class="fa fa-user"&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="row"&gt;
+              &lt;button ng-if="::connectEnabled()" ng-click="openConnectConversation()" type="button"
+                      class="btn btn-primary send-message"&gt;&lt;span class="glyphicon glyphicon-comment pad-right"&gt;&lt;/span&gt;${Message}&lt;/button&gt;
+              &lt;!-- file upload --&gt;
+              &lt;span ng-if="::data.isLoggedInUsersProfile"&gt;
+                &lt;input ng-show="false" type="file" accept="image/jpeg,image/png,image/bmp,image/x-windows-bmp,image/gif,image/x-icon,image/svg+xml" ng-file-select="attachFiles({files: $files})" /&gt;
+                &lt;button ng-click="uploadNewProfilePicture($event)"
+                        type="button"
+                        class="btn btn-default send-message"&gt;${Upload Picture}&lt;/button&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-12 col-sm-8 user-details"&gt;
+            &lt;h2&gt;{{data.name}}&lt;/h2&gt;
+            &lt;p ng-if="::displayField('sys_user', 'company', true)"&gt;&lt;strong class="pad-right"&gt;${Company}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="sys_user" table-id="data.sysUserID" field-model="data.sysUserModel.company"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+            &lt;p ng-if="::displayField('sys_user', 'title', true)"&gt;&lt;strong class="pad-right"&gt;${Title}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="sys_user" table-id="data.sysUserID" field-model="data.sysUserModel.title"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+            &lt;p ng-if="::displayField('sys_user', 'department', true)"&gt;&lt;strong class="pad-right"&gt;${Department}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="sys_user" table-id="data.sysUserID" field-model="data.sysUserModel.department"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+            &lt;p ng-if="::displayField('sys_user', 'location', true)"&gt;&lt;strong class="pad-right"&gt;${Location}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="sys_user" table-id="data.sysUserID" field-model="data.sysUserModel.location"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+            &lt;p ng-if="::(data.liveProfileID &amp;&amp; displayField('live_profile', 'short_description', true))"&gt;&lt;strong class="pad-right"&gt;${Bio}&lt;/strong&gt;&lt;sp-editable-field editable-by-user="data.isLoggedInUsersProfile" table="live_profile" table-id="data.liveProfileID" field-model="data.liveProfileModel.short_description"&gt;&lt;/sp-editable-field&gt;&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+      &lt;div ng-class="{'col-md-6': teamExists(), 'col-md-12': !teamExists()}" class="col-sm-12 col-xs-12"&gt;
+        &lt;div class="panel panel-default b" ng-if="getSysUserModelFields().length &gt; 0"&gt;
+          &lt;div class="panel-heading"&gt;
+            &lt;h2 class="panel-title"&gt;
+              &lt;i class="fa fa-info-circle m-r-sm"&gt;&lt;/i&gt;${About}
+            &lt;/h2&gt;
+          &lt;/div&gt;
+          &lt;div class="body padder-xs"&gt;
+            &lt;div class="list-group"&gt;
+              &lt;div ng-repeat="fieldModel in sysUserModelFields"&gt;
+                &lt;div class="list-group-item"&gt;
+                  &lt;div&gt;
+                    &lt;sp-editable-field block="true" table="{{data.table}}" editable-by-user="data.isLoggedInUsersProfile" table-id="data.sysUserID" field-model="fieldModel"&gt;&lt;/sp-editable-field&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="panel-footer clearfix" ng-if="data.dateTimeFormatChanged"&gt;
+            &lt;a id="refresh-to-complete-date-format-change" href="javascript:void(0)"
+               ng-click="reloadPage()" class="pull-right btn btn-primary"&gt;&lt;i class="fa fa-refresh m-r-sm" aria-hidden="true"&gt;&lt;/i&gt;${Refresh page to complete date/time format change}&lt;/a&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div ng-if="teamExists()" class="col-md-6 col-sm-12 col-xs-12"&gt;
+        &lt;sp-widget widget="data.teamWidget"&gt;&lt;/sp-widget&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;sp-widget widget="data.userPreferencesWidget"&gt;&lt;/sp-widget&gt;
+  &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;</payload><sys_class_name>sp_rel_widget_clone</sys_class_name><sys_created_by>CC-Supradhar</sys_created_by><sys_created_on>2023-05-22 06:35:05</sys_created_on><sys_id>18e29f08978321102d93fcd0f053af7e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>d8e29f08978321102d93fcd0f053af7a</sys_name><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sp_rel_widget_clone_18e29f08978321102d93fcd0f053af7e</sys_update_name><sys_updated_by>CC-Supradhar</sys_updated_by><sys_updated_on>2023-05-22 06:35:05</sys_updated_on></sp_rel_widget_clone></record_update>]]></payload>
+        <payload_hash>510528477</payload_hash>
+        <record_name>d8e29f08978321102d93fcd0f053af7a</record_name>
+        <reverted_from/>
+        <source>4fb9ee4c1b2ae1109cb1639bbc4bcbb2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-22 06:35:05</sys_created_on>
+        <sys_id>9ce29f08978321102d93fcd0f053af80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188422b2c270000001</sys_recorded_at>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-22 06:35:05</sys_updated_on>
+        <type>Widget Clone</type>
+        <update_guid>d4e29f08fd83211049aa642fd8013280</update_guid>
+        <update_guid_history>d4e29f08fd83211049aa642fd8013280:510528477</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">3b331748978321102d93fcd0f053afd2</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-22 06:36:41</sys_created_on>
+        <sys_db_object display_value="" name="sp_rel_widget_clone">sp_rel_widget_clone</sys_db_object>
+        <sys_id>87df69480c44443496f38b83a7b14e90</sys_id>
+        <sys_metadata>18e29f08978321102d93fcd0f053af7e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>d8e29f08978321102d93fcd0f053af7a</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_rel_widget_clone_18e29f08978321102d93fcd0f053af7e</sys_update_name>
+        <sys_update_version display_value="sp_rel_widget_clone_18e29f08978321102d93fcd0f053af7e">9ce29f08978321102d93fcd0f053af80</sys_update_version>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-22 06:36:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
