@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="dd8ec3951b2221109cb1639bbc4bcb14" label=" Item" max_length="40" name="x_1046400_auction_all_item" type="collection">
         <element label="Apppraisal Score" max_length="40" name="apppraisal_score" type="integer"/>
+        <element attributes="encode_utf8=false" label="Auctioned_on" mandatory="true" max_length="32" name="auctioned_on" reference="x_1046400_auction_auction" type="reference"/>
         <element label="Charity Name" max_length="32" name="charity_name" reference="x_1046400_auction_charity" type="reference"/>
         <element label="Description" max_length="40" name="description" type="string"/>
         <element attributes="pdf_cell_type=image" label="Image" max_length="40" name="image" type="user_image"/>
         <element label="Name" max_length="40" name="name" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element choice="1" label="Ranking" max_length="40" name="ranking" type="choice">
-            <choice/>
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Ancient Relic" sequence="0" value="ancient relic"/>
+                <element inactive_on_update="false" label="Normal" sequence="0" value="normal"/>
+                <element inactive_on_update="false" label="Rare" sequence="1" value="rare"/>
+                <element inactive_on_update="false" label="Very Rare" sequence="2" value="very rare"/>
+            </choice>
         </element>
         <element label="Starting Bid" mandatory="true" max_length="20" name="starting_bid" type="currency"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element attributes="omit_sys_original=true" label="Bids" max_length="20" name="u_currency_1" type="currency"/>
+        <index name="index">
+            <element name="auctioned_on"/>
+        </index>
         <index name="index2">
             <element name="charity_name"/>
         </index>
         <index name="index3">
             <element name="sys_class_name"/>
-        </index>
-        <element label="Appraised  By" max_length="32" name="auctioned_by" reference="x_1046400_auction_auction" type="reference"/>
-        <index name="index">
-            <element name="auctioned_by"/>
         </index>
     </element>
 </database>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>primary</color>
+        <css/>
+        <display_field>image</display_field>
+        <field_list>name,ranking,won_by</field_list>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>50</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">8d9104a8970321102d93fcd0f053afb6</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Data Table from Instance Definition">38058ff1cb11020000f8d856634c9c8c</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-23 06:54:14</sys_created_on>
+        <sys_id>e2d0e8e8978321102d93fcd0f053af62</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>ALL ITEMS</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_instance_table_e2d0e8e8978321102d93fcd0f053af62</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-23 07:01:05</sys_updated_on>
+        <table>x_1046400_auction_all_item</table>
+        <title>ALL ITEMS</title>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="DELETE" query="documentkey=e2d0e8e8978321102d93fcd0f053af62"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_instance_table_e2d0e8e8978321102d93fcd0f053af62</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table"><sp_instance_table action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>primary</color><css/><display_field>image</display_field><field_list>name,ranking,won_by</field_list><filter/><glyph/><id/><maximum_entries>50</maximum_entries><order>1</order><order_by/><order_direction>asc</order_direction><roles/><short_description/><size>md</size><sp_column display_value="1">8d9104a8970321102d93fcd0f053afb6</sp_column><sp_page/><sp_widget display_value="Data Table from Instance Definition">38058ff1cb11020000f8d856634c9c8c</sp_widget><sys_class_name>sp_instance_table</sys_class_name><sys_created_by>CC-Supradhar</sys_created_by><sys_created_on>2023-05-23 06:54:14</sys_created_on><sys_id>e2d0e8e8978321102d93fcd0f053af62</sys_id><sys_mod_count>3</sys_mod_count><sys_name>ALL ITEMS</sys_name><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sp_instance_table_e2d0e8e8978321102d93fcd0f053af62</sys_update_name><sys_updated_by>CC-Supradhar</sys_updated_by><sys_updated_on>2023-05-23 07:01:05</sys_updated_on><table>x_1046400_auction_all_item</table><title>ALL ITEMS</title><url/><widget_parameters/></sp_instance_table><sys_translated_text action="delete_multiple" query="documentkey=e2d0e8e8978321102d93fcd0f053af62"/></record_update>]]></payload>
+        <payload_hash>-1229641823</payload_hash>
+        <record_name>ALL ITEMS</record_name>
+        <reverted_from/>
+        <source>4fb9ee4c1b2ae1109cb1639bbc4bcbb2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-23 07:01:05</sys_created_on>
+        <sys_id>b662246c978321102d93fcd0f053afb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1884769568a0000001</sys_recorded_at>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-23 07:01:05</sys_updated_on>
+        <type>Instance with Table</type>
+        <update_guid>be62246c60832110819099aba8982cb5</update_guid>
+        <update_guid_history>be62246c60832110819099aba8982cb5:-1229641823,80a1642c858321105ff5ea84d9d89999:1865354258,fe212ce81e8321108062851c8b1906f2:1787762452,eed0e8e80983211013de0d89796d2863:-56599175</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="ALL ITEMS">2771f0e897c321102d93fcd0f053af08</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-23 08:06:56</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_table">sp_instance_table</sys_db_object>
+        <sys_id>b36f087ff1774152adf8ecd913d1ae04</sys_id>
+        <sys_metadata>e2d0e8e8978321102d93fcd0f053af62</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ALL ITEMS</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_instance_table_e2d0e8e8978321102d93fcd0f053af62</sys_update_name>
+        <sys_update_version display_value="sp_instance_table_e2d0e8e8978321102d93fcd0f053af62">b662246c978321102d93fcd0f053afb6</sys_update_version>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-23 08:06:56</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

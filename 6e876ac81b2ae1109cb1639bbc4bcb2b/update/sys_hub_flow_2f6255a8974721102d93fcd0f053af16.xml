@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>bidding</internal_name>
+        <label_cache>[]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>bidding</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-23 10:30:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2f6255a8974721102d93fcd0f053af16</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>bidding</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_hub_flow_2f6255a8974721102d93fcd0f053af16</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-23 10:30:51</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_variable_value action="delete_multiple" query="document_key=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=2f6255a8974721102d93fcd0f053af16^sys_idNOT IN676255a8974721102d93fcd0f053af18"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>2f6255a8974721102d93fcd0f053af16</id>
+        <name>bidding</name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-23 10:30:51</sys_created_on>
+        <sys_id>676255a8974721102d93fcd0f053af18</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-23 10:30:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=676255a8974721102d93fcd0f053af18"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_2f6255a8974721102d93fcd0f053af16"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_2f6255a8974721102d93fcd0f053af16"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_2f6255a8974721102d93fcd0f053af16"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_2f6255a8974721102d93fcd0f053af16"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=2f6255a8974721102d93fcd0f053af16"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=2f6255a8974721102d93fcd0f053af16"/>
+</record_update>

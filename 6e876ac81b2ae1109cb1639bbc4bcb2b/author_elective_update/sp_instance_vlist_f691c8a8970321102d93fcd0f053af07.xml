@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_vlist">
+    <sp_instance_vlist action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field>image</display_field>
+        <field_list>name,image,description,ranking,starting_bid,apppraisal_score,won_by</field_list>
+        <filter/>
+        <glyph>tag</glyph>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>lg</size>
+        <sp_column display_value="1">8d9104a8970321102d93fcd0f053afb6</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Simple List">5b255672cb03020000f8d856634c9c28</sp_widget>
+        <sys_class_name>sp_instance_vlist</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-23 04:37:44</sys_created_on>
+        <sys_id>f691c8a8970321102d93fcd0f053af07</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Items</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_instance_vlist_f691c8a8970321102d93fcd0f053af07</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-23 05:00:06</sys_updated_on>
+        <table>x_1046400_auction_all_item</table>
+        <title>Items</title>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"always_show": {
+		"value": "",
+		"displayValue": ""
+	},
+	"panel_body_height": {
+		"value": "160px",
+		"displayValue": "160px"
+	},
+	"image_field": {
+		"value": "image",
+		"displayValue": "image"
+	},
+	"secondary_fields": {
+		"value": "image,description,ranking,apppraisal_score,auctioned_by,charity_name",
+		"displayValue": "image,description,ranking,apppraisal_score,auctioned_by,charity_name"
+	},
+	"rounded_images": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_page": {
+		"value": "698144a8970321102d93fcd0f053afc2",
+		"displayValue": "items"
+	},
+	"hide_footer": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"disable_record_watcher": {
+		"value": "",
+		"displayValue": ""
+	},
+	"filter_acls": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance_vlist>
+    <sys_translated_text action="DELETE" query="documentkey=f691c8a8970321102d93fcd0f053af07"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_instance_vlist_f691c8a8970321102d93fcd0f053af07</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_vlist"&gt;&lt;sp_instance_vlist action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;display_field&gt;image&lt;/display_field&gt;&lt;field_list&gt;name,image,description,ranking,starting_bid,apppraisal_score,won_by&lt;/field_list&gt;&lt;filter/&gt;&lt;glyph&gt;tag&lt;/glyph&gt;&lt;id/&gt;&lt;maximum_entries&gt;5&lt;/maximum_entries&gt;&lt;order&gt;1&lt;/order&gt;&lt;order_by/&gt;&lt;order_direction&gt;asc&lt;/order_direction&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;lg&lt;/size&gt;&lt;sp_column display_value="1"&gt;8d9104a8970321102d93fcd0f053afb6&lt;/sp_column&gt;&lt;sp_page/&gt;&lt;sp_widget display_value="Simple List"&gt;5b255672cb03020000f8d856634c9c28&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_vlist&lt;/sys_class_name&gt;&lt;sys_created_by&gt;CC-Supradhar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-23 04:37:44&lt;/sys_created_on&gt;&lt;sys_id&gt;f691c8a8970321102d93fcd0f053af07&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;Items&lt;/sys_name&gt;&lt;sys_package display_value="AuctionArc" source="x_1046400_auction"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AuctionArc"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_vlist_f691c8a8970321102d93fcd0f053af07&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;CC-Supradhar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-23 05:00:06&lt;/sys_updated_on&gt;&lt;table&gt;x_1046400_auction_all_item&lt;/table&gt;&lt;title&gt;Items&lt;/title&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"always_show": {
+		"value": "",
+		"displayValue": ""
+	},
+	"panel_body_height": {
+		"value": "160px",
+		"displayValue": "160px"
+	},
+	"image_field": {
+		"value": "image",
+		"displayValue": "image"
+	},
+	"secondary_fields": {
+		"value": "image,description,ranking,apppraisal_score,auctioned_by,charity_name",
+		"displayValue": "image,description,ranking,apppraisal_score,auctioned_by,charity_name"
+	},
+	"rounded_images": {
+		"value": "",
+		"displayValue": ""
+	},
+	"list_page": {
+		"value": "698144a8970321102d93fcd0f053afc2",
+		"displayValue": "items"
+	},
+	"hide_footer": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"view": {
+		"value": "",
+		"displayValue": ""
+	},
+	"disable_record_watcher": {
+		"value": "",
+		"displayValue": ""
+	},
+	"filter_acls": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_vlist&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=f691c8a8970321102d93fcd0f053af07"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1331944180</payload_hash>
+        <record_name>Items</record_name>
+        <reverted_from/>
+        <source>4fb9ee4c1b2ae1109cb1639bbc4bcbb2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-23 05:00:06</sys_created_on>
+        <sys_id>26b64c20974321102d93fcd0f053af22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18846fa91370000001</sys_recorded_at>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-23 05:00:06</sys_updated_on>
+        <type>Instance of Simple List</type>
+        <update_guid>2eb64c2021432110e98441f4e88b8f21</update_guid>
+        <update_guid_history>2eb64c2021432110e98441f4e88b8f21:1331944180,17e500603143211009f4ff4b511ef091:632561405,e52580acfe0321103736e48f8fe601af:-6478102,9c250020004321108f1eb236c24106be:-2124220282,75c4ccecda0321102b293f2d29988c84:1737469788,1f6380ac80032110190b353aade18baa:-1284194586,7103c46c9a03211072cdb2cc2f46fbda:-1519829384,1f524c2c0e0321106e87250c7d297270:-424650739,9332c8a86903211001a881f763409310:-286439650,0791c8a873032110f4df37453d7ec009:-1181440356</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Items">dbd60060974321102d93fcd0f053af97</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-23 05:00:42</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_vlist">sp_instance_vlist</sys_db_object>
+        <sys_id>61f6357c227f42ed81e62ade5585b941</sys_id>
+        <sys_metadata>f691c8a8970321102d93fcd0f053af07</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Items</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_instance_vlist_f691c8a8970321102d93fcd0f053af07</sys_update_name>
+        <sys_update_version display_value="sp_instance_vlist_f691c8a8970321102d93fcd0f053af07">26b64c20974321102d93fcd0f053af22</sys_update_version>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-23 05:00:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

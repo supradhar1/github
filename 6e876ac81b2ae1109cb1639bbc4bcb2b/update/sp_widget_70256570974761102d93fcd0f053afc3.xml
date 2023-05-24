@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>timer</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>timer</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-24 06:31:03</sys_created_on>
+        <sys_id>70256570974761102d93fcd0f053afc3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>timer</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_70256570974761102d93fcd0f053afc3</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-24 07:24:20</sys_updated_on>
+        <template><![CDATA[<div>
+<script>
+function getTimeRemaining(endtime) {
+var t = Date.parse(endtime) - Date.parse(new Date());
+var seconds = Math.floor((t / 1000) % 60);
+var minutes = Math.floor((t / 1000 / 60) % 60);
+var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+var days = Math.floor(t / (1000 * 60 * 60 * 24));
+return {
+'total': t,
+'days': days,
+'hours': hours,
+'minutes': minutes,
+'seconds': seconds
+};
+}
+
+function initializeClock(id, endtime) {
+var clock = document.getElementById(id);
+var daysSpan = clock.querySelector('.days');
+var hoursSpan = clock.querySelector('.hours');
+var minutesSpan = clock.querySelector('.minutes');
+var secondsSpan = clock.querySelector('.seconds');
+
+function updateClock() {
+var t = getTimeRemaining(endtime);
+
+daysSpan.innerHTML = t.days;
+hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+if (t.total <= 0) {
+clearInterval(timeinterval);
+}
+}
+
+updateClock();
+var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+
+</script>
+<h1>Countdown Clock</h1>
+<div id="clockdiv">
+<div>
+<span class="days"></span>
+<div class="smalltext">Days</div>
+</div>
+<div>
+<span class="hours"></span>
+<div class="smalltext">Hours</div>
+</div>
+<div>
+<span class="minutes"></span>
+<div class="smalltext">Minutes</div>
+</div>
+<div>
+<span class="seconds"></span>
+<div class="smalltext">Seconds</div>
+</div>
+</div>
+<img src="https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg" alt="External Image">
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

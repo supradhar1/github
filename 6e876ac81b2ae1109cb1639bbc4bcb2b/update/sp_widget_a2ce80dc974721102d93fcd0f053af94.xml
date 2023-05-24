@@ -1,26 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[(function() {
-	var data = ${datwa }; // Access the data passed from the server-side script
-
-	// Client-side code to populate the table with data
-	var table = document.getElementById('myTable');
-	data.forEach(function(rowData) {
-		var row = document.createElement('tr');
-		for (var key in rowData) {
-			if (rowData.hasOwnProperty(key)) {
-				var cell = document.createElement('td');
-				cell.textContent = rowData[key];
-				row.appendChild(cell);
-			}
-		}
-		table.appendChild(row);
-	});
-})();
-]]></client_script>
+        <client_script/>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.widget {
+  // border: 1px solid #ffffff;
+  padding: 10px;
+  width: 450px;
+}
+
+
+
+table {
+  width: 200%;
+  border-collapse: collapse;
+  
+}
+
+
+
+th, td {
+  padding: 20px 25px;
+  text-align: left;
+  
+}
+
+
+
+th {
+  background-color:#99AAB5;
+  font-weight: bold;
+}
+
+
+
+tr:nth-child(even) {
+  background-color:#2FA6B7;
+}
+
+.bid-button {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &amp;:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  &amp;:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($color, 15%);
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  &amp;:hover {
+    color: #fff;
+    &amp;:before {
+      width: 100%;
+    }
+  }
+}
+
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -34,58 +95,67 @@
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {
-  var tableName = 'x_1046400_auction_all_item'; // Replace with your table name
+        <script><![CDATA[
+(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
 
-  var gr = new GlideRecord('tableName');
-  gr.query();
+ 
 
-  var data = [];
-  while (gr.next()) {
-    var rowData = {
-      column1: gr.getValue('number'), // Replace 'column1' with the actual column name
-      column2: gr.getValue('name'), // Replace 'column2' with the actual column name
-      // Add more columns as needed
-    };
 
-    data.push(rowData);
-  }
+data.records = [];
 
-  // Set the data as an output value for the widget
+    var itemGr = new GlideRecord('x_1046400_auction_all_item');
+    itemGr.query();
 
-})();
-]]></script>
+    while(itemGr.next()){
+         var record = {};
+        record.column1 = itemGr.getValue('name');
+        record.column2 = itemGr.getValue('image');
+        record.column3 = itemGr.getValue('description');        
+        record.column4 = itemGr.getValue('ranking');
+        record.column5 = itemGr.getValue('starting_bid');
+
+        data.records.push(record);
+    } 
+	})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-22 10:56:50</sys_created_on>
         <sys_id>a2ce80dc974721102d93fcd0f053af94</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name>Item</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_a2ce80dc974721102d93fcd0f053af94</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-22 11:45:29</sys_updated_on>
-        <template><![CDATA[<table id="myTable">
-  <!-- Table headers -->
+        <sys_updated_on>2023-05-23 10:06:17</sys_updated_on>
+        <template><![CDATA[<div class="widget" >
+<table>
   <tr>
-    <th>Column 1</th>
-    <th>Column 2</th>
-    <!-- Add more columns as needed -->
+    <th>Image</th>
+    <th>Name</th>
+    <th>Short description</th>
+    <th>Ranking</th>
+    <th>Starting Bid</th>
+    
   </tr>
-  <!-- Table rows will be dynamically populated -->
   <tbody>
-    <g:foreach var="row" in="data">
-      <tr>
-        <td>${row.number}</td>
-        <td>${row.name}</td>
-        <!-- Add more columns as needed -->
-      </tr>
-    </g:foreach>
+    <!-- Use AngularJS ng-repeat to iterate over records -->
+    <tr ng-repeat="data in data.records">
+      <td><img src="/{{data.column2}}.iix" height="200" width="150"></td>
+      <td>{{data.column1}}</td>
+      <td>{{data.column3}}</td>
+      <td>{{data.column4}}</td>
+      <td>{{data.column5}}</td>
+      <td><button class="bid-button" id="bid-button-1"> <a href=" ">Bid </a></button></td>
+
+    </tr>
   </tbody>
 </table>
-]]></template>
+
+</div>]]></template>
     </sp_widget>
 </record_update>
