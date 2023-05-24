@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script/>
+        <controller_as>c</controller_as>
+        <css>.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>auction_signup</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>auction_signup</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})()]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-08 04:18:37</sys_created_on>
+        <sys_id>f86d2e671b2221109cb1639bbc4bcb38</sys_id>
+        <sys_mod_count>74</sys_mod_count>
+        <sys_name>auction_signup</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_f86d2e671b2221109cb1639bbc4bcb38</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-08 09:07:34</sys_updated_on>
+        <template><![CDATA[<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+      <form role="form">
+        <h2>Sign Up </h2>
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1">
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+            </div>
+          </div>
+
+          <div class="col-xs-6 col-sm-6 col-md-6">
+            <div class="form-group">
+              <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <style>
+                  select {
+                    width:100px; /* Set the initial width of the select box */
+                    font-size:20px;
+                    display: inline-block;/* Set the font size of the select box */
+                  }
+                  
+                  /* Target the <label> tag associated with the <select> tag */
+                  label[for="my-select"] {
+                    font-size:20px;
+                  
+                    text-align: right;
+                  }
+
+                  select option {
+                    font-size:20px;
+                  }
+                </style>
+                <label for="my-select" tabindex="8">Who am I?</label>
+               
+                 
+               <select id="my-select"  >
+                  <option value="buyer">Buyer</option>
+                  <option value="seller">Seller</option>
+                  <option value="appraiser">Appraiser</option>
+                </select>  
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3">
+              <span class="button-checkbox">
+                <button type="button" class="btn" data-color="info" tabindex="7">I Agree</button>
+                <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
+              </span>
+            </div>
+            <div class="col-xs-9 col-sm-9 col-md-9">
+              By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+            </div>
+          </div>
+        </div>
+        <hr class="colorgraph">
+        <div class="row">
+          <div class="col-xs-6 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+          <div class="col-xs-6 col-md-6"><a href=" " class="btn btn-success btn-block btn-lg">Sign In</a></div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_widget_f86d2e671b2221109cb1639bbc4bcb38</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script/&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #c4e17f;
+  border-radius: 5px;
+  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+}
+
+&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;auction_signup&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;auction_signup&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})()]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;CC-Supradhar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-08 04:18:37&lt;/sys_created_on&gt;&lt;sys_id&gt;f86d2e671b2221109cb1639bbc4bcb38&lt;/sys_id&gt;&lt;sys_mod_count&gt;74&lt;/sys_mod_count&gt;&lt;sys_name&gt;auction_signup&lt;/sys_name&gt;&lt;sys_package display_value="AuctionArc" source="x_1046400_auction"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AuctionArc"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_f86d2e671b2221109cb1639bbc4bcb38&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;CC-Supradhar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-08 09:07:34&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="container"&gt;
+
+  &lt;div class="row"&gt;
+    &lt;div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3"&gt;
+      &lt;form role="form"&gt;
+        &lt;h2&gt;Sign Up &lt;/h2&gt;
+        &lt;hr class="colorgraph"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-xs-6 col-sm-6 col-md-6"&gt;
+            &lt;div class="form-group"&gt;
+              &lt;input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1"&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="col-xs-6 col-sm-6 col-md-6"&gt;
+            &lt;div class="form-group"&gt;
+              &lt;input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2"&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+          &lt;input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3"&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+          &lt;input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4"&gt;
+        &lt;/div&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-xs-6 col-sm-6 col-md-6"&gt;
+            &lt;div class="form-group"&gt;
+              &lt;input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5"&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="col-xs-6 col-sm-6 col-md-6"&gt;
+            &lt;div class="form-group"&gt;
+              &lt;input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6"&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col-xs-6 col-sm-6 col-md-6"&gt;
+              &lt;div class="form-group"&gt;
+                &lt;style&gt;
+                  select {
+                    width:100px; /* Set the initial width of the select box */
+                    font-size:20px;
+                    display: inline-block;/* Set the font size of the select box */
+                  }
+                  
+                  /* Target the &lt;label&gt; tag associated with the &lt;select&gt; tag */
+                  label[for="my-select"] {
+                    font-size:20px;
+                  
+                    text-align: right;
+                  }
+
+                  select option {
+                    font-size:20px;
+                  }
+                &lt;/style&gt;
+                &lt;label for="my-select" tabindex="8"&gt;Who am I?&lt;/label&gt;
+               
+                 
+               &lt;select id="my-select"  &gt;
+                  &lt;option value="buyer"&gt;Buyer&lt;/option&gt;
+                  &lt;option value="seller"&gt;Seller&lt;/option&gt;
+                  &lt;option value="appraiser"&gt;Appraiser&lt;/option&gt;
+                &lt;/select&gt;  
+               
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="row"&gt;
+            &lt;div class="col-xs-3 col-sm-3 col-md-3"&gt;
+              &lt;span class="button-checkbox"&gt;
+                &lt;button type="button" class="btn" data-color="info" tabindex="7"&gt;I Agree&lt;/button&gt;
+                &lt;input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1"&gt;
+              &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-9 col-sm-9 col-md-9"&gt;
+              By clicking &lt;strong class="label label-primary"&gt;Register&lt;/strong&gt;, you agree to the &lt;a href="" data-toggle="modal" data-target="#t_and_c_m"&gt;Terms and Conditions&lt;/a&gt; set out by this site, including our Cookie Use.
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;hr class="colorgraph"&gt;
+        &lt;div class="row"&gt;
+          &lt;div class="col-xs-6 col-md-6"&gt;&lt;input type="submit" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"&gt;&lt;/div&gt;
+          &lt;div class="col-xs-6 col-md-6"&gt;&lt;a href=" " class="btn btn-success btn-block btn-lg"&gt;Sign In&lt;/a&gt;&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+
+  &lt;!-- Modal --&gt;
+  &lt;div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"&gt;
+    &lt;div class="modal-dialog"&gt;
+      &lt;div class="modal-content"&gt;
+        &lt;div class="modal-header"&gt;
+          &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;×&lt;/button&gt;
+          &lt;h4 class="modal-title" id="myModalLabel"&gt;Terms &amp; Conditions&lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-body"&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.&lt;/p&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.&lt;/p&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.&lt;/p&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.&lt;/p&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.&lt;/p&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.&lt;/p&gt;
+          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="modal-footer"&gt;
+          &lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;I Agree&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;&lt;!-- /.modal-content --&gt;
+    &lt;/div&gt;&lt;!-- /.modal-dialog --&gt;
+  &lt;/div&gt;&lt;!-- /.modal --&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2106425623</payload_hash>
+        <record_name>auction_signup</record_name>
+        <reverted_from/>
+        <source>4fb9ee4c1b2ae1109cb1639bbc4bcbb2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-08 09:07:34</sys_created_on>
+        <sys_id>e98f2be31be221109cb1639bbc4bcbda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187fa9dbe7f0000001</sys_recorded_at>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-08 09:07:34</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>e18f2be37ee2211051863a6a60c131da</update_guid>
+        <update_guid_history>e18f2be37ee2211051863a6a60c131da:-2106425623,c46fe763ca26211030ac28f23bfc9fd6:61196766,731ca3ef8ae2211085cfbb90a1a7dc50:1387947201,3ffbab6f65e22110bc8d70d496495cb9:-756793739,f76aaf6f93a22110dc13910d1291e41a:908425369,935a2b2f3ba22110a58c31df63001349:-208308972,0df8afeb05e22110e84818842cbfb8bc:908425369,73886feb38a221107364a1e4db1c21d8:-31268005,0808ef6f30a2211054d63e489643a6ed:-168705819,53e7af6ff2a2211060db1230f768b312:-962589667,ba27afe7c5a22110bf8a582b4d6b53bb:-848913237,f979df6f98a22110bd7a63c11556ece8:607018617,9d59d76f59a221106ab3a3c626e15346:761491317,12091b2f5fa221105405c29672499c37:-1339113079,84f8d76fa6a221102c5dba9cedfd76f2:-981254902,28e8972fa1a22110b735229048a25dc5:-1696971256,3dd71b2fd6a2211008a6f56391ffca31:-342713054,5eb7972f6ba2211098553d5e574cb1af:570106308,a9179beb71a22110bd5a3ece054aef44:1472551123,83d613ebbba221104e6b54ab108e7edc:-569943345,87865fabc6a22110d463bf7e7d381cca:-738074332,8f7613ebe9a22110324954c9fec8ddd6:330409759,e876d36bf9a22110284371f4a81310f2:194446780,ce665f6b88a2211094b645d7808221e6:-625171356,964617ab29a221103e952ba72e22c4a7:-1358216816,41365babbfa22110d492d8c24c952b2d:-807561459,88169fab0ba22110fb1e4ad7626937d5:-594501655,24065bab60a221102108d21e5ffb1b3d:-302932039,ccc5d7abf6a221109899210fe49b2e61:688583944,70b55babd2a2211096c2bd3c6d5ea027:1519853193,8295d7abbda221100ed2750c4a0e435d:-353240609,816517abb1a22110591de8186b07f1a2:-45819449,5a05976b43a221106d77ca2f5718b018:-404824550,f9e45f6b2ba221101ecfd71d8223fb8a:1570824282,f8c4db6b1ba2211053ca2934f81b7343:-1968419642,0374136bd0a22110815580226721611f:-589872704,2564136bdca221100fab91aeafed4d1a:759718509,a564172beaa2211086d2cab111bb290d:-853824091,bf345f2ba0a22110eb49490f04ea5f4c:-1973470422,26f3532b85a221106190561c3b7905c3:-1857959849,5dc3172b83a221102c0e2e5c6a7cb93d:-700299529,47b3532b59a22110eff0eaae8cfd8a1c:1967956847,789353e7aca22110d7df70502ea9b135:-1570135881,0123dfef7b622110cba87766dd3832a8:1291470752,13f29fe721a22110079a40d845befddc:1561151603,58f2532b1ea221106ba7cca994340604:1507527980,f6c29fe70fa2211010cf7c1dd70047af:-145827307,544217e768a2211042dd8394897d3195:801484235,242213232fa22110084dd28890c040f9:739807755,6d029baff362211032dbc4928843994e:1710211798,7a4cc7ef866221107b8a71d360e11a98:-1599986755,b82a43ef79622110a23a8a841bcd3c0f:-1056155194,af0ac7efd262211078eae0206d01f48c:1667356540,1fd90fef786221102748b677847a66ba:-365691890,389903ef4f622110798743a6472924a7:-853977214,cb7943ef1f6221104c2656b78b345108:1941450035,c26903efa4622110a42c82e765a62ddb:-602521570,486903ef99622110307be1d978f1927f:1702667357,f64943efef6221106ce69b98a9f44c27:-287111012,d50903efc86221105234149133493801:1319777849,bc78c3af55622110a2c2c37cddb898c3:-2048054504,d438cf6fb4622110825629030f8b8d0d:-315768886,0828cf6f6e622110388b47a558c75106:-794876341,2ef7cf6f856221102d0ca86ad5123501:1297484431,27d703ab52622110907c73616c79929b:124965046,fa2787abed622110f2ef526bc09e4692:1854400103,9c368b6bc36221106f2af6377ef889f5:1757472033,b9650febab6221108233c9616dbe1740:-1868339871,6914436b0d622110b08866a35dc0721a:-547722789,a5c383ab9e622110fdf79f53bd217144:849912834,4a43c36bbb622110e7b9f97d8d5dd6ea:1319777849,4bc676af722221106bfa767aa797d842:-633655728,b2ad66a7fc222110e2f49d8b29cd1a0e:-492769209,7e7da2a72722211080c69cb87e1fae7c:-671336899,7c6d2e67e62221101f72cfec02a9c33a:-1963262127</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="auction_signup">7004e3f0977221102d93fcd0f053af43</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-12 05:29:41</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>23a8a703ca294500bb767f52657f4100</sys_id>
+        <sys_metadata>f86d2e671b2221109cb1639bbc4bcb38</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>auction_signup</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_widget_f86d2e671b2221109cb1639bbc4bcb38</sys_update_name>
+        <sys_update_version display_value="sp_widget_f86d2e671b2221109cb1639bbc4bcb38">e98f2be31be221109cb1639bbc4bcbda</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-12 05:29:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

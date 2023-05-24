@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme">
+    <sp_theme action="DELETE">
+        <css_variables>$cloud-Primary: #2d80c3;&#13;
+$cloud-Secondary: #ebf2f4;&#13;
+$cloud-CloudWhite: #ece5de;&#13;
+$cloud-CloudBlack: #323232;&#13;
+&#13;
+/* ELEMENT SPECIFIC CSS */&#13;
+$sp-tagline-color:		$cloud-CloudWhite !default;&#13;
+$navbar-inverse-bg: 	#000000 !default;&#13;
+$navbar-inverse-link-color: $cloud-CloudWhite !default;&#13;
+$navbar-inverse-link-hover-color: $cloud-Primary !default;&#13;
+$body-bg: $cloud-Secondary !default;</css_variables>
+        <footer/>
+        <footer_fixed>false</footer_fixed>
+        <header/>
+        <name>Auctionarc</name>
+        <navbar_fixed>true</navbar_fixed>
+        <sys_class_name>sp_theme</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-02 08:48:58</sys_created_on>
+        <sys_id>a361fcf51b2661109cb1639bbc4bcbfb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Auctionarc</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_theme_a361fcf51b2661109cb1639bbc4bcbfb</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-09 06:18:59</sys_updated_on>
+    </sp_theme>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_theme_a361fcf51b2661109cb1639bbc4bcbfb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_theme"><sp_theme action="INSERT_OR_UPDATE"><css_variables>$cloud-Primary: #2d80c3;&#13;
+$cloud-Secondary: #ebf2f4;&#13;
+$cloud-CloudWhite: #ece5de;&#13;
+$cloud-CloudBlack: #323232;&#13;
+&#13;
+/* ELEMENT SPECIFIC CSS */&#13;
+$sp-tagline-color:		$cloud-CloudWhite !default;&#13;
+$navbar-inverse-bg: 	#000000 !default;&#13;
+$navbar-inverse-link-color: $cloud-CloudWhite !default;&#13;
+$navbar-inverse-link-hover-color: $cloud-Primary !default;&#13;
+$body-bg: $cloud-Secondary !default;</css_variables><footer/><footer_fixed>false</footer_fixed><header/><name>Auctionarc</name><navbar_fixed>true</navbar_fixed><sys_class_name>sp_theme</sys_class_name><sys_created_by>CC-Supradhar</sys_created_by><sys_created_on>2023-05-02 08:48:58</sys_created_on><sys_id>a361fcf51b2661109cb1639bbc4bcbfb</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Auctionarc</sys_name><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sp_theme_a361fcf51b2661109cb1639bbc4bcbfb</sys_update_name><sys_updated_by>CC-Supradhar</sys_updated_by><sys_updated_on>2023-05-09 06:18:59</sys_updated_on></sp_theme></record_update>]]></payload>
+        <payload_hash>-1993902980</payload_hash>
+        <record_name>Auctionarc</record_name>
+        <reverted_from/>
+        <source>8ecdfa001baae1109cb1639bbc4bcb84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-12 05:26:29</sys_created_on>
+        <sys_id>c64367b0977221102d93fcd0f053afb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1880e6cc6160000001</sys_recorded_at>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-12 05:26:29</sys_updated_on>
+        <type>Theme</type>
+        <update_guid>064367b0bd722110b0a25e5695aba4b8</update_guid>
+        <update_guid_history>064367b0bd722110b0a25e5695aba4b8:0,fd821c44e83661107c4f1a0aaf7a538f:1573736727,3de40c086ff26110cdedc3865264b09f:-1595253511,6ab130b54e2661102cab71a972782581:-1192569696</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Auctionarc">9834a7f0977221102d93fcd0f053afab</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-12 05:30:29</sys_created_on>
+        <sys_db_object display_value="" name="sp_theme">sp_theme</sys_db_object>
+        <sys_id>2e52f5d8ac9048f4a954f80789d44710</sys_id>
+        <sys_metadata>a361fcf51b2661109cb1639bbc4bcbfb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auctionarc</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_theme_a361fcf51b2661109cb1639bbc4bcbfb</sys_update_name>
+        <sys_update_version display_value="sp_theme_a361fcf51b2661109cb1639bbc4bcbfb">c64367b0977221102d93fcd0f053afb8</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-12 05:30:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column">
+    <sp_column action="DELETE">
+        <class_name/>
+        <order>46</order>
+        <size>1</size>
+        <size_lg/>
+        <size_sm/>
+        <size_xs/>
+        <sp_row display_value="1">06155788978321102d93fcd0f053af6d</sp_row>
+        <sys_class_name>sp_column</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-22 06:45:23</sys_created_on>
+        <sys_id>433517c8978321102d93fcd0f053afaf</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>46</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_column_433517c8978321102d93fcd0f053afaf</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-22 06:47:54</sys_updated_on>
+    </sp_column>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_column_433517c8978321102d93fcd0f053afaf</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_column"><sp_column action="INSERT_OR_UPDATE"><class_name/><order>46</order><size>1</size><size_lg/><size_sm/><size_xs/><sp_row display_value="1">06155788978321102d93fcd0f053af6d</sp_row><sys_class_name>sp_column</sys_class_name><sys_created_by>CC-Harsha</sys_created_by><sys_created_on>2023-05-22 06:45:23</sys_created_on><sys_id>433517c8978321102d93fcd0f053afaf</sys_id><sys_mod_count>5</sys_mod_count><sys_name>46</sys_name><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sp_column_433517c8978321102d93fcd0f053afaf</sys_update_name><sys_updated_by>CC-Harsha</sys_updated_by><sys_updated_on>2023-05-22 06:47:54</sys_updated_on></sp_column></record_update>]]></payload>
+        <payload_hash>-1953104245</payload_hash>
+        <record_name>46</record_name>
+        <reverted_from/>
+        <source>8ecdfa001baae1109cb1639bbc4bcb84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-22 06:47:54</sys_created_on>
+        <sys_id>bfc5d30c978321102d93fcd0f053afb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1884236e5c00000001</sys_recorded_at>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-22 06:47:54</sys_updated_on>
+        <type>Column</type>
+        <update_guid>b7c5d30c9e8321102a9fa54f8b5e6bb7</update_guid>
+        <update_guid_history>b7c5d30c9e8321102a9fa54f8b5e6bb7:-1953104245,30b5130c69832110f29617965609e8e6:1653990443,cfa5dfc8f98321104e09913b73e846fe:966117835,20851fc8508321106cac2e0f9bd239c0:278245227,2775dbc81583211035f9d35f0f697eb4:-1970050261,473517c87d832110f37df968b41d49b0:496814923</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="46">dad5570c978321102d93fcd0f053af1b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-22 06:48:03</sys_created_on>
+        <sys_db_object display_value="" name="sp_column">sp_column</sys_db_object>
+        <sys_id>329cc256111d4074bbd83a3c547c9324</sys_id>
+        <sys_metadata>433517c8978321102d93fcd0f053afaf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>46</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_column_433517c8978321102d93fcd0f053afaf</sys_update_name>
+        <sys_update_version display_value="sp_column_433517c8978321102d93fcd0f053afaf">bfc5d30c978321102d93fcd0f053afb7</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-22 06:48:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

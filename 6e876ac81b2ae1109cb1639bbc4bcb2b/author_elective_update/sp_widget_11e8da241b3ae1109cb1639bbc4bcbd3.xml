@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function ($rootScope, $scope, snRecordWatcher, spUtil, $location, $uibModal, cabrillo, $timeout, $window, i18n) {
+
+	$scope.logoText = i18n.format(i18n.getMessage('Go to {0} Homepage'), $scope.portal.title);
+	$scope.collapse = function() {
+		$rootScope.$emit('sp-navbar-collapse');
+	}
+
+	$scope.avatarProfile = {
+		userID: $scope.user.sys_id,
+		name: $scope.user.name,
+		initials: $window.NOW.user_initials
+	};
+
+	if ($window.NOW.user_avatar) {
+		$scope.avatarProfile.userImage = $window.NOW.user_avatar;
+	}
+
+	if (cabrillo.isNative()) {
+		if ($window.innerWidth < 767) {
+			$scope.isViewNative = true;
+		} else {
+			$scope.isViewNativeTablet = true;
+		}
+	}
+
+
+	$scope.openPopUp = function() {
+		var url = "$chat_support.do?queueID=" + $scope.data.connect_support_queue_id;
+		var popup = window.open (url, "popup", "width=900, height=600");
+	};
+
+	$scope.openLogin = function () {
+		$scope.modalInstance = $uibModal.open({
+			templateUrl: 'modalLogin',
+			scope: $scope
+		});
+
+		var pageRoot = angular.element('.sp-page-root');
+		$scope.modalInstance.rendered.then(function() {
+			var $uibModalStack = $injector.get('$uibModalStack');
+			var modalObj = $uibModalStack.getTop();
+			var modal = modalObj.value.modalDomEl;
+
+			modal.attr('aria-label', modal.find('.panel-title').html());
+			modal.attr('aria-modal', 'true');
+			pageRoot.attr('aria-hidden', 'true');
+		});
+
+		$scope.modalInstance.closed.then(function() {
+			pageRoot.attr('aria-hidden', 'false');
+		});
+	};
+
+	var smScreenSize = isSMScreenSize();
+	$scope.showSMAvatar = isSMScreenSize();
+	$scope.showAvatar = !isSMScreenSize();
+
+	$scope.isAgentChatConfigured = g_has_agent_chat_config;
+
+	angular.element($window).on('resize', function () {
+		if(smScreenSize !== isSMScreenSize() && (!$scope.showSMAvatar || !$scope.showAvatar)){
+			$scope.showSMAvatar = true;
+			$scope.showAvatar = true;
+		}
+	});
+
+
+	function isSMScreenSize() {
+		return $window.matchMedia('(max-width: 992px)').matches;
+	}
+
+	$rootScope.$on('sp.avatar_changed', function(evt, obj) {
+		$scope.userID = "";
+		$scope.newAvatarId = obj.newAvatarId;
+		$timeout(function(){
+			$scope.userID = $scope.user.sys_id;
+			$("#profile-dropdown .sub-avatar").css("background-image", 'url("' + $scope.newAvatarId + '.iix?t=small")');
+		});
+	});
+
+	$scope.isHomepage = function() {
+		if (!$scope.page.id)
+			return true;
+
+		if ($scope.page.id == $scope.portal.homepage_dv)
+			return true;
+
+		return false;
+	};
+}
+		]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.navbar {&#13;
+  transition: 250ms opacity ease-in-out;&#13;
+  -webkit-transition: 250ms opacity ease-in-out;&#13;
+  border: 0;&#13;
+  border-bottom: 4px solid $sp-navbar-divider-color;&#13;
+}&#13;
+&#13;
+.navbar-fade {&#13;
+  opacity: 0.4;&#13;
+}&#13;
+&#13;
+.navbar-inverse .navbar-toggle {&#13;
+  border-color: rgba(255, 255, 255, 0.25);&#13;
+}&#13;
+&#13;
+header[role="banner"],&#13;
+.nav &gt; li &gt; a {&#13;
+  max-height: 60px;&#13;
+}&#13;
+&#13;
+.nav &gt; li &gt; a span.fa{&#13;
+  margin-left: 0.2rem;&#13;
+}&#13;
+&#13;
+@media screen and (max-width: 992px){&#13;
+  .nav &gt; li &gt; a {&#13;
+    padding-right: 0.5rem;&#13;
+    padding-left: 0.5rem;&#13;
+  }&#13;
+}&#13;
+&#13;
+.navbar-brand {&#13;
+  max-height: 60px;&#13;
+  padding: 0;&#13;
+  padding-bottom: 0.5rem;&#13;
+}&#13;
+&#13;
+.navbar-brand img, .navbar-brand span {&#13;
+  margin-left: $sp-logo-margin-x;&#13;
+  margin-right: $sp-logo-margin-x;&#13;
+  margin-top: $sp-logo-margin-y;&#13;
+  margin-bottom: $sp-logo-margin-y;&#13;
+  display: block;&#13;
+  max-height: $sp-logo-max-height;&#13;
+  max-width: $sp-logo-max-width;&#13;
+  position: relative;&#13;
+  top: 50%;&#13;
+  -webkit-transform: translateY(-50%);&#13;
+  -ms-transform: translateY(-50%);&#13;
+  transform: translateY(-50%);&#13;
+  overflow: hidden;&#13;
+}&#13;
+&#13;
+@media screen and (max-width: 992px){&#13;
+  .navbar-brand img, .navbar-brand span {&#13;
+    max-width: $sp-logo-mobile-max-width;&#13;
+  }&#13;
+}&#13;
+&#13;
+.breadcrumb-container {&#13;
+  background-color: $panel-bg;&#13;
+}&#13;
+&#13;
+/* for mobile app */&#13;
+.navbar-inverse.is-native {&#13;
+  background-color: #405060;&#13;
+}&#13;
+&#13;
+nav {&#13;
+  margin-bottom: 0px;&#13;
+  border-radius: 0px;&#13;
+&#13;
+ .toggle-dropdown {&#13;
+    height: 60px;&#13;
+  }&#13;
+&#13;
+}&#13;
+&#13;
+.navbar-right {&#13;
+  padding-right: 0px;&#13;
+  padding-left: 7px;&#13;
+}&#13;
+&#13;
+.navbar-nav {&#13;
+margin: 0px;&#13;
+}&#13;
+&#13;
+// PRB711244: Dropdown menu is scrollable when too many items&#13;
+.scrollable-dropdown {&#13;
+  max-height: 80vh;&#13;
+  overflow: auto;&#13;
+  height: auto;&#13;
+}&#13;
+&#13;
+.is-native {&#13;
+ .scrollable-dropdown {&#13;
+  max-height: 100vh;&#13;
+  overflow: scroll;&#13;
+  height: auto;&#13;
+	}&#13;
+}&#13;
+&#13;
+&#13;
+/* PRB923910: Fix for Service Portal - Header Poorly Aligned in Safari */&#13;
+@media screen and (min-width: 993px) {&#13;
+  .navbar-right {&#13;
+    display: flex !important;&#13;
+    height: auto !important;&#13;
+  }&#13;
+}&#13;
+&#13;
+@media (max-width: 992px) {&#13;
+  .navbar-toggle {&#13;
+    display: block;&#13;
+  }&#13;
+  .navbar-header {&#13;
+    float: none;&#13;
+  }&#13;
+  .navbar-left,.navbar-right {&#13;
+    float: none !important;&#13;
+  }&#13;
+  .navbar-nav {&#13;
+    float: none !important;&#13;
+  }&#13;
+  .navbar-nav &gt; li {&#13;
+    float: none;&#13;
+  }&#13;
+  .navbar-nav &gt; li &gt; a {&#13;
+    padding-top: 1rem ;&#13;
+    padding-bottom: 1rem;&#13;
+  }&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>arc_home</id>
+        <internal>false</internal>
+        <link><![CDATA[function(scope, element) {
+	var prevFocusIndex = -1;// This is used for prev focus of nav-bar(avatar) drop down items when its visible.
+	$(document).keyup(function(event) {
+		if (event.which == 9 || event.which == 37 || event.which == 39) { //tab key handler + arrow keys
+			if ($(event.target).parents(".dropdown-menu").length == 0) { //if we are NOT inside a dropdown...
+				//close the dropdowns
+				$(".dropdown").removeClass("open");
+				$("[data-toggle='dropdown']").attr("aria-expanded", "false");
+				prevFocusIndex = -1;
+			}
+		} else if(event.which == 38 || event.which == 40) {
+			var parent = $(event.target).parents('.dropdown-menu');
+			
+			// To support custom drop downs like cart and wish list.
+			if (parent.hasClass('custom-drop-down')) return;
+			
+			if (parent.length) {
+				var items = $(parent).find('li a, li button');
+				if (!items.length)
+					return;
+
+				var index = items.index(items.filter(':focus'));
+				if(index == -1) return;
+				
+				if (prevFocusIndex == index) {
+					if (index == 0)
+						index = items.length - 1;
+					else if (index == items.length - 1)
+						index = 0;
+						
+						items[index].focus();
+				} else if (event.which == 38 && index == 0 && prevFocusIndex == -1) { // to handle newly opened dropdown on keyup
+					index = items.length - 1;
+					items[index].focus();
+				}
+				prevFocusIndex = index;
+			
+			} else {
+				// Upon down/up arrow key event from the menu target element,
+        // focus the first/last menu item to be consistent with click behavior and conform to standard menubar pattern below
+				// https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html
+				if ($(event.target).is('[data-toggle="dropdown"]')) {
+					var parent = $(event.target).parent().find('.dropdown-menu');
+					
+					// To support custom drop downs like cart and wish list.
+					if (parent.hasClass('custom-drop-down')) return;
+					
+					var items = $(parent).find('li a, li button');
+					if (!items.length) return;
+					
+					var index = -1;
+					if(event.which == 40) //down
+						index = 0;
+					else if(event.which == 38) //up
+						index = items.length > 0 ? items.length-1 : 0;
+					
+					items[index].focus();
+					prevFocusIndex = index;
+					
+				}		
+			}
+		}
+		// on esc/close of the menu, reset the index
+		if(event.which == 27)
+			prevFocusIndex = -1;
+		
+		if (event.which == 13 || event.which == 32)
+			$(event.target).parent(".dropdown.open").find("ul.dropdown-menu li:first-child a").focus();
+	});
+
+	$(element).on('click.nav','.navbar-collapse.in',function(e) {
+		var target = $(e.target);
+		if (target.is('a')) {
+			if (target.hasClass('sp-menu-has-items'))
+				return; // menu item has a submenu, so just toggle it
+
+			// collapse mobile nav if clicked an anchor
+			$(this).removeClass('in').addClass('collapse');
+			return;
+		}
+
+		if (target.parent().hasClass("toggle-dropdown")) {
+			// collapse mobile nav if parent has toggle-dropdown class
+			$(this).removeClass('in').addClass('collapse');
+			return;
+		}
+
+		// if neither target nor parent is an anchor, do nothing
+		if (!target.parent().is('a'))
+			return;
+
+		// collapse mobile nav if target is part of a submenu
+		if (target.parents("ul.dropdown-menu").length > 0)
+			$(this).removeClass('in').addClass('collapse');
+	});
+}]]></link>
+        <name>arc_home</name>
+        <option_schema>[]</option_schema>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-11 05:23:01</sys_created_on>
+        <sys_id>11e8da241b3ae1109cb1639bbc4bcbd3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>arc_home</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_11e8da241b3ae1109cb1639bbc4bcbd3</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-11 05:26:07</sys_updated_on>
+        <template><![CDATA[
+
+
+
+
+<nav>
+
+  <ul>
+
+    <li>
+
+      <div class="profile">
+
+        <button>
+
+     <a href="https://dev75654.service-now.com/bonanza/?id=bonanza_profile"><img src="https://cdn3d.iconscout.com/3d/premium/thumb/profile-6073860-4996977.png">
+
+      </a></button>
+
+
+      </div></li>
+
+    <li><a href="https://dev75654.service-now.com/bonanza/?id=bonanza_home">Home</a></li>
+
+    <li><a href="#">Employee Login</a></li>
+
+    <li><a href="https://dev75654.service-now.com/bonanza/?id=bonanza_admin_page">For Employeer</a></li>
+
+    <li><a href="#">For Merchants</a></li>
+
+
+  </ul>
+
+</nav>
+
+
+
+
+
+
+
+
+
+]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_widget_11e8da241b3ae1109cb1639bbc4bcbd3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function ($rootScope, $scope, snRecordWatcher, spUtil, $location, $uibModal, cabrillo, $timeout, $window, i18n) {
+
+	$scope.logoText = i18n.format(i18n.getMessage('Go to {0} Homepage'), $scope.portal.title);
+	$scope.collapse = function() {
+		$rootScope.$emit('sp-navbar-collapse');
+	}
+
+	$scope.avatarProfile = {
+		userID: $scope.user.sys_id,
+		name: $scope.user.name,
+		initials: $window.NOW.user_initials
+	};
+
+	if ($window.NOW.user_avatar) {
+		$scope.avatarProfile.userImage = $window.NOW.user_avatar;
+	}
+
+	if (cabrillo.isNative()) {
+		if ($window.innerWidth &lt; 767) {
+			$scope.isViewNative = true;
+		} else {
+			$scope.isViewNativeTablet = true;
+		}
+	}
+
+
+	$scope.openPopUp = function() {
+		var url = "$chat_support.do?queueID=" + $scope.data.connect_support_queue_id;
+		var popup = window.open (url, "popup", "width=900, height=600");
+	};
+
+	$scope.openLogin = function () {
+		$scope.modalInstance = $uibModal.open({
+			templateUrl: 'modalLogin',
+			scope: $scope
+		});
+
+		var pageRoot = angular.element('.sp-page-root');
+		$scope.modalInstance.rendered.then(function() {
+			var $uibModalStack = $injector.get('$uibModalStack');
+			var modalObj = $uibModalStack.getTop();
+			var modal = modalObj.value.modalDomEl;
+
+			modal.attr('aria-label', modal.find('.panel-title').html());
+			modal.attr('aria-modal', 'true');
+			pageRoot.attr('aria-hidden', 'true');
+		});
+
+		$scope.modalInstance.closed.then(function() {
+			pageRoot.attr('aria-hidden', 'false');
+		});
+	};
+
+	var smScreenSize = isSMScreenSize();
+	$scope.showSMAvatar = isSMScreenSize();
+	$scope.showAvatar = !isSMScreenSize();
+
+	$scope.isAgentChatConfigured = g_has_agent_chat_config;
+
+	angular.element($window).on('resize', function () {
+		if(smScreenSize !== isSMScreenSize() &amp;&amp; (!$scope.showSMAvatar || !$scope.showAvatar)){
+			$scope.showSMAvatar = true;
+			$scope.showAvatar = true;
+		}
+	});
+
+
+	function isSMScreenSize() {
+		return $window.matchMedia('(max-width: 992px)').matches;
+	}
+
+	$rootScope.$on('sp.avatar_changed', function(evt, obj) {
+		$scope.userID = "";
+		$scope.newAvatarId = obj.newAvatarId;
+		$timeout(function(){
+			$scope.userID = $scope.user.sys_id;
+			$("#profile-dropdown .sub-avatar").css("background-image", 'url("' + $scope.newAvatarId + '.iix?t=small")');
+		});
+	});
+
+	$scope.isHomepage = function() {
+		if (!$scope.page.id)
+			return true;
+
+		if ($scope.page.id == $scope.portal.homepage_dv)
+			return true;
+
+		return false;
+	};
+}
+		]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;.navbar {&amp;#13;
+  transition: 250ms opacity ease-in-out;&amp;#13;
+  -webkit-transition: 250ms opacity ease-in-out;&amp;#13;
+  border: 0;&amp;#13;
+  border-bottom: 4px solid $sp-navbar-divider-color;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.navbar-fade {&amp;#13;
+  opacity: 0.4;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.navbar-inverse .navbar-toggle {&amp;#13;
+  border-color: rgba(255, 255, 255, 0.25);&amp;#13;
+}&amp;#13;
+&amp;#13;
+header[role="banner"],&amp;#13;
+.nav &amp;gt; li &amp;gt; a {&amp;#13;
+  max-height: 60px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.nav &amp;gt; li &amp;gt; a span.fa{&amp;#13;
+  margin-left: 0.2rem;&amp;#13;
+}&amp;#13;
+&amp;#13;
+@media screen and (max-width: 992px){&amp;#13;
+  .nav &amp;gt; li &amp;gt; a {&amp;#13;
+    padding-right: 0.5rem;&amp;#13;
+    padding-left: 0.5rem;&amp;#13;
+  }&amp;#13;
+}&amp;#13;
+&amp;#13;
+.navbar-brand {&amp;#13;
+  max-height: 60px;&amp;#13;
+  padding: 0;&amp;#13;
+  padding-bottom: 0.5rem;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.navbar-brand img, .navbar-brand span {&amp;#13;
+  margin-left: $sp-logo-margin-x;&amp;#13;
+  margin-right: $sp-logo-margin-x;&amp;#13;
+  margin-top: $sp-logo-margin-y;&amp;#13;
+  margin-bottom: $sp-logo-margin-y;&amp;#13;
+  display: block;&amp;#13;
+  max-height: $sp-logo-max-height;&amp;#13;
+  max-width: $sp-logo-max-width;&amp;#13;
+  position: relative;&amp;#13;
+  top: 50%;&amp;#13;
+  -webkit-transform: translateY(-50%);&amp;#13;
+  -ms-transform: translateY(-50%);&amp;#13;
+  transform: translateY(-50%);&amp;#13;
+  overflow: hidden;&amp;#13;
+}&amp;#13;
+&amp;#13;
+@media screen and (max-width: 992px){&amp;#13;
+  .navbar-brand img, .navbar-brand span {&amp;#13;
+    max-width: $sp-logo-mobile-max-width;&amp;#13;
+  }&amp;#13;
+}&amp;#13;
+&amp;#13;
+.breadcrumb-container {&amp;#13;
+  background-color: $panel-bg;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/* for mobile app */&amp;#13;
+.navbar-inverse.is-native {&amp;#13;
+  background-color: #405060;&amp;#13;
+}&amp;#13;
+&amp;#13;
+nav {&amp;#13;
+  margin-bottom: 0px;&amp;#13;
+  border-radius: 0px;&amp;#13;
+&amp;#13;
+ .toggle-dropdown {&amp;#13;
+    height: 60px;&amp;#13;
+  }&amp;#13;
+&amp;#13;
+}&amp;#13;
+&amp;#13;
+.navbar-right {&amp;#13;
+  padding-right: 0px;&amp;#13;
+  padding-left: 7px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.navbar-nav {&amp;#13;
+margin: 0px;&amp;#13;
+}&amp;#13;
+&amp;#13;
+// PRB711244: Dropdown menu is scrollable when too many items&amp;#13;
+.scrollable-dropdown {&amp;#13;
+  max-height: 80vh;&amp;#13;
+  overflow: auto;&amp;#13;
+  height: auto;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.is-native {&amp;#13;
+ .scrollable-dropdown {&amp;#13;
+  max-height: 100vh;&amp;#13;
+  overflow: scroll;&amp;#13;
+  height: auto;&amp;#13;
+	}&amp;#13;
+}&amp;#13;
+&amp;#13;
+&amp;#13;
+/* PRB923910: Fix for Service Portal - Header Poorly Aligned in Safari */&amp;#13;
+@media screen and (min-width: 993px) {&amp;#13;
+  .navbar-right {&amp;#13;
+    display: flex !important;&amp;#13;
+    height: auto !important;&amp;#13;
+  }&amp;#13;
+}&amp;#13;
+&amp;#13;
+@media (max-width: 992px) {&amp;#13;
+  .navbar-toggle {&amp;#13;
+    display: block;&amp;#13;
+  }&amp;#13;
+  .navbar-header {&amp;#13;
+    float: none;&amp;#13;
+  }&amp;#13;
+  .navbar-left,.navbar-right {&amp;#13;
+    float: none !important;&amp;#13;
+  }&amp;#13;
+  .navbar-nav {&amp;#13;
+    float: none !important;&amp;#13;
+  }&amp;#13;
+  .navbar-nav &amp;gt; li {&amp;#13;
+    float: none;&amp;#13;
+  }&amp;#13;
+  .navbar-nav &amp;gt; li &amp;gt; a {&amp;#13;
+    padding-top: 1rem ;&amp;#13;
+    padding-bottom: 1rem;&amp;#13;
+  }&amp;#13;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;arc_home&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function(scope, element) {
+	var prevFocusIndex = -1;// This is used for prev focus of nav-bar(avatar) drop down items when its visible.
+	$(document).keyup(function(event) {
+		if (event.which == 9 || event.which == 37 || event.which == 39) { //tab key handler + arrow keys
+			if ($(event.target).parents(".dropdown-menu").length == 0) { //if we are NOT inside a dropdown...
+				//close the dropdowns
+				$(".dropdown").removeClass("open");
+				$("[data-toggle='dropdown']").attr("aria-expanded", "false");
+				prevFocusIndex = -1;
+			}
+		} else if(event.which == 38 || event.which == 40) {
+			var parent = $(event.target).parents('.dropdown-menu');
+			
+			// To support custom drop downs like cart and wish list.
+			if (parent.hasClass('custom-drop-down')) return;
+			
+			if (parent.length) {
+				var items = $(parent).find('li a, li button');
+				if (!items.length)
+					return;
+
+				var index = items.index(items.filter(':focus'));
+				if(index == -1) return;
+				
+				if (prevFocusIndex == index) {
+					if (index == 0)
+						index = items.length - 1;
+					else if (index == items.length - 1)
+						index = 0;
+						
+						items[index].focus();
+				} else if (event.which == 38 &amp;&amp; index == 0 &amp;&amp; prevFocusIndex == -1) { // to handle newly opened dropdown on keyup
+					index = items.length - 1;
+					items[index].focus();
+				}
+				prevFocusIndex = index;
+			
+			} else {
+				// Upon down/up arrow key event from the menu target element,
+        // focus the first/last menu item to be consistent with click behavior and conform to standard menubar pattern below
+				// https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html
+				if ($(event.target).is('[data-toggle="dropdown"]')) {
+					var parent = $(event.target).parent().find('.dropdown-menu');
+					
+					// To support custom drop downs like cart and wish list.
+					if (parent.hasClass('custom-drop-down')) return;
+					
+					var items = $(parent).find('li a, li button');
+					if (!items.length) return;
+					
+					var index = -1;
+					if(event.which == 40) //down
+						index = 0;
+					else if(event.which == 38) //up
+						index = items.length &gt; 0 ? items.length-1 : 0;
+					
+					items[index].focus();
+					prevFocusIndex = index;
+					
+				}		
+			}
+		}
+		// on esc/close of the menu, reset the index
+		if(event.which == 27)
+			prevFocusIndex = -1;
+		
+		if (event.which == 13 || event.which == 32)
+			$(event.target).parent(".dropdown.open").find("ul.dropdown-menu li:first-child a").focus();
+	});
+
+	$(element).on('click.nav','.navbar-collapse.in',function(e) {
+		var target = $(e.target);
+		if (target.is('a')) {
+			if (target.hasClass('sp-menu-has-items'))
+				return; // menu item has a submenu, so just toggle it
+
+			// collapse mobile nav if clicked an anchor
+			$(this).removeClass('in').addClass('collapse');
+			return;
+		}
+
+		if (target.parent().hasClass("toggle-dropdown")) {
+			// collapse mobile nav if parent has toggle-dropdown class
+			$(this).removeClass('in').addClass('collapse');
+			return;
+		}
+
+		// if neither target nor parent is an anchor, do nothing
+		if (!target.parent().is('a'))
+			return;
+
+		// collapse mobile nav if target is part of a submenu
+		if (target.parents("ul.dropdown-menu").length &gt; 0)
+			$(this).removeClass('in').addClass('collapse');
+	});
+}]]&gt;&lt;/link&gt;&lt;name&gt;arc_home&lt;/name&gt;&lt;option_schema&gt;[]&lt;/option_schema&gt;&lt;public&gt;true&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;CC-Harsha&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-11 05:23:01&lt;/sys_created_on&gt;&lt;sys_id&gt;11e8da241b3ae1109cb1639bbc4bcbd3&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;arc_home&lt;/sys_name&gt;&lt;sys_package display_value="AuctionArc" source="x_1046400_auction"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AuctionArc"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_11e8da241b3ae1109cb1639bbc4bcbd3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;CC-Harsha&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-11 05:26:07&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[
+
+
+
+
+&lt;nav&gt;
+
+  &lt;ul&gt;
+
+    &lt;li&gt;
+
+      &lt;div class="profile"&gt;
+
+        &lt;button&gt;
+
+     &lt;a href="https://dev75654.service-now.com/bonanza/?id=bonanza_profile"&gt;&lt;img src="https://cdn3d.iconscout.com/3d/premium/thumb/profile-6073860-4996977.png"&gt;
+
+      &lt;/a&gt;&lt;/button&gt;
+
+
+      &lt;/div&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;a href="https://dev75654.service-now.com/bonanza/?id=bonanza_home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;a href="#"&gt;Employee Login&lt;/a&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;a href="https://dev75654.service-now.com/bonanza/?id=bonanza_admin_page"&gt;For Employeer&lt;/a&gt;&lt;/li&gt;
+
+    &lt;li&gt;&lt;a href="#"&gt;For Merchants&lt;/a&gt;&lt;/li&gt;
+
+
+  &lt;/ul&gt;
+
+&lt;/nav&gt;
+
+
+
+
+
+
+
+
+
+]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-876269530</payload_hash>
+        <record_name>arc_home</record_name>
+        <reverted_from/>
+        <source>8ecdfa001baae1109cb1639bbc4bcb84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-11 05:26:08</sys_created_on>
+        <sys_id>3699da641b3ae1109cb1639bbc4bcb82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>188094615910000001</sys_recorded_at>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-11 05:26:08</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>3e99da646d3ae1106b3b89f4680e3381</update_guid>
+        <update_guid_history>3e99da646d3ae1106b3b89f4680e3381:-876269530,6e09d264403ae1102694b23ee8ea5394:496596596,15e8da249a3ae110723d75de91c254d4:331680469</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="arc_home">3d4367b0977221102d93fcd0f053af99</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-12 05:26:29</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>18cef57bea5e4fb09a8914eb1d5f8aa1</sys_id>
+        <sys_metadata>11e8da241b3ae1109cb1639bbc4bcbd3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>arc_home</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_widget_11e8da241b3ae1109cb1639bbc4bcbd3</sys_update_name>
+        <sys_update_version display_value="sp_widget_11e8da241b3ae1109cb1639bbc4bcbd3">3699da641b3ae1109cb1639bbc4bcb82</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-12 05:26:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container">
+    <sp_container action="DELETE">
+        <background_color/>
+        <background_image/>
+        <background_style>default</background_style>
+        <bootstrap_alt>false</bootstrap_alt>
+        <class_name/>
+        <container_class_name/>
+        <name>Homee - Container 8</name>
+        <order>8</order>
+        <sp_page display_value="homee">5cfa67b8977221102d93fcd0f053afea</sp_page>
+        <subheader>false</subheader>
+        <sys_class_name>sp_container</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-22 06:44:52</sys_created_on>
+        <sys_id>a31593c8978321102d93fcd0f053afa0</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Homee - Container 8</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_container_a31593c8978321102d93fcd0f053afa0</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-22 11:39:16</sys_updated_on>
+        <title/>
+        <width>container</width>
+    </sp_container>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_container_a31593c8978321102d93fcd0f053afa0</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_container"><sp_container action="INSERT_OR_UPDATE"><background_color/><background_image/><background_style>default</background_style><bootstrap_alt>false</bootstrap_alt><class_name/><container_class_name/><name>Homee - Container 8</name><order>8</order><sp_page display_value="homee">5cfa67b8977221102d93fcd0f053afea</sp_page><subheader>false</subheader><sys_class_name>sp_container</sys_class_name><sys_created_by>CC-Harsha</sys_created_by><sys_created_on>2023-05-22 06:44:52</sys_created_on><sys_id>a31593c8978321102d93fcd0f053afa0</sys_id><sys_mod_count>12</sys_mod_count><sys_name>Homee - Container 8</sys_name><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sp_container_a31593c8978321102d93fcd0f053afa0</sys_update_name><sys_updated_by>CC-Harsha</sys_updated_by><sys_updated_on>2023-05-22 11:39:16</sys_updated_on><title/><width>container</width></sp_container></record_update>]]></payload>
+        <payload_hash>1893876628</payload_hash>
+        <record_name>Homee - Container 8</record_name>
+        <reverted_from/>
+        <source>8ecdfa001baae1109cb1639bbc4bcb84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-22 11:39:16</sys_created_on>
+        <sys_id>c088101c978721102d93fcd0f053af8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1884341a9ce0000001</sys_recorded_at>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-22 11:39:16</sys_updated_on>
+        <type>Container</type>
+        <update_guid>c888101c56872110466a4876f9f21b89</update_guid>
+        <update_guid_history>c888101c56872110466a4876f9f21b89:1893876628,f178101c0b872110fbf3da36b747bc12:1247667859,d6d1d8547a87211029997b82f6631e03:226395365,c29b3b00c74721108c3b7060f15ccc78:-1362656190,976a77ccda07211074d6e54bd826f8d0:1343259551,e75a37cc13072110c74e41f8f0f6bcad:-1362656190,42a0338433072110edd1dac4de091445:226395365,86e5d70c6583211019f91ffb61a0a916:-1362656190,3ad5970c15832110a9af651e022f2e43:1343259551,bdc5930c428321104f55db07943ff3d3:-245792004,1fb5930cb88321108c9a465ee74a1e27:-1834843559,7b75dbc8288321101251914006672de8:871072182,a31593c8728321104bd556673ab171a1:1343259551</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Homee - Container 8">d588101c978721102d93fcd0f053afde</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-22 11:39:21</sys_created_on>
+        <sys_db_object display_value="" name="sp_container">sp_container</sys_db_object>
+        <sys_id>108aa37045a643eb859e36de763e0559</sys_id>
+        <sys_metadata>a31593c8978321102d93fcd0f053afa0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Homee - Container 8</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_container_a31593c8978321102d93fcd0f053afa0</sys_update_name>
+        <sys_update_version display_value="sp_container_a31593c8978321102d93fcd0f053afa0">c088101c978721102d93fcd0f053af8a</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-22 11:39:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="cce9a28c1b2ae1109cb1639bbc4bcb00" label="Auction" max_length="40" name="x_1046400_auction_auction" type="collection">
-        <element display="true" label="Appraiser" max_length="40" name="appraiser" reference="sys_user" type="reference"/>
+        <element label="Appraiser" max_length="40" name="appraiser" reference="sys_user" type="reference"/>
         <element label="End Time" max_length="40" name="end_time" type="glide_date_time"/>
-        <element label="Name" max_length="40" name="name" type="string"/>
+        <element display="true" label="Name" max_length="40" name="name" type="string"/>
         <element label="Start Time" max_length="40" name="start_time" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="state" max_length="40" name="state" type="string">
+            <choice>
+                <element inactive_on_update="false" label="open" sequence="0" value="open"/>
+                <element inactive_on_update="false" label="closed" sequence="1" value="closed"/>
+                <element inactive_on_update="false" label="yet to open" sequence="2" value="yet to open"/>
+            </choice>
+        </element>
+        <element label="Timer" max_length="40" name="timer" type="integer"/>
     </element>
 </database>

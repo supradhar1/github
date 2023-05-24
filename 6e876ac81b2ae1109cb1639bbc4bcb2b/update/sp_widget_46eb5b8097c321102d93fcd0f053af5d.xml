@@ -1,9 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script/>
+        <client_script><![CDATA[function showSlides() {
+  var slides = document.getElementsByClassName("slide");
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+		slides[i].style.display = "block";
+		
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change slide every 2 seconds
+}
+
+ 
+
+var slideIndex = 0;
+showSlides();]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>$optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
+
+body {
+   display:flex;
+   flex-direction:row;
+   justify-content:center;
+   align-items:center;
+   overflow:hidden;
+   height:100vh;
+   
+   font-family: 'Roboto', sans-serif;
+   transition:.25s;
+   @include dark {
+      background: #232223;
+      color:white;
+   }
+   .credit {
+      position: absolute;
+      bottom:20px;
+      left:20px;
+      
+      color:inherit;
+   }
+   .options {
+      display:flex;
+      flex-direction:row;
+      align-items:stretch;
+      overflow:hidden;
+
+      min-width:600px;
+      max-width:900px;
+      width:calc(100% - 100px);
+      
+      height:400px;
+      
+      @for $i from 1 through 4 {
+         @media screen and (max-width:798px - $i*80) {
+            min-width:600px - $i*80;
+            .option:nth-child(#{6-$i}) {
+               display:none;
+            }
+         }
+      }
+      
+      .option {
+         position: relative;
+         overflow:hidden;
+
+         min-width:60px;
+         margin:10px;
+         //border:0px solid --defaultColor;
+
+         background:var(--optionBackground, var(--defaultBackground, #E6E9ED));
+         background-size:auto 120%;
+         background-position:center;
+
+         cursor: pointer;
+
+         transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+         @for $i from 1 through length($optionDefaultColours) {
+            &amp;:nth-child(#{$i}) {
+               --defaultBackground:#{nth($optionDefaultColours, $i)};
+            }
+         }
+         &amp;.active {
+            flex-grow:10000;
+            transform:scale(1);
+            
+            max-width:600px;
+            margin:0px;
+            border-radius:40px;
+            
+            background-size:auto 100%;
+            .shadow {
+               box-shadow:inset 0 -120px 120px -120px black, inset 0 -120px 120px -100px black;
+            }
+            .label {
+               bottom:20px;
+               left:20px;
+               .info &gt;div {
+                  left:0px;
+                  opacity:1;
+               }
+            }
+            /*&amp;:active {
+               transform:scale(0.9);
+            }*/
+         }
+         &amp;:not(.active) {
+            flex-grow:1;
+            
+            border-radius:30px;
+            .shadow {
+               bottom:-40px;
+               box-shadow:inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
+            }
+            .label {
+               bottom:10px;
+               left:10px;
+               .info &gt;div {
+                  left:20px;
+                  opacity:0;
+               }
+            }
+         }
+         .shadow {
+            position: absolute;
+            bottom:0px;
+            left:0px;
+            right:0px;
+            
+            height:120px;
+            
+            transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+         }
+         .label {
+            display:flex;
+            position: absolute;
+            right:0px;
+
+            height:40px;
+            transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+            .icon {
+               display:flex;
+               flex-direction:row;
+               justify-content:center;
+               align-items:center;
+               
+               min-width:40px;
+               max-width:40px;
+               height:40px;
+               border-radius:100%;
+
+               background-color:white;
+               color:var(--defaultBackground);
+            }
+            .info {
+               display:flex;
+               flex-direction:column;
+               justify-content:center;
+               
+               margin-left:10px;
+               
+               color:white;
+               
+               white-space: pre;
+               &gt;div {
+                  position: relative;
+                  
+                  transition:.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
+               }
+               .main {
+                  font-weight:bold;
+                  font-size:1.2rem;
+               }
+               .sub {
+                  transition-delay:.1s;
+               }
+            }
+         }
+      }
+   }
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -23,114 +204,75 @@
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-22 07:14:32</sys_created_on>
         <sys_id>46eb5b8097c321102d93fcd0f053af5d</sys_id>
-        <sys_mod_count>69</sys_mod_count>
+        <sys_mod_count>122</sys_mod_count>
         <sys_name>Auctiontopitems</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_46eb5b8097c321102d93fcd0f053af5d</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-23 04:11:31</sys_updated_on>
-        <template><![CDATA[<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .slideshow-container {
-        position: relative;
-        width: 100%;
-        height: 300px;
-      }
-
-      .slide {
-        display: none;
-      }
-
-      .slide img {
-        width: 100%;
-        height: 100%;
-      }
-
-      /* Navigation buttons */
-      .carousel-prev,
-      .carousel-next {
-        position: absolute;
-        top: 50%;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-        z-index: 1;
-        width: 30px;
-        height: 30px;
-        background-color: rgba(0, 0, 0, 0.5);
-        text-align: center;
-        line-height: 30px;
-        border-radius: 50%;
-      }
-
-      .carousel-prev {
-        left: 10px;
-        transform: translateY(-50%);
-      }
-
-      .carousel-next {
-        right: 10px;
-        transform: translateY(-50%);
-      
-      }
-
-
-    </style>
-  </head>
-  <body>
-    <div class="slideshow-container">
-      <div class="slide">
-        <img src="image1.jpg" alt="Slide 1">
-        <div class="slide-description">
-      <h3>Image 1</h3>
-      <p>Description for Image 1</p>
-    </div>
-
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-24 07:19:56</sys_updated_on>
+        <template><![CDATA[<div class="options">
+   <div class="option active" style="background-image:url('cosmetics.jpg');">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-walking"></i>
+         </div>
+         <div class="info">
+            <div class="main">Blonkisoaz</div>
+            <div class="sub">Omuke trughte a otufta</div>
+         </div>
       </div>
-      <div class="slide">
-        <img src="image2.jpg" alt="Slide 2">
+   </div>
+   <div class="option" style="background-image:url('cosmetics.jpg');">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-snowflake"></i>
+         </div>
+         <div class="info">
+            <div class="main">Oretemauw</div>
+            <div class="sub">Omuke trughte a otufta</div>
+         </div>
       </div>
-      <div class="slide">
-        <img src="image13.jpg" alt="Slide 3">
+   </div>
+   <div class="option" style="background-image:url('cosmetics.jpg');">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-tree"></i>
+         </div>
+         <div class="info">
+            <div class="main">Iteresuselle</div>
+            <div class="sub">Omuke trughte a otufta</div>
+         </div>
       </div>
-      <a class="carousel-prev" onclick="changeSlide(-1)">&#10094;</a>
-      <a class="carousel-next" onclick="changeSlide(1)">&#10095;</a>
-    </div>
-
-    <script>
-      var slideIndex = 0;
-      var slides = document.getElementsByClassName("slide");
-      var slidedesc = document.getElementsByClassName("slide-description");
-
-      function showSlide(index) {
-        if (index < 0) {
-          slideIndex = slides.length - 1;
-        } else if (index >= slides.length) {
-          slideIndex = 0;
-        }
-
-        for (var i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-
-        slides[slideIndex].style.display = "block";
-        
-      }
-
-      function changeSlide(n) {
-        slideIndex += n;
-        showSlide(slideIndex);
-      }
-
-      // Show initial slide
-      showSlide(slideIndex);
-    </script>
-  </body>
-</html>
-]]></template>
+   </div>
+   <div class="option" style="background-image:url('rolex.jpg');">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-tint"></i>
+         </div>
+         <div class="info">
+            <div class="main">Idiefe</div>
+            <div class="sub">Omuke trughte a otufta</div>
+         </div>
+      </div>
+   </div>
+   <div class="option" style="background-image:url('cosmetics.jpg');">
+      <div class="shadow"></div>
+      <div class="label">
+         <div class="icon">
+            <i class="fas fa-sun"></i>
+         </div>
+         <div class="info">
+            <div class="main">Inatethi</div>
+            <div class="sub">Omuke trughte a otufta</div>
+         </div>
+      </div>
+   </div>
+</div>]]></template>
     </sp_widget>
 </record_update>

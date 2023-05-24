@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>auction_headerimage</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Auction_headerimage</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-08 10:43:39</sys_created_on>
+        <sys_id>3c85487f1b2621109cb1639bbc4bcba0</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Auction_headerimage</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_3c85487f1b2621109cb1639bbc4bcba0</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-08 10:49:49</sys_updated_on>
+        <template><![CDATA[<header>
+<div class="overlay">
+<img
+src="https://st2.depositphotos.com/1561359/12316/v/950/depositphotos_123163894-stock-illustration-online-auction-hanging-sign.jpg" width="1000" height="700">
+</div>
+</header>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_widget_3c85487f1b2621109cb1639bbc4bcba0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;auction_headerimage&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;Auction_headerimage&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;CC-Supradhar&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-08 10:43:39&lt;/sys_created_on&gt;&lt;sys_id&gt;3c85487f1b2621109cb1639bbc4bcba0&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;Auction_headerimage&lt;/sys_name&gt;&lt;sys_package display_value="AuctionArc" source="x_1046400_auction"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AuctionArc"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_3c85487f1b2621109cb1639bbc4bcba0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;CC-Supradhar&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-08 10:49:49&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;header&gt;
+&lt;div class="overlay"&gt;
+&lt;img
+src="https://st2.depositphotos.com/1561359/12316/v/950/depositphotos_123163894-stock-illustration-online-auction-hanging-sign.jpg" width="1000" height="700"&gt;
+&lt;/div&gt;
+&lt;/header&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1766125142</payload_hash>
+        <record_name>Auction_headerimage</record_name>
+        <reverted_from/>
+        <source>4fb9ee4c1b2ae1109cb1639bbc4bcbb2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-08 10:49:49</sys_created_on>
+        <sys_id>d7e600f71b6621109cb1639bbc4bcb33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187fafb5c800000001</sys_recorded_at>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-08 10:49:49</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>dfe600f7356621108c1a31e2f00eaa32</update_guid>
+        <update_guid_history>dfe600f7356621108c1a31e2f00eaa32:1766125142,48e6c4f77b6621100c28fd59c5ffa020:1820518040,c0d644bb3d2621108627e8b7ce28e687:-1848371750,18c64cb7af6621109f552742d04a109f:-1793717158,da9680bfef26211078db3ed0884aabbe:-50532393,ab8680f731662110d88798de14484445:-652319028,3966c47f2b262110f0b3e3e1ce90d7d0:1656026384,e246487f98262110ea07e3625f044bd7:1417545201,e336487fd6262110563f01c058b25d96:-862731621,8616c0b73966211066b2af1159db2a51:-2109684956,8985487f7a262110c5b844ebd91aeda3:-1093723550</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Auction_headerimage">f3e3efb0977221102d93fcd0f053afa3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-12 05:29:20</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>03b17ac93ca54f56bd347c886b930af9</sys_id>
+        <sys_metadata>3c85487f1b2621109cb1639bbc4bcba0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Auction_headerimage</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_widget_3c85487f1b2621109cb1639bbc4bcba0</sys_update_name>
+        <sys_update_version display_value="sp_widget_3c85487f1b2621109cb1639bbc4bcba0">d7e600f71b6621109cb1639bbc4bcb33</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-12 05:29:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,170 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="e4e8f3611b6261109cb1639bbc4bcbca" sys_domain="global" table="x_1046400_auction_all_item" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_string_1</element>
+            <element>number</element>
             <position>0</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>7efb91b11be661109cb1639bbc4bcb4a</sys_id>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>34d301b097c361102d93fcd0f053af9f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
             <position>1</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>b6fb91b11be661109cb1639bbc4bcb4b</sys_id>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>3cd301b097c361102d93fcd0f053af9f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>apppraisal_score</element>
             <position>2</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>bafb91b11be661109cb1639bbc4bcb4b</sys_id>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>30d301b097c361102d93fcd0f053afa0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>description</element>
             <position>3</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>befb91b11be661109cb1639bbc4bcb4b</sys_id>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>34d301b097c361102d93fcd0f053afa0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_currency_1</element>
             <position>4</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>b2fb91b11be661109cb1639bbc4bcb4c</sys_id>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>38d301b097c361102d93fcd0f053afa0</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>auctioned_on</element>
+            <position>5</position>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>3cd301b097c361102d93fcd0f053afa0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>5</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>b6fb91b11be661109cb1639bbc4bcb4c</sys_id>
+            <position>6</position>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>30d301b097c361102d93fcd0f053afa1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>ranking</element>
-            <position>6</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>bafb91b11be661109cb1639bbc4bcb4c</sys_id>
+            <position>7</position>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>34d301b097c361102d93fcd0f053afa1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>charity_name</element>
-            <position>7</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>befb91b11be661109cb1639bbc4bcb4c</sys_id>
+            <position>8</position>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>38d301b097c361102d93fcd0f053afa1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>starting_bid</element>
-            <position>8</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>b2fb91b11be661109cb1639bbc4bcb4d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>auctioned_by</element>
             <position>9</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>b6fb91b11be661109cb1639bbc4bcb4d</sys_id>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>3cd301b097c361102d93fcd0f053afa1</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>image</element>
             <position>10</position>
-            <sys_created_by>CC-Supradhar</sys_created_by>
-            <sys_created_on>2023-05-02 11:53:35</sys_created_on>
-            <sys_id>bafb91b11be661109cb1639bbc4bcb4d</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
-            <sys_updated_by>CC-Supradhar</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:53:35</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number</element>
-            <position>11</position>
             <sys_created_by>CC-Harsha</sys_created_by>
-            <sys_created_on>2023-05-02 11:57:06</sys_created_on>
-            <sys_id>52cc59b11be661109cb1639bbc4bcb08</sys_id>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>30d301b097c361102d93fcd0f053afa2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
             <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-02 11:57:06</sys_updated_on>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>won_by</element>
+            <position>11</position>
+            <sys_created_by>CC-Harsha</sys_created_by>
+            <sys_created_on>2023-05-24 04:05:31</sys_created_on>
+            <sys_id>34d301b097c361102d93fcd0f053afa2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_all_item" sys_domain="global" view="Default view">e4e8f3611b6261109cb1639bbc4bcbca</sys_ui_section>
+            <sys_updated_by>CC-Harsha</sys_updated_by>
+            <sys_updated_on>2023-05-24 04:05:31</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

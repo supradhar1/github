@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="AuctionArc">e4d5d7881beae1109cb1639bbc4bcb14</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>All</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>sys_user</name>
+        <order>2</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_1046400_auction.auction_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-04-27 09:57:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>abe09f041beae1109cb1639bbc4bcb8d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>All</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_app_module_abe09f041beae1109cb1639bbc4bcb8d</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-04-27 10:33:03</sys_updated_on>
+        <timeline_page/>
+        <title>All</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sys_app_module_abe09f041beae1109cb1639bbc4bcb8d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="AuctionArc">e4d5d7881beae1109cb1639bbc4bcb14</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>All</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>sys_user</name><order>2</order><override_menu_roles>false</override_menu_roles><query/><report/><roles>x_1046400_auction.auction_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>CC-Supradhar</sys_created_by><sys_created_on>2023-04-27 09:57:04</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>abe09f041beae1109cb1639bbc4bcb8d</sys_id><sys_mod_count>5</sys_mod_count><sys_name>All</sys_name><sys_overrides/><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sys_app_module_abe09f041beae1109cb1639bbc4bcb8d</sys_update_name><sys_updated_by>CC-Harsha</sys_updated_by><sys_updated_on>2023-04-27 10:33:03</sys_updated_on><timeline_page/><title>All</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>54795182</payload_hash>
+        <record_name>All</record_name>
+        <reverted_from/>
+        <source>8ecdfa001baae1109cb1639bbc4bcb84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-04-27 10:33:04</sys_created_on>
+        <sys_id>e299db8c1beae1109cb1639bbc4bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187c2460f3a0000001</sys_recorded_at>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-04-27 10:33:04</sys_updated_on>
+        <type>Module</type>
+        <update_guid>ea99db8c0eeae110096df50d0e5ecc9d</update_guid>
+        <update_guid_history>ea99db8c0eeae110096df50d0e5ecc9d:54795182,10a8db4cfceae110edc5cc97bccd9032:-1476621841,9d861bc847eae1102e0ba7f7071877c0:1777735686,8e4613c84deae1104f686dab63ba4775:-352576821,8a35db48d2eae110db08887afcf4d0cf:1512877572,f2345f0847eae110c255725ddcfd71f9:0,db519f4415eae1105b662ee32d55ec58:586275701</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="All">7e81762c1b7ae1109cb1639bbc4bcb9f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-11 07:10:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>2be8b5958a4143e880e896e093c93a40</sys_id>
+        <sys_metadata>abe09f041beae1109cb1639bbc4bcb8d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>All</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sys_app_module_abe09f041beae1109cb1639bbc4bcb8d</sys_update_name>
+        <sys_update_version display_value="sys_app_module_abe09f041beae1109cb1639bbc4bcb8d">e299db8c1beae1109cb1639bbc4bcb9e</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-11 07:10:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

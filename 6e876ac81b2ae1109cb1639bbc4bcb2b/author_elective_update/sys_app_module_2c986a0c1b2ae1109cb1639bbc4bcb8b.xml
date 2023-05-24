@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="AuctionArc">e4d5d7881beae1109cb1639bbc4bcb14</application>
+        <assessment/>
+        <device_type/>
+        <filter table="sys_user">emailLIKEsupradharpb^EQ<item endquery="false" field="email" goto="false" newquery="false" operator="LIKE" or="false" value="supradharpb"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>SEPARATOR</link_type>
+        <map_page/>
+        <mobile_title>User</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>sys_user</name>
+        <order>1</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-04-27 06:58:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2c986a0c1b2ae1109cb1639bbc4bcb8b</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>User</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_app_module_2c986a0c1b2ae1109cb1639bbc4bcb8b</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-04-27 10:33:00</sys_updated_on>
+        <timeline_page/>
+        <title>User</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sys_app_module_2c986a0c1b2ae1109cb1639bbc4bcb8b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="AuctionArc">e4d5d7881beae1109cb1639bbc4bcb14</application><assessment/><device_type/><filter table="sys_user">emailLIKEsupradharpb^EQ<item endquery="false" field="email" goto="false" newquery="false" operator="LIKE" or="false" value="supradharpb"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><hint/><homepage/><image/><link_type>SEPARATOR</link_type><map_page/><mobile_title>User</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>sys_user</name><order>1</order><override_menu_roles>false</override_menu_roles><query/><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>CC-Supradhar</sys_created_by><sys_created_on>2023-04-27 06:58:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>2c986a0c1b2ae1109cb1639bbc4bcb8b</sys_id><sys_mod_count>13</sys_mod_count><sys_name>User</sys_name><sys_overrides/><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sys_app_module_2c986a0c1b2ae1109cb1639bbc4bcb8b</sys_update_name><sys_updated_by>CC-Harsha</sys_updated_by><sys_updated_on>2023-04-27 10:33:00</sys_updated_on><timeline_page/><title>User</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-1307618792</payload_hash>
+        <record_name>User</record_name>
+        <reverted_from/>
+        <source>8ecdfa001baae1109cb1639bbc4bcb84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-04-27 10:33:01</sys_created_on>
+        <sys_id>b599db8c1beae1109cb1639bbc4bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187c24603810000001</sys_recorded_at>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-04-27 10:33:01</sys_updated_on>
+        <type>Module</type>
+        <update_guid>bd99db8cf9eae110996081dfca5de354</update_guid>
+        <update_guid_history>bd99db8cf9eae110996081dfca5de354:-1307618792,3e98134ccceae1101c59fa30431a4209:-1656246409,fa275bc814eae11092776046110b8308:437282079,1c3c870071eae1103ff17fe85b781f17:-1968573239,46e01b4495eae110d78d8ff6aeb73850:1956698801,e3d09f04a2eae11073a19fee1165ec47:-1619945622,cf1e4b80c2eae110fce206b639f0f61a:1629138823,1c3c870071eae1103ff17fe85b781f17:-1968573239,fbfa87cc5daae1104623876432e5d014:1608071184,916a0b0c03aae1102a119d56426bded7:-1968573239,05a1cb44f1aae110f70d9f792f8cc84d:1629138823,8a81f6445d6ae110b2590336cd90ef98:-1346078923,6c71ba44c56ae1107f068d6dabf9fa69:-997451306,9330be045b6ae110f6981a6b263a0a2c:-300196072,20986a0ca32ae1103ef7f2031c58298e:-1474348113</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="User">ca00baa81b7ae1109cb1639bbc4bcbd3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-11 07:04:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>3c02ad1ab5044467b0f00a8a7c4082b9</sys_id>
+        <sys_metadata>2c986a0c1b2ae1109cb1639bbc4bcb8b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sys_app_module_2c986a0c1b2ae1109cb1639bbc4bcb8b</sys_update_name>
+        <sys_update_version display_value="sys_app_module_2c986a0c1b2ae1109cb1639bbc4bcb8b">b599db8c1beae1109cb1639bbc4bcb55</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-11 07:04:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

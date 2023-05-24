@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="5d907a281b7ae1109cb1639bbc4bcb89" label="User" max_length="40" name="x_1046400_auction_user" type="collection">
+        <element label="Name" mandatory="true" max_length="32" name="name" reference="sys_user" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element choice="1" display="true" label="who Am I ?" mandatory="true" max_length="40" name="who_am_i" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Buyer" sequence="0" value="buyer"/>
+                <element inactive_on_update="false" label="Seller" sequence="1" value="seller"/>
+                <element inactive_on_update="false" label="Appraiser" sequence="2" value="appraiser"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="name"/>
+        </index>
+    </element>
+</database>

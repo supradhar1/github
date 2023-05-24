@@ -24,17 +24,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>871233a91b2261109cb1639bbc4bcb44</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>auction items</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>All</sys_name>
         <sys_overrides/>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sys_app_module_871233a91b2261109cb1639bbc4bcb44</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-05-02 04:40:55</sys_updated_on>
+        <sys_updated_on>2023-05-02 04:45:25</sys_updated_on>
         <timeline_page/>
-        <title>auction items</title>
+        <title>All</title>
         <uncancelable>false</uncancelable>
         <view_name/>
         <window_name/>
