@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[var c = this;
-    c.showItemTypes = true;
-var a= document.getElementById("button").addEventListener("click", openModal);
+        <client_script><![CDATA[api.controller=function($scope,$location) {
+	
+	$scope.openModal = function(sysId){
+		
+		$location.search({id:'items&sysId=' + sysId });
+		
+	}
+	
+};
 
 
-        //    $location.search({id:'item_cloth'});
-
- 
 
 
        ]]></client_script>
@@ -179,7 +182,9 @@ table {
 		record.column2 = itemGr.getValue('start_time');
 		record.column3 = itemGr.getValue('end_time');        
 		record.column4 = itemGr.getDisplayValue('state');
+		record.sysId = itemGr.getValue('sys_id');
 		
+		console.log(record.sysId);
 
 
 		data.records.push(record);
@@ -190,52 +195,68 @@ table {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-25 04:57:24</sys_created_on>
         <sys_id>2a49d2059787a1102d93fcd0f053af23</sys_id>
-        <sys_mod_count>108</sys_mod_count>
+        <sys_mod_count>161</sys_mod_count>
         <sys_name>Auction</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_2a49d2059787a1102d93fcd0f053af23</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-26 05:01:18</sys_updated_on>
+        <sys_updated_on>2023-05-26 09:34:10</sys_updated_on>
         <template><![CDATA[<div class="widget" >
-<table>
-  <tr>
- 
-    <th>Name</th>
-       <th>Start Time</th>
-    <th>End Time</th>
-    <th>Status</th>
-    
-  </tr>
-  <tbody>
-    <!-- Use AngularJS ng-repeat to iterate over records -->
-    <tr ng-repeat="data in data.records">
-      <td>{{data.column1}}</td>
-      <td>{{data.column2}}</td>
-      <td>{{data.column3}}</td>
-      <td> {{data.column4}}
-</td>
-      <td><button class="bid-button"  id="button" onclick="openModal()"> View</button></td>
+  <table>
+    <tr>
+
+      <th>Name</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Status</th>
+     
 
     </tr>
-  </tbody>
-</table>
+    <tbody>
+      <!-- Use AngularJS ng-repeat to iterate over records -->
+      <tr ng-repeat="data in data.records">
+        <td>{{data.column1}}</td>
+        <td>{{data.column2}}</td>
+        <td>{{data.column3}}</td>
+        <td> {{data.column4}}</td>
+     
+        
+        <td  ><a href="?id=items&sysId={{data.sysId}}"><button class="bid-button"  id="button"> View</button></a></td>
+
+      </tr>
+    </tbody>
+  </table>
 
 </div>
 <script>
+
 function openModal() {
-  // Define the URL of the widget you want to display
-  var widgetURL = "https://dev59662.service-now.com/arc/?id=items";
-
-
-
+  var widgetURL = "https://dev59662.service-now.com/arc/?id=items&sysId={{data.sysId}}";
   window.open(widgetURL, "_blank");
-	document.getElementById("button").addEventListener("click", openModal);
-
 }
 
-// Add an event listener to the button click event
+/*function disableButton() {
+  var stateField = gel('status');
+  var button = gel('button');
+
+  if (stateField.value === "Closed") {
+    button.disabled = true;
+  } else {
+    button.disabled = false;
+  }
+}
+
+document.getElementById("button").addEventListener("click", openModal);
+disableButton();
+
+function gel(id) {
+  return document.getElementById(id);
+}
+*/
+
+  // Add an event listener to the button click event
 </script>
 ]]></template>
     </sp_widget>
