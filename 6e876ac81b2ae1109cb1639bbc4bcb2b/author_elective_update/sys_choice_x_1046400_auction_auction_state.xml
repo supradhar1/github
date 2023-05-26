@@ -20,7 +20,7 @@
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
-            <label>open</label>
+            <label>Open</label>
             <language>en</language>
             <name>x_1046400_auction_auction</name>
             <sequence>0</sequence>
@@ -30,9 +30,9 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>76ad85f897c361102d93fcd0f053af22</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>CC-Supradhar</sys_updated_by>
+            <sys_updated_on>2023-05-25 09:51:12</sys_updated_on>
             <value>open</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -40,7 +40,7 @@
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
-            <label>closed</label>
+            <label>Closed</label>
             <language>en</language>
             <name>x_1046400_auction_auction</name>
             <sequence>1</sequence>
@@ -50,9 +50,9 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>7ead85f897c361102d93fcd0f053af23</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>CC-Supradhar</sys_updated_by>
+            <sys_updated_on>2023-05-25 09:51:23</sys_updated_on>
             <value>closed</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -60,7 +60,7 @@
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
-            <label>yet to open</label>
+            <label>Yet to open</label>
             <language>en</language>
             <name>x_1046400_auction_auction</name>
             <sequence>2</sequence>
@@ -70,9 +70,9 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>faad85f897c361102d93fcd0f053af24</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>CC-Supradhar</sys_updated_by>
+            <sys_updated_on>2023-05-25 09:51:30</sys_updated_on>
             <value>yet to open</value>
         </sys_choice>
     </sys_choice>

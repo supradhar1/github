@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Center alignment for main content */
+main {
+  text-align: center;
+}
+
+/* Center alignment for footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Footer section for social media icons */
+.footer-social-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 5px;
+}
+
+.footer-social-section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  border-top: 1px solid $primary-line-color;
+  width: calc(100% - 20px);
+}
+
+.footer-social-overlap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(55, 55, 55);
+  padding: 0 20px;
+}
+
+.footer-social-connect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: 3.5em "Oswald", sans-serif;
+  color: #fff;
+}
+
+.footer-social-small {
+  font-size: 0.6em;
+  padding: 0px 20px;
+}
+
+.footer-social-overlap &gt; a {
+  font-size: 3em;
+}
+
+.footer-social-overlap &gt; a:not(:first-child) {
+  margin-left: 0.38em;
+}
+
+.footer-bottom-section {
+  width: 50%;
+  padding: 10px;
+  border-top: 1px solid $primary-line-color;
+  margin-top: 1px;
+}
+
+.footer-bottom-section &gt; div:first-child {
+  margin-right: auto;
+}
+
+.footer-bottom-wrapper {
+  font-size: 1.5em;
+  color: #fff;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  .footer-list-header {
+    font-size: 2em;
+    text-align: center;
+  }
+  .footer-list-anchor {
+    font-size: 1.1em;
+  }
+  .footer-social-connect {
+    font-size: 2.5em;
+  }
+  .footer-social-overlap &gt; a {
+    font-size: 2.24em;
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 5em;
+  }
+  .footer-list-top {
+    width: 100%;
+  }
+  .footer-list-header {
+    font-size: 3em;
+    text-align: center;
+  }
+  .footer-list-anchor {
+    font-size: 1.5em;
+  }
+  .footer-social-section {
+    justify-content: center;
+  }
+  .footer-social-section::after {
+    top: 25%;
+  }
+  .footer-social-connect {
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+  .footer-social-overlap {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    text-align: center;
+    font-size: 2.2em;
+  }
+  .footer-list-anchor {
+    font-size: 1.2em;
+  }
+  .footer-social-connect {
+    font-size: 2.4em;
+  }
+  .footer-social-overlap &gt; a {
+    font-size: 2.24em;
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em;
+  }
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>footer</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>footer</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-25 11:29:05</sys_created_on>
+        <sys_id>98f2fb0d97cba1102d93fcd0f053afd9</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>footer</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_98f2fb0d97cba1102d93fcd0f053afd9</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-25 11:55:59</sys_updated_on>
+        <template><![CDATA[<main>
+  </main>
+<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
+<footer class="flex-rw">
+  <ul class="footer-list-top">
+    
+      <h4 class="footer-list-header">Connect With Us</h4>
+    <a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a> <br>
+    <a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a><br>
+    <a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">STORE LOCATOR</a><br>
+    <a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEW USERS</a><br>
+  </ul>     
+
+  <section class="footer-social-section flex-rw">
+      <span class="footer-social-overlap footer-social-connect">
+  
+      <span class="footer-social-overlap footer-social-icons-wrapper">
+      <class title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i>
+      <class title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i>
+      <class title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i>
+      <class title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i>
+      <class title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i>
+        <class title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i>   
+]]></template>
+    </sp_widget>
+</record_update>

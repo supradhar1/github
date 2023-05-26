@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[var c = this;
+    c.showItemTypes = true;
+var a= document.getElementById("button").addEventListener("click", openModal);
+
+
+        //    $location.search({id:'item_cloth'});
+
+ 
+
+
+       ]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.widget {
+  // border: 1px solid #ffffff;
+  padding: 10px;
+  width: 450px;
+}
+
+
+
+table {
+    margin: 100px auto;
+  	border-spacing: 0px;
+	width: 680px;
+	box-shadow: 5px 4px 30px ;
+	border-radius: 10px;
+	background: #fff;
+  transition: all .5s; }
+	
+	
+	td {
+		padding: 20px 15px;
+	}
+	
+	thead {
+		background: linear-gradient(45deg, #614ad3, #e42c64);
+		border-radius: 10px 10px 0 0;
+		
+		tr {
+			border-radius: 10px 10px 0 0;
+		}
+		
+		td {
+			color: #fff;
+			font-size: 20px;
+		}
+		
+		td:first-of-type {
+			border-radius: 10px 0 0 0;
+		}
+		
+		td:last-of-type {
+			border-radius: 0 10px 0 0;
+		}
+	}
+	
+	tbody {
+		td {
+			border-top: 1px solid #f0f0f0;
+		}
+		
+		tr:hover {
+			background: #8b9dc3 ;
+		}
+	}
+
+}
+
+
+
+
+
+.bid-button {
+  position: relative;
+  display: inline-block;
+  
+  background: #fff;
+  width: 100px;
+  padding: .75rem 1.25rem;
+
+  border: 5px solid #4ac0ee;
+  color: #4ac0ee;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align:center;
+  
+  z-index: 1;
+  @include transition(all .15s .15s ease-out);
+
+    &amp;:after,
+    &amp;:before {
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        top: 100%;
+        left: 0;
+        bottom: -10px;
+        content: '';
+        z-index: 1;
+        @include transition(all .15s .15s ease-out);
+    }
+
+    &amp;:before {
+        background: #4ac0ee;
+        top: 10px;
+        left: -10px;
+        height: 100%;
+        width: 10px;
+    }
+
+    &amp;:after {
+        width:100%;
+        background: #4ac0ee;
+        right: 0px;
+        left: -10px;
+        height: 10px;
+    }
+
+    &amp;:hover {
+      background: #4ac0ee;
+      color: #fff;
+      margin-left: -7.5px;
+      margin-bottom: -7.5px;
+
+      &amp;:after,
+      &amp;:before {
+          top: 100%;
+          left: 0;
+          bottom: 0px;
+      }
+
+      &amp;:before {
+          top: 0px;
+          left: 0px;
+          width: 0px;
+      }
+
+      &amp;:after {
+          right: 0px;
+          left: 0px;
+          height: 0px;
+      }
+
+    }
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>auction</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Auction</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+
+
+
+	data.records = [];
+
+	var itemGr = new GlideRecord('x_1046400_auction_auction');
+	itemGr.query();
+	var field = 'state';
+	while(itemGr.next()){
+		var record = {};
+		record.column1 = itemGr.getValue('name');
+		record.column2 = itemGr.getValue('start_time');
+		record.column3 = itemGr.getValue('end_time');        
+		record.column4 = itemGr.getDisplayValue('state');
+		
+
+
+		data.records.push(record);
+	} 
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-25 04:57:24</sys_created_on>
+        <sys_id>2a49d2059787a1102d93fcd0f053af23</sys_id>
+        <sys_mod_count>108</sys_mod_count>
+        <sys_name>Auction</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_2a49d2059787a1102d93fcd0f053af23</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-26 05:01:18</sys_updated_on>
+        <template><![CDATA[<div class="widget" >
+<table>
+  <tr>
+ 
+    <th>Name</th>
+       <th>Start Time</th>
+    <th>End Time</th>
+    <th>Status</th>
+    
+  </tr>
+  <tbody>
+    <!-- Use AngularJS ng-repeat to iterate over records -->
+    <tr ng-repeat="data in data.records">
+      <td>{{data.column1}}</td>
+      <td>{{data.column2}}</td>
+      <td>{{data.column3}}</td>
+      <td> {{data.column4}}
+</td>
+      <td><button class="bid-button"  id="button" onclick="openModal()"> View</button></td>
+
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<script>
+function openModal() {
+  // Define the URL of the widget you want to display
+  var widgetURL = "https://dev59662.service-now.com/arc/?id=items";
+
+
+
+  window.open(widgetURL, "_blank");
+	document.getElementById("button").addEventListener("click", openModal);
+
+}
+
+// Add an event listener to the button click event
+</script>
+]]></template>
+    </sp_widget>
+</record_update>

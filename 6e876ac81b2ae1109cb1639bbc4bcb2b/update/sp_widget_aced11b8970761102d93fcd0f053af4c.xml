@@ -39,271 +39,275 @@
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>body {
-     margin: 20px;
-     margin-top: 50px !important;
-     background-color: #fff;
+  margin: 20px;
+  margin-top: 50px !important;
+  background-color: #fff;
 }
 
 a {
-     color: #c00;
+  color: #c00;
 }
 
 .page-content-wrapper .page-content {
-     margin-left: 0;
-     padding: 0;
+  margin-left: 0;
+  padding: 0;
 }
 
 .page-content-wrapper .page-content {
-     padding: 0 !important;
+  padding: 0 !important;
 }
 
 .newest-auction {
-     margin: 0;
-     padding: 0;
-     list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .newest-auction &gt; li {
-     margin: 0 0 20px;
+  margin: 0 0 20px;
 }
 
 .newest-auction &gt; li &gt; img {
-     float: left;
-     width: 200px;
-     height: 130px;
+  float: left;
+  width: 200px;
+  height: 130px;
 }
 
 .newest-auction &gt; li &gt; .info {
-     overflow: hidden;
-     background-color: #f5f5f5;
-     position: relative;
-     height: 130px;
-     padding-top: 7px;
-     padding-right: 40px;
-     text-align: left;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  position: relative;
+  height: 130px;
+  padding-top: 7px;
+  padding-right: 40px;
+  text-align: left;
 }
 
 .newest-auction &gt; li &gt; .info &gt; .title {
-     font-size: 17pt;
-     margin: 0;
-     color: #c00;
+  font-size: 17pt;
+  margin: 0;
+  color: #c00;
 }
 
 .newest-auction &gt; li &gt; .info &gt; .desc {
-     font-size: 12pt;
-     font-weight: 300;
-     margin: 0;
+  font-size: 12pt;
+  font-weight: 300;
+  margin: 0;
 }
 
 .newest-auction &gt; li &gt; .info a {
-     margin: 0 10px;
+  margin: 0 10px;
 }
 
 .newest-auction &gt; li &gt; .info &gt; .price {
-     font-size: 17pt;
-     margin: 0;
-     color: #c00;
+  font-size: 17pt;
+  margin: 0;
+  color: #c00;
 }
 
 .newest-auction &gt; li &gt; .info &gt; .year {
-     margin: 0;
+  margin: 0;
 }
 
 .newest-auction &gt; li &gt; .info &gt; .milage {
-     margin: 0;
+  margin: 0;
 }
 
 .newest-auction &gt; li &gt; .info &gt; ul {
-     display: table;
-     width: 100%;
-     margin: 10px 0 0;
-     padding: 0;
-     list-style: none;
-     text-align: center;
+  display: table;
+  width: 100%;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
 }
 
 .newest-auction &gt; li &gt; .info &gt; ul &gt; li {
-     display: table-cell;
-     font-size: 11pt;
-     font-weight: 300;
-     padding: 3px 0 3px 10px;
-     text-align: left;
-     color: #1e1e1e;
-     border-right: 1px solid #fff;
+  display: table-cell;
+  font-size: 11pt;
+  font-weight: 300;
+  padding: 3px 0 3px 10px;
+  text-align: left;
+  color: #1e1e1e;
+  border-right: 1px solid #fff;
 }
 
 .newest-auction &gt; li &gt; .info &gt; ul &gt; li &gt; small {
-     margin-left: 4px;
-     color: #c00;
+  margin-left: 4px;
+  color: #c00;
 }
 
 .newest-auction &gt; li &gt; .info &gt; .title,
 .newest-auction &gt; li &gt; .info &gt; .desc {
-     padding: 0 10px;
+  padding: 0 10px;
 }
 
 .newest-auction &gt; li &gt; .info &gt; .price {
-     position: absolute;
-     top: 6px;
-     right: 10px;
+  position: absolute;
+  top: 6px;
+  right: 10px;
 }
 
 .newest-auction &gt; li &gt; .info &gt; .year {
-     font-size: 11pt;
-     position: absolute;
-     top: 34px;
-     right: 10px;
+  font-size: 11pt;
+  position: absolute;
+  top: 34px;
+  right: 10px;
 }
 
 .newest-auction &gt; li &gt; .info &gt; .milage {
-     position: absolute;
-     top: 55px;
-     right: 10px;
+  position: absolute;
+  top: 55px;
+  right: 10px;
 }
 
 .newest-auction &gt; li &gt; .info &gt; ul {
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     border-top: 1px solid #fff;
-     background-color: #d9d9d9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #fff;
+  background-color: #d9d9d9;
 }
 
 @media only screen and (max-width: 768px) {
-     .newest-auction &gt; li &gt; img {
-          width: 100%;
-          height: 100%;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .title {
-          font-size: 14pt;
-          margin: 0;
-          color: #c00;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .desc {
-          font-size: 12pt;
-          font-weight: 300;
-          margin: 0;
-     }
-     .newest-auction &gt; li &gt; .info a {
-          font-size: 12pt;
-          margin: 0 10px;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .price {
-          font-size: 14pt;
-          margin: 0;
-          color: #c00;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .year {
-          position: absolute;
-          top: 27px;
-          font-size: 12pt;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .milage {
-          position: absolute;
-          top: 50px;
-          font-size: 12pt;
-     }
-     .newest-auction &gt; li &gt; .info &gt; ul &gt; li {
-          display: table-cell;
-          font-size: 11pt;
-          font-weight: 300;
-          padding: 3px 0 3px 10px;
-          text-align: left;
-          color: #1e1e1e;
-          border-right: 1px solid #fff;
-     }
+  .newest-auction &gt; li &gt; img {
+    width: 100%;
+    height: 100%;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .title {
+    font-size: 14pt;
+    margin: 0;
+    color: #c00;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .desc {
+    font-size: 12pt;
+    font-weight: 300;
+    margin: 0;
+  }
+  .newest-auction &gt; li &gt; .info a {
+    font-size: 12pt;
+    margin: 0 10px;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .price {
+    font-size: 14pt;
+    margin: 0;
+    color: #c00;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .year {
+    position: absolute;
+    top: 27px;
+    font-size: 12pt;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .milage {
+    position: absolute;
+    top: 50px;
+    font-size: 12pt;
+  }
+  .newest-auction &gt; li &gt; .info &gt; ul &gt; li {
+    display: table-cell;
+    font-size: 11pt;
+    font-weight: 300;
+    padding: 3px 0 3px 10px;
+    text-align: left;
+    color: #1e1e1e;
+    border-right: 1px solid #fff;
+  }
+  .img{
+    width:100px;
+    height:50px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-     .newest-auction &gt; li &gt; img {
-          width: 100%;
-          height: 100%;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .title {
-          font-size: 12pt;
-          margin: 0;
-          color: #c00;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .desc {
-          font-size: 10pt;
-          font-weight: 300;
-          margin: 0;
-     }
-     .newest-auction &gt; li &gt; .info a {
-          font-size: 10pt;
-          margin: 0 10px;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .price {
-          font-size: 12pt;
-          margin: 0;
-          color: #c00;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .year {
-          position: absolute;
-          top: 25px;
-          font-size: 10pt;
-          margin: 0;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .milage {
-          position: absolute;
-          top: 45px;
-          font-size: 10pt;
-          margin: 0;
-     }
-     .newest-auction &gt; li &gt; .info &gt; ul &gt; li {
-          display: table-cell;
-          font-size: 10pt;
-          font-weight: 300;
-          padding: 3px 0 3px 10px;
-          text-align: left;
-          color: #1e1e1e;
-          border-right: 1px solid #fff;
-     }
+  .newest-auction &gt; li &gt; img {
+    width: 100%;
+    height: 100%;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .title {
+    font-size: 12pt;
+    margin: 0;
+    color: #c00;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .desc {
+    font-size: 10pt;
+    font-weight: 300;
+    margin: 0;
+  }
+  .newest-auction &gt; li &gt; .info a {
+    font-size: 10pt;
+    margin: 0 10px;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .price {
+    font-size: 12pt;
+    margin: 0;
+    color: #c00;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .year {
+    position: absolute;
+    top: 25px;
+    font-size: 10pt;
+    margin: 0;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .milage {
+    position: absolute;
+    top: 45px;
+    font-size: 10pt;
+    margin: 0;
+  }
+  .newest-auction &gt; li &gt; .info &gt; ul &gt; li {
+    display: table-cell;
+    font-size: 10pt;
+    font-weight: 300;
+    padding: 3px 0 3px 10px;
+    text-align: left;
+    color: #1e1e1e;
+    border-right: 1px solid #fff;
+  }
 }
 
 @media only screen and (max-width: 320px) {
-     .newest-auction &gt; li &gt; img {
-          width: 100%;
-          height: 100%;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .title {
-          font-size: 17pt;
-          margin: 0;
-          color: #c00;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .desc {
-          font-size: 12pt;
-          font-weight: 300;
-          margin: 0;
-     }
-     .newest-auction &gt; li &gt; .info a {
-          margin: 0 10px;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .price {
-          font-size: 17pt;
-          margin: 0;
-          color: #c00;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .year {
-          margin: 0;
-     }
-     .newest-auction &gt; li &gt; .info &gt; .milage {
-          margin: 0;
-     }
+  .newest-auction &gt; li &gt; img {
+    width: 100%;
+    height: 100%;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .title {
+    font-size: 17pt;
+    margin: 0;
+    color: #c00;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .desc {
+    font-size: 12pt;
+    font-weight: 300;
+    margin: 0;
+  }
+  .newest-auction &gt; li &gt; .info a {
+    margin: 0 10px;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .price {
+    font-size: 17pt;
+    margin: 0;
+    color: #c00;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .year {
+    margin: 0;
+  }
+  .newest-auction &gt; li &gt; .info &gt; .milage {
+    margin: 0;
+  }
 }
 
 .btn-bid {
-     padding-left: 0 !important;
-     text-align: center !important;
-     vertical-align: middle;
-     color: #fff !important;
-     border-right: none !important;
-     background-color: #c00;
-     border-radius: 0;
+  padding-left: 0 !important;
+  text-align: center !important;
+  vertical-align: middle;
+  color: #fff !important;
+  border-right: none !important;
+  background-color: #c00;
+  border-radius: 0;
 }
 
 .btn-bid:hover {
-     background-color: #333 !important;
+  background-color: #333 !important;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -318,51 +322,56 @@ a {
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <script><![CDATA[
+(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+ 
+
+
+data.records = [];
+
+    var itemGr = new GlideRecord('x_1046400_auction_all_item');
+    itemGr.query();
+
+    while(itemGr.next()){
+         var record = {};
+        record.column1 = itemGr.getValue('name');
+        record.column2 = itemGr.getValue('image');
+        record.column3 = itemGr.getValue('description');        
+        record.column4 = itemGr.getValue('ranking');
+        record.column5 = itemGr.getValue('starting_bid');
+
+        data.records.push(record);
+    } 
+	})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-24 05:59:22</sys_created_on>
         <sys_id>aced11b8970761102d93fcd0f053af4c</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>Bidding</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_aced11b8970761102d93fcd0f053af4c</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-24 06:29:03</sys_updated_on>
+        <sys_updated_on>2023-05-25 04:05:04</sys_updated_on>
         <template><![CDATA[<div class="row">
      <div class="col-md-12">
+         
+          
           <ul class="newest-auction">
                <li>
-                    <div class="info">
-                         <h2 class="title">Toyota Prado</h2>
-                         <p class="desc">Minimum bid increament is AED 500 for this Auction.</p>
+                    <img src="https://cdn.moglix.com/p/kZAPNDP6LsICJ-xxlarge.jpg" alt="">
+                    <div class="info" >
+                         <h2 class="title">{{data.column1}}</h2>
+                         <p class="desc">Minimum bid increament is Rs.500 for this Auction.</p>
                          <a href="#">View Details</a>
-                         <h2 class="price">AED 55,000</h2>
-                         <p class="year">Year <span class="font-red-thunderbird">2011</span></p>
-                         <p class="milage">Milage <span class="font-red-thunderbird">95379</span> km</p>
-                         <ul>
-                              <li>12<small>D</small> 20<small>H</small> 45<small>M</small> 00<small>S</small><br>Remaining Time</li>
-                              <li><div id="countdown"></div><br>End Time</li>
-                              <li>IN01321<br>Lot No.</li>
-                              <li>06<br>Bid No.</li>
-                              <li class="btn btn-bid">BID NOW</li>
-                         </ul>
-                    </div>
-               </li>
-          </ul>
-          <ul class="newest-auction">
-               <li>
-                    <img src="http://lorempixel.com/800/600/city" alt="">
-                    <div class="info">
-                         <h2 class="title">Toyota Land Cruiser</h2>
-                         <p class="desc">Minimum bid increament is AED 500 for this Auction.</p>
-                         <a href="#">View Details</a>
-                         <h2 class="price">AED 55,000</h2>
-                         <p class="year">Year <span class="font-red-thunderbird">2013</span></p>
-                         <p class="milage">Milage <span class="font-red-thunderbird">65850</span> km</p>
+                         <h2 class="price">Rs. 5,000</h2>
+                         <p class="year">Year <span class="font-red-thunderbird"></span></p>
                          <ul>
                               <li>12<small>D</small> 20<small>H</small> 45<small>M</small> 00<small>S</small><br>Remaining Time</li>
                               <li>16:30 | 13 : 02 : 2016<br>End Time</li>
@@ -375,13 +384,13 @@ a {
           </ul>
           <ul class="newest-auction">
                <li>
-                    <img src="http://lorempixel.com/800/600/people" alt="">
+                    <img src="https://5.imimg.com/data5/GLADMIN/Default/2021/5/AB/ZA/BQ/35336981/titan-men-s-watches-1000x1000.jpg" alt="" width="100" height="50">
                     <div class="info">
-                         <h2 class="title">Toyota Corolla</h2>
+                         <h2 class="title">Titan Watch</h2>
                          <p class="desc">Minimum bid increament is AED 500 for this Auction.</p>
                          <a href="#">View Details</a>
                          <h2 class="price">AED 55,000</h2>
-                         <p class="year">Year <span class="font-red-thunderbird">2014</span></p>
+                         <p class="year">Year <span class="font-red-thunderbird"></span></p>
                          <p class="milage">Milage <span class="font-red-thunderbird">55450</span> km</p>
                          <ul>
                               <li>12<small>D</small> 20<small>H</small> 45<small>M</small> 00<small>S</small><br>Remaining Time</li>

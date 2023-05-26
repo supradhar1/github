@@ -23,14 +23,14 @@
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-24 06:31:03</sys_created_on>
         <sys_id>70256570974761102d93fcd0f053afc3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>timer</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_70256570974761102d93fcd0f053afc3</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-24 07:24:20</sys_updated_on>
+        <sys_updated_on>2023-05-24 10:12:30</sys_updated_on>
         <template><![CDATA[<div>
 <script>
 function getTimeRemaining(endtime) {
@@ -95,7 +95,6 @@ initializeClock('clockdiv', deadline);
 <div class="smalltext">Seconds</div>
 </div>
 </div>
-<img src="https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg" alt="External Image">
 
 </div>]]></template>
     </sp_widget>

@@ -6,11 +6,12 @@
         <element label="Start Time" max_length="40" name="start_time" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" choice="1" label="state" max_length="40" name="state" type="string">
             <choice>
-                <element inactive_on_update="false" label="open" sequence="0" value="open"/>
-                <element inactive_on_update="false" label="closed" sequence="1" value="closed"/>
-                <element inactive_on_update="false" label="yet to open" sequence="2" value="yet to open"/>
+                <element inactive_on_update="false" label="Open" sequence="0" value="open"/>
+                <element inactive_on_update="false" label="Closed" sequence="1" value="closed"/>
+                <element inactive_on_update="false" label="Yet to open" sequence="2" value="yet to open"/>
             </choice>
         </element>
         <element label="Timer" max_length="40" name="timer" type="integer"/>
+        <element label="countdown" max_length="40" name="u_glide_duration_1" type="glide_duration"/>
     </element>
 </database>
