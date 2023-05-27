@@ -3,159 +3,218 @@
         <category>custom</category>
         <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
         <controller_as>c</controller_as>
-        <css>body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+        <css>
 
-/* Center alignment for main content */
+$primary-light-blue: #8DB9ED;
+$primary-line-color: #ccc;
+* {
+  box-sizing: border-box
+}
+html, body {
+  height: 100%
+}
+body {
+	font: 11px "Open Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
+  justify-content: space-between
+}
+ul {
+  list-style: none
+}
+a {
+  text-decoration: none
+}
+.generic-anchor {
+	color: $primary-light-blue;
+	&amp;:visited {
+		color: $primary-light-blue
+	}
+	&amp;:hover {
+		color: $primary-line-color
+	}
+}
+.flex-rw {
+  display: flex;
+  flex-flow: row wrap;
+}
+//This main is mostly to push the footer to the bottom and for demo purposes.
 main {
-  text-align: center;
-}
-
-/* Center alignment for footer */
-footer {
+  flex: 1 1 auto; //For IE11
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-/* Footer section for social media icons */
-.footer-social-section {
-  display: flex;
   justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: rgb(155,155,155);
+  line-height: 1
+}
+footer {
+  background: rgb(55,55,55);
+  margin-top: auto;
+  width: 100%
+}
+.footer-list-top {
+  width: 33.333%
+}
+.footer-list-top &gt; li {
+  text-align: center;
+  padding-bottom: 10px
+}
+.footer-list-header {
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 2.3vw "Oswald", sans-serif
+}
+.footer-list-anchor {
+  font: 1.3em "Open Sans", sans-serif
+}
+.footer-social-section {
+  width: 100%;
   align-items: center;
+  justify-content: space-around;
   position: relative;
   margin-top: 5px;
 }
-
 .footer-social-section::after {
   content: "";
   position: absolute;
   z-index: 1;
   top: 50%;
   left: 10px;
-  transform: translateY(-50%);
   border-top: 1px solid $primary-line-color;
-  width: calc(100% - 20px);
+  width: calc(100% - 20px)
 }
-
 .footer-social-overlap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(55, 55, 55);
-  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  background: rgb(55,55,55);
+  padding: 0 20px
 }
-
 .footer-social-connect {
   display: flex;
   align-items: center;
-  justify-content: center;
   font: 3.5em "Oswald", sans-serif;
-  color: #fff;
+  color: #fff
 }
-
 .footer-social-small {
   font-size: 0.6em;
-  padding: 0px 20px;
+  padding: 0px 20px
 }
-
 .footer-social-overlap &gt; a {
-  font-size: 3em;
+  font-size: 3em
 }
-
 .footer-social-overlap &gt; a:not(:first-child) {
-  margin-left: 0.38em;
+  margin-left: 0.38em
 }
-
 .footer-bottom-section {
-  width: 50%;
+  width: 100%;
   padding: 10px;
   border-top: 1px solid $primary-line-color;
-  margin-top: 1px;
+  margin-top: 10px
 }
-
 .footer-bottom-section &gt; div:first-child {
-  margin-right: auto;
+  margin-right: auto
 }
-
 .footer-bottom-wrapper {
   font-size: 1.5em;
-  color: #fff;
+  color: #fff
 }
-
-/* Media Queries */
-
+.footer-address {
+  display: inline;
+  font-style: normal
+}
 @media only screen and (max-width: 768px) {
   .footer-list-header {
-    font-size: 2em;
-    text-align: center;
+    font-size: 4em
   }
   .footer-list-anchor {
-    font-size: 1.1em;
+    font-size: 1.1em
   }
   .footer-social-connect {
-    font-size: 2.5em;
+    font-size: 2.5em
   }
   .footer-social-overlap &gt; a {
-    font-size: 2.24em;
+    font-size: 2.24em
   }
   .footer-bottom-wrapper {
-    font-size: 1.3em;
+    font-size: 1.3em
   }
 }
-
 @media only screen and (max-width: 568px) {
   main {
-    font-size: 5em;
+    font-size: 5em
   }
   .footer-list-top {
-    width: 100%;
+    width: 100%
   }
   .footer-list-header {
     font-size: 3em;
-    text-align: center;
   }
   .footer-list-anchor {
-    font-size: 1.5em;
+    font-size: 1.5em
   }
   .footer-social-section {
-    justify-content: center;
+    justify-content: center
   }
   .footer-social-section::after {
-    top: 25%;
+    top: 25%
   }
   .footer-social-connect {
     margin-bottom: 10px;
-    padding: 0 10px;
+    padding: 0 10px
   }
   .footer-social-overlap {
     display: flex;
     justify-content: center;
   }
-}
-
-@media only screen and (max-width: 320px) {
-  .footer-list-header {
-    text-align: center;
-    font-size: 2.2em;
+  .footer-social-icons-wrapper {
+    width: 100%;
+    padding: 0
   }
-  .footer-list-anchor {
-    font-size: 1.2em;
+  .footer-social-overlap &gt; a:not(:first-child) {
+    margin-left: 20px;
   }
-  .footer-social-connect {
-    font-size: 2.4em;
-  }
-  .footer-social-overlap &gt; a {
-    font-size: 2.24em;
+  .footer-bottom-section {
+    padding: 0 5px 10px 5px
   }
   .footer-bottom-wrapper {
-    font-size: 1.3em;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px
   }
 }
-</css>
+@media only screen and (max-width: 480px) {
+  .footer-social-overlap &gt; a {
+    margin: auto
+  }
+  .footer-social-overlap &gt; a:not(:first-child) {
+    margin-left: 0;
+  }
+  .footer-bottom-rights {
+    display: block
+  }
+}
+@media only screen and (max-width: 320px) {
+  .footer-list-header {
+    font-size: 2.2em
+  }
+  .footer-list-anchor {
+    font-size: 1.2em
+  }
+  .footer-social-connect {
+    font-size: 2.4em
+  }
+  .footer-social-overlap &gt; a {
+    font-size: 2.24em
+  }
+  .footer-bottom-wrapper {
+    font-size: 1.3em
+  }
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -175,37 +234,41 @@ footer {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-25 11:29:05</sys_created_on>
         <sys_id>98f2fb0d97cba1102d93fcd0f053afd9</sys_id>
-        <sys_mod_count>45</sys_mod_count>
+        <sys_mod_count>61</sys_mod_count>
         <sys_name>footer</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_98f2fb0d97cba1102d93fcd0f053afd9</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-25 11:55:59</sys_updated_on>
-        <template><![CDATA[<main>
-  </main>
-<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
-<footer class="flex-rw">
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-26 05:58:52</sys_updated_on>
+        <template><![CDATA[<footer class="flex-rw">
+  <ul class="footer-list-top"></ul>
   <ul class="footer-list-top">
-    
-      <h4 class="footer-list-header">Connect With Us</h4>
-    <a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a> <br>
-    <a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a><br>
-    <a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">STORE LOCATOR</a><br>
-    <a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEW USERS</a><br>
-  </ul>     
+    <li>
+      <h4 class="footer-list-header">SUPPORT</h4></li>
+    <li><a href='/shop/about-mission' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
+    <li><a href='/promos.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">PROMOS</a></li>
+    <li><a href='/retailers/new-retailers.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">BECOME A RETAILER</a></li>
 
-  <section class="footer-social-section flex-rw">
-      <span class="footer-social-overlap footer-social-connect">
+    <li><a href='/job-openings.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">JOB OPENINGS</a></li>
+
+    <li><a href='/shop/about-show-schedule' class="generic-anchor footer-list-anchor" itemprop="significantLink">EVENTS</a></li>
+  </ul>
   
+ 
+  <section class="footer-social-section flex-rw">
+      
       <span class="footer-social-overlap footer-social-icons-wrapper">
-      <class title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i>
-      <class title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i>
-      <class title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i>
-      <class title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i>
-      <class title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i>
-        <class title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i>   
-]]></template>
+      <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+      <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+      <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+      <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+      <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+      </span>
+  </section>
+  
+</footer>]]></template>
     </sp_widget>
 </record_update>

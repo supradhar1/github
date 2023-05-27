@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="DELETE">
+        <class_name/>
+        <order>1</order>
+        <sp_column/>
+        <sp_container display_value="Homee - Container 2">59959301978ba1102d93fcd0f053afc6</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-25 09:21:18</sys_created_on>
+        <sys_id>98b5d701978ba1102d93fcd0f053af53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_row_98b5d701978ba1102d93fcd0f053af53</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-25 09:21:18</sys_updated_on>
+    </sp_row>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sp_row_98b5d701978ba1102d93fcd0f053af53</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row"><sp_row action="INSERT_OR_UPDATE"><class_name/><order>1</order><sp_column/><sp_container display_value="Homee - Container 2">59959301978ba1102d93fcd0f053afc6</sp_container><sys_class_name>sp_row</sys_class_name><sys_created_by>CC-Harsha</sys_created_by><sys_created_on>2023-05-25 09:21:18</sys_created_on><sys_id>98b5d701978ba1102d93fcd0f053af53</sys_id><sys_mod_count>0</sys_mod_count><sys_name>1</sys_name><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sp_row_98b5d701978ba1102d93fcd0f053af53</sys_update_name><sys_updated_by>CC-Harsha</sys_updated_by><sys_updated_on>2023-05-25 09:21:18</sys_updated_on></sp_row></record_update>]]></payload>
+        <payload_hash>1772752400</payload_hash>
+        <record_name>1</record_name>
+        <reverted_from/>
+        <source>8ecdfa001baae1109cb1639bbc4bcb84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-25 09:21:18</sys_created_on>
+        <sys_id>54b5d701978ba1102d93fcd0f053af55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18852366c240000001</sys_recorded_at>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-25 09:21:18</sys_updated_on>
+        <type>Row</type>
+        <update_guid>9cb5d701878ba110b067160560df0b54</update_guid>
+        <update_guid_history>9cb5d701878ba110b067160560df0b54:1772752400</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="1">f0d55b01978ba1102d93fcd0f053af73</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-25 09:21:53</sys_created_on>
+        <sys_db_object display_value="" name="sp_row">sp_row</sys_db_object>
+        <sys_id>7fcbe1c1503f4320b12dc54cb4c10979</sys_id>
+        <sys_metadata>98b5d701978ba1102d93fcd0f053af53</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sp_row_98b5d701978ba1102d93fcd0f053af53</sys_update_name>
+        <sys_update_version display_value="sp_row_98b5d701978ba1102d93fcd0f053af53">54b5d701978ba1102d93fcd0f053af55</sys_update_version>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-25 09:21:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

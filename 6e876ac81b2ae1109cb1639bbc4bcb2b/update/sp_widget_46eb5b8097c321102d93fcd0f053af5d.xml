@@ -21,7 +21,7 @@ cards.forEach(function(card) {
 }
 
 .flex-card {
-  width: 300px;
+  width: 1000px;
   margin: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -54,12 +54,12 @@ cards.forEach(function(card) {
 }
 
 .expanded {
-  width: 600px;
+  width: 400px;
   cursor: pointer;
 }
 
 .expanded .card-image {
-  height: 300px;
+  height: 400px;
 }
 
 .expanded .card-content {
@@ -85,14 +85,14 @@ cards.forEach(function(card) {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-22 07:14:32</sys_created_on>
         <sys_id>46eb5b8097c321102d93fcd0f053af5d</sys_id>
-        <sys_mod_count>141</sys_mod_count>
+        <sys_mod_count>160</sys_mod_count>
         <sys_name>Auctiontopitems</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_46eb5b8097c321102d93fcd0f053af5d</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-24 09:15:58</sys_updated_on>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-24 09:40:55</sys_updated_on>
         <template><![CDATA[<div class="flex-cards">
   <div class="flex-card">
     <div class="card-header">
@@ -100,7 +100,7 @@ cards.forEach(function(card) {
     </div>
     <div class="card-content">
       <h3 class="card-title">Card 1</h3>
-      <p class="card-description">This is the description for Card 1.</p>
+      <p class="card-description">price=$4999<br>sold</p>
     </div>
   </div>
   <div class="flex-card">
@@ -109,7 +109,7 @@ cards.forEach(function(card) {
     </div>
     <div class="card-content">
       <h3 class="card-title">Card 2</h3>
-      <p class="card-description">This is the description for Card 2.</p>
+      <p class="card-description">price=$999<br>sold</p>
     </div>
   </div>
   <div class="flex-card">
@@ -118,7 +118,7 @@ cards.forEach(function(card) {
     </div>
     <div class="card-content">
       <h3 class="card-title">Card 3</h3>
-      <p class="card-description">This is the description for Card 3.</p>
+      <p class="card-description">price=3999<br>sold</p>
     </div>
   </div>
 </div>

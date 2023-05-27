@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="86405bd51b2221109cb1639bbc4bcb05" label="My Bid" max_length="40" name="x_1046400_auction_my_bid" type="collection">
-        <element label="Amount" max_length="20" name="amount" type="currency"/>
-        <element label="Item" max_length="32" name="item" reference="x_1046400_auction_my_bid" type="reference"/>
+        <element label="Item" max_length="32" name="item" reference_qual="u_currency_1ANYTHINGjavascript:global.getCurrencyFilter('x_1046400_auction_all_item','u_currency_1', 'USD;USD')^EQ" type="string" use_reference_qualifier="advanced"/>
         <element choice="1" label="Status" max_length="40" name="status" type="choice">
             <choice/>
         </element>
+        <element attributes="omit_sys_original=true" label="Amount" max_length="20" name="u_currency_1" read_only="true" type="currency"/>
+        <element attributes="u_currency_1" calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" dependent="u_currency_1" dependent_on_field="u_currency_1" label="Amount" max_length="32" name="u_reference_1" read_only="true" reference="x_1046400_auction_all_item" reference_qual="u_currency_1SAMEASu_currency_1^EQ" reference_qual_condition="u_currency_1SAMEASu_currency_1^EQ" type="reference" use_dependent_field="true"/>
         <index name="index">
             <element name="item"/>
+        </index>
+        <index name="index2">
+            <element name="u_reference_1"/>
         </index>
     </element>
 </database>

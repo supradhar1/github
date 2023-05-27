@@ -4,13 +4,13 @@
             <element>name</element>
             <position>0</position>
             <sys_created_by>CC-Harsha</sys_created_by>
-            <sys_created_on>2023-05-24 04:48:32</sys_created_on>
-            <sys_id>4fad85f897c361102d93fcd0f053af37</sys_id>
+            <sys_created_on>2023-05-25 09:32:18</sys_created_on>
+            <sys_id>29389f81978ba1102d93fcd0f053af98</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_auction" sys_domain="global" view="Default view">5c3fb2801baae1109cb1639bbc4bcb0c</sys_ui_section>
             <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
+            <sys_updated_on>2023-05-25 09:32:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>start_time</element>
             <position>1</position>
             <sys_created_by>CC-Harsha</sys_created_by>
-            <sys_created_on>2023-05-24 04:48:32</sys_created_on>
-            <sys_id>47ad85f897c361102d93fcd0f053af38</sys_id>
+            <sys_created_on>2023-05-25 09:32:18</sys_created_on>
+            <sys_id>21389f81978ba1102d93fcd0f053af99</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_auction" sys_domain="global" view="Default view">5c3fb2801baae1109cb1639bbc4bcb0c</sys_ui_section>
             <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
+            <sys_updated_on>2023-05-25 09:32:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>state</element>
             <position>2</position>
             <sys_created_by>CC-Harsha</sys_created_by>
-            <sys_created_on>2023-05-24 04:48:32</sys_created_on>
-            <sys_id>4bad85f897c361102d93fcd0f053af38</sys_id>
+            <sys_created_on>2023-05-25 09:32:18</sys_created_on>
+            <sys_id>25389f81978ba1102d93fcd0f053af99</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_auction" sys_domain="global" view="Default view">5c3fb2801baae1109cb1639bbc4bcb0c</sys_ui_section>
             <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
+            <sys_updated_on>2023-05-25 09:32:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>.split</element>
             <position>3</position>
             <sys_created_by>CC-Harsha</sys_created_by>
-            <sys_created_on>2023-05-24 04:48:32</sys_created_on>
-            <sys_id>4fad85f897c361102d93fcd0f053af38</sys_id>
+            <sys_created_on>2023-05-25 09:32:18</sys_created_on>
+            <sys_id>29389f81978ba1102d93fcd0f053af99</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_auction" sys_domain="global" view="Default view">5c3fb2801baae1109cb1639bbc4bcb0c</sys_ui_section>
             <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
+            <sys_updated_on>2023-05-25 09:32:18</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>end_time</element>
             <position>4</position>
             <sys_created_by>CC-Harsha</sys_created_by>
-            <sys_created_on>2023-05-24 04:48:32</sys_created_on>
-            <sys_id>43ad85f897c361102d93fcd0f053af39</sys_id>
+            <sys_created_on>2023-05-25 09:32:18</sys_created_on>
+            <sys_id>2d389f81978ba1102d93fcd0f053af99</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_auction" sys_domain="global" view="Default view">5c3fb2801baae1109cb1639bbc4bcb0c</sys_ui_section>
             <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
+            <sys_updated_on>2023-05-25 09:32:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,27 +74,13 @@
             <element>appraiser</element>
             <position>5</position>
             <sys_created_by>CC-Harsha</sys_created_by>
-            <sys_created_on>2023-05-24 04:48:32</sys_created_on>
-            <sys_id>47ad85f897c361102d93fcd0f053af39</sys_id>
+            <sys_created_on>2023-05-25 09:32:18</sys_created_on>
+            <sys_id>21389f81978ba1102d93fcd0f053af9a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_auction" sys_domain="global" view="Default view">5c3fb2801baae1109cb1639bbc4bcb0c</sys_ui_section>
             <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>timer</element>
-            <position>6</position>
-            <sys_created_by>CC-Harsha</sys_created_by>
-            <sys_created_on>2023-05-24 04:56:08</sys_created_on>
-            <sys_id>126f81f897c361102d93fcd0f053afd2</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_1046400_auction_auction" sys_domain="global" view="Default view">5c3fb2801baae1109cb1639bbc4bcb0c</sys_ui_section>
-            <sys_updated_by>CC-Harsha</sys_updated_by>
-            <sys_updated_on>2023-05-24 04:56:08</sys_updated_on>
+            <sys_updated_on>2023-05-25 09:32:18</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

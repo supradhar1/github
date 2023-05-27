@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script/>
+        <controller_as>c</controller_as>
+        <css>.h4{
+ text-align: center;
+}
+$primary-light-blue: #8DB9ED;
+$primary-line-color: #ccc;
+* {
+  box-sizing: border-box
+  height: 300;
+  weight: 60; 
+  text-align:center;
+}
+html, body {
+  height: 50%;
+  weight: 50%;
+  text-align: center;
+}
+body {
+	font: 11px "Open Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-left : 80%;
+  text-align: center;
+  margin-right : 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  //This justify-content is essentially unnecessary in Firefox and Chrome due to the flex: 1 1 auto on the main.  However, it's needed to push the footer down on IE11
+  justify-content: space-between
+}
+ul {
+  list-style: none
+}
+a {
+  text-decoration: none
+}
+.generic-anchor {
+  text-align:center;
+  
+	color: $primary-light-blue;
+ 
+	&amp;:visited {
+		color: $primary-light-blue
+	}
+	&amp;:hover {
+		color: $primary-line-color
+	}
+}
+.flex-rw {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+}
+//This main is mostly to push the footer to the bottom and for demo purposes.
+main {
+  flex: 1 1 auto; //For IE11
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font: 10em "Oswald", sans-serif;
+  color: rgb(155,155,155);
+  line-height: 1
+}
+footer {
+  background: rgb(55,55,55);
+  margin-top: auto;
+  width: 100%
+}
+.footer-list-top {
+  text-align: center;
+  width: 33.333%
+}
+.footer-list-top &gt; li {
+  text-align: center;
+  padding-bottom: 10px
+}
+.footer-list-header {
+  text-align: center;
+  padding: 10px 0 5px 0;
+  color: #fff;
+  font: 2.3vw "Oswald", sans-serif;
+}
+.footer-list-anchor {
+  font: 1.3em "Open Sans", sans-serif
+}
+.footer-social-section {
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 5px;
+}
+.footer-social-section::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 10px;
+  border-top: 1px solid $primary-line-color;
+  width: calc(100% - 20px)
+}
+.footer-social-overlap {
+  position: relative;
+  z-index: 2;
+  background: rgb(55,55,55);
+  padding: 0 20px
+}
+.footer-social-connect {
+  display: flex;
+  align-items: center;
+  font: 3.5em "Oswald", sans-serif;
+  color: #fff
+}
+.footer-social-small {
+  font-size: 0.6em;
+  padding: 0px 20px
+}
+.footer-social-overlap &gt; a {
+  font-size: 3em
+}
+.footer-social-overlap &gt; a:not(:first-child) {
+  margin-left: 0.38em
+}
+.footer-bottom-section {
+  width: 100%;
+  padding: 10px;
+  border-top: 1px solid $primary-line-color;
+  margin-top: 10px
+}
+.footer-bottom-section &gt; div:first-child {
+  margin-right: auto
+}
+.footer-bottom-wrapper {
+  font-size: 1.5em;
+  color: #fff
+}
+.footer-address {
+  display: inline;
+  font-style: normal
+}
+
+@media only screen and (max-width: 568px) {
+  main {
+    font-size: 5em
+  }
+  .footer-list-top {
+    text-align:center;
+    width: 100%
+  }
+  .footer-list-header {
+    
+    text-align:center;
+    
+    font-size: 3em;
+  }
+  .footer-list-anchor {
+    font-size: 1.5em
+  }
+  .footer-social-section {
+    justify-content: center
+  }
+  .footer-social-section::after {
+    top: 25%
+  }
+  .footer-social-connect {
+    margin-bottom: 10px;
+    padding: 0 10px
+  }
+  .footer-social-overlap {
+    display: flex;
+    justify-content: center;
+  }
+  .footer-social-icons-wrapper {
+    width: 100%;
+    padding: 0
+  }
+  .footer-social-overlap &gt; a:not(:first-child) {
+    margin-left: 20px;
+  }
+  .footer-bottom-section {
+    padding: 0 5px 10px 5px
+  }
+  .footer-bottom-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px
+  }
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>home3</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>home3</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-25 05:39:07</sys_created_on>
+        <sys_id>e1d2e20197c7a1102d93fcd0f053af37</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>home3</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_e1d2e20197c7a1102d93fcd0f053af37</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-26 05:27:00</sys_updated_on>
+        <template><![CDATA[<main>
+  </main>
+<!--Some of this HTML is directly from Pavilion.  You can change it to whatever you want if you want to mimic this design.-->
+<footer class="flex-rw">
+  <ul class="footer-list-top">
+      <h4 class="footer-list-header">Connect With Us</h4>
+    <li><a href='/shop/about-contact' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
+    <li><a href='/faq.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
+    <li id='find-a-store'><a href='/shop/store-locator' class="generic-anchor footer-list-anchor" itemprop="significantLink">STORE LOCATOR</a></li>
+    <li id='user-registration'><a href='/shop/user-registration?URL=' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEW USERS</a></li>
+    <li id='order-tracking'><a href='/shop/order-status' itemprop="significantLink" class="generic-anchor footer-list-anchor">ORDER STATUS</a></li>
+  </ul> </footer>
+
+  <section class="footer-social-section flex-rw">
+      <span class="footer-social-overlap footer-social-connect">
+  
+      <span class="footer-social-overlap footer-social-icons-wrapper">
+      <class title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i>
+      <class title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i>
+      <class title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i>
+      <class title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i>
+      <class title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i>
+      <class title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i>
+  <section class="footer-bottom-section flex-rw"]]></template>
+    </sp_widget>
+</record_update>

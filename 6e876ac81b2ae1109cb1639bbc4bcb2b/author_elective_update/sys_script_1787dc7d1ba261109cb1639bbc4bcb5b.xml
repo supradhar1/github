@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>true</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1046400_auction_autoupdate</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1046400_auction_autoupdate">currencyISNOTEMPTYjavascript:global.getCurrencyFilter('x_1046400_auction_autoupdate','currency', 'USD;USD')^EQ<item endquery="false" field="currency" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value="javascript:global.getCurrencyFilter('x_1046400_auction_autoupdate','currency', 'USD;USD')"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>autoupdate</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+
+
+    var c = parseInt(current.getValue('currency'));
+    var d = Math.floor((Math.random() * 100) + 1);
+    var result = parseInt(c + d);
+    current.setValue('final_amount', result);
+
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-02 07:00:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1787dc7d1ba261109cb1639bbc4bcb5b</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>autoupdate</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_script_1787dc7d1ba261109cb1639bbc4bcb5b</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-02 08:35:28</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=1787dc7d1ba261109cb1639bbc4bcb5b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sys_script_1787dc7d1ba261109cb1639bbc4bcb5b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;true&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;true&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_1046400_auction_autoupdate&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition table="x_1046400_auction_autoupdate"&gt;currencyISNOTEMPTYjavascript:global.getCurrencyFilter('x_1046400_auction_autoupdate','currency', 'USD;USD')^EQ&lt;item endquery="false" field="currency" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value="javascript:global.getCurrencyFilter('x_1046400_auction_autoupdate','currency', 'USD;USD')"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter_condition&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;autoupdate&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+
+
+    var c = parseInt(current.getValue('currency'));
+    var d = Math.floor((Math.random() * 100) + 1);
+    var result = parseInt(c + d);
+    current.setValue('final_amount', result);
+
+
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;CC-Harsha&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-05-02 07:00:17&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;1787dc7d1ba261109cb1639bbc4bcb5b&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name&gt;autoupdate&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="AuctionArc" source="x_1046400_auction"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="AuctionArc"&gt;6e876ac81b2ae1109cb1639bbc4bcb2b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_1787dc7d1ba261109cb1639bbc4bcb5b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;CC-Harsha&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-05-02 08:35:28&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;before&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=1787dc7d1ba261109cb1639bbc4bcb5b"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1192394280</payload_hash>
+        <record_name>autoupdate</record_name>
+        <reverted_from/>
+        <source>8ecdfa001baae1109cb1639bbc4bcb84</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-02 08:35:29</sys_created_on>
+        <sys_id>81aee0751b2661109cb1639bbc4bcb8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>187db9a352e0000001</sys_recorded_at>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-02 08:35:29</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>38aee0754f2661108022554ac55aec8d</update_guid>
+        <update_guid_history>38aee0754f2661108022554ac55aec8d:1192394280,19dba0b1e7266110e709c6b1a6c9224b:195561772,e1bb20396ee26110fa16d55b7b9df064:-25774392,4390acf5b7e26110d511369df1cf5e0b:1702115969,6750e0f532e26110a2df002ea646e7d9:-2060948898,8edf94b5eae26110a98e6804a9e99fd5:-1879282949,25bfd8b559e26110d75f3fab9533d12d:2074693602,b2ccdcf127e2611001b6b3b52b3b1037:-741880566,157c58f1b8e26110197690aac01e22d4:2019374813,9afb54f1eae2611071e23916c8abd47c:895701029,52995c315de26110b5ca4ff48faee1cb:-455937634,bed858fd54a2611039ce35864ace7b8d:-1713490560</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-03 08:38:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>055674ed97b24b108ff89763c00ea100</sys_id>
+        <sys_metadata>1787dc7d1ba261109cb1639bbc4bcb5b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>autoupdate</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent display_value="">93f65c7d1ba261109cb1639bbc4bcb42</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sys_script_1787dc7d1ba261109cb1639bbc4bcb5b</sys_update_name>
+        <sys_update_version display_value="sys_script_1787dc7d1ba261109cb1639bbc4bcb5b">81aee0751b2661109cb1639bbc4bcb8e</sys_update_version>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-03 08:38:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>8f8d16c99787a1102d93fcd0f053afe5</image>
+        <name>fontawesome.svg</name>
+        <size_bytes>1312</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-25 05:13:59</sys_created_on>
+        <sys_id>02dc9a899787a1102d93fcd0f053af49</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>fontawesome.svg</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>db_image_02dc9a899787a1102d93fcd0f053af49</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-25 05:16:00</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/svg+xml</content_type>
+        <file_name>image</file_name>
+        <hash>8cdc4480927c109c82cb231b4a185844a36d8ad38ebf0f0b6421cb4a7593abe9</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>1312</size_bytes>
+        <size_compressed>679</size_compressed>
+        <state>available</state>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-25 05:16:00</sys_created_on>
+        <sys_id>8f8d16c99787a1102d93fcd0f053afe5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2023-05-25 05:16:00</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>02dc9a899787a1102d93fcd0f053af49</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="8f8d16c99787a1102d93fcd0f053afe5">8f8d16c99787a1102d93fcd0f053afe5</sys_attachment>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-25 05:16:00</sys_created_on>
+        <sys_id>cf8d16c99787a1102d93fcd0f053afe5</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>fVRtaxpBEP4rEz+10Fl3Z9/uipG2gWLBQKGQ7/Zqo+B5wRNN/PV9Zj0hQlJwvXOemWeeeVkn/eGRntvNtr8drfb7p8/j8fF4NEdvut3jWKy1Y3iM6LBeHr91z7cjS5ZSsBSdjKaTG+Yb+t5t9/T1uOy7dkk/dx0lE4yl3y/05S+gxYAwaYIeGV5ZTdO1NF83y23/H4/xZvD4cNe17XLXrBebS9RHuuueXnbrx9WexIovctZNt+0/0Y9tY4h5Onla7Ff053Z0H2ymkJvaBMYhCSaVF+9NTXbjshHSr8aZmo0jrw+haCo8Vh52h5+WBDiJ8eSdSSg4zmPwFON7zP3Fhli1zGMK5CxYmgyjE80rJMlkfQYxrrFwgDkj0lWmIqeg+EYyGBERUQkUBHt5yx4xoBAGmiioFi8Y1wHCLYGDS32JHVKmWUy2YWW2MCjEBXrwYmehsgeX3ooKIHszCiJDw2hQxYLMIiYDVgnsQoFMxHFAaxzPAcebCCCrR2ZUltknDda3hMoay4OCcxp8ehVyNlCRGII2BnVT5Y3WWzorDz5q2Rgnehp0VnL+YI6HFAaIB4gLNNMYLiF2EO65gA8+K1KjcI0KTscirMmkZ0iQUk8KaP4hp7fZ6/QeudTGzUPEZH2qTW44Fn50CymTciXGruWyKr/QNrAm0aXSLY3W+Llg2azFRkXQOl1QDEJbU7FHzjtIcDEqRVnzVJGIRzkpGLeBfONWsM8kJl30oMmsdvSsY4gSEOByoDBEYnhQkkgTRiNzvV2Va3i4BOWcl5516U9t9ljluBC9CyB3OBwqvU+vLGo4tRXkhStPq65XBrie7rGpGG9YlG24kHq9pK8taji1QW/RlacO4spRXU+j8XSif3zTf+kgkC4gBQAA</data>
+        <length>892</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="8f8d16c99787a1102d93fcd0f053afe5">8f8d16c99787a1102d93fcd0f053afe5</sys_attachment>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-25 05:16:00</sys_created_on>
+        <sys_id>438d16c99787a1102d93fcd0f053afe6</sys_id>
+    </sys_attachment_doc>
+</record_update>

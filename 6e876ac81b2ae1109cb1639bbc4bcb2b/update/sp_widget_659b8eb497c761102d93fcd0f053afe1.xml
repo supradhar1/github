@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script/>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>home</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>home</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-24 09:19:03</sys_created_on>
+        <sys_id>659b8eb497c761102d93fcd0f053afe1</sys_id>
+        <sys_mod_count>54</sys_mod_count>
+        <sys_name>home</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_659b8eb497c761102d93fcd0f053afe1</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-25 09:06:56</sys_updated_on>
+        <template><![CDATA[
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <style>
+      body {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         overflow: hidden;
+         height: 100px;
+         font-family: 'Roboto', sans-serif;
+      }
+
+      .options {
+         display: flex;
+         flex-direction: row;
+         align-items: stretch;
+         overflow: hidden;
+         min-width: 750px;
+         max-width: 1000px;
+         width: calc(100% - 100px);
+         height: 400px;
+      }
+
+      .option {
+         position: relative;
+         overflow: hidden;
+         min-width: 60px;
+         margin: 10px;
+         background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
+         background-size: auto 120%;
+         background-position: center;
+         cursor: pointer;
+         transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+      }
+
+      .option.active {
+         flex-grow: 10000;
+         transform: scale(1);
+         max-width: 600px;
+         margin: 0;
+         border-radius: 40px;
+         background-size: auto 100%;
+      }
+
+      .option:not(.active) {
+         flex-grow: 1;
+         border-radius: 30px;
+      }
+
+      .option .shadow {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         height: 120px;
+         transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      }
+
+      .option .label {
+         display: flex;
+         position: absolute;
+         right: 0;
+         bottom: 10px;
+         left: 10px;
+         height: 40px;
+         transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      }
+
+      .option .label .icon {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         min-width: 40px;
+         max-width: 40px;
+         height: 40px;
+         border-radius: 100%;
+         
+         color: var(--defaultBackground);
+      }
+
+      .option .label .info {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         margin-left: 10px;
+         color: white;
+         white-space: pre;
+      }
+
+      .option .label .info > div {
+         position: relative;
+         transition: .5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity .5s ease-out;
+      }
+
+      .option .label .info .main {
+         font-weight: bold;
+         font-size: 1.2rem;
+      }
+
+      .option .label .info .sub {
+         transition-delay: .1s;
+      }
+   </style>
+  </head>
+  <body>
+    <div class="options">
+      <div class="option active" style="background:url('rolexx.jpg');">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-walking"></i>
+          </div>
+          <div class="info">
+            <div class="main">ROLEX LIMITED EDITION</div>
+            <div class="sub">$4999</div>
+          </div>
+        </div>
+      </div>
+      <div class="option" style="background:url('cosmeticss.jpg');">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="info">
+            <div class="main">COSMETICS</div>
+            <div class="sub">$999</div>
+          </div>
+        </div> 
+      </div>
+      <div class="option" style="background:url('blackberryy.jpg');">
+        <div class="shadow"></div>
+        <div class="label">
+          <div class="icon">
+            <i class="fas fa-tree" style="background:url('fontawesome.svg');"></i>
+          </div>
+          <div class="info">
+            <div class="main">BLACKBERRY</div>
+            <div class="sub">$3999</div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script>
+        $(document).ready(function() {
+          $(".option").click(function() {
+            $(".option").removeClass("active");
+            $(this).addClass("active");
+          });
+        });
+      </script>
+      
+]]></template>
+    </sp_widget>
+</record_update>

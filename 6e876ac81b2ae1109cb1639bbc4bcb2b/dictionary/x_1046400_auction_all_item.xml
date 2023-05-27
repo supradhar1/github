@@ -18,6 +18,7 @@
         <element label="Starting Bid" mandatory="true" max_length="20" name="starting_bid" type="currency"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element attributes="omit_sys_original=true" label="Bids" max_length="20" name="u_currency_1" type="currency"/>
+        <element label="Won By" max_length="32" name="won_by" reference="sys_user" type="reference"/>
         <index name="index">
             <element name="auctioned_on"/>
         </index>
@@ -26,6 +27,9 @@
         </index>
         <index name="index3">
             <element name="sys_class_name"/>
+        </index>
+        <index name="index4">
+            <element name="won_by"/>
         </index>
     </element>
 </database>

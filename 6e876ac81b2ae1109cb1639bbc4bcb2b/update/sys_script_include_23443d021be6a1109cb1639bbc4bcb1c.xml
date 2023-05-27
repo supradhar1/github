@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1046400_auction.Autopopulate</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Autopopulate</name>
+        <script><![CDATA[var Autopopulate = Class.create();
+Autopopulate.prototype = {
+    initialize: function() {},
+
+    getValues: function(id) {
+        var otherRecord = new GlideRecord('x_1046400_auction_all_item');
+        otherRecord.get(id);
+
+        return {
+            field1: otherRecord.getValue('name'),
+            field2: otherRecord.getValue('u_currency_1'),
+            
+        };
+    },
+
+    type: 'AutoPopulateFields'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-03 08:25:00</sys_created_on>
+        <sys_id>23443d021be6a1109cb1639bbc4bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Autopopulate</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_script_include_23443d021be6a1109cb1639bbc4bcb1c</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-03 08:25:00</sys_updated_on>
+    </sys_script_include>
+</record_update>
