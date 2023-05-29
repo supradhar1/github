@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script/>
+        <client_script><![CDATA[api.controller=function($scope,$location) {
+	
+	$scope.openModal = function(sysId){
+		
+		$location.search({id:'&sysId=' + sysId });
+		
+	}
+	
+};]]></client_script>
         <controller_as>c</controller_as>
         <css>.widget {
   // border: 1px solid #ffffff;
-  padding: 10px;
-  width: 450px;
+  padding: 0px;
+  width: 400px;
 }
 
 
 
 table {
-  width: 200%;
+  width: 390%;
   border-collapse: collapse;
   
 }
@@ -81,7 +89,28 @@ tr:nth-child(even) {
   }
 }
 
-</css>
+.bidnow {
+  max-width: 190px;
+  display: block;
+  margin: 15px;
+  padding: 10px 12px;
+  border: 6px solid white;
+  background: steelblue;
+  color: white !important;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 100 !important;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 0 1px black;
+  text-shadow: 1px 1px 16px black;
+ 
+  &amp;:active {
+    text-shadow: none;
+  box-shadow: 0 0 0 1px black, inset 1px 1px 20px -3px black;
+  }
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -97,42 +126,44 @@ tr:nth-child(even) {
         <roles/>
         <script><![CDATA[
 (function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
 
- 
-var sysId = $sp.getParameter('sysId');
 
-data.records = [];
+	var sysId = $sp.getParameter('sysId');
 
-    var itemGr = new GlideRecord('x_1046400_auction_all_item');
-    itemGr.query();
+	data.records = [];
 
-    while(itemGr.next()){
-         var record = {};
-        record.column1 = itemGr.getValue('name');
-        record.column2 = itemGr.getValue('image');
-        record.column3 = itemGr.getValue('description');        
-        record.column4 = itemGr.getValue('ranking');
-        record.column5 = itemGr.getValue('starting_bid');
+	var itemGr = new GlideRecord('x_1046400_auction_all_item');
+	itemGr.addQuery('auctioned_on',sysId);
+	itemGr.query();
 
-        data.records.push(record);
-    } 
-	})();
+	while(itemGr.next()){
+		var record = {};
+		record.name = itemGr.getValue('name');
+		record.image = itemGr.getValue('image');
+		record.description = itemGr.getValue('description');        
+		record.ranking= itemGr.getValue('ranking');
+		record.startingbid = itemGr.getValue('starting_bid');
+		record.sysId = itemGr.getValue('sys_id');
+
+		data.records.push(record);
+	} 
+})();
 ]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-22 10:56:50</sys_created_on>
         <sys_id>a2ce80dc974721102d93fcd0f053af94</sys_id>
-        <sys_mod_count>69</sys_mod_count>
+        <sys_mod_count>93</sys_mod_count>
         <sys_name>Item</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_a2ce80dc974721102d93fcd0f053af94</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-26 09:43:16</sys_updated_on>
+        <sys_updated_on>2023-05-29 09:01:02</sys_updated_on>
         <template><![CDATA[<div class="widget" >
 <table>
   <tr>
@@ -146,11 +177,15 @@ data.records = [];
   <tbody>
     <!-- Use AngularJS ng-repeat to iterate over records -->
     <tr ng-repeat="data in data.records">
-      <td><img src="/{{data.column2}}.iix" height="200" width="150"></td>
-      <td>{{data.column1}}</td>
-      <td>{{data.column3}}</td>
-      <td>{{data.column4}}</td>
-      <td>{{data.column5}}$</td>
+      <td><img src="/{{data.image}}.iix" height="200" width="150"></td>
+      <td>{{data.name}}</td>
+      <td>{{data.description}}</td>
+      <td>{{data.ranking}}</td>
+      <td>{{data.startingbid}}</td>
+        <td><a href="?id=bids&sysId={{data.sysId}}"><button class="bid-button"  id="button">Bid </button></a></td>
+        
+        
+
 
     </tr>
   </tbody>

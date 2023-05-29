@@ -18,21 +18,21 @@
         <sc_cat_item/>
         <sc_category/>
         <short_description/>
-        <sp_page display_value="auction">7f808968970721102d93fcd0f053af1d</sp_page>
+        <sp_page display_value="all_auction">4d947a52970321102d93fcd0f053affc</sp_page>
         <sp_rectangle_menu display_value="Auction">3f8dfe04974321102d93fcd0f053afd0</sp_rectangle_menu>
         <sp_rectangle_menu_item/>
         <sys_class_name>sp_rectangle_menu_item</sys_class_name>
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-22 05:30:47</sys_created_on>
         <sys_id>5833c388974321102d93fcd0f053af94</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Auctions</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_rectangle_menu_item_5833c388974321102d93fcd0f053af94</sys_update_name>
-        <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-05-23 09:17:49</sys_updated_on>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-29 04:10:00</sys_updated_on>
         <table/>
         <type>page</type>
         <url/>

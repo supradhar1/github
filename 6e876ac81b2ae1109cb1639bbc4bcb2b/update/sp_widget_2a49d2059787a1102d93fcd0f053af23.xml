@@ -13,26 +13,21 @@
 
 
 
-
        ]]></client_script>
         <controller_as>c</controller_as>
         <css>.widget {
-  // border: 1px solid #ffffff;
   padding: 10px;
   width: 450px;
 }
 
 
-
 table {
-    margin: 100px auto;
-  	border-spacing: 0px;
-	width: 680px;
-	box-shadow: 5px 4px 30px ;
-	border-radius: 10px;
-	background: #fff;
-  transition: all .5s; }
-	
+  width: 390%;
+  border-collapse: collapse;
+  
+}
+
+
 	
 	td {
 		padding: 20px 15px;
@@ -178,10 +173,10 @@ table {
 	var field = 'state';
 	while(itemGr.next()){
 		var record = {};
-		record.column1 = itemGr.getValue('name');
-		record.column2 = itemGr.getValue('start_time');
-		record.column3 = itemGr.getValue('end_time');        
-		record.column4 = itemGr.getDisplayValue('state');
+		record.name = itemGr.getValue('name');
+		record.starttime = itemGr.getValue('start_time');
+		record.endtime= itemGr.getValue('end_time');        
+		record.state = itemGr.getDisplayValue('state');
 		record.sysId = itemGr.getValue('sys_id');
 		
 		console.log(record.sysId);
@@ -195,14 +190,14 @@ table {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-25 04:57:24</sys_created_on>
         <sys_id>2a49d2059787a1102d93fcd0f053af23</sys_id>
-        <sys_mod_count>161</sys_mod_count>
+        <sys_mod_count>183</sys_mod_count>
         <sys_name>Auction</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_2a49d2059787a1102d93fcd0f053af23</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-26 09:34:10</sys_updated_on>
+        <sys_updated_on>2023-05-29 07:01:40</sys_updated_on>
         <template><![CDATA[<div class="widget" >
   <table>
     <tr>
@@ -217,10 +212,11 @@ table {
     <tbody>
       <!-- Use AngularJS ng-repeat to iterate over records -->
       <tr ng-repeat="data in data.records">
-        <td>{{data.column1}}</td>
-        <td>{{data.column2}}</td>
-        <td>{{data.column3}}</td>
-        <td> {{data.column4}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.starttime}}</td>
+        <td>{{data.endtime}}</td>
+        <td> {{data.state}}</td>
+      
      
         
         <td  ><a href="?id=items&sysId={{data.sysId}}"><button class="bid-button"  id="button"> View</button></a></td>
@@ -232,29 +228,7 @@ table {
 </div>
 <script>
 
-function openModal() {
-  var widgetURL = "https://dev59662.service-now.com/arc/?id=items&sysId={{data.sysId}}";
-  window.open(widgetURL, "_blank");
-}
 
-/*function disableButton() {
-  var stateField = gel('status');
-  var button = gel('button');
-
-  if (stateField.value === "Closed") {
-    button.disabled = true;
-  } else {
-    button.disabled = false;
-  }
-}
-
-document.getElementById("button").addEventListener("click", openModal);
-disableButton();
-
-function gel(id) {
-  return document.getElementById(id);
-}
-*/
 
   // Add an event listener to the button click event
 </script>

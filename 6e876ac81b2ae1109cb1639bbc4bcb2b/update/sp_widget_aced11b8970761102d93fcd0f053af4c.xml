@@ -132,43 +132,43 @@ tr:nth-child(even) {
         <roles/>
         <script><![CDATA[
 (function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
-
- 
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
 
 
-data.records = [];
 
-    var itemGr = new GlideRecord('x_1046400_auction_all_item');
-	  
-    itemGr.query();
 
-    while(itemGr.next()){
-         var record = {};
-        record.column1 = itemGr.getValue('name');
-        record.column2 = itemGr.getValue('image');
-        record.column3 = itemGr.getValue('description');        
-        record.column4 = itemGr.getValue('ranking');
-        record.column5 = itemGr.getValue('starting_bid');
+	data.records = [];
 
-        data.records.push(record);
-    } 
-	})();
+	var itemGr = new GlideRecord('x_1046400_auction_all_item');
+
+	itemGr.query();
+
+	while(itemGr.next()){
+		var record = {};
+		record.column1 = itemGr.getValue('name');
+		record.column2 = itemGr.getValue('image');
+		record.column3 = itemGr.getValue('description');        
+		record.column4 = itemGr.getValue('ranking');
+		record.column5 = itemGr.getValue('starting_bid');
+
+		data.records.push(record);
+	} 
+})();
 ]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-24 05:59:22</sys_created_on>
         <sys_id>aced11b8970761102d93fcd0f053af4c</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>Bidding</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_aced11b8970761102d93fcd0f053af4c</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-26 08:43:48</sys_updated_on>
+        <sys_updated_on>2023-05-27 16:36:47</sys_updated_on>
         <template><![CDATA[<div class="widget" >
 <table>
   <tr>
@@ -186,7 +186,7 @@ data.records = [];
       <td>{{data.column1}}</td>
       <td>{{data.column3}}</td>
       <td>{{data.column4}}</td>
-      <td>{{data.column5}}$</td>
+      <td>{{data.column5}}</td>
 
     </tr>
   </tbody>

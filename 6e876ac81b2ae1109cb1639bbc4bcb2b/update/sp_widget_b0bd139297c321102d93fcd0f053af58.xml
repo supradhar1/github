@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.widget {
+  // border: 1px solid #ffffff;
+  padding: 0px;
+  width: 400px;
+}
+
+
+
+table {
+  width: 390%;
+  border-collapse: collapse;
+  
+}
+
+
+
+th, td {
+  padding: 20px 25px;
+  text-align: left;
+  
+}
+
+
+
+th {
+  background-color:#99AAB5;
+  font-weight: bold;
+}
+
+
+
+tr:nth-child(even) {
+  background-color:#8b9dc3;
+}
+
+.bid-button {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &amp;:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color;
+    border-radius: 10rem;
+    z-index: -2;
+  }
+  &amp;:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: darken($color, 15%);
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1;
+  }
+  &amp;:hover {
+    color: #fff;
+    &amp;:before {
+      width: 100%;
+    }
+  }
+}
+
+.bidnow {
+  max-width: 190px;
+  display: block;
+  margin: 15px;
+  padding: 10px 12px;
+  border: 6px solid white;
+  background: steelblue;
+  color: white !important;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 100 !important;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 0 1px black;
+  text-shadow: 1px 1px 16px black;
+ 
+  &amp;:active {
+    text-shadow: none;
+  box-shadow: 0 0 0 1px black, inset 1px 1px 20px -3px black;
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>bid</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>bid</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[
+(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+ 
+var sysId = $sp.getParameter('sysId');
+
+data.records = [];
+
+    var itemGr = new GlideRecord('x_1046400_auction_all_item');
+		itemGr.addQuery('auctioned_on',sysId);
+    itemGr.query();
+
+    while(itemGr.next()){
+         var record = {};
+        record.name = itemGr.getValue('name');
+        record.image = itemGr.getValue('image');
+        record.description = itemGr.getValue('description');        
+        record.ranking= itemGr.getValue('ranking');
+        record.startingbid = itemGr.getValue('starting_bid');
+
+        data.records.push(record);
+    } 
+	})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-29 07:08:41</sys_created_on>
+        <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>bid</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-29 07:08:41</sys_updated_on>
+        <template><![CDATA[<div class="widget" >
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Short description</th>
+    <th>Ranking</th>
+    <th>Starting Bid</th>
+    
+  </tr>
+  <tbody>
+    <!-- Use AngularJS ng-repeat to iterate over records -->
+    <tr ng-repeat="data in data.records">
+      <td><img src="/{{data.image}}.iix" height="200" width="150"></td>
+      <td>{{data.name}}</td>
+      <td>{{data.description}}</td>
+      <td>{{data.ranking}}</td>
+      <td>{{data.startingbid}}</td>
+        <td><button class="bidnow" >
+            Bid
+          </button></td>
+
+
+    </tr>
+  </tbody>
+</table>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>
