@@ -22,7 +22,7 @@
 
 
 table {
-  width: 390%;
+  width: 280%;
   border-collapse: collapse;
  
 }
@@ -30,7 +30,7 @@ table {
 
 	
 	td {
-		padding: 5px 5px;
+		padding: 10px 10px;
 	}
 	
 	thead {
@@ -191,14 +191,14 @@ table {
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-30 09:44:44</sys_created_on>
         <sys_id>280b8132974721102d93fcd0f053af65</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Auction1</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_280b8132974721102d93fcd0f053af65</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-05-30 09:47:42</sys_updated_on>
+        <sys_updated_on>2023-05-30 09:54:43</sys_updated_on>
         <template><![CDATA[<div class="widget" >
   <table>
     <tr>
