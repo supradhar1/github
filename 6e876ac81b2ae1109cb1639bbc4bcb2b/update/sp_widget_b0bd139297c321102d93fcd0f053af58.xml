@@ -19,48 +19,6 @@
 
 
 
-.bid-button {
-  display: inline-block;
-  padding: .75rem 1.25rem;
-  border-radius: 10rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: .15rem;
-  transition: all .3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  &amp;:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $color;
-    border-radius: 10rem;
-    z-index: -2;
-  }
-  &amp;:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: darken($color, 15%);
-    transition: all .3s;
-    border-radius: 10rem;
-    z-index: -1;
-  }
-  &amp;:hover {
-    color: #fff;
-    &amp;:before {
-      width: 100%;
-    }
-  }
-}
 
 input {
 
@@ -74,8 +32,6 @@ input {
 button {
   background: #fff;
   color: #333;
-  font-size: 16px;
-  font-weight: bold;
 }
 
 button:hover {
@@ -116,7 +72,7 @@ button:hover {
 		record.name = itemGr.getValue('name');
 		record.image = itemGr.getValue('image');
 
-		record.startingbid = itemGr.getValue('starting_bid');
+		record.startingbid = itemGr.getValue('u_currency_1');
 		data.startingbid = itemGr.getValue('starting_bid');
 
 		data.records.push(record);
@@ -125,10 +81,17 @@ button:hover {
 
 	if(input){
 		
+	//	itemGr.addQuery('sys_id',sysId);
+		itemGr.query();
+
 
 		if(input.currency > data.startingbid)
-		  itemGr.setValue('u_currency_1',input.currency);
-		  itemGr.update();
+			if(itemGr.next()){
+				itemGr.setValue('u_currency_1',input.currency);
+				itemGr.update();
+			}
+
+
 
 
 	}
@@ -139,14 +102,14 @@ button:hover {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>56</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-30 08:35:39</sys_updated_on>
+        <sys_updated_on>2023-05-30 09:44:13</sys_updated_on>
         <template><![CDATA[<div class="container">
   <div class="course" ng-repeat="gr in c.data.records">
     <center> <img src="/{{gr.image}}.iix" alt="data">
