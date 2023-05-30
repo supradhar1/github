@@ -9,6 +9,7 @@ $primary-light-blue: #8DB9ED;
 $primary-line-color: #ccc;
 * {
   box-sizing: border-box
+  width:100px;
 }
 html, body {
   height: 100%
@@ -234,24 +235,24 @@ footer {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-25 11:29:05</sys_created_on>
         <sys_id>98f2fb0d97cba1102d93fcd0f053afd9</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_name>footer</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_98f2fb0d97cba1102d93fcd0f053afd9</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-05-26 05:58:52</sys_updated_on>
+        <sys_updated_on>2023-05-30 07:03:27</sys_updated_on>
         <template><![CDATA[<footer class="flex-rw">
   <ul class="footer-list-top"></ul>
   <ul class="footer-list-top">
     <li>
       <h4 class="footer-list-header">SUPPORT</h4></li>
-    <li><a href='/shop/about-mission' class="generic-anchor footer-list-anchor" itemprop="significantLink">GET TO KNOW US</a></li>
-    <li><a href='/promos.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">PROMOS</a></li>
-    <li><a href='/retailers/new-retailers.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">BECOME A RETAILER</a></li>
+    <li><a href='/shop/about-mission' class="generic-anchor footer-list-anchor" itemprop="significantLink">CONTACT</a></li>
+    <li><a href='/promos.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">FAQ</a></li>
+    <li><a href='/retailers/new-retailers.html' class="generic-anchor footer-list-anchor" itemprop="significantLink">NEW USERS</a></li>
 
-    <li><a href='/job-openings.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">JOB OPENINGS</a></li>
+    <li><a href='/job-openings.html' itemprop="significantLink" class="generic-anchor footer-list-anchor">ORDER STATUS</a></li>
 
     <li><a href='/shop/about-show-schedule' class="generic-anchor footer-list-anchor" itemprop="significantLink">EVENTS</a></li>
   </ul>
@@ -260,12 +261,12 @@ footer {
   <section class="footer-social-section flex-rw">
       
       <span class="footer-social-overlap footer-social-icons-wrapper">
-      <a href="https://www.pinterest.com/paviliongift/" class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
-      <a href="https://www.facebook.com/paviliongift" class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
-      <a href="https://twitter.com/PavilionGiftCo" class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
-      <a href="http://instagram.com/paviliongiftcompany" class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCYgUODvd0qXbu_LkUWpTVEg" class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
-      <a href="https://plus.google.com/+Paviliongift/posts" class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
+      <a class="generic-anchor" target="_blank" title="Pinterest" itemprop="significantLink"><i class="fa fa-pinterest"></i></a>
+      <a  class="generic-anchor" target="_blank" title="Facebook" itemprop="significantLink"><i class="fa fa-facebook"></i></a>
+      <a class="generic-anchor" target="_blank" title="Twitter" itemprop="significantLink"><i class="fa fa-twitter"></i></a>
+      <a class="generic-anchor" target="_blank" title="Instagram" itemprop="significantLink"><i class="fa fa-instagram"></i></a>
+      <a class="generic-anchor" target="_blank" title="Youtube" itemprop="significantLink"><i class="fa fa-youtube"></i></a>
+      <a  class="generic-anchor" target="_blank" title="Google Plus" itemprop="significantLink"><i class="fa fa-google-plus"></i></a>
       </span>
   </section>
   

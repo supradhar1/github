@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <client_script><![CDATA[api.controller=function($scope) {
+  /* widget controller */
+  var c = this;
+	
+	$scope.currency = function(){
+		c.server.update();
+	}
+};]]></client_script>
         <controller_as>c</controller_as>
         <css>.widget {
   // border: 1px solid #ffffff;
@@ -11,32 +18,6 @@
 
 
 
-table {
-  width: 390%;
-  border-collapse: collapse;
-  
-}
-
-
-
-th, td {
-  padding: 20px 25px;
-  text-align: left;
-  
-}
-
-
-
-th {
-  background-color:#99AAB5;
-  font-weight: bold;
-}
-
-
-
-tr:nth-child(even) {
-  background-color:#8b9dc3;
-}
 
 .bid-button {
   display: inline-block;
@@ -81,28 +62,27 @@ tr:nth-child(even) {
   }
 }
 
-.bidnow {
-  max-width: 190px;
-  display: block;
-  margin: 15px;
-  padding: 10px 12px;
-  border: 6px solid white;
-  background: steelblue;
-  color: white !important;
-  border-radius: 15px;
-  text-decoration: none;
-  font-size: 21px;
-  font-weight: 100 !important;
+input {
+
+  color: #333;
+  font-size: 32px;
+
   width: 100%;
-  text-align: center;
-  box-shadow: 0 0 0 1px black;
-  text-shadow: 1px 1px 16px black;
- 
-  &amp;:active {
-    text-shadow: none;
-  box-shadow: 0 0 0 1px black, inset 1px 1px 20px -3px black;
-  }
-}</css>
+
+}
+
+button {
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #333;
+  color: #fff;
+}
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -118,70 +98,88 @@ tr:nth-child(even) {
         <roles/>
         <script><![CDATA[
 (function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
 
- 
-var sysId = $sp.getParameter('sysId');
 
-data.records = [];
+	var sysId = $sp.getParameter('sysId');
 
-    var itemGr = new GlideRecord('x_1046400_auction_all_item');
-		itemGr.addQuery('auctioned_on',sysId);
-    itemGr.query();
+	data.records = [];
 
-    while(itemGr.next()){
-         var record = {};
-        record.name = itemGr.getValue('name');
-        record.image = itemGr.getValue('image');
-        record.description = itemGr.getValue('description');        
-        record.ranking= itemGr.getValue('ranking');
-        record.startingbid = itemGr.getValue('starting_bid');
+	var itemGr = new GlideRecord('x_1046400_auction_all_item');
+	itemGr.addQuery('sys_id',sysId);
 
-        data.records.push(record);
-    } 
-	})();
+	itemGr.query();
+
+	while(itemGr.next()){
+		var record = {};
+		record.name = itemGr.getValue('name');
+		record.image = itemGr.getValue('image');
+
+		record.startingbid = itemGr.getValue('starting_bid');
+		data.startingbid = itemGr.getValue('starting_bid');
+
+		data.records.push(record);
+	} 
+
+
+	if(input){
+		
+
+		if(input.currency > data.startingbid)
+		  itemGr.setValue('u_currency_1',input.currency);
+		  itemGr.update();
+
+
+	}
+})();
 ]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>56</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-29 07:08:41</sys_updated_on>
-        <template><![CDATA[<div class="widget" >
-<table>
-  <tr>
-    <th>Image</th>
-    <th>Name</th>
-    <th>Short description</th>
-    <th>Ranking</th>
-    <th>Starting Bid</th>
-    
-  </tr>
-  <tbody>
-    <!-- Use AngularJS ng-repeat to iterate over records -->
-    <tr ng-repeat="data in data.records">
-      <td><img src="/{{data.image}}.iix" height="200" width="150"></td>
-      <td>{{data.name}}</td>
-      <td>{{data.description}}</td>
-      <td>{{data.ranking}}</td>
-      <td>{{data.startingbid}}</td>
-        <td><button class="bidnow" >
-            Bid
-          </button></td>
+        <sys_updated_on>2023-05-30 08:35:39</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div class="course" ng-repeat="gr in c.data.records">
+    <center> <img src="/{{gr.image}}.iix" alt="data">
+      <h3>
+        {{gr.name}}
+      </h3>
+      <h4>
+        Current Bid :{{gr.startingbid}}
+      </h4><br>
+      <form ng-submit="currency()">
+        
+     
+      <h4>
+        <label for="currency-field">Enter Amount</label>
+        
+         <div class="input-group"> 
+        <span class="input-group-addon">$</span>
+        <input type="number" value="1000" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="c2" required ng-model="data.currency" />
+      </div> 
+        
+        
+        <button type="submit" class="bidnow">Bid</button>
+      </h4>
+
+      </form>
+
+    </center>
+  </div>
+</div>
+<div>
 
 
-    </tr>
-  </tbody>
-</table>
-
-</div>]]></template>
+</div>
+]]></template>
     </sp_widget>
 </record_update>

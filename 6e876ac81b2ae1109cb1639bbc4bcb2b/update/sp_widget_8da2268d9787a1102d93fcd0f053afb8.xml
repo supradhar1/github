@@ -3,59 +3,42 @@
         <category>custom</category>
         <client_script/>
         <controller_as>c</controller_as>
-        <css>{
-border:block
+        <css>widget{
+  width:40px;
 }
 body {
-  min-height: 100vh;
-  background: grey;
-  color: black;
-  display: flex;
+  color:red;
   justify-content: center;
   align-items: center;
 }
 blockquote {
-   display: inline-block;
-   padding: 10px;
-   border: 2px solid black;
-   background-color:red;
-   color: white;
-   font-size: 20px;
+  background-color:red;
+  color: white;
+  font-size: 40px;
 }
-cite {
-  
-  text-align: right;
-  font-family: Verdana, Arial, sans-serif;
-  margin-top: 1rem;
-  font-size: .9rem;
-  color: #aaa;
-  font-style: normal;
-}
+
 blockquote q {
   font-family: Georgia, serif;
   font-style: italic;
   letter-spacing: .1rem;
 }
-blockquote q span { 
-  will-change: opacity, filter;
-  opacity: 0;
-  filter: blur(0px);
-}
+
 q {
   quotes: "“" "”" "‘" "’" ;
 }
 q:before {
-    content: open-quote;
+  content: open-quote;
 
 }
 q:after {
   content: close-quote;
-  
+
 }
 q:before, q:after {
   color: #ccc;
   font-size: 4rem;
-}</css>
+}
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -75,61 +58,22 @@ q:before, q:after {
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-25 05:38:15</sys_created_on>
         <sys_id>8da2268d9787a1102d93fcd0f053afb8</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>84</sys_mod_count>
         <sys_name>home2</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_8da2268d9787a1102d93fcd0f053afb8</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-05-26 10:07:02</sys_updated_on>
-        <template><![CDATA[<blockquote contenteditable="true"><q>If you're not buying recycled products, you're not really recycling.</q>
+        <sys_updated_on>2023-05-30 08:29:24</sys_updated_on>
+        <template><![CDATA[<div class="widget">
+ 
+<blockquote contenteditable="true"><q>If you're not buying recycled products, you're not really recycling.</q>
 </blockquote>
 
-<script>
-document.onreadystatechange = function() {
-   if (document.readyState === 'complete') {
-      splitWords();
-   }
-};
 
-function splitWords() {
-   let quote = document.querySelector("blockquote q");
-   quote.innerText = quote.innerText.replace(/(<([^>]+)>)/ig, "");
-   let quotewords = quote.innerText.split(" ");
-   let wordCount = quotewords.length;
-   quote.innerHTML = "";
-   for (let i = 0; i < wordCount; i++) {
-      quote.innerHTML += "<span>" + quotewords[i] + "</span>";
-      if (i < quotewords.length - 1) {
-         quote.innerHTML += " ";
-      }
-   }
-   quotewords = document.querySelectorAll("blockquote q span");
-   fadeWords(quotewords);
-}
+</div>
 
-function getRandom(min, max) {
-   return Math.random() * (max - min) + min;
-}
-
-function fadeWords(quotewords) {
-   Array.prototype.forEach.call(quotewords, function(word) {
-      let animate = word.animate([{
-         opacity: 0,
-         filter: "blur(" + getRandom(2, 5) + "px)"
-      }, {
-         opacity: 1,
-         filter: "blur(0px)"
-      }],
-      {
-         duration: 1000,
-         delay: getRandom(500, 3300),
-         fill: 'forwards'
-      });
-   });
-}
-</script>
 ]]></template>
     </sp_widget>
 </record_update>

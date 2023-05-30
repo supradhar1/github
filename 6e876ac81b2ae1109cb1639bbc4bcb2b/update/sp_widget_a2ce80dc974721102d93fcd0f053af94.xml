@@ -5,7 +5,7 @@
 	
 	$scope.openModal = function(sysId){
 		
-		$location.search({id:'&sysId=' + sysId });
+		$location.search({id:'bids&sysId=' + sysId });
 		
 	}
 	
@@ -89,7 +89,7 @@ tr:nth-child(even) {
   }
 }
 
-.bidnow {
+.bid-button {
   max-width: 190px;
   display: block;
   margin: 15px;
@@ -126,44 +126,44 @@ tr:nth-child(even) {
         <roles/>
         <script><![CDATA[
 (function() {
-	/* populate the 'data' object */
-	/* e.g., data.table = $sp.getValue('table'); */
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
 
+ 
+var sysId = $sp.getParameter('sysId');
 
-	var sysId = $sp.getParameter('sysId');
+data.records = [];
 
-	data.records = [];
+    var itemGr = new GlideRecord('x_1046400_auction_all_item');
+		itemGr.addQuery('auctioned_on',sysId);
+    itemGr.query();
 
-	var itemGr = new GlideRecord('x_1046400_auction_all_item');
-	itemGr.addQuery('auctioned_on',sysId);
-	itemGr.query();
+    while(itemGr.next()){
+         var record = {};
+        record.name = itemGr.getValue('name');
+        record.image = itemGr.getValue('image');
+        record.description = itemGr.getValue('description');        
+        record.ranking= itemGr.getValue('ranking');
+        record.startingbid = itemGr.getValue('starting_bid');
+        	record.sysId = itemGr.getValue('sys_id');
 
-	while(itemGr.next()){
-		var record = {};
-		record.name = itemGr.getValue('name');
-		record.image = itemGr.getValue('image');
-		record.description = itemGr.getValue('description');        
-		record.ranking= itemGr.getValue('ranking');
-		record.startingbid = itemGr.getValue('starting_bid');
-		record.sysId = itemGr.getValue('sys_id');
-
-		data.records.push(record);
-	} 
-})();
+        data.records.push(record);
+    } 
+	})();
 ]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-22 10:56:50</sys_created_on>
         <sys_id>a2ce80dc974721102d93fcd0f053af94</sys_id>
-        <sys_mod_count>93</sys_mod_count>
+        <sys_mod_count>100</sys_mod_count>
         <sys_name>Item</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_a2ce80dc974721102d93fcd0f053af94</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-29 09:01:02</sys_updated_on>
+        <sys_updated_on>2023-05-29 10:38:24</sys_updated_on>
         <template><![CDATA[<div class="widget" >
 <table>
   <tr>

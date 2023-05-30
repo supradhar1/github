@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function updateClock() {
+  var now = new Date();
+  var hours = now.getHours() % 12;
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+
+  var hourHand = g_form.getControl('hour-hand');
+  var minuteHand = g_form.getControl('minute-hand');
+  var secondHand = g_form.getControl('second-hand');
+
+  var hourRotation = (hours * 30) + (minutes * 0.5);
+  var minuteRotation = (minutes * 6) + (seconds * 0.1);
+  var secondRotation = seconds * 6;
+
+  hourHand.style.transform = 'rotate(' + hourRotation + 'deg)';
+  minuteHand.style.transform = 'rotate(' + minuteRotation + 'deg)';
+  secondHand.style.transform = 'rotate(' + secondRotation + 'deg)';
+
+  setTimeout(updateClock, 1000); // Update every second
+}
+
+updateClock();
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.analog-clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+  position: absolute;
+  background-color: #000;
+  transform-origin: bottom center;
+}
+
+.hour-hand {
+  width: 6px;
+  height: 70px;
+  left: 97px;
+  top: 65px;
+  border-radius: 6px 6px 0 0;
+}
+
+.minute-hand {
+  width: 4px;
+  height: 90px;
+  left: 99px;
+  top: 45px;
+  border-radius: 4px 4px 0 0;
+}
+
+.second-hand {
+  width: 2px;
+  height: 100px;
+  left: 100px;
+  top: 35px;
+  border-radius: 2px 2px 0 0;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>clock</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>clock</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-05-29 11:16:21</sys_created_on>
+        <sys_id>286690a6978721102d93fcd0f053afbc</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>clock</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_286690a6978721102d93fcd0f053afbc</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-05-29 11:31:24</sys_updated_on>
+        <template><![CDATA[<div class="analog-clock">
+  <div id="hour-hand" class="hand"></div>
+  <div id="minute-hand" class="hand"></div>
+  <div id="second-hand" class="hand"></div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>
