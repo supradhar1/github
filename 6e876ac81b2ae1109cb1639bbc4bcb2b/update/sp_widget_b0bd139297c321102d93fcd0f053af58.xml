@@ -2,28 +2,45 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[api.controller=function($scope) {
-  /* widget controller */
-  var c = this;
-	
+	/* widget controller */
+	var c = this;
+	c.errMsg = null;
+	c.sucMsg = null;
 	$scope.currency = function(){
-		c.server.update();
+		c.errMsg = null;
+		c.sucMsg = null;
+
+		c.server.update().then(function(response){
+
+			c.errMsg = response.errorMsg;
+			c.sucMsg = response.sucMsg;
+		});
 	}
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>.widget {
   // border: 1px solid #ffffff;
-  padding: 0px;
-  width: 400px;
+  padding-left: 450px;
+  width: 650px;
 }
 
 
 
 
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+
 input {
 
   color: #333;
-  font-size: 32px;
+  font-size: 18px;
 
   width: 100%;
 
@@ -32,11 +49,22 @@ input {
 button {
   background: #fff;
   color: #333;
+  width: 70px;
+
 }
 
 button:hover {
   background: #333;
   color: #fff;
+}
+.form-control.currency {
+  padding -right:200px;
+  width: 70px;
+}
+. alertCenter{
+  padding-left: 450px;
+
+  width: 650px;
 }
 </css>
         <data_table>sp_instance</data_table>
@@ -80,18 +108,25 @@ button:hover {
 
 
 	if(input){
-		
-	//	itemGr.addQuery('sys_id',sysId);
+
+		//	itemGr.addQuery('sys_id',sysId);
 		itemGr.query();
 
 
-		if(input.currency > data.startingbid)
+		if(input.currency < data.startingbid){
+			data.errorMsg = 'Entered Bid is less than the Current Bid';
+		}else {
 			if(itemGr.next()){
 				itemGr.setValue('u_currency_1',input.currency);
 				itemGr.update();
 			}
 
+			data.sucMsg  = 'Bid Updated';
 
+	
+
+
+		}
 
 
 	}
@@ -102,41 +137,61 @@ button:hover {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>156</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-30 09:44:13</sys_updated_on>
-        <template><![CDATA[<div class="container">
+        <sys_updated_on>2023-05-31 04:50:46</sys_updated_on>
+        <template><![CDATA[
+<div class="alertCenter">
+  
+  <div ng-if="c.sucMsg" class=" alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>{{ c.sucMsg }}</strong> 
+</div>
+  
+  <div ng-if="c.errMsg" class="alert alert-danger alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>{{ c.errMsg }}</strong> 
+</div>
+</div>
+
+
+  
+  
+  
+  <div class="widget">
   <div class="course" ng-repeat="gr in c.data.records">
-    <center> <img src="/{{gr.image}}.iix" alt="data">
-      <h3>
-        {{gr.name}}
-      </h3>
-      <h4>
-        Current Bid :{{gr.startingbid}}
-      </h4><br>
-      <form ng-submit="currency()">
-        
-     
+    <img src="/{{gr.image}}.iix" alt="data">
+
+    <h3>
+      {{gr.name}}
+    </h3>
+    <h4>
+      Current Bid :{{gr.startingbid}}
+    </h4><br>
+    <form ng-submit="currency()">
+
+
       <h4>
         <label for="currency-field">Enter Amount</label>
-        
-         <div class="input-group"> 
-        <span class="input-group-addon">$</span>
-        <input type="number" value="1000" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="c2" required ng-model="data.currency" />
-      </div> 
-        
-        
+
+        <div class="input-group"> 
+          <span class="input-group-addon">$</span>
+          <input type="number" value="10" min="0" size="1"  class="form-control currency" id="c2" required ng-model="data.currency" />
+        </div> 
+        <br>
+
         <button type="submit" class="bidnow">Bid</button>
       </h4>
 
-      </form>
+    </form>
 
-    </center>
+    <div id="error-message"></div>
+
   </div>
 </div>
 <div>
