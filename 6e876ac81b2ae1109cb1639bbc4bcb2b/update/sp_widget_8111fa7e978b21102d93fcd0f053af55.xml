@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+  /* widget controller */
+  var c = this;
+	
+	$scope.currency = function(){
+		c.server.update();
+	}
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.widget {
+  // border: 1px solid #ffffff;
+  padding: 0px;
+  width: 400px;
+}
+
+
+
+
+
+.container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+   }
+
+
+
+input {
+
+  color: #333;
+  font-size: 32px;
+
+  width: 100%;
+
+}
+
+button {
+  background: #fff;
+  color: #333;
+}
+
+button:hover {
+  background: #333;
+  color: #fff;
+}
+.form-control.currency {
+  width: 50px;
+  position:center/* Adjust the width as desired */
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>bid1</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>bid1</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[
+(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+
+	var sysId = $sp.getParameter('sysId');
+
+	data.records = [];
+
+	var itemGr = new GlideRecord('x_1046400_auction_all_item');
+	itemGr.addQuery('sys_id',sysId);
+
+	itemGr.query();
+
+	while(itemGr.next()){
+		var record = {};
+		record.name = itemGr.getValue('name');
+		record.image = itemGr.getValue('image');
+
+		record.startingbid = itemGr.getValue('u_currency_1');
+		data.startingbid = itemGr.getValue('starting_bid');
+
+		data.records.push(record);
+	} 
+
+
+	if(input){
+		
+	//	itemGr.addQuery('sys_id',sysId);
+		itemGr.query();
+
+
+		if(input.currency > data.startingbid)
+			if(itemGr.next()){
+				itemGr.setValue('u_currency_1',input.currency);
+				itemGr.update();
+			}
+
+
+
+
+	}
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-05-30 17:10:42</sys_created_on>
+        <sys_id>8111fa7e978b21102d93fcd0f053af55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>bid1</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_8111fa7e978b21102d93fcd0f053af55</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-05-30 17:10:42</sys_updated_on>
+        <template><![CDATA[<div class="container">
+  <div class="course" ng-repeat="gr in c.data.records">
+    <center> <img src="/{{gr.image}}.iix" alt="data">
+      <h3>
+        {{gr.name}}
+      </h3>
+      <h4>
+        Current Bid :{{gr.startingbid}}
+      </h4><br>
+      <form ng-submit="currency()">
+        
+     
+      <h4>
+        <label for="currency-field">Enter Amount</label>
+        
+         <div class="input-group"> 
+        <span class="input-group-addon">$</span>
+    <input type="number" value="10" min="0" size="1"  class="form-control currency" id="c2" required ng-model="data.currency" />
+         </div> 
+        
+        
+        <button type="submit" class="bidnow">Bid</button>
+      </h4>
+
+      </form>
+
+    </center>
+  </div>
+</div>
+<div>
+
+
+</div>
+]]></template>
+    </sp_widget>
+</record_update>
