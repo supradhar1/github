@@ -19,52 +19,36 @@
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>.widget {
-  // border: 1px solid #ffffff;
-  padding-left: 450px;
-  width: 650px;
+  padding-left: 0; /* Remove the padding */
+  width: auto; /* Adjust the width as needed */
 }
-
-
-
-
-
-.container {
+.container{
+  width:auto;
+  display:flex;
+  padding-left:25px;
+}
+.course {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  padding: 10px;
 }
 
-
-
-input {
-
-  color: #333;
-  font-size: 18px;
-
-  width: 100%;
-
+.course img {
+  margin-right: 10px; /* Add margin to create space between the image and text */
 }
 
-button {
-  background: #fff;
-  color: #333;
-  width: 70px;
-
+.course h3, .course h4 {
+  margin: 0;
 }
 
-button:hover {
-  background: #333;
-  color: #fff;
+.course h4 label {
+  display: inline-block;
+  margin-right: 5px;
 }
+
 .form-control.currency {
-  padding -right:200px;
   width: 70px;
-}
-. alertCenter{
-  padding-left: 450px;
-
-  width: 650px;
+  margin-left: 5px; /* Add margin to separate the input from the button */
 }
 </css>
         <data_table>sp_instance</data_table>
@@ -137,14 +121,14 @@ button:hover {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>156</sys_mod_count>
+        <sys_mod_count>181</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-31 04:50:46</sys_updated_on>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-01 04:58:10</sys_updated_on>
         <template><![CDATA[
 <div class="alertCenter">
   
@@ -169,7 +153,7 @@ button:hover {
 
     <h3>
       {{gr.name}}
-    </h3>
+    </h3><br>
     <h4>
       Current Bid :{{gr.startingbid}}
     </h4><br>

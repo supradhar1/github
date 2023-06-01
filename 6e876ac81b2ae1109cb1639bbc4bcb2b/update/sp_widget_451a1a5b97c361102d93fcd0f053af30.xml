@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>sample</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-06-01 04:48:06</sys_created_on>
+        <sys_id>451a1a5b97c361102d93fcd0f053af30</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>sample</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_451a1a5b97c361102d93fcd0f053af30</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-01 04:48:38</sys_updated_on>
+        <template><![CDATA[
+<!doctype html>
+<html data-ap_nid="7" data-theme="standard" data-ui="gold" data-font="avenir" data-uid="177440" data-entity-id="148414" data-ai-nid="148414" data-pid="138151" data-ap-nid="7" data-sid="2" class="no-js" lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="dnAShmjckzRXU18NrAxNk4c33vIaWTaoemXnqcqNw1U"/>
+  <script>
+    dataLayer = [{
+      'pageCategory': 'auction-item',
+      'visitorType': 'visitor'
+    }];
+  </script>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"4be7196245",applicationID:"301078069"};;(()=>{"use strict";var e,t,n={8768:(e,t,n)=>{n.d(t,{T:()=>r,p:()=>i});const r=/(iPad|iPhone|iPod)/g.test(navigator.userAgent),i=r&&Boolean("undefined"==typeof SharedWorker)},2919:(e,t,n)=>{n.d(t,{P_:()=>h,Mt:()=>p,C5:()=>c,DL:()=>w,OP:()=>N,lF:()=>C,Yu:()=>A,Dg:()=>v,CX:()=>u,GE:()=>y,sU:()=>I});var r={};n.r(r),n.d(r,{agent:()=>x,match:()=>k,version:()=>_});var i=n(6797),o=n(4286);const a={beacon:i.ce.beacon,errorBeacon:i.ce.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},s={};function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!s[e])throw new Error("Info for ".concat(e," was never set"));return s[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");s[e]=new o.I(t,a),(0,i.Qy)(e,s[e],"info")}var d=n(2797),f=n(2374);const l={allow_bfcache:!0,privacy:{cookies_enabled:!0},ajax:{deny_list:void 0,enabled:!0,harvestTimeSeconds:10},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},session:{domain:void 0,expiresMs:d.oD,inactiveMs:d.Hb},ssl:void 0,obfuscate:void 0,jserrors:{enabled:!0,harvestTimeSeconds:10},metrics:{enabled:!0},page_action:{enabled:!0,harvestTimeSeconds:30},page_view_event:{enabled:!0},page_view_timing:{enabled:!0,harvestTimeSeconds:30,long_task:!1},session_trace:{enabled:!0,harvestTimeSeconds:10},spa:{enabled:!0,harvestTimeSeconds:10}},g={};function h(e){if(!e)throw new Error("All configuration objects require an agent identifier!");if(!g[e])throw new Error("Configuration for ".concat(e," was never set"));return g[e]}function v(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");g[e]=new o.I(t,l),(0,i.Qy)(e,g[e],"config")}function p(e,t){if(!e)throw new Error("All configuration objects require an agent identifier!");var n=h(e);if(n){for(var r=t.split("."),i=0;i<r.length-1;i++)if("object"!=typeof(n=n[r[i]]))return;n=n[r[r.length-1]]}return n}const m={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},b={};function w(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!b[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return b[e]}function y(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");b[e]=new o.I(t,m),(0,i.Qy)(e,b[e],"loader_config")}const A=(0,i.mF)().o;var x=null,_=null;const j=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var D=navigator.userAgent,E=D.match(j);E&&-1===D.indexOf("Chrome")&&-1===D.indexOf("Chromium")&&(x="Safari",_=E[1])}function k(e,t){if(!x)return!1;if(e!==x)return!1;if(!t)return!0;if(!_)return!1;for(var n=_.split("."),r=t.split("."),i=0;i<r.length;i++)if(r[i]!==n[i])return!1;return!0}var S=n(1651);const T={buildEnv:S.Re,bytesSent:{},queryBytesSent:{},customTransaction:void 0,disabled:!1,distMethod:S.gF,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,offset:Math.floor(f._A?.performance?.timeOrigin||f._A?.performance?.timing?.navigationStart||Date.now()),onerror:void 0,origin:""+f._A.location,ptid:void 0,releaseIds:{},session:void 0,xhrWrappable:"function"==typeof f._A.XMLHttpRequest?.prototype?.addEventListener,userAgent:r,version:S.q4},P={};function N(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!P[e])throw new Error("Runtime for ".concat(e," was never set"));return P[e]}function I(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");P[e]=new o.I(t,T),(0,i.Qy)(e,P[e],"runtime")}function C(e){return function(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}(e)}},4286:(e,t,n)=>{n.d(t,{I:()=>o});var r=n(909),i=n(8610);class o{constructor(e,t){Object.assign(this,function(e,t){const n={};try{return e&&"object"==typeof e?t&&"object"==typeof t?(Object.assign(n,t),Object.entries(e).forEach((e=>{let[o,a]=e;if(!Object.keys(t).includes(o))return;const s=(0,r.q)(o);s.length&&a&&"object"==typeof a&&s.forEach((e=>{e in a&&((0,i.Z)('"'.concat(e,'" is a protected attribute and can not be changed in feature ').concat(o,".  It will have no effect.")),delete a[e])})),n[o]=a})),n):(0,i.Z)("Setting a Configurable requires a model to set its initial properties"):(0,i.Z)("New setting a Configurable requires an object as input")}catch(e){(0,i.Z)("An error occured while setting a Configurable",e)}}(e,t))}}},1651:(e,t,n)=>{n.d(t,{Re:()=>i,gF:()=>o,q4:()=>r});const r="1.232.0",i="PROD",o="CDN"},9557:(e,t,n)=>{n.d(t,{w:()=>o});var r=n(8610);const i={agentIdentifier:"",ee:void 0};class o{constructor(e){try{if("object"!=typeof e)return(0,r.Z)("shared context requires an object as input");this.sharedContext={},Object.assign(this.sharedContext,i),Object.entries(e).forEach((e=>{let[t,n]=e;Object.keys(i).includes(t)&&(this.sharedContext[t]=n)}))}catch(e){(0,r.Z)("An error occured while setting SharedContext",e)}}}},4329:(e,t,n)=>{n.d(t,{L:()=>d,R:()=>c});var r=n(3752),i=n(7022),o=n(4045),a=n(2325);const s={};function c(e,t){const n={staged:!1,priority:a.p[t]||0};u(e),s[e].get(t)||s[e].set(t,n)}function u(e){e&&(s[e]||(s[e]=new Map))}function d(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"feature";if(u(e),!e||!s[e].get(t))return a(t);s[e].get(t).staged=!0;const n=Array.from(s[e]);function a(t){const n=e?r.ee.get(e):r.ee,a=o.X.handlers;if(n.backlog&&a){var s=n.backlog[t],c=a[t];if(c){for(var u=0;s&&u<s.length;++u)f(s[u],c);(0,i.D)(c,(function(e,t){(0,i.D)(t,(function(t,n){n[0].on(e,n[1])}))}))}delete a[t],n.backlog[t]=null,n.emit("drain-"+t,[])}}n.every((e=>{let[t,n]=e;return n.staged}))&&(n.sort(((e,t)=>e[1].priority-t[1].priority)),n.forEach((e=>{let[t]=e;a(t)})))}function f(e,t){var n=e[1];(0,i.D)(t[n],(function(t,n){var r=e[0];if(n[0]===r){var i=n[1],o=e[3],a=e[2];i.apply(o,a)}}))}},3752:(e,t,n)=>{n.d(t,{ee:()=>u});var r=n(6797),i=n(3916),o=n(7022),a=n(2919),s="nr@context";let c=(0,r.fP)();var u;function d(){}function f(){return new d}function l(){u.aborted=!0,u.backlog={}}c.ee?u=c.ee:(u=function e(t,n){var r={},c={},g={},h=!1;try{h=16===n.length&&(0,a.OP)(n).isolatedBacklog}catch(e){}var v={on:b,addEventListener:b,removeEventListener:w,emit:m,get:A,listeners:y,context:p,buffer:x,abort:l,aborted:!1,isBuffering:_,debugId:n,backlog:h?{}:t&&"object"==typeof t.backlog?t.backlog:{}};return v;function p(e){return e&&e instanceof d?e:e?(0,i.X)(e,s,f):f()}function m(e,n,r,i,o){if(!1!==o&&(o=!0),!u.aborted||i){t&&o&&t.emit(e,n,r);for(var a=p(r),s=y(e),d=s.length,f=0;f<d;f++)s[f].apply(a,n);var l=j()[c[e]];return l&&l.push([v,e,n,a]),a}}function b(e,t){r[e]=y(e).concat(t)}function w(e,t){var n=r[e];if(n)for(var i=0;i<n.length;i++)n[i]===t&&n.splice(i,1)}function y(e){return r[e]||[]}function A(t){return g[t]=g[t]||e(v,t)}function x(e,t){var n=j();v.aborted||(0,o.D)(e,(function(e,r){t=t||"feature",c[r]=t,t in n||(n[t]=[])}))}function _(e){return!!j()[c[e]]}function j(){return v.backlog}}(void 0,"globalEE"),c.ee=u)},9252:(e,t,n)=>{n.d(t,{E:()=>r,p:()=>i});var r=n(3752).ee.get("handle");function i(e,t,n,i,o){o?(o.buffer([e],i),o.emit(e,t,n)):(r.buffer([e],i),r.emit(e,t,n))}},4045:(e,t,n)=>{n.d(t,{X:()=>o});var r=n(9252);o.on=a;var i=o.handlers={};function o(e,t,n,o){a(o||r.E,i,e,t,n)}function a(e,t,n,i,o){o||(o="feature"),e||(e=r.E);var a=t[o]=t[o]||{};(a[n]=a[n]||[]).push([e,i])}},8544:(e,t,n)=>{n.d(t,{bP:()=>s,iz:()=>c,m$:()=>a});var r=n(2374);let i=!1,o=!1;try{const e={get passive(){return i=!0,!1},get signal(){return o=!0,!1}};r._A.addEventListener("test",null,e),r._A.removeEventListener("test",null,e)}catch(e){}function a(e,t){return i||o?{capture:!!e,passive:i,signal:t}:!!e}function s(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;window.addEventListener(e,t,a(n,r))}function c(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],r=arguments.length>3?arguments[3]:void 0;document.addEventListener(e,t,a(n,r))}},5526:(e,t,n)=>{n.d(t,{Rl:()=>a,ky:()=>s});var r=n(2374);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=r._A?.crypto||r._A?.msCrypto;let t,n=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(31))),i.split("").map((e=>"x"===e?o(t,++n).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=r._A?.crypto||r._A?.msCrypto;let n,i=0;t&&t.getRandomValues&&(n=t.getRandomValues(new Uint8Array(31)));const a=[];for(var s=0;s<e;s++)a.push(o(n,++i).toString(16));return a.join("")}},2797:(e,t,n)=>{n.d(t,{Bq:()=>r,Hb:()=>o,oD:()=>i});const r="NRBA",i=144e5,o=18e5},2053:(e,t,n)=>{function r(){return Math.round(performance.now())}n.d(t,{z:()=>r})},8610:(e,t,n)=>{function r(e,t){"function"==typeof console.warn&&(console.warn("New Relic: ".concat(e)),t&&console.warn(t))}n.d(t,{Z:()=>r})},3916:(e,t,n)=>{n.d(t,{X:()=>i});var r=Object.prototype.hasOwnProperty;function i(e,t,n){if(r.call(e,t))return e[t];var i=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},2374:(e,t,n)=>{n.d(t,{_A:()=>o,il:()=>r,v6:()=>i});const r=Boolean("undefined"!=typeof window&&window.document),i=Boolean("undefined"!=typeof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator);let o=(()=>{if(r)return window;if(i){if("undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope)return globalThis;if(self instanceof WorkerGlobalScope)return self}throw new Error('New Relic browser agent shutting down due to error: Unable to locate global scope. This is possibly due to code redefining browser global variables like "self" and "window".')})()},7022:(e,t,n)=>{n.d(t,{D:()=>r});const r=(e,t)=>Object.entries(e||{}).map((e=>{let[n,r]=e;return t(n,r)}))},2438:(e,t,n)=>{n.d(t,{P:()=>o});var r=n(3752);const i=()=>{const e=new WeakSet;return(t,n)=>{if("object"==typeof n&&null!==n){if(e.has(n))return;e.add(n)}return n}};function o(e){try{return JSON.stringify(e,i())}catch(e){try{r.ee.emit("internal-error",[e])}catch(e){}}}},2650:(e,t,n)=>{n.d(t,{K:()=>a,b:()=>o});var r=n(8544);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,r.bP)("load",e,t)}function a(e){if(i())return e();(0,r.iz)("DOMContentLoaded",e)}},6797:(e,t,n)=>{n.d(t,{EZ:()=>u,Qy:()=>c,ce:()=>o,fP:()=>a,gG:()=>d,mF:()=>s});var r=n(2053),i=n(2374);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return i._A.NREUM||(i._A.NREUM={}),void 0===i._A.newrelic&&(i._A.newrelic=i._A.NREUM),i._A.NREUM}function s(){let e=a();return e.o||(e.o={ST:i._A.setTimeout,SI:i._A.setImmediate,CT:i._A.clearTimeout,XHR:i._A.XMLHttpRequest,REQ:i._A.Request,EV:i._A.Event,PR:i._A.Promise,MO:i._A.MutationObserver,FETCH:i._A.fetch}),e}function c(e,t,n){let i=a();const o=i.initializedAgents||{},s=o[e]||{};return Object.keys(s).length||(s.initializedAt={ms:(0,r.z)(),date:new Date}),i.initializedAgents={...o,[e]:{...s,[n]:t}},i}function u(e,t){a()[e]=t}function d(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},6998:(e,t,n)=>{n.d(t,{N:()=>i});var r=n(8544);function i(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2?arguments[2]:void 0,i=arguments.length>3?arguments[3]:void 0;return void(0,r.iz)("visibilitychange",(function(){if(t)return void("hidden"==document.visibilityState&&e());e(document.visibilityState)}),n,i)}},6034:(e,t,n)=>{n.d(t,{gF:()=>o,mY:()=>i,t9:()=>r,vz:()=>s,xS:()=>a});const r=n(2325).D.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},2484:(e,t,n)=>{n.d(t,{Dz:()=>i,OJ:()=>a,qw:()=>o,t9:()=>r});const r=n(2325).D.pageViewEvent,i="firstbyte",o="domcontent",a="windowload"},6382:(e,t,n)=>{n.d(t,{t:()=>r});const r=n(2325).D.pageViewTiming},1509:(e,t,n)=>{n.d(t,{W:()=>s});var r=n(2919),i=n(3752),o=n(2384),a=n(6797);class s{constructor(e,t,n){this.agentIdentifier=e,this.aggregator=t,this.ee=i.ee.get(e,(0,r.OP)(this.agentIdentifier).isolatedBacklog),this.featureName=n,this.blocked=!1,this.checkConfiguration()}checkConfiguration(){if(!(0,r.lF)(this.agentIdentifier)){let e={...(0,a.gG)().info?.jsAttributes};try{e={...e,...(0,r.C5)(this.agentIdentifier)?.jsAttributes}}catch(e){}(0,o.j)(this.agentIdentifier,{...(0,a.gG)(),info:{...(0,a.gG)().info,jsAttributes:e}})}}}},2384:(e,t,n)=>{n.d(t,{j:()=>b});var r=n(2325),i=n(2919),o=n(9252),a=n(3752),s=n(2053),c=n(4329),u=n(2650),d=n(2374),f=n(8610),l=n(6034),g=n(6797);function h(){const e=(0,g.gG)();["setErrorHandler","finished","addToTrace","inlineHit","addRelease","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId"].forEach((t=>{e[t]=function(){for(var n=arguments.length,r=new Array(n),i=0;i<n;i++)r[i]=arguments[i];return function(t){for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];let o=[];return Object.values(e.initializedAgents).forEach((e=>{e.exposed&&e.api[t]&&o.push(e.api[t](...r))})),o.length>1?o:o[0]}(t,...r)}}))}var v=n(7022);const p={stn:[r.D.sessionTrace],err:[r.D.jserrors,r.D.metrics],ins:[r.D.pageAction],spa:[r.D.spa]};const m={};function b(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},b=arguments.length>2?arguments[2]:void 0,w=arguments.length>3?arguments[3]:void 0,{init:y,info:A,loader_config:x,runtime:_={loaderType:b},exposed:j=!0}=t;const D=(0,g.gG)();A||(y=D.init,A=D.info,x=D.loader_config),A.jsAttributes??={},d.v6&&(A.jsAttributes.isWorker=!0),(0,i.CX)(e,A),(0,i.Dg)(e,y||{}),(0,i.GE)(e,x||{}),(0,i.sU)(e,_),h();const E=function(e,t){t||(0,c.R)(e,"api");const g={};var h=a.ee.get(e),v=h.get("tracer"),p="api-",m=p+"ixn-";function b(t,n,r,o){const a=(0,i.C5)(e);return null===n?delete a.jsAttributes[t]:(0,i.CX)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:n}}),A(p,r,!0,o||null===n?"session":void 0)(t,n)}function w(){}["setErrorHandler","finished","addToTrace","inlineHit","addRelease"].forEach((e=>g[e]=A(p,e,!0,"api"))),g.addPageAction=A(p,"addPageAction",!0,r.D.pageAction),g.setCurrentRouteName=A(p,"routeName",!0,r.D.spa),g.setPageViewName=function(t,n){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,i.OP)(e).customTransaction=(n||"http://custom.transaction")+t,A(p,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t){let n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if("string"==typeof e){if(["string","number"].includes(typeof t)||null===t)return b(e,t,"setCustomAttribute",n);(0,f.Z)("Failed to execute setCustomAttribute.\nNon-null value must be a string or number type, but a type of <".concat(typeof t,"> was provided."))}else(0,f.Z)("Failed to execute setCustomAttribute.\nName must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.setUserId=function(e){if("string"==typeof e||null===e)return b("enduser.id",e,"setUserId",!0);(0,f.Z)("Failed to execute setUserId.\nNon-null value must be a string type, but a type of <".concat(typeof e,"> was provided."))},g.interaction=function(){return(new w).get()};var y=w.prototype={createTracer:function(e,t){var n={},i=this,a="function"==typeof t;return(0,o.p)(m+"tracer",[(0,s.z)(),e,n],i,r.D.spa,h),function(){if(v.emit((a?"":"no-")+"fn-start",[(0,s.z)(),i,a],n),a)try{return t.apply(this,arguments)}catch(e){throw v.emit("fn-err",[arguments,this,"string"==typeof e?new Error(e):e],n),e}finally{v.emit("fn-end",[(0,s.z)()],n)}}}};function A(e,t,n,i){return function(){return(0,o.p)(l.xS,["API/"+t+"/called"],void 0,r.D.metrics,h),i&&(0,o.p)(e+t,[(0,s.z)(),...arguments],n?null:this,i,h),n?void 0:this}}function x(){n.e(439).then(n.bind(n,5692)).then((t=>{let{setAPI:n}=t;n(e),(0,c.L)(e,"api")})).catch((()=>(0,f.Z)("Downloading runtime APIs failed...")))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{y[e]=A(m,e,void 0,r.D.spa)})),g.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),(0,o.p)(l.xS,["API/noticeError/called"],void 0,r.D.metrics,h),(0,o.p)("err",[e,(0,s.z)(),!1,t],void 0,r.D.jserrors,h)},d.v6?x():(0,u.b)((()=>x()),!0),g}(e,w);return(0,g.Qy)(e,E,"api"),(0,g.Qy)(e,j,"exposed"),(0,g.EZ)("activatedFeatures",m),(0,g.EZ)("setToken",(t=>function(e,t){var n=a.ee.get(t);e&&"object"==typeof e&&((0,v.D)(e,(function(e,t){if(!t)return(p[e]||[]).forEach((t=>{(0,o.p)("block-"+e,[],void 0,t,n)}));m[e]||((0,o.p)("feat-"+e,[],void 0,p[e],n),m[e]=!0)})),(0,c.L)(t,r.D.pageViewEvent))}(t,e))),E}},909:(e,t,n)=>{n.d(t,{Z:()=>i,q:()=>o});var r=n(2325);function i(e){switch(e){case r.D.ajax:return[r.D.jserrors];case r.D.sessionTrace:return[r.D.ajax,r.D.pageViewEvent];case r.D.pageViewTiming:return[r.D.pageViewEvent];default:return[]}}function o(e){return e===r.D.jserrors?[]:["auto"]}},2325:(e,t,n)=>{n.d(t,{D:()=>r,p:()=>i});const r={ajax:"ajax",jserrors:"jserrors",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionTrace:"session_trace",spa:"spa"},i={[r.pageViewEvent]:1,[r.pageViewTiming]:2,[r.metrics]:3,[r.jserrors]:4,[r.ajax]:5,[r.sessionTrace]:6,[r.pageAction]:7,[r.spa]:8}}},r={};function i(e){var t=r[e];if(void 0!==t)return t.exports;var o=r[e]={exports:{}};return n[e](o,o.exports,i),o.exports}i.m=n,i.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return i.d(t,{a:t}),t},i.d=(e,t)=>{for(var n in t)i.o(t,n)&&!i.o(e,n)&&Object.defineProperty(e,n,{enumerable:!0,get:t[n]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,n)=>(i.f[n](e,t),t)),[])),i.u=e=>(({78:"page_action-aggregate",147:"metrics-aggregate",193:"session_trace-aggregate",242:"session-manager",317:"jserrors-aggregate",348:"page_view_timing-aggregate",439:"async-api",729:"lazy-loader",786:"page_view_event-aggregate",873:"spa-aggregate",898:"ajax-aggregate"}[e]||e)+"."+{78:"64dc4751",147:"c2ad263a",193:"c0ef217a",242:"2a8d47d1",317:"017d6ea4",348:"ddd91465",439:"ad3273bd",729:"c8cd494b",786:"5a238c1f",873:"342172b1",875:"2c240adb",898:"666f66ea"}[e]+"-1.232.0.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA:",i.l=(n,r,o,a)=>{if(e[n])e[n].push(r);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var f=u[d];if(f.getAttribute("src")==n||f.getAttribute("data-webpack")==t+o){s=f;break}}s||(c=!0,(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=n),e[n]=[r];var l=(t,r)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[n];if(delete e[n],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(r))),t)return t(r)},g=setTimeout(l.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=l.bind(null,s.onerror),s.onload=l.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.j=71,i.p="https://js-agent.newrelic.com/",(()=>{var e={71:0,131:0};i.f.j=(t,n)=>{var r=i.o(e,t)?e[t]:void 0;if(0!==r)if(r)n.push(r[2]);else{var o=new Promise(((n,i)=>r=e[t]=[n,i]));n.push(r[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(n=>{if(i.o(e,t)&&(0!==(r=e[t])&&(e[t]=void 0),r)){var o=n&&("load"===n.type?"missing":n.type),a=n&&n.target&&n.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,r[1](s)}}),"chunk-"+t,t)}};var t=(t,n)=>{var r,o,[a,s,c]=n,u=0;if(a.some((t=>0!==e[t]))){for(r in s)i.o(s,r)&&(i.m[r]=s[r]);if(c)c(i)}for(t&&t(n);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},n=window.webpackChunkNRBA=window.webpackChunkNRBA||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})();var o={};(()=>{i.r(o);var e=i(2325),t=i(2919);const n=Object.values(e.D);function r(e){const r={};return n.forEach((n=>{r[n]=function(e,n){return!1!==(0,t.Mt)(n,"".concat(e,".enabled"))}(n,e)})),r}var a=i(2384),s=i(909),c=i(9252),u=i(8768),d=i(4329),f=i(1509),l=i(2650),g=i(2374),h=i(8610);class v extends f.W{constructor(e,t,n){let r=!(arguments.length>3&&void 0!==arguments[3])||arguments[3];super(e,t,n),this.hasAggregator=!1,this.auto=r,this.abortHandler,r&&(0,d.R)(e,n)}importAggregator(){if(this.hasAggregator||!this.auto)return;this.hasAggregator=!0;const e=async()=>{try{const{setupAgentSession:e}=await i.e(242).then(i.bind(i,2011));e(this.agentIdentifier);const{lazyLoader:t}=await i.e(729).then(i.bind(i,8110)),{Aggregate:n}=await t(this.featureName,"aggregate");new n(this.agentIdentifier,this.aggregator)}catch(e){(0,h.Z)("Downloading ".concat(this.featureName," failed..."),e),this.abortHandler?.()}};g.v6?e():(0,l.b)((()=>e()),!0)}}var p=i(2484),m=i(2053);class b extends v{static featureName=p.t9;constructor(n,r){let i=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];if(super(n,r,p.t9,i),("undefined"==typeof PerformanceNavigationTiming||u.T)&&"undefined"!=typeof PerformanceTiming){const r=(0,t.OP)(n);r[p.Dz]=Math.max(Date.now()-r.offset,0),(0,l.K)((()=>r[p.qw]=Math.max((0,m.z)()-r[p.Dz],0))),(0,l.b)((()=>{const t=(0,m.z)();r[p.OJ]=Math.max(t-r[p.Dz],0),(0,c.p)("timing",["load",t],void 0,e.D.pageViewTiming,this.ee)}))}this.importAggregator()}}var w=i(9557),y=i(7022);class A extends w.w{constructor(e){super(e),this.aggregatedData={}}store(e,t,n,r,i){var o=this.getBucket(e,t,n,i);return o.metrics=function(e,t){t||(t={count:0});return t.count+=1,(0,y.D)(e,(function(e,n){t[e]=x(n,t[e])})),t}(r,o.metrics),o}merge(e,t,n,r,i){var o=this.getBucket(e,t,r,i);if(o.metrics){var a=o.metrics;a.count+=n.count,(0,y.D)(n,(function(e,t){if("count"!==e){var r=a[e],i=n[e];i&&!i.c?a[e]=x(i.t,r):a[e]=function(e,t){if(!t)return e;t.c||(t=_(t.t));return t.min=Math.min(e.min,t.min),t.max=Math.max(e.max,t.max),t.t+=e.t,t.sos+=e.sos,t.c+=e.c,t}(i,a[e])}}))}else o.metrics=n}storeMetric(e,t,n,r){var i=this.getBucket(e,t,n);return i.stats=x(r,i.stats),i}getBucket(e,t,n,r){this.aggregatedData[e]||(this.aggregatedData[e]={});var i=this.aggregatedData[e][t];return i||(i=this.aggregatedData[e][t]={params:n||{}},r&&(i.custom=r)),i}get(e,t){return t?this.aggregatedData[e]&&this.aggregatedData[e][t]:this.aggregatedData[e]}take(e){for(var t={},n="",r=!1,i=0;i<e.length;i++)t[n=e[i]]=j(this.aggregatedData[n]),t[n].length&&(r=!0),delete this.aggregatedData[n];return r?t:null}}function x(e,t){return null==e?function(e){e?e.c++:e={c:1};return e}(t):t?(t.c||(t=_(t.t)),t.c+=1,t.t+=e,t.sos+=e*e,e>t.max&&(t.max=e),e<t.min&&(t.min=e),t):{t:e}}function _(e){return{t:e,min:e,max:e,sos:e*e,c:1}}function j(e){return"object"!=typeof e?[]:(0,y.D)(e,D)}function D(e,t){return t}var E=i(6797),k=i(5526),S=i(2438);var T=i(6998),P=i(8544),N=i(6382);class I extends v{static featureName=N.t;constructor(e,n){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(e,n,N.t,r),g.il&&((0,t.OP)(e).initHidden=Boolean("hidden"===document.visibilityState),(0,T.N)((()=>(0,c.p)("docHidden",[(0,m.z)()],void 0,N.t,this.ee)),!0),(0,P.bP)("pagehide",(()=>(0,c.p)("winPagehide",[(0,m.z)()],void 0,N.t,this.ee))),this.importAggregator())}}const C=Boolean(g._A?.Worker),O=Boolean(g._A?.SharedWorker),R=Boolean(g._A?.navigator?.serviceWorker);let M,B,z;var q=i(6034);class W extends v{static featureName=q.t9;constructor(t,n){let r=!(arguments.length>2&&void 0!==arguments[2])||arguments[2];super(t,n,q.t9,r),function(e){if(!M){if(C){M=Worker;try{g._A.Worker=n(M,"Dedicated")}catch(e){o(e,"Dedicated")}if(O){B=SharedWorker;try{g._A.SharedWorker=n(B,"Shared")}catch(e){o(e,"Shared")}}else r("Shared");if(R){z=navigator.serviceWorker.register;try{g._A.navigator.serviceWorker.register=(t=z,function(){for(var e=arguments.length,n=new Array(e),r=0;r<e;r++)n[r]=arguments[r];return i("Service",n[1]?.type),t.apply(navigator.serviceWorker,n)})}catch(e){o(e,"Service")}}else r("Service");var t;return}r("All")}function n(e,t){return"undefined"==typeof Proxy?e:new Proxy(e,{construct:(e,n)=>(i(t,n[1]?.type),new e(...n))})}function r(t){g.v6||e("Workers/".concat(t,"/Unavailable"))}function i(t,n){e("Workers/".concat(t,"module"===n?"/Module":"/Classic"))}function o(t,n){e("Workers/".concat(n,"/SM/Unsupported")),(0,h.Z)("NR Agent: Unable to capture ".concat(n," workers."),t)}}((t=>(0,c.p)(q.xS,[t],void 0,e.D.metrics,this.ee))),this.importAggregator()}}new class{constructor(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:(0,k.ky)(16);this.agentIdentifier=t,this.sharedAggregator=new A({agentIdentifier:this.agentIdentifier}),this.features={},this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(b),Object.assign(this,(0,a.j)(this.agentIdentifier,e,e.loaderType||"agent")),this.start()}get config(){return{info:(0,t.C5)(this.agentIdentifier),init:(0,t.P_)(this.agentIdentifier),loader_config:(0,t.DL)(this.agentIdentifier),runtime:(0,t.OP)(this.agentIdentifier)}}start(){const t="features";try{const n=r(this.agentIdentifier),i=Array.from(this.desiredFeatures);i.sort(((t,n)=>e.p[t.featureName]-e.p[n.featureName])),i.forEach((t=>{if(n[t.featureName]||t.featureName===e.D.pageViewEvent){const e=(0,s.Z)(t.featureName);e.every((e=>n[e]))||(0,h.Z)("".concat(t.featureName," is enabled but one or more dependent features has been disabled (").concat((0,S.P)(e),"). This may cause unintended consequences or missing data...")),this.features[t.featureName]=new t(this.agentIdentifier,this.sharedAggregator)}})),(0,E.Qy)(this.agentIdentifier,this.features,t)}catch(e){(0,h.Z)("Failed to initialize all enabled instrument classes (agent aborted) -",e);for(const e in this.features)this.features[e].abortHandler?.();const n=(0,E.fP)();return delete n.initializedAgents[this.agentIdentifier]?.api,delete n.initializedAgents[this.agentIdentifier]?.[t],delete this.sharedAggregator,n.ee?.abort(),delete n.ee?.get(this.agentIdentifier),!1}}}({features:[b,I,W],loaderType:"lite"})})(),window.NRBA=o})();</script>
+<link rel="shortcut icon" href="https://airauctioneer.com/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="Get on track in the amazing Lotus Exige v6 Cup! The Exige Cup is powered by a 3.5 litre Toyota DOHC V6 VVT-i, 24-valve, equipped with Harrop HTV 1320 supercharger producing 345 hp (350 PS) and 400 N⋅m (295 lb⋅ft) of torque at 7,000 rpm. It has a 6-speed Toyota EC60 close ratio manual transmission, sequential gearbox with paddleshift. The mid-mounted, transverse layout results" />
+<link rel="canonical" href="https://airauctioneer.com/example/trackday-in-a-lotus-exige-7" />
+<link rel="shortlink" href="https://airauctioneer.com/node/148414" />
+<meta property="og:type" content="product" />
+<meta property="og:site_name" content="AirAuctioneer" />
+<meta property="og:url" content="https://airauctioneer.com/example/trackday-in-a-lotus-exige-7" />
+<meta property="og:title" content="Trackday in a Lotus Exige" />
+<meta property="og:description" content="Get on track in the amazing Lotus Exige v6 Cup! The Exige Cup is powered by a 3.5 litre Toyota DOHC V6 VVT-i, 24-valve, equipped with Harrop HTV 1320 supercharger producing 345 hp (350 PS) and 400 N⋅m (295 lb⋅ft) of torque at 7,000 rpm. It has a 6-speed Toyota EC60 close ratio manual transmission, sequential gearbox with paddleshift. The mid-mounted, transverse layout results in near-perfect weight distribution. 0-60 mph takes 3.8 seconds, and the top speed is 170 mph." />
+<meta property="og:updated_time" content="2023-03-23T02:22:54+05:30" />
+<meta property="og:image" content="https://airauctioneer-live.s3.us-west-1.amazonaws.com/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="https://airauctioneer-live.s3.us-west-1.amazonaws.com/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg" />
+<meta property="article:published_time" content="2022-12-25T12:54:31+05:30" />
+<meta property="article:modified_time" content="2023-03-23T02:22:54+05:30" />
+<title>Trackday in a Lotus Exige | AirAuctioneer</title>
+<script>var d=document,c=d.documentElement.classList,i=d.createElement('input'),t='t';c.remove('no-js');c.add('js');i.setAttribute('type','datetime-local');i.setAttribute('value', t);if(i.value!==t)c.add('has-date');</script>
+<script>window.WebFontConfig={custom:{families:["AvenirLTPro-Book","AvenirLTPro-Medium","AvenirLTPro-Heavy","AvenirLTPro-Black"]},timeout:3000,active:function(){window.fontsActiveInterval=setInterval(function(){Drupal&&Drupal.behaviors&&Drupal.behaviors.airt&&Drupal.behaviors.airt.fontsActive()},100)}};</script>
+<link rel="preload" as="script" href="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"/>
+<script async src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/assets/images/favicons/site.webmanifest">
+<link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#49beea">
+<link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#355159">
+<meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="https://airauctioneer.com/sites/default/files/advagg_css/css__O3QzMqz3dLZSdoGrpGzr0dcU9J0NcNQH3oxfu4czl7Q__J0BBnra9ihymTPWtT5x-wyAbRH_7L-F4uPK9IWefOKg__lvVyayIsDdPIiZjIVZGSEm_toh-ShgI-SETtnKaZvKk.css" media="all" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&amp;family=Lato:wght@300;400;600;700&amp;family=Nunito:wght@300;400;600;700&amp;family=Open+Sans:wght@300;400;600;700&amp;family=Roboto:wght@300;400;600;700&amp;family=Roboto+Slab:wght@300;400;600;700&amp;display=swap" media="all" />
+<link rel="stylesheet" href="https://airauctioneer.com/sites/default/files/advagg_css/css__bYbDc5mxX3u230x2Y4gG2ccrtsBjv1ck_LeiT5toID8__ABtSVDDQYOXnHSTUkkRFMHVeJ8iKmUtl-1cbrwvfZmk__lvVyayIsDdPIiZjIVZGSEm_toh-ShgI-SETtnKaZvKk.css" media="all" />
+<script src="https://airauctioneer.com/sites/default/files/advagg_js/js__cMO9RINp7meTLMtdxR-1KbUpY_tdY3HzE4UGmLS3QYE__FHbTXwf74mBmNCl_DptZjIDWAZhRjGIYMEkz1-gDGzQ__lvVyayIsDdPIiZjIVZGSEm_toh-ShgI-SETtnKaZvKk.js" defer="defer"></script>
+<script src="https://airauctioneer.com/sites/default/files/advagg_js/js__jk6VXUbzJzg4LbIo20A6n7prvO1-NFc26guIHRP6us4__BN2pvd9Cn8EErUhrVCdi0K5A69K2ylE9F1aMbFeiN0g__lvVyayIsDdPIiZjIVZGSEm_toh-ShgI-SETtnKaZvKk.js"></script>
+<script>
+jQuery.migrateMute=true;jQuery.migrateTrace=false;
+</script>
+<script src="https://airauctioneer.com/sites/default/files/advagg_js/js__HOc9i93X6hSwdfs9_nvF7xgmRQSq9EjdvHKA_h2u7kU__yRfoKVYp4PRztsP_X0RttrInBeUODaLHr8SLS8S_l5Q__lvVyayIsDdPIiZjIVZGSEm_toh-ShgI-SETtnKaZvKk.js"></script>
+<script>
+document.createElement( "picture" );
+</script>
+<script src="https://airauctioneer.com/sites/default/files/advagg_js/js__7wc_vLYuwxq81ZDxdNYu595Z9RnYERa-Bk4-ickolRU__w-PMLfH6zqtjVzkS-nWWWwfVSgJAym2-NrJEUGmylQs__lvVyayIsDdPIiZjIVZGSEm_toh-ShgI-SETtnKaZvKk.js"></script>
+<script>
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":1,"ajaxPageState":{"theme":"airt","theme_token":"n1dpjD5axXCO2_SrllqH7kpj7WAPJ0hVPmArk3IwhZM","jquery_version":"1.12","jquery_version_token":"pql44tzswmMB4Hwc4RT8avUt0rEBU158Z4sL_ZacUpE","css":{"sites\/all\/modules\/contrib\/picture\/picture_wysiwyg.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/slick-carousel\/slick\/slick.css":1,"https:\/\/fonts.googleapis.com\/css2?family=Dosis:wght@300;400;600;700\u0026family=Lato:wght@300;400;600;700\u0026family=Nunito:wght@300;400;600;700\u0026family=Open+Sans:wght@300;400;600;700\u0026family=Roboto:wght@300;400;600;700\u0026family=Roboto+Slab:wght@300;400;600;700\u0026display=swap":1,"sites\/all\/themes\/custom\/airt\/assets\/build\/css\/style.css":1},"js":{"sites\/all\/modules\/contrib\/picture\/picturefill2\/picturefill.min.js":1,"sites\/all\/modules\/contrib\/picture\/picture.min.js":1,"sites\/all\/modules\/custom\/clientside_validation\/js\/clientside_validation.ie8.js":1,"sites\/all\/modules\/custom\/clientside_validation\/js\/clientside_validation.js":1,"sites\/all\/themes\/custom\/airt\/assets\/build\/scripts\/js\/airt.js":1,"sites\/all\/themes\/custom\/airt\/assets\/build\/scripts\/js\/plugins\/jquery.equalize-heights.js":1,"https:\/\/airauctioneer.com\/sites\/default\/files\/google_tag\/airauctioneer\/google_tag.script.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.12\/jquery.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery-migrate\/1\/jquery-migrate.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_browser.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.core.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/jquery.ui.widget.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery.form\/4\/jquery.form.js":1,"sites\/all\/themes\/custom\/airt\/assets\/build\/scripts\/js\/misc\/_ajax.js":1,"sites\/all\/modules\/contrib\/entityreference\/js\/entityreference.js":1,"sites\/all\/themes\/custom\/airt\/assets\/build\/scripts\/js\/misc\/_progress.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/ajax-responder.js":1,"sites\/all\/themes\/custom\/airt\/assets\/build\/scripts\/js\/modules\/views_load_more\/_views_load_more.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"sites\/all\/themes\/custom\/airt\/assets\/build\/scripts\/js\/modules\/views\/js\/_ajax_view.js":1,"sites\/all\/themes\/custom\/airt\/assets\/build\/scripts\/js\/modules\/views_refresh\/_views_refresh.js":1,"sites\/all\/modules\/custom\/clientside_validation\/plugins\/validator\/js\/blacklist.cv.js":1,"sites\/all\/modules\/custom\/clientside_validation\/clientside_validation_elements\/plugins\/validator\/js\/min_max.cv.js":1,"sites\/all\/libraries\/jquery-validation\/dist\/jquery.validate.js":1,"sites\/all\/libraries\/jquery-validation\/dist\/additional-methods.js":1,"sites\/all\/modules\/custom\/air\/modules\/air_jstimer\/jstimer.js":1,"sites\/all\/libraries\/bootstrap\/js\/collapse.js":1,"sites\/all\/libraries\/bootstrap\/js\/dropdown.js":1,"sites\/all\/libraries\/bootstrap\/js\/transition.js":1,"sites\/all\/libraries\/bootstrap-dropdown-hover\/.\/dist\/jquery.bootstrap-dropdown-hover.js":1,"sites\/all\/libraries\/df-visible\/jquery.visible.js":1,"sites\/all\/libraries\/fancybox\/dist\/jquery.fancybox.js":1,"sites\/all\/libraries\/iCheck\/icheck.js":1,"sites\/all\/libraries\/imagesloaded\/imagesloaded.pkgd.js":1,"sites\/all\/libraries\/jquery.scrollTo\/jquery.scrollTo.js":1,"sites\/all\/libraries\/jquery.selectBoxIt\/src\/javascripts\/jquery.selectBoxIt.js":1,"sites\/all\/libraries\/js-cookie\/src\/js.cookie.js":1,"sites\/all\/libraries\/mousetrap\/mousetrap.js":1,"sites\/all\/libraries\/slick-carousel\/slick\/slick.js":1,"sites\/all\/libraries\/svgxuse\/svgxuse.js":1,"sites\/all\/libraries\/jquery-throttle-debounce\/jquery.ba-throttle-debounce.min.js":1,"sites\/all\/themes\/custom\/airt\/assets\/build\/scripts\/js\/MyFonts.js":1}},"airt":{"polls":{"ap-7":{"apNid":"7","method":"GET","event":"refresh","selector":"#node-148414","url":"\/example\/trackday-in-a-lotus-exige-7\/refresh","interval":5}},"logFileURLs":{"ap-7":"https:\/\/airauctioneer.com\/sites\/default\/files\/logs\/7.js"},"liveDataMappings":{"updated":0,"price":1,"bid-count":2,"bidder-count":3,"leader":4,"attr_data-leader":5,"expiry-formatted":7,"attr_data-unmet-reserve":8,"attr_data-bought-now":9,"attr_data-expiry":6,"label":1,"amount":2,"auction":3,"donations":4,"next_expiry_label":5,"attr_data-next-expiry":6},"breakpoints":{"lg":"90","md":"60","mlg":"75","sm":"30"},"svgDefs":"\/assets\/symbols\/symbol-defs-06e142b2b5.svg","uiMessageFadeDelay":1500,"imagePath":"\/assets\/images","environment":"live","sessionID":"SSESS34be42129b9aa134d54b6754c1c000b9"},"air":{"userBidItems":[],"uid":"177440","rid":"[2]","hasFieldHelp":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:ca46f54dff0561af2f06a696c76e903f":{"view_name":"air_auction_bids","view_display_id":"auction_item_bids_list","view_args":"148414","view_path":"node\/148414","view_base_path":"auction-bids\/%\/download","view_dom_id":"ca46f54dff0561af2f06a696c76e903f","pager_element":0}}},"urlIsAjaxTrusted":{"\/views\/ajax":true,"\/system\/ajax":true,"\/example\/trackday-in-a-lotus-exige-7":true},"better_exposed_filters":{"views":{"air_auction_bids":{"displays":{"auction_item_bids_list":{"filters":[]}}}}},"viewsRefresh":{"ca46f54dff0561af2f06a696c76e903f":""},"ajax":{"edit-save-bid":{"callback":"air_bid_form_ajax_callback","event":"mousedown","keypress":true,"prevent":"click","url":"\/system\/ajax","submit":{"_triggering_element_name":"place_bid","_triggering_element_value":"Place bid"}}},"clientsideValidation":[],"languagePrefix":""});
+</script>
+  </head>
+<body class="c-viewport c-page c-page--logged-in c-page--ai-full" >
+  <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKQSSZH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><filter id='color-blue' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0.286  0 0 0 0 0.745  0 0 0 0 0.918  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-blue' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='-0.074 0 0 0 0.286  -0.427 0 0 0 0.745  -0.569 0 0 0 0.918  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-white-blue' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0.714 0 0 0 0.286  0.255 0 0 0 0.745  0.082 0 0 0 0.918  0 0 0 1 0'></feColorMatrix></filter><filter id='color-teal' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0.204  0 0 0 0 0.486  0 0 0 0 0.549  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-teal' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0.008 0 0 0 0.204  -0.168 0 0 0 0.486  -0.2 0 0 0 0.549  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-white-teal' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0.796 0 0 0 0.204  0.514 0 0 0 0.486  0.451 0 0 0 0.549  0 0 0 1 0'></feColorMatrix></filter><filter id='color-green' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0.518  0 0 0 0 0.78  0 0 0 0 0.659  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-green' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='-0.306 0 0 0 0.518  -0.462 0 0 0 0.78  -0.31 0 0 0 0.659  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-white-green' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0.482 0 0 0 0.518  0.22 0 0 0 0.78  0.341 0 0 0 0.659  0 0 0 1 0'></feColorMatrix></filter><filter id='color-black' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-black' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0.212 0 0 0 0  0.318 0 0 0 0  0.349 0 0 0 0  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-white-black' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='1 0 0 0 0  1 0 0 0 0  1 0 0 0 0  0 0 0 1 0'></feColorMatrix></filter><filter id='color-gold' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0.851  0 0 0 0 0.718  0 0 0 0 0.188  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-gold' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='-0.639 0 0 0 0.851  -0.4 0 0 0 0.718  0.161 0 0 0 0.188  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-white-gold' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0.149 0 0 0 0.851  0.282 0 0 0 0.718  0.812 0 0 0 0.188  0 0 0 1 0'></feColorMatrix></filter><filter id='color-blue-black' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0.212  0 0 0 0 0.318  0 0 0 0 0.349  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-blue-black' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0.212  0 0 0 0 0.318  0 0 0 0 0.349  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-white-blue-black' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0.788 0 0 0 0.212  0.682 0 0 0 0.318  0.651 0 0 0 0.349  0 0 0 1 0'></feColorMatrix></filter><filter id='color-gray-87-blue-tint' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0.859  0 0 0 0 0.863  0 0 0 0 0.867  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-gray-87-blue-tint' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='-0.647 0 0 0 0.859  -0.545 0 0 0 0.863  -0.518 0 0 0 0.867  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-white-gray-87-blue-tint' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0.141 0 0 0 0.859  0.137 0 0 0 0.863  0.133 0 0 0 0.867  0 0 0 1 0'></feColorMatrix></filter><filter id='color-warning' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 1  0 0 0 0 0.729  0 0 0 0 0.333  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-warning' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='-0.788 0 0 0 1  -0.411 0 0 0 0.729  0.016 0 0 0 0.333  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-white-warning' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 1  0.271 0 0 0 0.729  0.667 0 0 0 0.333  0 0 0 1 0'></feColorMatrix></filter><filter id='color-danger' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0 0 0 0 0.937  0 0 0 0 0.322  0 0 0 0 0.294  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-danger' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='-0.725 0 0 0 0.937  -0.004 0 0 0 0.322  0.055 0 0 0 0.294  0 0 0 1 0'></feColorMatrix></filter><filter id='logo-white-danger' color-interpolation-filters='sRGB'><feColorMatrix type='matrix' values='0.063 0 0 0 0.937  0.678 0 0 0 0.322  0.706 0 0 0 0.294  0 0 0 1 0'></feColorMatrix></filter></defs></svg>
+  <div id="viewport-side" class="c-viewport__side">
+    <nav class="c-nav c-nav--composite">
+      <ul class="js-composite-menu c-nav__list c-nav__list--composite c-nav__list--tier_1"><li class="c-nav__item c-nav__item--my-home"><a href="/my-home" class="c-nav__link"><span class="c-nav__title c-nav__title--with-icon"><svg class="c-icon c-icon--home c-icon--nav c-nav__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-home"></use></svg><span class="c-nav__text">My home</span></span></a></li>
+<li class="c-nav__item c-nav__item--sign-out"><a href="/user/logout?destination=node/148414%3Flogout%3D1" class="c-nav__link"><span class="c-nav__title c-nav__title--with-icon"><svg class="c-icon c-icon--logout c-icon--nav c-nav__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-logout"></use></svg><span class="c-nav__text">Sign out</span></span></a></li>
+</ul>    </nav>
+  </div>
+
+<div id="viewport-main" class="c-viewport__main">
+  <div class="c-page__top">
+        <header class="c-header c-header--ai-full" id="header">
+      <div class="c-header__top">
+        <div class="o-wrapper@md">
+          <div class="c-header__top-inner">
+            <a href="#content-main" id="skip-link" class="s--skip-link u-invisible-until-focused">Skip to main content</a>
+                          <div class="c-header__nav-toggle ">
+                <button class="js-viewport-toggle c-button--link c-nav__toggle c-nav__toggle--composite">
+                  <svg class="c-icon c-icon--menu c-nav__icon c-nav__icon--menu"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-menu"></use></svg>                  <svg class="c-icon c-icon--cross c-nav__icon c-nav__icon--cross"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-cross"></use></svg>                </button>
+              </div>
+            
+            <div class="c-header__branding c-header__branding--custom" style="margin-top: 24px; margin-bottom: 24px"><a href="/example" class=""><img class="c-logo c-logo--custom" typeof="foaf:Image" src="https://airauctioneer.com/sites/default/files/styles/air_header_logo/public/u4/aegir.png?itok=CcBU3U6d" width="240" height="68" alt="" /></a></div>
+                          <nav class="c-header__main-nav c-nav c-nav--main">
+
+                
+                                  <div class="c-nav__wrap c-nav__wrap--info">
+                    <ul class="c-nav__list c-nav__list--exit-example"><li class="c-nav__item c-nav__item--home"><a href="/home" class="c-nav__link"><span class="c-nav__title c-nav__title--with-icon"><svg class="c-icon c-icon--exit c-icon--nav c-nav__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-exit"></use></svg><span class="c-nav__text">Back to AirAuctioneer</span></span></a></li>
+</ul>                  </div>
+                
+                                  <div class="c-nav__wrap c-nav__wrap--personal">
+                    <ul class="c-nav__list c-nav__list--personal"><li class="c-nav__item c-nav__item--my-home"><a href="/my-home" class="c-nav__link"><span class="c-nav__title c-nav__title--with-icon"><svg class="c-icon c-icon--home c-icon--nav c-nav__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-home"></use></svg><span class="c-nav__text">My home</span></span></a></li>
+</ul>                  </div>
+                
+              </nav>
+            
+          </div>
+        </div>
+      </div>
+              <div class="c-header__bottom c-header__bottom--breadcrumbs">
+          <div class="o-wrapper@md">
+            <div class="c-header__bottom-inner">
+              <div class="c-header__breadcrumbs c-breadcrumbs"><ol class="c-breadcrumbs__list"><li class="c-breadcrumbs__item"><svg class="c-icon c-icon--chevron--h c-breadcrumbs__separator"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron--h"></use></svg><a href="/my-home" class="c-breadcrumbs__link">My home</a></li>
+<li class="c-breadcrumbs__item u-hide@lmd"><svg class="c-icon c-icon--chevron--h c-breadcrumbs__separator"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron--h"></use></svg><a href="/example" class="c-breadcrumbs__link c-tooltip c-tooltip--n" aria-label="Aegir Technologies 2023 Fundraising Auction">Aegir Technologies 2023 Fundraising…</a></li>
+<li class="c-breadcrumbs__item u-hide@lmd"><svg class="c-icon c-icon--chevron--h c-breadcrumbs__separator"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron--h"></use></svg><a href="/example/trackday-in-a-lotus-exige-7" id="air-breadcrumb-here" class="c-breadcrumbs__link c-breadcrumbs__here  is-active">Trackday in a Lotus Exige</a></li>
+</ol>
+</div>                          </div>
+          </div>
+        </div>
+          </header>
+
+    <main class="c-content c-content--auth c-content--ai-full" id="main">
+
+      
+      
+      
+      
+      <div class="c-content__main c-content__main--ai-full" id="content-main">
+                <div class="o-wrapper--tight-1@md">
+                                
+              
+<article id="node-148414" class="c-node-ai c-node-ai--full js-ai js-ai--full js-eq"  about="/example/trackday-in-a-lotus-exige-7" typeof="sioc:Item foaf:Document" data-entity-id="148414" data-unmet-reserve="1" data-live-id="148414" data-updated="1685594714" data-leader="168091" data-status="live-reserve-not-met" data-lec="false" data-expiry="1688108400">
+    <div class="is-sticky">
+          <div id="air-ai-status-indicator-148414" class="js-ai-status-indicator c-node-ai__status c-node-ai__status--full c-tooltip c-tooltip--n" aria-label="The reserve has not yet been met."></div>        <div class="js-ai-page-nav c-node-ai__page-nav c-page-nav c-page-nav--ai c-page-nav--full c-node-ai__page-nav--header c-page-nav--header"><ul class="o-list-bare c-page-nav__list"><li class="c-page-nav__item c-page-nav__item--back"><a href="/example" class="c-page-nav__link c-page-nav__link--back js-ai-page-nav-back" rel="nofollow" data-mousetrap-trigger="m" data-ajax-type="GET"><svg class="c-icon c-icon--chevron-double--h c-page-nav__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron-double--h"></use></svg>All items</a></li>
+<li class="c-page-nav__item c-page-nav__item--prev"><a href="/example/maldives-vacation-for-two-5/nojs" id="air-page-nav-prev" class="c-page-nav__link c-page-nav__link--prev js-nav-link-ajax use-ajax" rel="nofollow" data-mousetrap-trigger="," data-ajax-wrapper="#node-148414" data-dir="prev" data-ajax-type="GET"><svg class="c-icon c-icon--chevron--h c-page-nav__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron--h"></use></svg>Previous<span class="u-hide@lmd"> item</span></a></li>
+</ul></div>  </div>
+  <header class="c-node-ai__header">
+        <h1 id="air-content-title" class="js-resize js-max-lines-3 c-heading--alpha c-node-ai__title" >
+      #004 Trackday in a Lotus Exige    </h1>
+      </header>
+
+  <div class="c-node-ai__summary-wrap">
+    <div class="c-node-ai__summary-item c-node-ai__summary-item--timer">
+      <div class="c-node-ai__timer">
+        <div id="ai-timer-148414" class="js-timer-wrapper c-timer c-timer--block u-hide-no-js"><div class="c-timer__title"><span class="js-timer-title">Time remaining</span><sup>&#8224;</sup></div><span class="c-timer__body"><span class="js-timer" data-timer_id="ai-148414-long-block" data-type="expiry" data-timeout="1688108400" data-format_num="long"></span>
+</span></div>      </div>
+    </div>
+    <div class="c-node-ai__summary-item c-node-ai__summary-item--price">
+      <div class="c-node-ai__price">
+        <div id="ai-price-148414" class="c-price  c-price--block"><div class="c-price__title"><span class="js-price-title">Current bid</span></div><div class="c-price__wrapper"><div class="c-price__value u-tc--highlight-bg" data-tcid="148414:price">$550<sup>&Dagger;</sup></div></div><div class="c-price__bidder-info">Reserve not met</div></div>      </div>
+    </div>
+                  <div class="c-node-ai__summary-item c-node-ai__summary-item--bid">
+          <div class="c-node-ai__bidding">
+                          <div class="c-node-ai__bid-form">
+                <div id="air-bid-form-wrapper"><form class="c-form js-form js-form-air-bid-form c-form--large c-bid-form c-bid-form--enter-bid c-bid-form--with-bid-type-options c-form--air-bid-form" autocomplete="off" data-cache-expiry="1685616314" action="/example/trackday-in-a-lotus-exige-7" method="post" id="air-bid-form" accept-charset="UTF-8"><div class="js-form-wrapper c-form__wrapper"> <label class="js-form-label c-form__label c-bid-form__title" for="edit-title"><span class="js-label-text c-form__label-text">My bid</span></label>
+<input type="hidden" name="ajax_get" value="bid-confirm" />
+<div class="js-form-container c-content__form-container c-form__container c-form__container--bidding c-bid-form__bidding-wrapper c-form__container--clearfix" id="edit-bidding"><div id="air-bid-form-wrapper" class="js-form-container c-content__form-container c-form__container js-prefix-input c-bid-form__input-wrapper c-form__container--clearfix"><div class="js-form-container c-content__form-container c-form__container c-bid-form__input-container c-form__container--clearfix" id="edit-container"><div class="js-form-item c-form__item c-form__item--type_numberfield c-form__item--name_bid-amount c-form__item--element_bid-amount c-form__item--no-title">
+ <div class="c-form__control-wrapper c-form__control-wrapper--numberfield"><input class="js-form-control c-input c-input--number c-form__control js-form-control c-input c-input--numberfield c-form__control js-bid-input js-input-to-prefix c-bid-form__input is-required" placeholder="Max. bid" id="edit-bid-amount" name="bid_amount" value="" step="10" min="560" type="number" /></div><span class="js-input-prefix c-form__input-prefix-js u-fade-js">$</span>
+
+</div>
+</div><button class="c-button js-button js-submit-button c-button--submit c-form__control--submit-button c-form__control--button c-form__control js-form-control js-enable-on-valid-form-change c-bid-form__button c-button--large is-disabled-js" type="submit" id="edit-save-bid" name="place_bid" value="Place bid">Place bid<span class="js-ajax-progress c-ajax-progress c-ajax-progress--submit c-ajax-progress--large c-button__ajax-progress"></span>
+</button></div><div id="edit-bid-type" class="c-bid-form__bid-type js-form-radios c-form__radios"><div class="js-form-group c-form__group c-form__group--type_radio c-form__group--name_bid-type c-form__group--element_bid-type">
+<div class="js-form-control-wrapper c-form__control-wrapper c-form__control-wrapper--radio c-form__control-wrapper--checkbox-sm"> <input class="js-form-control c-form__control c-form__control--radio js-icheck-sm js-ignore-form-change js-bid-type-radios" type="radio" id="edit-bid-type-max-bid" name="bid_type" value="max_bid" checked="checked" />  <label class="js-form-label c-form__label c-form__label--after" for="edit-bid-type-max-bid"><span class="js-label-text c-form__label-text">Max. bid<sup>&#167;</sup></span></label>
+</div></div>
+<div class="js-form-group c-form__group c-form__group--type_radio c-form__group--name_bid-type c-form__group--element_bid-type">
+<div class="js-form-control-wrapper c-form__control-wrapper c-form__control-wrapper--radio c-form__control-wrapper--checkbox-sm"> <input class="js-form-control c-form__control c-form__control--radio js-icheck-sm js-ignore-form-change js-bid-type-radios" type="radio" id="edit-bid-type-auction-bid" name="bid_type" value="auction_bid" />  <label class="js-form-label c-form__label c-form__label--after" for="edit-bid-type-auction-bid"><span class="js-label-text c-form__label-text">Exact bid</span></label>
+</div></div>
+</div></div><input type="hidden" name="form_build_id" value="form-zGVlKGuL3X6_qA0Z3a1zLgu3mIg2UlSBVC2bqeGxfxs" />
+<input type="hidden" name="form_token" value="9BnAAU_IoGIkJ1Akoka-zqaKLHhCwpWPOGE9oZ81nFg" />
+<input type="hidden" name="form_id" value="air_bid_form" />
+<div id="air-bid-form-note" class="js-form-container c-content__form-container c-form__container c-bid-form__note c-form__container--clearfix">Bids in multiples of $10; minimum $560</div></div></form></div>              </div>
+                      </div>
+        </div>
+                    <div class="c-node-ai__summary-item c-node-ai__summary-item--sharing">
+        <div class="c-node-ai__sharing">
+          <div class="c-share c-share--ai"><ul class="o-list-bare c-share__list"><li class="c-share__item"><a href="https://airauctioneer.com/example/trackday-in-a-lotus-exige-7" class="c-share__link c-share__link--link js-copy-to-clipboard" target="_blank" data-ctc-url="https://airauctioneer.com/example/trackday-in-a-lotus-exige-7" data-ctc-text="Copy link"><svg class="c-icon c-icon--link-disc c-share__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-link-disc"></use></svg><span class="c-share__link-text">Copy link</span></a></li>
+<li class="c-share__item"><a href="https://twitter.com/intent/tweet?text=Trackday+in+a+Lotus+Exige&amp;url=https%3A%2F%2Fairauctioneer.com%2Fexample%2Ftrackday-in-a-lotus-exige-7" class="c-share__link c-share__link--twitter" target="_blank"><svg class="c-icon c-icon--twitter-disc c-share__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-twitter-disc"></use></svg><span class="c-share__link-text"></span></a></li>
+<li class="c-share__item"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fairauctioneer.com%2Fexample%2Ftrackday-in-a-lotus-exige-7" class="c-share__link c-share__link--facebook" target="_blank"><svg class="c-icon c-icon--facebook-disc c-share__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-facebook-disc"></use></svg><span class="c-share__link-text"></span></a></li>
+</ul></div>        </div>
+      </div>
+      </div>
+
+  <div class="c-node-ai__details-wrap">
+          <div class="o-layout">
+        <div class="o-layout__item u-1/2@md">
+          <div class="c-node-ai__slideshow">
+            <div class="js-ai-slider--thumbs c-slider c-slider--ai-thumbs u-hide-no-js"><div class="js-ai-slides c-slider__slides"><div class="u-fade-js js-ai-slide c-slider__slide"><img  src="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_100/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=ZfJW1vbB" srcset="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_100/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=ZfJW1vbB 100w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_200/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=80GHvDai 200w" alt="" sizes="(min-width: 30em) 62px, (min-width: 375px) 50px, 40px" /></div><div class="u-fade-js js-ai-slide c-slider__slide"><img  src="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_100/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=Ng6vO-he" srcset="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_100/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=Ng6vO-he 100w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_200/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=LYGMDefB 200w" alt="" sizes="(min-width: 30em) 62px, (min-width: 375px) 50px, 40px" /></div></div><div class="js-ai-slider-controls c-slider__controls u-hide-no-js"><button class="c-button js-button c-button--link c-slider__control js-ai-slider-prev c-slider__control--prev" type="button" value=""><span class="c-slider__control-label"><svg class="c-icon c-icon--chevron--h u-reflect--x"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron--h"></use></svg></span></button><button class="c-button js-button c-button--link c-slider__control js-ai-slider-next c-slider__control--next" type="button" value=""><span class="c-slider__control-label"><svg class="c-icon c-icon--chevron--h"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron--h"></use></svg></span></button></div></div><div class="js-ai-slider--main c-slider c-slider--ai-main"><div class="js-ai-slides c-slider__slides" data-slick-auto-play="" data-slick-auto-play-speed="" data-slick-fade-timing="250" data-slick-adaptive-height=""><div class="js-ai-slide c-slider__slide"><div class="c-slider__image"><a href="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_440/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=SmdalOm9" data-fancybox="ai-images" data-srcset="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_620/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=OSnCmNcO 620w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_840/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=gjsSQptu 840w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_1240/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=baMmWBCC 1000w" class="c-slider__full-size-link"><img  style="max-width: min(1000px, 100%);" src="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_440/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=SmdalOm9" srcset="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_440/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=SmdalOm9 440w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_620/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=OSnCmNcO 620w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_840/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=gjsSQptu 840w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_1240/s3/u4/auction-item-images/new-lotus-cars-for-sale-exige-v6-cup-r-gallery-06.jpg?itok=baMmWBCC 1000w" alt="" sizes="(min-width: 85em) 620px, (min-width: 60em) 50vw, 100vw" /></a></div></div><div class="js-ai-slide c-slider__slide u-hide-no-js"><div class="c-slider__image"><a href="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_440/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=oZhnqYJP" data-fancybox="ai-images" data-srcset="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_620/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=f1NwiDYR 620w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_840/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=_QSlJmhO 840w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_1240/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=ylEg_0uX 1240w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_1800/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=JCxMha6L 1800w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_3600/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=omZnJXB6 3600w" class="c-slider__full-size-link"><img  style="max-width: min(4000px, 100%);" src="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_440/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=oZhnqYJP" srcset="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_440/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=oZhnqYJP 440w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_620/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=f1NwiDYR 620w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_840/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=_QSlJmhO 840w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_scaled_1240/s3/u4/auction-item-images/exige_v6_cup_r_02_10_13_75.jpg?itok=ylEg_0uX 1240w" alt="" sizes="(min-width: 85em) 620px, (min-width: 60em) 50vw, 100vw" /></a></div></div></div><div class="js-ai-slider-controls c-slider__controls u-hide-no-js"><button class="c-button js-button c-button--link c-slider__control js-ai-slider-prev c-slider__control--prev" type="button" value=""><span class="c-slider__control-label"><svg class="c-icon c-icon--chevron--h u-reflect--x"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron--h"></use></svg></span></button><button class="c-button js-button c-button--link c-slider__control js-ai-slider-next c-slider__control--next" type="button" value=""><span class="c-slider__control-label"><svg class="c-icon c-icon--chevron--h"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron--h"></use></svg></span></button></div></div>          </div>
+        </div>
+        <div class="o-layout__item u-1/2@md">
+                    <div class="c-node-ai__about">
+                                    <h2 class="c-heading--beta">About this item</h2>
+            <div class="c-node-ai__description">
+              <h3>Get on track in the amazing Lotus Exige v6 Cup!</h3>
+<p>The Exige Cup is powered by a 3.5 litre Toyota DOHC V6 VVT-i, 24-valve, equipped with Harrop HTV 1320 supercharger producing 345 hp (350 PS) and 400 N⋅m (295 lb⋅ft) of torque at 7,000 rpm.</p>
+<p>It has a 6-speed Toyota EC60 close ratio manual transmission, sequential gearbox with paddleshift. </p>
+<p>The mid-mounted, transverse layout results in near-perfect weight distribution. 0-60 mph takes 3.8 seconds, and the top speed is 170 mph.</p>
+            </div>
+                                                              <div class="c-node-ai__market-value">
+                <h5 class="c-heading--epsilon">
+                  Value: <span class="u-tc_df">$1,500</span>
+                </h5>
+              </div>
+                                                  <div id="air-ai-timeout-detail-148414" class=""><div class="c-node-ai__end-time c-node-ai__end-time--with-extension"><span class="c-node-ai__end-time-title">Bidding ends: </span><span class="c-node-ai__end-time-time">12:00am, 30 June 2023<sup>&dagger;</sup></span><span class="c-node-ai__end-time-time c-node-ai__end-time-time--long">12:00am, Friday 30 June 2023<sup>&dagger;</sup></span><span class="c-node-ai__end-time-timezone">America/Los Angeles</span></div><div class="c-node-ai__footnote"><span class="c-node-ai__footnote-marker"><sup>&dagger;</sup></span> <span class="c-node-ai__footnote-text">Subject to an automatic extension of 10 minutes, if a bid is received within 10 minutes of expiry.</span></div></div>                                      <div id="air-ai-reserve-footnote-148414" class="c-node-ai__footnote"><span class="c-node-ai__footnote-marker"><sup>&Dagger;</sup></span><span class="c-node-ai__footnote-text">This item is subject to a reserve price, which has not yet been met.
+                     Should the leading bid at expiry not meet the reserve,
+                     the item will not be sold.</span></div><div class="c-node-ai__footnote"><span class="c-node-ai__footnote-marker"><sup>&#167;</sup></span><span class="c-node-ai__footnote-text">When 'Max. bid' is selected, enter the maximum amount you are willing to pay and we will
+                         place automatic bids for you up to this level, increasing the price by the smallest amount
+                         possible each time. <br class='u-hide@lmlg'>When 'Exact bid' is selected, the price will rise immediately to the level
+                         of your bid.</span></div>                                                      <div class="js-smart-scroll c-node-ai__bid-now u-hide-js" data-target="[name=&quot;bid_amount&quot;]"><a href="#air-bid-form-wrapper" class="js-bid-now js-scroll-to c-button js-button" data-scrollto-offset="-60">Bid now</a></div>                                                  </div>
+                  </div>
+      </div>
+      </div>
+
+  <div class="c-node-ai__additional-wrap">
+    <div class="o-layout">
+              <div class="o-layout__item u-2/3@mlg">
+          <div class="c-node-ai__bids">
+            <h2 class="c-heading--beta">
+              Bidding            </h2>
+            <div id="ai-bid-list-148414" class="c-node-ai__bid-list "><div class="view-dom-id-ca46f54dff0561af2f06a696c76e903f js-view js-view-air-auction-bids c-view c-view--air-auction-bids c-view--display_auction-item-bids-list c-view--large c-view--display-handler_block c-view--style_table" data-view-name="air_auction_bids" data-view-display="auction_item_bids_list" data-view-page="0">
+        
+  
+  
+  
+      <div class="js-view-content c-view__content">
+      <table class="views-table cols-3 o-table o-table--view_air-auction-bids o-table--rows o-table--large js-views-table c-views-table c-views-table--view_air-auction-bids c-views-table--display_auction-item-bids-list"  data-leader="168091">
+         <thead>
+      <tr>
+                  <th class="js-view-table-header-field c-views-table__header c-views-table__header--name"  scope="col" align="bottom">
+            Bidder          </th>
+                  <th class="js-view-table-header-field c-views-table__header c-views-table__header--created"  scope="col" align="bottom">
+            Time          </th>
+                  <th class="js-view-table-header-field c-views-table__header c-views-table__header--bid-amount"  scope="col" align="bottom">
+            Bid          </th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr class="u-tc--highlight-bg js-tc-parent" data-entity-id="625352">
+                  <td class="c-views-table__field c-views-table__field--name" >
+                        Taylor Kloss Pittsinger                      </td>
+                  <td class="c-views-table__field c-views-table__field--created" >
+                        1:52pm 22 Mar 2023                      </td>
+                  <td class="c-views-table__field c-views-table__field--bid-amount"  data-tcid="625352:amount">
+                        $550                      </td>
+              </tr>
+          <tr class="u-tc--highlight-bg js-tc-parent" data-entity-id="609371">
+                  <td class="c-views-table__field c-views-table__field--name" >
+                        Rolands Plinta                      </td>
+                  <td class="c-views-table__field c-views-table__field--created" >
+                        11:54pm 17 Feb 2023                      </td>
+                  <td class="c-views-table__field c-views-table__field--bid-amount"  data-tcid="609371:amount">
+                        $530                      </td>
+              </tr>
+          <tr class="u-tc--highlight-bg js-tc-parent" data-entity-id="609106">
+                  <td class="c-views-table__field c-views-table__field--name" >
+                        David Sparks                      </td>
+                  <td class="c-views-table__field c-views-table__field--created" >
+                        3:17pm 17 Feb 2023                      </td>
+                  <td class="c-views-table__field c-views-table__field--bid-amount"  data-tcid="609106:amount">
+                        $520                      </td>
+              </tr>
+          <tr class="u-tc--highlight-bg js-tc-parent" data-entity-id="606611">
+                  <td class="c-views-table__field c-views-table__field--name" >
+                        jase_1                      </td>
+                  <td class="c-views-table__field c-views-table__field--created" >
+                        10:43am 13 Feb 2023                      </td>
+                  <td class="c-views-table__field c-views-table__field--bid-amount"  data-tcid="606611:amount">
+                        $510                      </td>
+              </tr>
+          <tr class="u-tc--highlight-bg js-tc-parent" data-entity-id="593649">
+                  <td class="c-views-table__field c-views-table__field--name" >
+                        David Sparks                      </td>
+                  <td class="c-views-table__field c-views-table__field--created" >
+                        11:37pm 24 Dec 2022                      </td>
+                  <td class="c-views-table__field c-views-table__field--bid-amount"  data-tcid="593649:amount">
+                        $500                      </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>          </div>
+        </div>
+            <div class="o-layout__item u-1/3@mlg">
+                  <div class="c-node-ai__related">
+            <h3 class="c-heading--gamma">
+              Other items from              <a href="/example" class="">Aegir Technologies 2023 Fundraising Auction</a>            </h3>
+            <div class="o-layout">
+                              <div class="o-layout__item u-1/2 u-1/3@sm u-1/4@mmd  u-1/5@md u-margin-bottom u-1/2@mlg">
+                  <div id="node-148412" class="c-node-ai c-node-ai--small-teaser js-ai js-ai--small_teaser js-eq js-ai--teaser-view c-node-ai--teaser-view"  about="/example/lavender-shortbread-biscuits-3" typeof="sioc:Item foaf:Document" data-entity-id="148412" data-unmet-reserve="0" data-live-id="148412" data-updated="1685594714" data-leader="170682" data-status="bidding" data-lec="false" data-expiry="1688108400">
+  <div class="c-node-ai__content">
+          <div id="air-ai-status-indicator-148412" class="js-ai-status-indicator c-node-ai__status c-node-ai__status--small-teaser c-tooltip c-tooltip--n" aria-label="Bidding is under way."></div>        <div class="c-node-ai__image-wrap">
+      <div class="c-node-ai__image">
+        <svg viewBox="0 0 100 100"></svg>
+        <a href="/example/lavender-shortbread-biscuits-3" class="js-nav-link-ajax use-ajax"><img  alt="" sizes="(min-width: 110em) 220px, (min-width: 90em) 18vw, (min-width: 60em) 25vw, (min-width: 30em) 50vw, 100vw" data-src="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_canvas_440/s3/u4/auction-item-images/heather-barnes-1553169-unsplash_0.jpg?itok=MRMyqEYi" data-srcset="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_canvas_200/s3/u4/auction-item-images/heather-barnes-1553169-unsplash_0.jpg?itok=7LTCoCHJ 200w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_canvas_440/s3/u4/auction-item-images/heather-barnes-1553169-unsplash_0.jpg?itok=MRMyqEYi 440w" /></a>      </div>
+    </div>
+
+    <div class="c-node-ai__details-wrap">
+            <h3 class="c-node-ai__title c-heading--gamma" >
+                  <a href="/example/lavender-shortbread-biscuits-3"  data-mousetrap-trigger="1" class="js-nav-link-ajax use-ajax">
+            #003 Lavender shortbread biscuits            </a>
+              </h3>
+
+      <div class="c-node-ai__timer">
+        <div id="ai-timer-148412" class="js-timer-wrapper c-timer c-timer--inline u-hide-no-js"><div class="c-timer__title"><span class="js-timer-title">Ends in</span>: </div><span class="c-timer__body"><span class="js-timer" data-timer_id="ai-148412-short-inline" data-type="expiry" data-timeout="1688108400" data-format_num="short"></span>
+</span></div>      </div>
+
+      <div class="c-node-ai__price">
+        <div id="ai-price-148412" class="c-price  c-price--inline"><div class="c-price__title"><span class="js-price-title">Current bid</span>: </div><div class="c-price__wrapper"><div class="c-price__value u-tc--highlight" data-live-item="price" data-tcid="148412:price">$171</div></div></div>      </div>
+
+      
+    </div>
+  </div>
+</div>
+                  </div>                <div class="o-layout__item u-1/2 u-1/3@sm u-1/4@mmd  u-1/5@md u-margin-bottom u-1/2@mlg">
+                  <div id="node-148413" class="c-node-ai c-node-ai--small-teaser js-ai js-ai--small_teaser js-eq js-ai--teaser-view c-node-ai--teaser-view"  about="/example/maldives-vacation-for-two-5" typeof="sioc:Item foaf:Document" data-entity-id="148413" data-unmet-reserve="0" data-live-id="148413" data-updated="1685594714" data-leader="177176" data-status="bidding" data-lec="true" data-expiry="1688108400">
+  <div class="c-node-ai__content">
+          <div id="air-ai-status-indicator-148413" class="js-ai-status-indicator c-node-ai__status c-node-ai__status--small-teaser c-tooltip c-tooltip--n" aria-label="Bidding is under way."></div>        <div class="c-node-ai__image-wrap">
+      <div class="c-node-ai__image">
+        <svg viewBox="0 0 100 100"></svg>
+        <a href="/example/maldives-vacation-for-two-5" class="js-nav-link-ajax use-ajax"><img  alt="" sizes="(min-width: 110em) 220px, (min-width: 90em) 18vw, (min-width: 60em) 25vw, (min-width: 30em) 50vw, 100vw" data-src="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_canvas_440/s3/u4/auction-item-images/maldives-1993704.jpg?itok=SlPt3nDu" data-srcset="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_canvas_200/s3/u4/auction-item-images/maldives-1993704.jpg?itok=frpYZAge 200w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_canvas_440/s3/u4/auction-item-images/maldives-1993704.jpg?itok=SlPt3nDu 440w" /></a>      </div>
+    </div>
+
+    <div class="c-node-ai__details-wrap">
+            <h3 class="c-node-ai__title c-heading--gamma" >
+                  <a href="/example/maldives-vacation-for-two-5"  data-mousetrap-trigger="2" class="js-nav-link-ajax use-ajax">
+            #002 Maldives vacation for two*          </a>
+              </h3>
+
+      <div class="c-node-ai__timer">
+        <div id="ai-timer-148413" class="js-timer-wrapper c-timer c-timer--inline u-hide-no-js"><div class="c-timer__title"><span class="js-timer-title">Ends in</span>: </div><span class="c-timer__body"><span class="js-timer" data-timer_id="ai-148413-short-inline" data-type="expiry" data-timeout="1688108400" data-format_num="short"></span>
+</span></div>      </div>
+
+      <div class="c-node-ai__price">
+        <div id="ai-price-148413" class="c-price  c-price--inline"><div class="c-price__title"><span class="js-price-title">Current bid</span>: </div><div class="c-price__wrapper"><div class="c-price__value u-tc--highlight" data-live-item="price" data-tcid="148413:price">$2,050</div></div></div>      </div>
+
+      
+    </div>
+  </div>
+</div>
+                  </div>                <div class="o-layout__item u-1/2 u-1/3@sm u-1/4@mmd  u-1/5@md u-margin-bottom u-1/2@mlg u-hide@lsm">
+                  <div id="node-148411" class="c-node-ai c-node-ai--small-teaser js-ai js-ai--small_teaser js-eq js-ai--teaser-view c-node-ai--teaser-view"  about="/example/headmaster-for-the-day-4" typeof="sioc:Item foaf:Document" data-entity-id="148411" data-unmet-reserve="0" data-live-id="148411" data-updated="1685594714" data-leader="164890" data-status="bidding" data-lec="false" data-expiry="1690700400">
+  <div class="c-node-ai__content">
+          <div id="air-ai-status-indicator-148411" class="js-ai-status-indicator c-node-ai__status c-node-ai__status--small-teaser c-tooltip c-tooltip--n" aria-label="Bidding is under way."></div>        <div class="c-node-ai__image-wrap">
+      <div class="c-node-ai__image">
+        <svg viewBox="0 0 100 100"></svg>
+        <a href="/example/headmaster-for-the-day-4" class="js-nav-link-ajax use-ajax"><img  alt="" sizes="(min-width: 110em) 220px, (min-width: 90em) 18vw, (min-width: 60em) 25vw, (min-width: 30em) 50vw, 100vw" data-src="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_canvas_440/s3/u4/auction-item-images/headmasters-office.jpg?itok=Dsa_UtU-" data-srcset="https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_canvas_200/s3/u4/auction-item-images/headmasters-office.jpg?itok=XbuE_M8b 200w, https://airauctioneer-live.s3.us-west-1.amazonaws.com/styles/air_square_canvas_440/s3/u4/auction-item-images/headmasters-office.jpg?itok=Dsa_UtU- 440w" /></a>      </div>
+    </div>
+
+    <div class="c-node-ai__details-wrap">
+            <h3 class="c-node-ai__title c-heading--gamma" >
+                  <a href="/example/headmaster-for-the-day-4"  data-mousetrap-trigger="3" class="js-nav-link-ajax use-ajax">
+            #001 Headmaster for the day           </a>
+              </h3>
+
+      <div class="c-node-ai__timer">
+        <div id="ai-timer-148411" class="js-timer-wrapper c-timer c-timer--inline u-hide-no-js"><div class="c-timer__title"><span class="js-timer-title">Ends in</span>: </div><span class="c-timer__body"><span class="js-timer" data-timer_id="ai-148411-short-inline" data-type="expiry" data-timeout="1690700400" data-format_num="short"></span>
+</span></div>      </div>
+
+      <div class="c-node-ai__price">
+        <div id="ai-price-148411" class="c-price  c-price--inline"><div class="c-price__title"><span class="js-price-title">Current bid</span>: </div><div class="c-price__wrapper"><div class="c-price__value u-tc--highlight" data-live-item="price" data-tcid="148411:price">$300</div></div></div>      </div>
+
+      
+    </div>
+  </div>
+</div>
+                  </div>            </div>
+                      </div>
+              </div>
+    </div>
+  </div>
+
+  <footer class="js-ai-footer c-node-ai__footer">
+    <div class="js-ai-page-nav c-node-ai__page-nav c-page-nav c-page-nav--ai c-page-nav--full c-page-nav--footer c-node-ai__page-nav--footer"><ul class="o-list-bare c-page-nav__list"><li class="c-page-nav__item c-page-nav__item--back"><a href="/example" class="c-page-nav__link c-page-nav__link--back js-ai-page-nav-back" rel="nofollow" data-mousetrap-trigger="m" data-ajax-type="GET"><svg class="c-icon c-icon--chevron-double--h c-page-nav__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron-double--h"></use></svg>All items</a></li>
+<li class="c-page-nav__item c-page-nav__item--prev"><a href="/example/maldives-vacation-for-two-5/nojs" id="air-page-nav-prev-footer" class="c-page-nav__link c-page-nav__link--prev js-nav-link-ajax use-ajax" rel="nofollow" data-mousetrap-trigger="," data-ajax-wrapper="#node-148414" data-dir="prev" data-ajax-type="GET"><svg class="c-icon c-icon--chevron--h c-page-nav__icon"><use xlink:href="/assets/symbols/symbol-defs-06e142b2b5.svg#icon-chevron--h"></use></svg>Previous<span class="u-hide@lmd"> item</span></a></li>
+</ul></div>  </footer>
+
+</article>
+
+                                            </div>
+            </div>
+
+      
+    </main>
+  </div>
+
+  <div class="c-page__bottom">
+        <footer class="c-footer c-footer--app">
+            <div class="o-wrapper@md">
+        <div class="c-footer__wrap c-footer__wrap--outer">
+                    <div class="c-footer__wrap c-footer__wrap--info">
+            <div class="c-footer__info">
+              <div class="c-footer__branding">
+                <a class="c-footer__home-link c-logo c-logo--footer-app" href="/"></a>
+              </div>
+              <div class="c-footer__legal">
+                <ul class="c-footer__links"><li class="c-footer__link c-footer__link--copyright"><a href="/" class="c-footer__legal-link c-footer__legal-link--copyright">&copy; 2023 AirAuctioneer Pty Ltd</a></li>
+<li class="c-footer__link c-footer__link--abn"><a href="https://www.abr.business.gov.au/ABN/View?id=13630621215" class="c-footer__legal-link c-footer__legal-link--abn" target="_blank">ABN 13 630 621 215</a></li>
+<li class="c-footer__link c-footer__link--user-agreement"><a href="/user-agreement" class="c-footer__legal-link">User Agreement</a></li>
+<li class="c-footer__link c-footer__link--privacy"><a href="/privacy-policy" class="c-footer__legal-link">Privacy<span class="u-hide@lsm"> Policy</span></a></li>
+</ul>              </div>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</div>
+  <script src="https://airauctioneer.com/sites/default/files/advagg_js/js__GM3GJPR36rRIz0TRkjC5OQwrioSyN9aoYRivDhCO_AM__qAl84FcCv2jyN22yFGS5Oc85cjd9zKX6p_cFNLGhe-M__lvVyayIsDdPIiZjIVZGSEm_toh-ShgI-SETtnKaZvKk.js" async="async"></script>
+
+<!--[if lt IE 9]>
+<script src="https://airauctioneer.com/sites/default/files/advagg_js/js__ubhSQKI-5cBLRGapodPL53ST3JFWpnC8Wn46TFV6Kag__YOa1OrQoaqmsMfFOQhKRAmTpNznD8eWXsIx7Y85yBtE__lvVyayIsDdPIiZjIVZGSEm_toh-ShgI-SETtnKaZvKk.js"></script>
+<![endif]-->
+<script src="https://airauctioneer.com/sites/default/files/advagg_js/js__HP_UONPFYAAZrQpeQrtq8NhY_84cfgbc6j0QsZBRcc0__htchb1kvHirVQZOSs63Gn2DZ0KEHPLcYdBunXq6kR14__lvVyayIsDdPIiZjIVZGSEm_toh-ShgI-SETtnKaZvKk.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4be7196245","applicationID":"301078069","transactionName":"YlNUN0EDCEACBkwIVlsZdwBHCwldTAtXBVxqRlcEVj0QWgYS","queueTime":0,"applicationTime":1666,"atts":"ThRXQQkZG04=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+]]></template>
+    </sp_widget>
+</record_update>
