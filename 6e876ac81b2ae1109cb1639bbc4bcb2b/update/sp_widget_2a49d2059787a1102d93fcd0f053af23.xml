@@ -2,18 +2,18 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[api.controller=function($scope,$location) {
-	
+
 	$scope.openModal = function(sysId){
-		
+
 		$location.search({id:'items&sysId=' + sysId });
-		
+
 	}
-	
+
 };
 
 
 
-       ]]></client_script>
+]]></client_script>
         <controller_as>c</controller_as>
         <css>.widget {
   padding: 10px;
@@ -191,14 +191,14 @@ table {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-25 04:57:24</sys_created_on>
         <sys_id>2a49d2059787a1102d93fcd0f053af23</sys_id>
-        <sys_mod_count>196</sys_mod_count>
+        <sys_mod_count>256</sys_mod_count>
         <sys_name>Auction</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_2a49d2059787a1102d93fcd0f053af23</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-30 09:57:54</sys_updated_on>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-02 09:20:51</sys_updated_on>
         <template><![CDATA[<div class="widget" >
   <table>
     <tr>
@@ -207,7 +207,7 @@ table {
       <th>Start Time</th>
       <th>End Time</th>
       <th>Status</th>
-     
+
 
     </tr>
     <tbody>
@@ -217,10 +217,17 @@ table {
         <td>{{data.starttime}}</td>
         <td>{{data.endtime}}</td>
         <td> {{data.state}}</td>
-      
-     
-        
-        <td  ><a href="?id=items&sysId={{data.sysId}}"><button class="bid-button"  id="button" ng-if="data.state === 'Open'||  'Yet to Open'" > View</button></a></td>
+
+
+
+        <td>
+
+
+        <td>
+          <a href="?id=items&sysId={{data.sysId}}">
+            <button class="bid-button" id="button" ng-disabled="data.state === 'Closed' || data.state === 'Yet to open'">View</button>
+          </a>
+        </td>
 
       </tr>
     </tbody>
