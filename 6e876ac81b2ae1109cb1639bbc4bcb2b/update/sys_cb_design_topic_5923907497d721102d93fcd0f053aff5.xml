@@ -1,14 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
-    <sys_cb_topic action="INSERT_OR_UPDATE">
-        <applicability/>
-        <applicability_mode>query</applicability_mode>
-        <autopilot_topic>true</autopilot_topic>
-        <category/>
-        <channels/>
-        <connect_queue/>
-        <description/>
-        <expose_on_palette>false</expose_on_palette>
-        <flexible_conversation_switching>true</flexible_conversation_switching>
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="_PRVW__1123983407d7211019a5618956aee571">5123983497d721102d93fcd0f053af72</compiled_topic>
+        <design_definition>{"type":"FlowTopic","type":"FlowTopic","triggers":[{"type":"Trigger","name":"40a924c949364da5b290c0e0c83ccd18","triggerType":"request","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"id":"40a924c949364da5b290c0e0c83ccd18"}],"goals":[{"name":"primary","trigger_id":"40a924c949364da5b290c0e0c83ccd18","nodes":[{"type":"StartGoal","type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"37cb4faba6d2412db602b888c7c804ea","name":"Start"},{"type":"TerminateGoal","type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"40e099d22c224eaaa982f468fe2b3cda","name":"End"},{"type":"TextOutputPrompt","type":"TextOutputPrompt","value":[{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Welcome to AuctionArc\", vaContext.getRequesterLang())"}],"id":"4edd88c59b844ca48759a27f78c7d59a","name":"Welcome ","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"secure":false},{"type":"InputPrompt","type":"InputPrompt","variable_id":"de4e0daa1a26481dbbff30ae01415635","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Hi    {0}\", vaContext.getRequesterLang(), [vaInputs.user.name])"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"190f7f2849c24b1a9bd574a34395c7e8","name":"greeting","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"TextOutputPrompt","type":"TextOutputPrompt","value":[{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Just a moment\", vaContext.getRequesterLang())"}],"id":"174f10039c74478ab2a4c7bce4f41b90","name":"Queryresponse","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"secure":false},{"type":"ChoiceInputPrompt","type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"ee477398d57645859f6f0c4f7a1ab766","name":"Choices","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"variable_id":"0df495b4ac2c499fac9db0eb4e52f009","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Here are a few quick links to help  you out\", vaContext.getRequesterLang())"},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true}},{"type":"ChoiceInputPrompt","type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"8da96d9f142b472782839c9014ea3b15","name":"Userpersonas","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"variable_id":"b899ae0cb34f4fd4bf690aa400bf9481","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Select your role?\", vaContext.getRequesterLang())"},"acknowledgement":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Thank you for choosing\", vaContext.getRequesterLang())"},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true}}],"edges":[{"type":"Edge","source_node_id":"4edd88c59b844ca48759a27f78c7d59a","target_node_id":"8da96d9f142b472782839c9014ea3b15","id":"de4a88bb1e9b4db08d1746e03ee7f80a"},{"type":"Edge","source_node_id":"ee477398d57645859f6f0c4f7a1ab766","target_node_id":"174f10039c74478ab2a4c7bce4f41b90","id":"7b7acf040c2e4e7ea510b1ffd0bb7d18"},{"type":"Edge","source_node_id":"37cb4faba6d2412db602b888c7c804ea","target_node_id":"190f7f2849c24b1a9bd574a34395c7e8","id":"717343646afe492ba33856bd55908b81"},{"type":"Edge","source_node_id":"190f7f2849c24b1a9bd574a34395c7e8","target_node_id":"4edd88c59b844ca48759a27f78c7d59a","id":"28401d6b73634ecc9da7b8dc3154b72f"},{"type":"Edge","source_node_id":"174f10039c74478ab2a4c7bce4f41b90","target_node_id":"40e099d22c224eaaa982f468fe2b3cda","id":"42b5a9ccfecb4e38b01f4e1603f54896"},{"type":"Edge","source_node_id":"8da96d9f142b472782839c9014ea3b15","target_node_id":"ee477398d57645859f6f0c4f7a1ab766","id":"f1390631975b4246bae19fd8c38bd160"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"list":false},{"type":"VariableDto","type":"String","name":"greeting","list":false,"id":"de4e0daa1a26481dbbff30ae01415635","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"Choice","type":"Choice","choices":[{"name":"Auction","element":"Aucrion"},{"name":"Billing ","element":"Billing "}],"id":"0df495b4ac2c499fac9db0eb4e52f009","name":"choices","formatType":"text","secure":false,"sensitive":false,"list":false},{"type":"Choice","type":"Choice","choices":[{"name":"Buyer","element":"Buyer"},{"name":"Seller","element":"Seller"}],"id":"b899ae0cb34f4fd4bf690aa400bf9481","name":"userpersonas","formatType":"text","secure":false,"sensitive":false,"list":false}],"applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"6e876ac81b2ae1109cb1639bbc4bcb2b","domain":"global","topic_type":"SMALL_TALK","channels":[],"id":"95b5c074979721102d93fcd0f053af46","name":"_PRVW__1123983407d7211019a5618956aee571","key_phrases":["Auction-Bot"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":true,"autopilot_topic":true,"design_categories":[],"triggerable_by_notification":false,"library":false,"readOnly":true,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>95b5c074979721102d93fcd0f053af46</design_topic_id>
         <graph>{
   "graph_api_version": "1.0.41",
   "goals": {
@@ -377,35 +371,20 @@
     }
   }
 }</graph>
-        <key_phrases>Auction-Bot</key_phrases>
-        <library>false</library>
-        <live_agent>false</live_agent>
-        <name>Auction-Bot</name>
-        <nlu_intent/>
-        <nlu_intent_label/>
-        <nlu_model/>
-        <nlu_model_label/>
-        <nlu_provider/>
-        <palette_label/>
-        <roles/>
-        <secure_custom_input_control>false</secure_custom_input_control>
-        <source_topic_id/>
-        <sys_class_name>sys_cb_topic</sys_class_name>
-        <sys_created_by>CC-Supradhar</sys_created_by>
-        <sys_created_on>2023-06-05 09:49:49</sys_created_on>
+        <name>_PRVW__1123983407d7211019a5618956aee571</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-06-05 10:48:31</sys_created_on>
         <sys_domain>global</sys_domain>
-        <sys_id>95b5c074979721102d93fcd0f053af46</sys_id>
-        <sys_mod_count>18</sys_mod_count>
-        <sys_name>Auction-Bot</sys_name>
+        <sys_id>5923907497d721102d93fcd0f053aff5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
-        <sys_update_name>sys_cb_topic_95b5c074979721102d93fcd0f053af46</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-06-05 10:43:31</sys_updated_on>
-        <triggerable_by_notification>false</triggerable_by_notification>
-        <type>SMALL_TALK</type>
-        <variables/>
-    </sys_cb_topic>
-    <sys_variable_value action="delete_multiple" query="document_key=95b5c074979721102d93fcd0f053af46"/>
+        <sys_update_name>sys_cb_design_topic_5923907497d721102d93fcd0f053aff5</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-05 10:48:31</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
 </record_update>

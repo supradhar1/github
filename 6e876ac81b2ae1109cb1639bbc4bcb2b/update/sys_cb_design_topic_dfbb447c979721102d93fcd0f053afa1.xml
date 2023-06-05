@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="_PRVW__5bbb447c3f972110d61847d2684d9d9b">9fbb447c979721102d93fcd0f053af9e</compiled_topic>
+        <design_definition>{"type":"FlowTopic","type":"FlowTopic","triggers":[{"type":"Trigger","name":"308a0846e3fe41a9ab22f671fe6b69a7","triggerType":"request","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"id":"308a0846e3fe41a9ab22f671fe6b69a7"}],"goals":[{"name":"primary","trigger_id":"308a0846e3fe41a9ab22f671fe6b69a7","nodes":[{"type":"StartGoal","type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"37cb4faba6d2412db602b888c7c804ea","name":"Start"},{"type":"TerminateGoal","type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"40e099d22c224eaaa982f468fe2b3cda","name":"End"},{"type":"TextOutputPrompt","type":"TextOutputPrompt","value":[{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"va:topic:95b5c074979721102d93fcd0f053af46:node:4edd88c59b844ca48759a27f78c7d59a:field:0\", vaContext.getRequesterLang())"}],"id":"4edd88c59b844ca48759a27f78c7d59a","name":"Welcome ","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"secure":false},{"type":"InputPrompt","type":"InputPrompt","variable_id":"de4e0daa1a26481dbbff30ae01415635","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"Hi    {0}\", vaContext.getRequesterLang(), [vaInputs.user.name])"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"190f7f2849c24b1a9bd574a34395c7e8","name":"greeting","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""},{"type":"InputPrompt","type":"InputPrompt","variable_id":"297ee08fdce44ba988c0176ee7ffee03","message":{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"hkk\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"skippable":{"type":"Applicability","type":"Applicability","mode":"script","value":"false"},"id":"1d7b00fe703649fc831294f1d986607a","name":"user query","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"formatType":"Text","validationScript":""}],"edges":[{"type":"Edge","source_node_id":"37cb4faba6d2412db602b888c7c804ea","target_node_id":"190f7f2849c24b1a9bd574a34395c7e8","id":"717343646afe492ba33856bd55908b81"},{"type":"Edge","source_node_id":"190f7f2849c24b1a9bd574a34395c7e8","target_node_id":"4edd88c59b844ca48759a27f78c7d59a","id":"28401d6b73634ecc9da7b8dc3154b72f"},{"type":"Edge","source_node_id":"4edd88c59b844ca48759a27f78c7d59a","target_node_id":"1d7b00fe703649fc831294f1d986607a","id":"de4a88bb1e9b4db08d1746e03ee7f80a"},{"type":"Edge","source_node_id":"1d7b00fe703649fc831294f1d986607a","target_node_id":"40e099d22c224eaaa982f468fe2b3cda","id":"08dc026803294eb4b20cbf0403868e16"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"list":false},{"type":"VariableDto","type":"String","name":"greeting","list":false,"id":"de4e0daa1a26481dbbff30ae01415635","formatType":"Text","validationScript":"","secure":false,"sensitive":false},{"type":"VariableDto","type":"String","name":"user_query","list":false,"id":"297ee08fdce44ba988c0176ee7ffee03","formatType":"Text","validationScript":"","secure":false,"sensitive":false}],"applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"6e876ac81b2ae1109cb1639bbc4bcb2b","domain":"global","topic_type":"SMALL_TALK","channels":[],"id":"95b5c074979721102d93fcd0f053af46","name":"_PRVW__5bbb447c3f972110d61847d2684d9d9b","key_phrases":["Auction-Bot"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":true,"autopilot_topic":true,"design_categories":[],"triggerable_by_notification":false,"library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>95b5c074979721102d93fcd0f053af46</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.41",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "37cb4faba6d2412db602b888c7c804ea": {
+          "id": "37cb4faba6d2412db602b888c7c804ea",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "40e099d22c224eaaa982f468fe2b3cda": {
+          "id": "40e099d22c224eaaa982f468fe2b3cda",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "4edd88c59b844ca48759a27f78c7d59a": {
+          "id": "4edd88c59b844ca48759a27f78c7d59a",
+          "stepType": "TextOutput",
+          "name": "Welcome ",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Welcome to AuctionArc "
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "How can  i assist you ?"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "ff34abde95c441789efc15c91f592788"
+            }
+          ],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "190f7f2849c24b1a9bd574a34395c7e8": {
+          "id": "190f7f2849c24b1a9bd574a34395c7e8",
+          "stepType": "Prompt",
+          "name": "greeting",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Hi    "
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.user.name}}",
+                      "displayValue": "Input Variables➛User➛Name"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": "  "
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "de4e0daa1a26481dbbff30ae01415635",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "1d7b00fe703649fc831294f1d986607a": {
+          "id": "1d7b00fe703649fc831294f1d986607a",
+          "stepType": "Prompt",
+          "name": "user query",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "hkk"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "297ee08fdce44ba988c0176ee7ffee03",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "717343646afe492ba33856bd55908b81",
+          "edgeType": "Edge",
+          "source": "37cb4faba6d2412db602b888c7c804ea",
+          "target": "190f7f2849c24b1a9bd574a34395c7e8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "28401d6b73634ecc9da7b8dc3154b72f",
+          "edgeType": "Edge",
+          "source": "190f7f2849c24b1a9bd574a34395c7e8",
+          "target": "4edd88c59b844ca48759a27f78c7d59a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "de4a88bb1e9b4db08d1746e03ee7f80a",
+          "edgeType": "Edge",
+          "source": "4edd88c59b844ca48759a27f78c7d59a",
+          "target": "1d7b00fe703649fc831294f1d986607a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "08dc026803294eb4b20cbf0403868e16",
+          "edgeType": "Edge",
+          "source": "1d7b00fe703649fc831294f1d986607a",
+          "target": "40e099d22c224eaaa982f468fe2b3cda",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "de4e0daa1a26481dbbff30ae01415635": {
+      "id": "de4e0daa1a26481dbbff30ae01415635",
+      "name": "greeting",
+      "label": "Greeting",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY4NTk1OTg3MDM4OCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "297ee08fdce44ba988c0176ee7ffee03": {
+      "id": "297ee08fdce44ba988c0176ee7ffee03",
+      "name": "user_query",
+      "label": "User Query",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY4NTk2MDA3NTcxMSBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    }
+  }
+}</graph>
+        <name>_PRVW__5bbb447c3f972110d61847d2684d9d9b</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-06-05 10:16:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>dfbb447c979721102d93fcd0f053afa1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_cb_design_topic_dfbb447c979721102d93fcd0f053afa1</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-05 10:16:10</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>
