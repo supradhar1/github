@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>u_string_3</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-05 05:50:05</sys_created_on>
+        <sys_id>cebe8b6c975321102d93fcd0f053af91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_string_3</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_ui_policy_action_cebe8b6c975321102d93fcd0f053af91</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-05 05:50:05</sys_updated_on>
+        <table>x_1046400_auction_all_item</table>
+        <ui_policy display_value="When item type is others display others field">4d6e476c975321102d93fcd0f053af0a</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

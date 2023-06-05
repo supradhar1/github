@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="_PRVW__903accb88b9721108e21d7ece66bef60">d03accb8979721102d93fcd0f053af63</compiled_topic>
+        <design_definition>{"type":"FlowTopic","type":"FlowTopic","triggers":[{"type":"Trigger","name":"b1378a5795984be8b3c35116946ac090","triggerType":"request","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"id":"b1378a5795984be8b3c35116946ac090"}],"goals":[{"name":"primary","trigger_id":"b1378a5795984be8b3c35116946ac090","nodes":[{"type":"StartGoal","type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"37cb4faba6d2412db602b888c7c804ea","name":"Start"},{"type":"TerminateGoal","type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","type":"String","mode":"string","value":""},"id":"40e099d22c224eaaa982f468fe2b3cda","name":"End"},{"type":"TextOutputPrompt","type":"TextOutputPrompt","value":[{"type":"String","type":"String","mode":"string","value":"gs.getMessageLang(\"va:topic:95b5c074979721102d93fcd0f053af46:node:4edd88c59b844ca48759a27f78c7d59a:field:0 {0}\", vaContext.getRequesterLang(), [vaInputs.user.name])"}],"id":"4edd88c59b844ca48759a27f78c7d59a","name":"Welcome ","goal_id":"primary","applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"secure":false}],"edges":[{"type":"Edge","source_node_id":"4edd88c59b844ca48759a27f78c7d59a","target_node_id":"40e099d22c224eaaa982f468fe2b3cda","id":"de4a88bb1e9b4db08d1746e03ee7f80a"},{"type":"Edge","source_node_id":"37cb4faba6d2412db602b888c7c804ea","target_node_id":"4edd88c59b844ca48759a27f78c7d59a","id":"717343646afe492ba33856bd55908b81"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","type":"Reference","table":"sys_user","id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"list":false}],"applicability":{"type":"Applicability","type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"6e876ac81b2ae1109cb1639bbc4bcb2b","domain":"global","topic_type":"SMALL_TALK","channels":[],"id":"95b5c074979721102d93fcd0f053af46","name":"_PRVW__903accb88b9721108e21d7ece66bef60","key_phrases":["Auction-Bot"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":true,"autopilot_topic":true,"design_categories":[],"triggerable_by_notification":false,"library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>95b5c074979721102d93fcd0f053af46</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.41",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "37cb4faba6d2412db602b888c7c804ea": {
+          "id": "37cb4faba6d2412db602b888c7c804ea",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "40e099d22c224eaaa982f468fe2b3cda": {
+          "id": "40e099d22c224eaaa982f468fe2b3cda",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "4edd88c59b844ca48759a27f78c7d59a": {
+          "id": "4edd88c59b844ca48759a27f78c7d59a",
+          "stepType": "TextOutput",
+          "name": "Welcome ",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Welcome to AuctionArc "
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "How can  i assist"
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.user.name}}",
+                        "displayValue": "Input Variables➛User➛Name"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": "?"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "ff34abde95c441789efc15c91f592788"
+            }
+          ],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "de4a88bb1e9b4db08d1746e03ee7f80a",
+          "edgeType": "Edge",
+          "source": "4edd88c59b844ca48759a27f78c7d59a",
+          "target": "40e099d22c224eaaa982f468fe2b3cda",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "717343646afe492ba33856bd55908b81",
+          "edgeType": "Edge",
+          "source": "37cb4faba6d2412db602b888c7c804ea",
+          "target": "4edd88c59b844ca48759a27f78c7d59a",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    }
+  }
+}</graph>
+        <name>_PRVW__903accb88b9721108e21d7ece66bef60</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-06-05 10:09:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>103accb8979721102d93fcd0f053af66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_cb_design_topic_103accb8979721102d93fcd0f053af66</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-05 10:09:24</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

@@ -18,13 +18,8 @@
 	}
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css>.widget {
-  padding-left: 10px;
-  width: 100%;
-  font-size: 16px;
-}
+        <css>
 
- 
 
 .container {
   width: auto;
@@ -33,7 +28,7 @@
   font-size:20px;
 }
 
- 
+
 
 .course {
   display: flex;
@@ -41,41 +36,69 @@
   padding: 10px;
   width:auto;
 
-}
+}*/
 
- 
+
 
 .course img {
-  margin-right: 10px;
-   font-size:12px;
-  line-height:20px;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  width:auto;
+
 }
+h3{ 
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
+  padding-left:50px;
+}
+.test{ 
+  height: 600px;
+  width: 900px;
+  //background-color: powderblue;
+  //border: 3px solid #73AD21;
+  padding-top: 50px;
+  padding-right:0px;
+  padding-bottom: 50px;
+  padding-left:100px;
+}
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+/*.amount{
+  height: 600px;
+  width: 900px;
+  //background-color: powderblue;
+  //border: 3px solid #73AD21;
+  padding-top: 50px;
+  padding-right:0px;
+  padding-bottom: 50px;
+  padding-left:100px;
+  
+}*/
 
- 
-
-.course h3,
+/*.course h3,
 .course h4 {
-  width: auto;
-  margin: 0px;
-  fon
- 
-}
 
- 
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}*/
 
-.course h4 label {
-  display: inline-block;
+
+
+/*.course h4 label {
   margin-right: 5px;
   width: auto;
-}
+}*/
 
- 
 
-.form-control.currency {
-  width: 70px;
-  margin-left: 5px;
-}
-</css>
+
+.</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -146,14 +169,14 @@
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>203</sys_mod_count>
+        <sys_mod_count>317</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-05 04:11:12</sys_updated_on>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-05 09:24:11</sys_updated_on>
         <template><![CDATA[<div class="alertCenter">
 <div ng-if="c.sucMsg" class="alert-dismissible" role="alert">
 <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -169,32 +192,28 @@
 </div>
 
  
-
-<div id="error-message"></div>
-
- 
-
-<div class="widget">
 <div class="course" ng-repeat="gr in c.data.records">
 <img src="/{{gr.image}}.iix" alt="data">
-
  
 
-    <h3><br>{{gr.name}}</h3><br>
-<h4><br>Current Bid: {{gr.startingbid}}</h4><br>
+<div class="test">
+  
+  
+ <h3>{{gr.name}}</h3>
+<h4>Current Bid: {{gr.startingbid}}</h4>
 <form ng-submit="currency()">
-<h4>
+<div class="amount">
 <label for="currency-field">Enter Amount</label>
-<div class="input-group">
-<span class="input-group-addon">$</span>
-<input type="number" value="10" min="0" size="1" class="form-control currency" id="c2" required ng-model="data.currency" />
-</div>
+  <i class="fa fa-dollar" style="font-size:14px"></i>
+<input type="number" value="10" min="0" size="1" class="form-control" id="c2" required ng-model="data.currency" />
+    </div>
+  
 <br>
 <button type="submit" class="bidnow">Bid</button>
-</h4>
+
 </form>
-</div>
-</div>
+  </div>
+ </div>
 <div></div>]]></template>
     </sp_widget>
 </record_update>
