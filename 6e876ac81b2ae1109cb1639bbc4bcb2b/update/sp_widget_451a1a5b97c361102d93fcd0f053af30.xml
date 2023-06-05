@@ -113,77 +113,14 @@
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-06-01 04:48:06</sys_created_on>
         <sys_id>451a1a5b97c361102d93fcd0f053af30</sys_id>
-        <sys_mod_count>60</sys_mod_count>
+        <sys_mod_count>61</sys_mod_count>
         <sys_name>sample</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_451a1a5b97c361102d93fcd0f053af30</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-06-01 08:09:19</sys_updated_on>
-        <template><![CDATA[
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <!-- Replace "test" with your own sandbox Business account app client ID -->
-    <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
-    <!-- Set up a container element for the button -->
-    <div id="paypal-button-container"><button >
-      jd
-      </button></div>
-    <script>
-      paypal.Buttons({
-        // Order is created on the server and the order id is returned
-        createOrder() {
-          return fetch("/my-server/create-paypal-order", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            // use the "body" param to optionally pass additional order information
-            // like product skus and quantities
-            body: JSON.stringify({
-              cart: [
-                {
-                  sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
-                  quantity: "YOUR_PRODUCT_QUANTITY",
-                },
-              ],
-            }),
-          })
-          .then((response) => response.json())
-          .then((order) => order.id);
-        },
-        // Finalize the transaction on the server after payer approval
-        onApprove(data) {
-          return fetch("/my-server/capture-paypal-order", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              orderID: data.orderID
-            })
-          })
-          .then((response) => response.json())
-          .then((orderData) => {
-            // Successful capture! For dev/demo purposes:
-            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-            const transaction = orderData.purchase_units[0].payments.captures[0];
-            alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
-            // When ready to go live, remove the alert and show a success message within this page. For example:
-            // const element = document.getElementById('paypal-button-container');
-            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-            // Or go to another URL:  window.location.href = 'thank_you.html';
-          });
-        }
-      }).render('#paypal-button-container');
-    </script>
-  </body>
-</html>
-]]></template>
+        <sys_updated_on>2023-06-05 04:05:07</sys_updated_on>
+        <template/>
     </sp_widget>
 </record_update>
