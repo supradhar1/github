@@ -145,7 +145,15 @@
                   "type": "paragraph",
                   "children": [
                     {
-                      "text": "Just a moment"
+                      "text": "Ticket has been raised"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Our Agent will contact you shortly."
                     }
                   ]
                 }
@@ -168,7 +176,7 @@
                 "type": "paragraph",
                 "children": [
                   {
-                    "text": "Here are a few quick links to help  you out"
+                    "text": "Here are a few quick links to help  you out."
                   }
                 ]
               }
@@ -242,15 +250,24 @@
             "mode": "simple"
           },
           "applicability": {
-            "value": "",
-            "mode": "query"
+            "mode": "query",
+            "value": ""
           },
           "skippable": {
             "value": "",
             "mode": "query"
           },
           "defaultValue": {
-            "value": "",
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
             "mode": "simple"
           },
           "variableId": "b899ae0cb34f4fd4bf690aa400bf9481",
@@ -265,6 +282,380 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false
+        },
+        "d197c0674e184e478a598ff6fd90331d": {
+          "stepType": "ChoicePrompt",
+          "name": "Choice",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "what problem you are facing?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "2577dab84fe34f10aa503fd5adb4f977",
+          "id": "d197c0674e184e478a598ff6fd90331d",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "7cf6dd535299439786f33e18333b1c77": {
+          "id": "7cf6dd535299439786f33e18333b1c77",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "2114009a0dce4173a987825c01ce515b": {
+          "id": "2114009a0dce4173a987825c01ce515b",
+          "stepType": "ImplicitEnd"
+        },
+        "e650e8ba2ec641c78c6bb3c1f430e9fe": {
+          "stepType": "ChoicePrompt",
+          "name": "Choice",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Here are a few quick links to help  you out."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "981ab6978d3d47548f2a612e633a68e2",
+          "id": "e650e8ba2ec641c78c6bb3c1f430e9fe",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "3eb501a7e44c4f0c9f704afb5cde68ff": {
+          "id": "3eb501a7e44c4f0c9f704afb5cde68ff",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "157ea4ae895041a7b8699d3dad5cc627": {
+          "id": "157ea4ae895041a7b8699d3dad5cc627",
+          "stepType": "ImplicitEnd"
+        },
+        "bae6f25255f5445abc5da66621d6eb99": {
+          "stepType": "ChoicePrompt",
+          "name": "choice",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "what problem you are facing?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "79b173571f1c4dd4a1356e0e083d653c",
+          "id": "bae6f25255f5445abc5da66621d6eb99",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "875f889eb9d14175b7bd054c92830c41": {
+          "id": "875f889eb9d14175b7bd054c92830c41",
+          "stepType": "TextOutput",
+          "name": "Queryresponse",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Ticket has been raised"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Our Agent will contact you shortly."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "d9ffc994a0bd4af1bbb5e7679250ca04"
+            }
+          ],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "0817cbf3b753447f9248711ee938ce55": {
+          "id": "0817cbf3b753447f9248711ee938ce55",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "15c919148c8f4d0995529dbd26ac178f": {
+          "id": "15c919148c8f4d0995529dbd26ac178f",
+          "stepType": "ImplicitEnd"
+        },
+        "425af3754e2e4fa795869faad634587a": {
+          "stepType": "ChoicePrompt",
+          "name": "choice",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "what problem you are facing?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "ad9915cf77c5454da9b0074bf9368c8b",
+          "id": "425af3754e2e4fa795869faad634587a",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "b3e31ea4115d4fecadf4486fdcef071d": {
+          "stepType": "ChoicePrompt",
+          "name": "Choice",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "what problem you are facing?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "df31aff203b64d29b6db72d7bd1f8dfe",
+          "id": "b3e31ea4115d4fecadf4486fdcef071d",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "7d436f81d49c46cd8f8242e156863484": {
+          "id": "7d436f81d49c46cd8f8242e156863484",
+          "stepType": "TextOutput",
+          "name": "Queryresponse",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Ticket has been raised"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Our Agent will contact you shortly."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "9073432c62194feba7cea23d0728f0be"
+            }
+          ],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "f8ef2c87289e40a2b5ada3338970d77c": {
+          "id": "f8ef2c87289e40a2b5ada3338970d77c",
+          "stepType": "TextOutput",
+          "name": "Queryresponse",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Ticket has been raised"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Our Agent will contact you shortly."
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "b768022d845f4633938d5ff538e3c0e7"
+            }
+          ],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
         }
       },
       "edges": [
@@ -273,14 +664,6 @@
           "edgeType": "Edge",
           "source": "4edd88c59b844ca48759a27f78c7d59a",
           "target": "8da96d9f142b472782839c9014ea3b15",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "7b7acf040c2e4e7ea510b1ffd0bb7d18",
-          "edgeType": "Edge",
-          "source": "ee477398d57645859f6f0c4f7a1ab766",
-          "target": "174f10039c74478ab2a4c7bce4f41b90",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -309,10 +692,160 @@
           "targetPort": ""
         },
         {
+          "id": "500ea69cefe1455a9b9011f4810b3a9f",
+          "edgeType": "Edge",
+          "source": "d197c0674e184e478a598ff6fd90331d",
+          "target": "174f10039c74478ab2a4c7bce4f41b90",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
           "id": "f1390631975b4246bae19fd8c38bd160",
           "edgeType": "Edge",
           "source": "8da96d9f142b472782839c9014ea3b15",
+          "target": "7cf6dd535299439786f33e18333b1c77",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ce2236e5f2ff4f238be42e0dc0e7156f",
+          "edgeType": "Branch",
+          "source": "7cf6dd535299439786f33e18333b1c77",
           "target": "ee477398d57645859f6f0c4f7a1ab766",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.userpersonas=Buyer",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "0edd91df44a342618201af9e55f1513c",
+          "edgeType": "Branch",
+          "source": "7cf6dd535299439786f33e18333b1c77",
+          "target": "e650e8ba2ec641c78c6bb3c1f430e9fe",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.userpersonas=Seller",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "7b7acf040c2e4e7ea510b1ffd0bb7d18",
+          "edgeType": "Edge",
+          "source": "ee477398d57645859f6f0c4f7a1ab766",
+          "target": "3eb501a7e44c4f0c9f704afb5cde68ff",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b479597488fe4b5ca990d46f1b41c5bf",
+          "edgeType": "Branch",
+          "source": "3eb501a7e44c4f0c9f704afb5cde68ff",
+          "target": "d197c0674e184e478a598ff6fd90331d",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choices=Auction",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "c6b39c99dd6d46a9affed804460ab666",
+          "edgeType": "Branch",
+          "source": "3eb501a7e44c4f0c9f704afb5cde68ff",
+          "target": "bae6f25255f5445abc5da66621d6eb99",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choices=Billing ",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "f196c9f3b00e40529d3ff811a96ba1ea",
+          "edgeType": "Edge",
+          "source": "bae6f25255f5445abc5da66621d6eb99",
+          "target": "875f889eb9d14175b7bd054c92830c41",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0ee7504afce54e98a2fbcea2e9776e63",
+          "edgeType": "Edge",
+          "source": "875f889eb9d14175b7bd054c92830c41",
+          "target": "157ea4ae895041a7b8699d3dad5cc627",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "eac23164b2c04e1d969bcb4573fd853a",
+          "edgeType": "Edge",
+          "source": "e650e8ba2ec641c78c6bb3c1f430e9fe",
+          "target": "0817cbf3b753447f9248711ee938ce55",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f3d5a8e490ac41828275d75f11b2352b",
+          "edgeType": "Branch",
+          "source": "0817cbf3b753447f9248711ee938ce55",
+          "target": "425af3754e2e4fa795869faad634587a",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choice_2=payment",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "adac38b113004429ae54d3e3650c4a37",
+          "edgeType": "Branch",
+          "source": "0817cbf3b753447f9248711ee938ce55",
+          "target": "b3e31ea4115d4fecadf4486fdcef071d",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choice_2=Auction",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "67de2b52b6374f289b97a764ebd8be99",
+          "edgeType": "Edge",
+          "source": "b3e31ea4115d4fecadf4486fdcef071d",
+          "target": "7d436f81d49c46cd8f8242e156863484",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "7f5d39a1946046969dfd686fbf69fef1",
+          "edgeType": "Edge",
+          "source": "7d436f81d49c46cd8f8242e156863484",
+          "target": "2114009a0dce4173a987825c01ce515b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "50cdec42103849d699b99ba45041815d",
+          "edgeType": "Edge",
+          "source": "425af3754e2e4fa795869faad634587a",
+          "target": "f8ef2c87289e40a2b5ada3338970d77c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b82939aeafe544a394d043a44171680e",
+          "edgeType": "Edge",
+          "source": "f8ef2c87289e40a2b5ada3338970d77c",
+          "target": "15c919148c8f4d0995529dbd26ac178f",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -349,7 +882,7 @@
       "choices": [
         {
           "label": "Auction",
-          "value": "Aucrion"
+          "value": "Auction"
         },
         {
           "label": "Billing ",
@@ -374,6 +907,79 @@
         }
       ],
       "category": "vaInputs"
+    },
+    "2577dab84fe34f10aa503fd5adb4f977": {
+      "id": "2577dab84fe34f10aa503fd5adb4f977",
+      "name": "choice",
+      "label": "Choice",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "unable to auction",
+          "value": "unable to auction"
+        },
+        {
+          "label": "my bids",
+          "value": "Items are not dislaying in my bids"
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "981ab6978d3d47548f2a612e633a68e2": {
+      "id": "981ab6978d3d47548f2a612e633a68e2",
+      "name": "choice_2",
+      "label": "Choice (2)",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Auction",
+          "value": "Auction"
+        },
+        {
+          "label": "payment",
+          "value": "payment"
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "79b173571f1c4dd4a1356e0e083d653c": {
+      "id": "79b173571f1c4dd4a1356e0e083d653c",
+      "name": "choice_3",
+      "label": "Choice (3)",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "error in payment",
+          "value": "payment"
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "ad9915cf77c5454da9b0074bf9368c8b": {
+      "id": "ad9915cf77c5454da9b0074bf9368c8b",
+      "name": "choice_5",
+      "label": "Choice (5)",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "error in payment receving",
+          "value": "error in payment receving"
+        }
+      ],
+      "category": "vaInputs"
+    },
+    "df31aff203b64d29b6db72d7bd1f8dfe": {
+      "id": "df31aff203b64d29b6db72d7bd1f8dfe",
+      "name": "choice_4",
+      "label": "Choice (4)",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "unable to place the items into auction",
+          "value": "unable to place the items into auction"
+        }
+      ],
+      "category": "vaInputs"
     }
   }
 }</graph>
@@ -395,14 +1001,14 @@
         <sys_created_on>2023-06-05 09:49:49</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>95b5c074979721102d93fcd0f053af46</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_name>Auction-Bot</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sys_cb_topic_95b5c074979721102d93fcd0f053af46</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-06-05 10:43:31</sys_updated_on>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-05 11:54:47</sys_updated_on>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>SMALL_TALK</type>
         <variables/>

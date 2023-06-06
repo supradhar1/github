@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application>Virtual Agent</application>
+        <code/>
+        <commented_message/>
+        <key>error in payment receving</key>
+        <language>en</language>
+        <message>error in payment receving</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-06-05 11:50:05</sys_created_on>
+        <sys_id>8f31ecf0971b21102d93fcd0f053af5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>error in payment receving</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_ui_message_8f31ecf0971b21102d93fcd0f053af5d</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-05 11:50:05</sys_updated_on>
+    </sys_ui_message>
+</record_update>
