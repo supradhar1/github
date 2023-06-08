@@ -12,16 +12,7 @@
    $scope.newRecord = function(){
 		 $location.search({id:'form',table:"x_1046400_auction_all_item",sys_id:'-1',auctioned_on:'1'});
 	 }
- 
-
-   
-
- 
-
-
-
-
- 
+	
 };]]></client_script>
         <controller_as>c</controller_as>
         <css>.widget {
@@ -102,8 +93,7 @@ tr:nth-child(even) {
   }
 }
 
-
-.new-button {
+.new button {
   max-width: 200px;
   display: block;
   margin: 20px;
@@ -182,7 +172,7 @@ data.records = [];
         record.description = itemGr.getValue('description');        
         record.category= itemGr.getValue('category');
         record.startingbid = itemGr.getValue('starting_bid');
-        	record.sysId = itemGr.getValue('sys_id');
+        record.sysId = itemGr.getValue('sys_id');
 
         data.records.push(record);
     } 
@@ -193,14 +183,14 @@ data.records = [];
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-22 10:56:50</sys_created_on>
         <sys_id>a2ce80dc974721102d93fcd0f053af94</sys_id>
-        <sys_mod_count>127</sys_mod_count>
+        <sys_mod_count>134</sys_mod_count>
         <sys_name>Item</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_a2ce80dc974721102d93fcd0f053af94</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-08 06:40:57</sys_updated_on>
+        <sys_updated_on>2023-06-08 08:53:56</sys_updated_on>
         <template><![CDATA[<div class="widget" >
 <table>
   <tr>
@@ -210,7 +200,7 @@ data.records = [];
     <th>Category</th>   
     <th>Starting Bid</th>
     <th> <a href=""><button class="new button" id="button" ng-click="newRecord()">New</button></a></th>
-
+           
     
   </tr>
   <tbody>

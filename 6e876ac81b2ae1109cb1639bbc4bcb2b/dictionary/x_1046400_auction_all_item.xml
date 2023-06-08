@@ -37,7 +37,7 @@
                 <element inactive_on_update="false" label="Very Rare" sequence="2" value="very rare"/>
             </choice>
         </element>
-        <element label="Starting Bid" mandatory="true" max_length="20" name="starting_bid" type="currency"/>
+        <element display="true" label="Starting Bid" mandatory="true" max_length="20" name="starting_bid" type="currency"/>
         <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
         <element attributes="omit_sys_original=true" label="Bids" max_length="20" name="u_currency_1" type="currency"/>
         <element attributes="edge_encryption_enabled=true" label="Others" max_length="40" name="u_string_3" type="string"/>

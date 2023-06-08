@@ -57,13 +57,14 @@ text-align: center;
 
 .button:hover {
   background-color: transparent;
-  color: #4ac0ee;
+  color: green;
 }
 
 .button:focus {
   outline: none;
   box-shadow: 0 0 0 2px #4ac0ee;
 }
+
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -96,14 +97,14 @@ text-align: center;
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-24 09:19:03</sys_created_on>
         <sys_id>659b8eb497c761102d93fcd0f053afe1</sys_id>
-        <sys_mod_count>101</sys_mod_count>
+        <sys_mod_count>102</sys_mod_count>
         <sys_name>home</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_659b8eb497c761102d93fcd0f053afe1</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-08 05:28:08</sys_updated_on>
+        <sys_updated_on>2023-06-08 07:12:53</sys_updated_on>
         <template><![CDATA[
     <div class="home-container1">
       <h1 class="home-text">
