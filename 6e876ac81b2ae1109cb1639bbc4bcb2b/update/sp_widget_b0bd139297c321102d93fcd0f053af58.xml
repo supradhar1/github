@@ -35,8 +35,8 @@
 }
 
 img{
-   width: 220%;
-  height: 630px;
+   width: 200%;
+  height: 400px;
   background-repeat: no-repeat;
   background-size: contain;
   border: 1px solid red;
@@ -311,14 +311,14 @@ top: 350px;
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>569</sys_mod_count>
+        <sys_mod_count>571</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-06-08 07:09:38</sys_updated_on>
+        <sys_updated_on>2023-06-08 09:00:54</sys_updated_on>
         <template><![CDATA[<!--<div class="alertCenter">
 <center><div ng-if="c.sucMsg" class="alert-dismissible" role="alert">
 <!-- <center><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>{{ c.sucMsg }}</strong>

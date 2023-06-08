@@ -708,9 +708,191 @@
             "mode": "query"
           },
           "variableId": "278daeb1bd68472693fb68fc42395d9a"
+        },
+        "81e4524a74874ea8aa2cc88bd515e00b": {
+          "id": "81e4524a74874ea8aa2cc88bd515e00b",
+          "stepType": "Prompt",
+          "name": "desc2",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter the query in detail"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "c940d3d616ed4dcb948cdb28123cbf63",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "b528defdc3a04f9fa5df518297142219": {
+          "id": "b528defdc3a04f9fa5df518297142219",
+          "stepType": "CrudAction",
+          "name": "Record2",
+          "template": "category={{vaInputs.choice_2}}^number={{vaInputs.userpersonas}}^sub_category={{vaInputs.choice_4}}^query={{vaInputs.desc2}}",
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "2723397d61b848ea8c04202bc3becbd8"
+        },
+        "1cd00e47939348f4859e83b683215f4a": {
+          "id": "1cd00e47939348f4859e83b683215f4a",
+          "stepType": "Prompt",
+          "name": "desc3",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter the query in detail"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "f2b9d732321845b1b5270bccbdf370bc",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
+        },
+        "1c143571fc444650b861ab192e452f9e": {
+          "id": "1c143571fc444650b861ab192e452f9e",
+          "stepType": "CrudAction",
+          "name": "Record3",
+          "template": "category={{vaInputs.choices}}^query={{vaInputs.desc3}}^number={{vaInputs.userpersonas}}^sub_category={{vaInputs.choice_3}}",
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "13e5a68f6dc7460d8f47cb9ed665cf02"
+        },
+        "11d5a0fc9d9f49f8869b0c808656b14e": {
+          "id": "11d5a0fc9d9f49f8869b0c808656b14e",
+          "stepType": "CrudAction",
+          "name": "Record4",
+          "template": "category={{vaInputs.choices}}^query={{vaInputs.desc4}}^sub_category={{vaInputs.choice}}^number={{vaInputs.userpersonas}}",
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "4217bb7a07854a35821e3149e3eb0e12"
+        },
+        "1383dcceec944738ac5efdeb177ca1cf": {
+          "id": "1383dcceec944738ac5efdeb177ca1cf",
+          "stepType": "Prompt",
+          "name": "desc4",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Enter Query in detail"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "a8c8da1fbc9b47ddb3fb088eb6ec6a34",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          }
         }
       },
       "edges": [
+        {
+          "id": "42b5a9ccfecb4e38b01f4e1603f54896",
+          "edgeType": "Edge",
+          "source": "174f10039c74478ab2a4c7bce4f41b90",
+          "target": "11d5a0fc9d9f49f8869b0c808656b14e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
         {
           "id": "717343646afe492ba33856bd55908b81",
           "edgeType": "Edge",
@@ -724,22 +906,6 @@
           "edgeType": "Edge",
           "source": "4edd88c59b844ca48759a27f78c7d59a",
           "target": "8da96d9f142b472782839c9014ea3b15",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "42b5a9ccfecb4e38b01f4e1603f54896",
-          "edgeType": "Edge",
-          "source": "174f10039c74478ab2a4c7bce4f41b90",
-          "target": "40e099d22c224eaaa982f468fe2b3cda",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "500ea69cefe1455a9b9011f4810b3a9f",
-          "edgeType": "Edge",
-          "source": "d197c0674e184e478a598ff6fd90331d",
-          "target": "174f10039c74478ab2a4c7bce4f41b90",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -812,22 +978,6 @@
           "label": "Always"
         },
         {
-          "id": "f196c9f3b00e40529d3ff811a96ba1ea",
-          "edgeType": "Edge",
-          "source": "bae6f25255f5445abc5da66621d6eb99",
-          "target": "875f889eb9d14175b7bd054c92830c41",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "0ee7504afce54e98a2fbcea2e9776e63",
-          "edgeType": "Edge",
-          "source": "875f889eb9d14175b7bd054c92830c41",
-          "target": "157ea4ae895041a7b8699d3dad5cc627",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "eac23164b2c04e1d969bcb4573fd853a",
           "edgeType": "Edge",
           "source": "e650e8ba2ec641c78c6bb3c1f430e9fe",
@@ -862,22 +1012,6 @@
           "label": "Always"
         },
         {
-          "id": "67de2b52b6374f289b97a764ebd8be99",
-          "edgeType": "Edge",
-          "source": "b3e31ea4115d4fecadf4486fdcef071d",
-          "target": "7d436f81d49c46cd8f8242e156863484",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "7f5d39a1946046969dfd686fbf69fef1",
-          "edgeType": "Edge",
-          "source": "7d436f81d49c46cd8f8242e156863484",
-          "target": "2114009a0dce4173a987825c01ce515b",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "50cdec42103849d699b99ba45041815d",
           "edgeType": "Edge",
           "source": "425af3754e2e4fa795869faad634587a",
@@ -906,6 +1040,94 @@
           "edgeType": "Edge",
           "source": "6f8535efaad84c0c8b48e001676b0d38",
           "target": "15c919148c8f4d0995529dbd26ac178f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "67de2b52b6374f289b97a764ebd8be99",
+          "edgeType": "Edge",
+          "source": "b3e31ea4115d4fecadf4486fdcef071d",
+          "target": "81e4524a74874ea8aa2cc88bd515e00b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ddf06775ebb246fe9ed075b5121892ae",
+          "edgeType": "Edge",
+          "source": "81e4524a74874ea8aa2cc88bd515e00b",
+          "target": "7d436f81d49c46cd8f8242e156863484",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "7f5d39a1946046969dfd686fbf69fef1",
+          "edgeType": "Edge",
+          "source": "7d436f81d49c46cd8f8242e156863484",
+          "target": "b528defdc3a04f9fa5df518297142219",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "851bc68c7b7f4fe69b7046003e0a0ab5",
+          "edgeType": "Edge",
+          "source": "b528defdc3a04f9fa5df518297142219",
+          "target": "2114009a0dce4173a987825c01ce515b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f196c9f3b00e40529d3ff811a96ba1ea",
+          "edgeType": "Edge",
+          "source": "bae6f25255f5445abc5da66621d6eb99",
+          "target": "1cd00e47939348f4859e83b683215f4a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ff9f393862694b648f25eb793010afa5",
+          "edgeType": "Edge",
+          "source": "1cd00e47939348f4859e83b683215f4a",
+          "target": "875f889eb9d14175b7bd054c92830c41",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0ee7504afce54e98a2fbcea2e9776e63",
+          "edgeType": "Edge",
+          "source": "875f889eb9d14175b7bd054c92830c41",
+          "target": "1c143571fc444650b861ab192e452f9e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "15388123ee5d46b48d977e758259722a",
+          "edgeType": "Edge",
+          "source": "1c143571fc444650b861ab192e452f9e",
+          "target": "157ea4ae895041a7b8699d3dad5cc627",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "663d19c6743f4844a91fe533681ff8c0",
+          "edgeType": "Edge",
+          "source": "11d5a0fc9d9f49f8869b0c808656b14e",
+          "target": "40e099d22c224eaaa982f468fe2b3cda",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "500ea69cefe1455a9b9011f4810b3a9f",
+          "edgeType": "Edge",
+          "source": "d197c0674e184e478a598ff6fd90331d",
+          "target": "1383dcceec944738ac5efdeb177ca1cf",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "3580c2fe37b04bec8aadbf523a96b63f",
+          "edgeType": "Edge",
+          "source": "1383dcceec944738ac5efdeb177ca1cf",
+          "target": "174f10039c74478ab2a4c7bce4f41b90",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -1054,6 +1276,72 @@
       "table": "x_1046400_auction_query",
       "inactive": false,
       "category": "vaInputs"
+    },
+    "c940d3d616ed4dcb948cdb28123cbf63": {
+      "id": "c940d3d616ed4dcb948cdb28123cbf63",
+      "name": "desc2",
+      "label": "Desc2",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY4NjIxNDQyOTQ0MiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "2723397d61b848ea8c04202bc3becbd8": {
+      "id": "2723397d61b848ea8c04202bc3becbd8",
+      "name": "record2",
+      "label": "Record2",
+      "varType": "reference",
+      "table": "x_1046400_auction_query",
+      "inactive": false,
+      "category": "vaInputs"
+    },
+    "f2b9d732321845b1b5270bccbdf370bc": {
+      "id": "f2b9d732321845b1b5270bccbdf370bc",
+      "name": "desc3",
+      "label": "Desc3",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY4NjIxNDYwNTgxOCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
+    },
+    "13e5a68f6dc7460d8f47cb9ed665cf02": {
+      "id": "13e5a68f6dc7460d8f47cb9ed665cf02",
+      "name": "record3",
+      "label": "Record3",
+      "varType": "reference",
+      "table": "x_1046400_auction_query",
+      "inactive": false,
+      "category": "vaInputs"
+    },
+    "4217bb7a07854a35821e3149e3eb0e12": {
+      "id": "4217bb7a07854a35821e3149e3eb0e12",
+      "name": "record4",
+      "label": "Record4",
+      "varType": "reference",
+      "table": "x_1046400_auction_query",
+      "inactive": false,
+      "category": "vaInputs"
+    },
+    "a8c8da1fbc9b47ddb3fb088eb6ec6a34": {
+      "id": "a8c8da1fbc9b47ddb3fb088eb6ec6a34",
+      "name": "desc4",
+      "label": "Desc4",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTY4NjIxNTEzOTcwNCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      }
     }
   }
 }</graph>
@@ -1075,14 +1363,14 @@
         <sys_created_on>2023-06-05 09:49:49</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>95b5c074979721102d93fcd0f053af46</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>39</sys_mod_count>
         <sys_name>Auction-Bot</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sys_cb_topic_95b5c074979721102d93fcd0f053af46</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-06-08 08:53:10</sys_updated_on>
+        <sys_updated_on>2023-06-08 09:08:16</sys_updated_on>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>SMALL_TALK</type>
         <variables/>
