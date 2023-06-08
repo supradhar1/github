@@ -3,148 +3,105 @@
         <category>custom</category>
         <client_script><![CDATA[api.controller=function($scope,$location) {
 
-	$scope.openModal = function(sysId){
+ 
 
-		$location.search({id:'items&sysId=' + sysId });
+    $scope.openModal = function(sysId){
 
-	}
+ 
 
-};
+        $location.search({id:'items&sysId=' + sysId });
 
+ 
 
+    }
 
-]]></client_script>
+ 
+
+};]]></client_script>
         <controller_as>c</controller_as>
         <css>.widget {
   padding: 10px;
   width: 450px;
-}
+  background: linear-gradient(45deg, #e6e6e6, #f2f2f2);
+  border-radius: 10px;
 
-
-table {
-  width: 200%;
-  border-collapse: collapse;
- 
-}
-
-
-	
-	td {
-		padding: 20px 15px;
-	}
-	
-	thead {
-		background: linear-gradient(45deg, #614ad3, #e42c64);
-		border-radius: 10px 10px 0 0;
-		
-		tr {
-			border-radius: 10px 10px 0 0;
-		}
-		
-		td {
-			color: #fff;
-			font-size: 20px;
-		}
-		
-		td:first-of-type {
-			border-radius: 10px 0 0 0;
-		}
-		
-		td:last-of-type {
-			border-radius: 0 10px 0 0;
-		}
-	}
-	
-	tbody {
-		td {
-			border-top: 1px solid #f0f0f0;
-		}
-		
-		tr:hover {
-			background: #8b9dc3 ;
-		}
-	}
 
 }
 
 
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+.data-frame {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+.image-container {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.text-container {
+  flex-grow: 1;
+}
+
+
+
+.text-container h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+
+
+.text-container p {
+  font-size: 14px;
+  margin: 5px 0;
+}
 
 
 
 .bid-button {
-  position: relative;
-  display: inline-block;
-  
-  background: #fff;
-  width: 100px;
-  padding: .75rem 1.25rem;
-
-  border: 5px solid #4ac0ee;
-  color: #4ac0ee;
+  background-color: #4ac0ee;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
   font-weight: bold;
   text-transform: uppercase;
-  text-align:center;
-  
-  z-index: 1;
-  @include transition(all .15s .15s ease-out);
-
-    &amp;:after,
-    &amp;:before {
-        position: absolute;
-        width: 100%;
-        max-width: 100%;
-        top: 100%;
-        left: 0;
-        bottom: -10px;
-        content: '';
-        z-index: 1;
-        @include transition(all .15s .15s ease-out);
-    }
-
-    &amp;:before {
-        background: #4ac0ee;
-        top: 10px;
-        left: -10px;
-        height: 100%;
-        width: 10px;
-    }
-
-    &amp;:after {
-        width:100%;
-        background: #4ac0ee;
-        right: 0px;
-        left: -10px;
-        height: 10px;
-    }
-
-    &amp;:hover {
-      background: #4ac0ee;
-      color: #fff;
-      margin-left: -7.5px;
-      margin-bottom: -7.5px;
-
-      &amp;:after,
-      &amp;:before {
-          top: 100%;
-          left: 0;
-          bottom: 0px;
-      }
-
-      &amp;:before {
-          top: 0px;
-          left: 0px;
-          width: 0px;
-      }
-
-      &amp;:after {
-          right: 0px;
-          left: 0px;
-          height: 0px;
-      }
-
-    }
+  cursor:pointer;
 }
 
+.bid-button disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  
+
+}
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -160,83 +117,79 @@ table {
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-	/* populate the 'data' object */
-	/* e.g., data.table = $sp.getValue('table'); */
+    /* populate the 'data' object */
+    /* e.g., data.table = $sp.getValue('table'); */
+
+ 
+
+ 
+
+ 
 
 
+    data.records = [];
+
+ 
+
+ 
+
+    var itemGr = new GlideRecord('x_1046400_auction_auction');
+    itemGr.orderBy('start_time');
+    itemGr.query();
+    var field = 'state';
+    while(itemGr.next()){
+        var record = {};
+        record.name = itemGr.getValue('name');
+        record.starttime = itemGr.getValue('start_time');
+        record.endtime= itemGr.getValue('end_time');        
+        record.state = itemGr.getDisplayValue('state');
+        record.sysId = itemGr.getValue('sys_id');
+
+ 
+
+        console.log(record.sysId);
+
+ 
+
+ 
 
 
-	data.records = [];
+        data.records.push(record);
+    } 
+})();
 
-	var itemGr = new GlideRecord('x_1046400_auction_auction');
-	itemGr.orderBy('start_time');
-	itemGr.query();
-	var field = 'state';
-	while(itemGr.next()){
-		var record = {};
-		record.name = itemGr.getValue('name');
-		record.starttime = itemGr.getValue('start_time');
-		record.endtime= itemGr.getValue('end_time');        
-		record.state = itemGr.getDisplayValue('state');
-		record.sysId = itemGr.getValue('sys_id');
-		
-		console.log(record.sysId);
-
-
-		data.records.push(record);
-	} 
-})();]]></script>
+ ]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-25 04:57:24</sys_created_on>
         <sys_id>2a49d2059787a1102d93fcd0f053af23</sys_id>
-        <sys_mod_count>256</sys_mod_count>
+        <sys_mod_count>295</sys_mod_count>
         <sys_name>Auction</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_2a49d2059787a1102d93fcd0f053af23</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-02 09:20:51</sys_updated_on>
-        <template><![CDATA[<div class="widget" >
-  <table>
-    <tr>
-
-      <th>Name</th>
-      <th>Start Time</th>
-      <th>End Time</th>
-      <th>Status</th>
-
-
-    </tr>
-    <tbody>
-      <!-- Use AngularJS ng-repeat to iterate over records -->
-      <tr ng-repeat="data in data.records">
-        <td>{{data.name}}</td>
-        <td>{{data.starttime}}</td>
-        <td>{{data.endtime}}</td>
-        <td> {{data.state}}</td>
-
-
-
-        <td>
-
-
-        <td>
-          <a href="?id=items&sysId={{data.sysId}}">
-            <button class="bid-button" id="button" ng-disabled="data.state === 'Closed' || data.state === 'Yet to open'">View</button>
-          </a>
-        </td>
-
-      </tr>
-    </tbody>
-  </table>
-
+        <sys_updated_on>2023-06-06 08:58:44</sys_updated_on>
+        <template><![CDATA[<div class="widget" ng-repeat="data in data.records">
+<div class="container">
+<div class="data-frame" >
+<div class="image-container" >
+<img src="path_to_image{{ $index + 1 }}.jpg" alt="Image {{ $index + 1 }}">
 </div>
-<script>
-
-</script>
-]]></template>
+<div class="text-container">
+ 
+<h3>{{ data.name }}</h3>
+<p>Start Time: {{ data.starttime }}</p>
+<p>End Time: {{ data.endtime }}</p>
+<p>Status: {{ data.state }}</p>
+ <a href="?id=items&sysId={{ data.sysId }}">
+<button class="btn btn-primary bid-button" ng-if="data.state != 'Closed' && data.state !='Yet to open'">View</button>
+</a>
+</div>
+</div><br>
+</div>
+</div>]]></template>
     </sp_widget>
 </record_update>

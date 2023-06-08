@@ -1,129 +1,278 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[ (function() {
-  var chatButton = document.querySelector('.help-button');
-  var chatFrame = document.querySelector('.chat-frame');
-
- 
-
-  chatButton.addEventListener('click', function() {
-    // Toggle chat window visibility
-    var isWindowVisible = chatFrame.style.display !== 'none';
-    chatFrame.style.display = isWindowVisible ? 'none' : 'block';
-
- 
-
-    // Check if the chat window is visible
-    if (isWindowVisible) {
-      // Mark all messages as read
-      chatFrame.contentWindow.postMessage({ type: 'markAllMessagesRead' }, '*');
-    } else {
-      // Reset unread message count
-      chatButton.classList.remove('state-unread');
-    }
-  });
-
- 
-
-  // Listen for new messages from the chat frame
-  window.addEventListener('message', function(event) {
-    var data = event.data;
-    if (data && data.type === 'newMessage') {
-      // Increment unread message count
-      chatButton.classList.add('state-unread');
-    }
-  });
-})();
-
-
-
-
-
-]]></client_script>
+        <client_script><![CDATA[function($log, $scope, $element, $document, spModal, $q, $timeout, $window) {
+	'use strict';
+	
+  /* widget controller */
+  var $ctrl = this;
+	var $spContainer = $document.find('.sp-page-root');
+	var $widgetParent = $element.parent();
+	var START_SUPPORT_CONVERSATION = "${auction}";
+	var CLOSE_SUPPORT_CONVERSATION = "${Close Support Conversation}";
+	
+	$ctrl.isWindowVisible = false;
+	$ctrl.hasUnreadMessages = false;
+	$ctrl.firstPress = false;
+	$ctrl.vaSource = '';
+	
+	
+	$ctrl.toggleWindow = function() {
+		if ($ctrl.isWindowVisible) {
+			$ctrl.isWindowVisible = false;
+			$ctrl.helpButtonAriaLabel = START_SUPPORT_CONVERSATION;
+			$timeout(function() {
+				if (!$ctrl.isWindowVisible) {
+					$element.find('.conversation-container').css("display", "none");
+					$element.find('.sn-connect-floating').css("display", "none");
+					$element.find('.sn-connect-floating-wrapper').css("display", "none");
+					
+					// ios overlay hacky fix.
+					$document.find('.touch_scroll').css("-webkit-overflow-scrolling", "touch");
+				}
+			}, 300);
+		} else {
+			if (!$ctrl.firstPress) {
+				$ctrl.firstPress = true;
+				$ctrl.vaSource = '/$sn-va-web-client-app.do?sysparm_nostack=true&sysparm_stack=no';
+				if ($ctrl.options.va_url_params) {
+					$ctrl.vaSource = $ctrl.vaSource + '&' + $ctrl.options.va_url_params;
+				}
+			}
+			$ctrl.isWindowVisible = true;
+			$ctrl.hasUnreadMessages = false;
+			$ctrl.helpButtonAriaLabel = CLOSE_SUPPORT_CONVERSATION;
+			$element.find('.conversation-container').css("display", "block");
+			$element.find('.sn-connect-floating').css("display", "block");
+			$element.find('.sn-connect-floating-wrapper').css("display", "block");
+			
+			// ios overlay hacky fix.
+			$document.find('.touch_scroll').css("-webkit-overflow-scrolling", "auto");
+		}
+	};
+	
+		$window.addEventListener("message", function(e) {
+			if (e.data === 'sn-va-web-client-app-new-message' && $ctrl.isWindowVisible === false) {
+				$ctrl.hasUnreadMessages = true;
+			}
+			else if (e.data === 'sn-va-web-client-app-trigger-login') {
+				$window.location.reload(true);
+			}
+		});
+	
+	$element.find('.help-button').on("mouseup", function(e) {
+		e.target.blur();
+		e.stopPropagation();
+	});
+	
+	$element.find('.help-icon').on("mouseup", function(e) {
+		e.target.blur();
+		e.stopPropagation();
+	});
+	
+	$ctrl.openWindow = function() {
+		$ctrl.isWindowVisible = true;		
+		// delay before clearing unread message indicator
+		// in-case user opens and closes quickly
+		$timeout(function() {
+			if ($ctrl.isWindowVisible) {
+				$ctrl.hasUnreadMessages = false;							
+			}
+		}, 500);
+	};
+	
+	var _closeWindow = function() {
+		
+		$ctrl.isWindowVisible = false;
+		$ctrl.hasActiveConversation = false;
+	};
+}]]></client_script>
         <controller_as>$ctrl</controller_as>
-        <css>.conversation-button-container {
+        <css>$color-darker: #485563;
+$color-white: #ffffff;
+
+$window-width: 375px;
+$window-height: 600px;
+$button-height: 60px;
+$bottom-margin: 15px;
+
+$sn-chatbot-animation-speed: 300ms;
+
+// OVERRIDE TO DISPLAY RECORD CARDS
+.sn-card-component_records {
+  display: block !important;
+}
+
+.conversation-button-container {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  right: 30px;
+  bottom: 15px;
+  z-index: 20;
+
+  .conversation-region {
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+
+
+    &amp;.open {
+      transition: $sn-chatbot-animation-speed ease-in opacity;
+      opacity: 1;
+      visibility: visible;
+
+    }
+  }
+
+
+  .help-button {
+    position: relative;
+    width: 60px;
+    color: #fff;
+    float: right;
+    border: none;
+    height: $button-height;
+    border-radius: 60px;
+    box-shadow: 0px 2px 11px #ababab;
+    -moz-box-shadow: 0px 2px 11px #ababab;
+    -o-box-shadow: 0px 2px 11px #ababab;
+    padding: 0;
+    background-color: #8D8DE0;
+
+    &amp;::before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    &amp;:hover::before {
+    	background-color: rgba(0,0,0,0.2);
+    }
+
+    &amp;:focus {
+      outline: thin dotted;
+      outline-color: gray;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: 2px;
+    }
+
+    &amp;.state-unread {
+      &amp; &gt; span:after {
+        content: ' ';
+        position: absolute;
+        top: -17px;
+        right: -14px;
+        width: 16px;
+        height: 16px;
+        background-color: #ed6e5c;
+        border-radius: 25px;
+      }
+    }
+    
+    .help-icon {
+      pointer-events: none;
+      position: relative;
+    }
+    
+    .sn-va-widget-icon {
+    	background-image: url('/images/sn-va-sp-widget/sn-va-sp-widget-icon.svg');
+      height: 32px;
+      top: 1px;
+      left: 12px;
+      width: 36px;
+      display: block
+    }
+
+    .icon-close {
+      font-size: 20px;
+
+    }
+
+  }
 }
 
- 
-
-.conversation-container {
-  width: 300px;
-  height: 400px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
- 
-
-.chat-frame {
-  width: 100%;
-  height: 100%;
-}
-
- 
-
-.help-button {
-  position: absolute;
-  bottom: 0;
+// window sizing
+.sn-connect-floating {
+  position: relative;
+  bottom: 15px;
   right: 0;
-  width: 60px;
-  height: 60px;
-  border: none;
-  border-radius: 50%;
-  color: #ffffff;
-  font-size: 24px;
-  cursor: pointer;
+  display: none;
+
+  .sn-connect-floating-wrapper {
+    width: $window-width; 
+    transition: 
+    border-bottom: 1px solid #bdc0c4;
+    margin-right: 0;
+    right: 0;
+    box-shadow: 0px 2px 11px #ababab !important;
+    -moz-box-shadow: 0px 2px 11px #ababab !important;
+    -o-box-shadow: 0px 2px 11px #ababab !important;
+    transition: max-height 0s $sn-chatbot-animation-speed;
+    display: none;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .conversation-container {
+      height: 100%;
+      display: none;
+
+      .chat-frame {
+        max-height: $window-height;
+        height: calc(100vh - $button-height - ($bottom-margin * 3));
+        width: $window-width;
+        margin-bottom: -5px;
+        border: none;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      // Immediate div is autogenerated from serviceportal
+      &amp; &gt; div {
+        height: 100%;
+      }
+    }
+  }
 }
 
- 
+// Mobile SCSS
+@media (max-width: 425px) {  
+  .sn-connect-floating {
+    .sn-connect-floating-wrapper {
+      position: fixed;
+      max-height: 100%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: calc($button-height + 20px);
+      top: 0;
+      border-radius: 0px !important;
 
-.help-button .hover-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
+      .conversation-container {
+        position: absolute;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
 
- 
-
-.help-button:hover .hover-overlay {
-  opacity: 1;
-}
-
- 
-
-.help-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
- 
-
-.help-icon.icon-open {
-  background-color: #0078d4;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
- 
-
-.help-icon.icon-close {
-  background-color: #dc3545;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+        .chat-frame {
+          max-height: initial !important;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -155,62 +304,36 @@
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-06-06 04:10:06</sys_created_on>
         <sys_id>3e818c89971761102d93fcd0f053afb7</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Arcbot</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_3e818c89971761102d93fcd0f053afb7</sys_update_name>
-        <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-06 06:28:40</sys_updated_on>
-        <template><![CDATA[
-
-<div class="conversation-button-container">
-
-  <div class="conversation-region fade" ng-class="{'open': $ctrl.isWindowVisible}">
-
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-06 08:46:35</sys_updated_on>
+        <template><![CDATA[<div class="conversation-button-container">
+	<div class="conversation-region fade" 
+       ng-class="{'open': $ctrl.isWindowVisible}">
     <div class="sn-connect sn-connect-floating">
-
       <div class="sn-connect-floating-wrapper loaded">
-
         <div class="conversation-container">
-
-          <iframe title="${Arc-Bot}" class="chat-frame" scrolling="no" horizontalscrolling="no" verticalscrolling="no" frameborder="none" ng-src="{{$ctrl.vaSource}}">
-
+          <iframe title="${auction}" class = "chat-frame" scrolling="no"  horizontalscrolling="no" verticalscrolling="no" frameborder="none" ng-src="{{$ctrl.vaSource}}">
           </iframe>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
-
   <button aria-label="{{$ctrl.helpButtonAriaLabel}}"
-
           class="help-button"
-
           ng-attr-tabindex="0"
-
-          ng-class="{'state-open': $ctrl.isWindowVisible, 'state-unread': $ctrl.hasUnreadMessages}"
-
+          ng-class="{'state-open': $ctrl.isWindowVisible, 'state-unread': $ctrl.hasUnreadMessages}" 
           ng-click="$ctrl.toggleWindow()"
-
           ng-style="{'background-color': $ctrl.options.button_color}"
-
           ng-attr-tabindex="0">
-
     <div class="hover-overlay"></div>
-
     <span aria-hidden="true" ng-class="$ctrl.isWindowVisible ? 'help-icon icon-close icon-cross' : 'help-icon icon-open sn-va-widget-icon'"></span>
-
-  </button>
-
-</div>
-
-
-    
- ]]></template>
+  </button>  
+</div>]]></template>
     </sp_widget>
 </record_update>

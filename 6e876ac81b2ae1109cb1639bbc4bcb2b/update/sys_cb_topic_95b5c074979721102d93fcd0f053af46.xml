@@ -42,7 +42,7 @@
         "4edd88c59b844ca48759a27f78c7d59a": {
           "id": "4edd88c59b844ca48759a27f78c7d59a",
           "stepType": "TextOutput",
-          "name": "Welcome ",
+          "name": "greeting",
           "secure": false,
           "value": [
             {
@@ -51,13 +51,20 @@
                   "type": "paragraph",
                   "children": [
                     {
-                      "text": "Welcome to AuctionArc "
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
+                      "text": "How can i help you  "
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.user.name}}",
+                        "displayValue": "Input Variables➛User➛Name"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
                     {
                       "text": ""
                     }
@@ -66,71 +73,40 @@
               ],
               "mode": "simple",
               "_key": "ff34abde95c441789efc15c91f592788"
+            },
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "select your role"
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.choices}}",
+                        "displayValue": "Input Variables➛Choices"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "f2de5ab1-efc9-4c9d-800d-286618800155"
             }
           ],
           "applicability": {
             "value": "",
             "mode": "query"
-          }
-        },
-        "190f7f2849c24b1a9bd574a34395c7e8": {
-          "id": "190f7f2849c24b1a9bd574a34395c7e8",
-          "stepType": "Prompt",
-          "name": "greeting",
-          "prompt": {
-            "value": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "text": "Hi    "
-                  },
-                  {
-                    "type": "datapill",
-                    "dataPill": {
-                      "value": "{{vaInputs.user.name}}",
-                      "displayValue": "Input Variables➛User➛Name"
-                    },
-                    "children": [
-                      {
-                        "text": ""
-                      }
-                    ]
-                  },
-                  {
-                    "text": "  "
-                  }
-                ]
-              }
-            ],
-            "mode": "simple"
-          },
-          "confirmMessage": {
-            "value": "",
-            "mode": "simple"
-          },
-          "acknowledgeMsg": {
-            "value": "",
-            "mode": "simple"
-          },
-          "applicability": {
-            "value": "",
-            "mode": "query"
-          },
-          "skippable": {
-            "value": "",
-            "mode": "query"
-          },
-          "defaultValue": {
-            "value": "",
-            "mode": "simple"
-          },
-          "withNluUserInput": false,
-          "skipIfFulfilled": false,
-          "variableId": "de4e0daa1a26481dbbff30ae01415635",
-          "inputType": {
-            "format": "Text",
-            "script": ""
           }
         },
         "174f10039c74478ab2a4c7bce4f41b90": {
@@ -660,26 +636,18 @@
       },
       "edges": [
         {
+          "id": "717343646afe492ba33856bd55908b81",
+          "edgeType": "Edge",
+          "source": "37cb4faba6d2412db602b888c7c804ea",
+          "target": "4edd88c59b844ca48759a27f78c7d59a",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
           "id": "de4a88bb1e9b4db08d1746e03ee7f80a",
           "edgeType": "Edge",
           "source": "4edd88c59b844ca48759a27f78c7d59a",
           "target": "8da96d9f142b472782839c9014ea3b15",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "717343646afe492ba33856bd55908b81",
-          "edgeType": "Edge",
-          "source": "37cb4faba6d2412db602b888c7c804ea",
-          "target": "190f7f2849c24b1a9bd574a34395c7e8",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "28401d6b73634ecc9da7b8dc3154b72f",
-          "edgeType": "Edge",
-          "source": "190f7f2849c24b1a9bd574a34395c7e8",
-          "target": "4edd88c59b844ca48759a27f78c7d59a",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -861,19 +829,6 @@
       "table": "sys_user",
       "varType": "reference"
     },
-    "de4e0daa1a26481dbbff30ae01415635": {
-      "id": "de4e0daa1a26481dbbff30ae01415635",
-      "name": "greeting",
-      "label": "Greeting",
-      "varType": "string",
-      "secure": false,
-      "category": "vaInputs",
-      "encryptionHashFunction": "SHA-256",
-      "encryptionSalt": {
-        "value": "MTY4NTk1OTg3MDM4OCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
-        "mode": "simple"
-      }
-    },
     "0df495b4ac2c499fac9db0eb4e52f009": {
       "id": "0df495b4ac2c499fac9db0eb4e52f009",
       "name": "choices",
@@ -983,7 +938,7 @@
     }
   }
 }</graph>
-        <key_phrases>Auction-Bot</key_phrases>
+        <key_phrases>hi,Hi,Hello,hello,Hloo,hloo,Hey,hey</key_phrases>
         <library>false</library>
         <live_agent>false</live_agent>
         <name>Auction-Bot</name>
@@ -1001,14 +956,14 @@
         <sys_created_on>2023-06-05 09:49:49</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>95b5c074979721102d93fcd0f053af46</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>Auction-Bot</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sys_cb_topic_95b5c074979721102d93fcd0f053af46</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-05 11:54:47</sys_updated_on>
+        <sys_updated_on>2023-06-06 11:16:24</sys_updated_on>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>SMALL_TALK</type>
         <variables/>

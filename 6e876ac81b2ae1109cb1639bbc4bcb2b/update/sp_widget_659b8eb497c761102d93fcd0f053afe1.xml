@@ -3,11 +3,68 @@
         <category>custom</category>
         <client_script/>
         <controller_as>c</controller_as>
-        <css>.a{
+        <css>.home-container1 {
+  width: 100%;
+  height: 97px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.home-text {
+  color:green;
+  font-style: normal ;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+@media(max-width: 767px) {
+  .home-text {
+    font-size: 40px;
+  }
+}
+
+.h1{
+color: black;
+text-align: center;
+  font-weight:20px;
+ }
+
+
+
+
+.a{
   color:white;
   font-weight:bold;
   font-size:12px;
-}</css>
+}
+
+.h1 {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;  
+  padding: .85rem 1.55rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: 2px solid #4ac0ee;
+  border-radius: 5px;
+  transition: all .15s ease-out;
+   justify-content: center;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #4ac0ee;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4ac0ee;
+}
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -21,21 +78,53 @@
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+ var c = this;
+	var userGr = new GlideRecord('sys_user');
+  userGr.get(gs.getUserID());
+
+ 
+
+  var username = userGr.getValue('name');
+	c.data.username = username;
+})();
+]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-24 09:19:03</sys_created_on>
         <sys_id>659b8eb497c761102d93fcd0f053afe1</sys_id>
-        <sys_mod_count>90</sys_mod_count>
+        <sys_mod_count>101</sys_mod_count>
         <sys_name>home</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_659b8eb497c761102d93fcd0f053afe1</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-05 10:46:19</sys_updated_on>
-        <template><![CDATA[<head>
+        <sys_updated_on>2023-06-08 05:28:08</sys_updated_on>
+        <template><![CDATA[
+    <div class="home-container1">
+      <h1 class="home-text">
+        <br />
+        <span>█▓▒▒░░░WELCOME {{data.username}}░░░▒▒▓█</span>
+        <br />
+      </h1>
+    </div>
+
+
+<div class="h1">
+  
+  TOP SOLD ITEMS
+  
+</div>
+
+
+
+
+
+<head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
     body {
@@ -150,7 +239,7 @@
       <div class="shadow"></div>
       <div class="label">
         <div class="icon">
-          <i class="fas fa-walking"></i>
+          <i class=""></i>
         </div>
         <div class="info">
           <div class="a">FOSSIL</div>
@@ -162,7 +251,6 @@
       <div class="shadow"></div>
       <div class="label">
         <div class="icon">
-          <i class="fas fa-heart"></i>
         </div>
         <div class="info">
           <div class="main">COSMETICS</div>
@@ -174,7 +262,7 @@
       <div class="shadow"></div>
       <div class="label">
         <div class="icon">
-          <i class="fas fa-tree" style="background:url('fontawesome.svg');"></i>
+          <i class="" style="background:url('fontawesome.svg');"></i>
         </div>
         <div class="info">
           <div class="main">BLACKBERRY</div>
@@ -207,6 +295,15 @@
     });
   </script>
 </body>
+
+<div class="h1">
+  
+
+
+  <a href="https://dev59662.service-now.com/arc/?id=all_auction" class="button">&nbsp;&nbsp;GO TO AUCTION</a>
+
+           
+</div>
 ]]></template>
     </sp_widget>
 </record_update>

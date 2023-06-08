@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.h1 {
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  
+  padding: .85rem 1.55rem;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  border: 2px solid #4ac0ee;
+  border-radius: 5px;
+  transition: all .15s ease-out;
+   justify-content: center;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #4ac0ee;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4ac0ee;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>a</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>a</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-06-07 09:11:08</sys_created_on>
+        <sys_id>5a00de59971fa1102d93fcd0f053af27</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>a</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_5a00de59971fa1102d93fcd0f053af27</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-08 05:04:41</sys_updated_on>
+        <template><![CDATA[<div class="h1">
+  
+
+
+  <a href="https://dev59662.service-now.com/arc/?id=all_auction" class="button">&nbsp;&nbsp;GO TO AUCTION</a>
+
+           
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -104,181 +104,9 @@ function() {
 }
 ]]></client_script>
         <controller_as>c</controller_as>
-        <css>.slider{
-  width: 100%;
-  height: 100vh;
-
-  .items-group{
-    width: 100%;
-    height: 100%;
-    position: relative;
-
-    .item{
-      top: 0px;
-      left: 0px;
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      overflow: hidden;
-      transition: 0.5s;
-      visibility: hidden;
-      position: relative;
-      padding: 50px 20px;
-      position: absolute;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-
-      &amp;:hover{
-        
-        .bg{
-          opacity: 0.2;
-        }
-        
-        .block{
-          box-shadow: 0px 0px 50px #333;
-        }
-      }
-
-      &amp;.active{
-        opacity: 1;
-        visibility: visible;
-      }
-
-      .bg{
-        top: 0px;
-        left: 0px;
-        opacity: 1;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        transition: 0.5s;
-        position: absolute;
-        transform: scale(1.03);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-      
-      .blur{
-        top: 0px;
-        left: 0px;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        transition: 0.5s;
-        filter: blur(5px);
-        position: absolute;
-        transform: scale(1.03);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-
-      .block{
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        color: #ffffff;
-        transition:box-shadow 0.5s;
-        max-width: 300px;
-        overflow: hidden;
-        max-height: 450px;
-        border-radius: 10px;
-        transform: scale(1.03);
-        box-sizing: border-box;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        box-shadow: none;
-        
-        .circleLight{
-          top: 0px;
-          left: 0px;
-          opacity: 0;
-          content: '';
-          width: 100%;
-          height: 100%;
-          display: block;
-          transition: 0.5s;
-          position: absolute;
-          border-radius: 10px;
-          background: radial-gradient(circle at 80px 40px, #fff, transparent);
-        }
-        
-        .text{
-          width: 100%;
-          height: 100%;
-          display: flex;
-          text-align: center;
-          flex-direction: column;
-          justify-content: center;
-          background-position: center;
-          background-attachment: fixed;
-        }
-        
-        h2{
-          font-family: 'Oswald', sans-serif;
-          font-size: 130px;
-          margin-bottom: 0px;
-        }
-        
-        p{
-          font-family: 'Open Sans', sans-serif;
-          font-size: 15px;
-        }
-        
-        &amp;:hover{
-          box-shadow: 0px 0px 70px #111;
-          
-          .circleLight{
-            opacity: 0.4;
-          }
-        }
-      }
-    }
-  }
-
-  .navigations{
-    bottom: 0px;
-    width: 100%;
-    position: absolute;
-
-    .dots{
-      height: 20px;
-      padding: 10px 0px;
-      text-align: center;
-
-      li{
-        width: 10px;
-        height: 10px;
-        cursor: pointer;
-        transition: 0.3s;
-        background: #fff;
-        border-radius: 50%;
-        display: inline-block;
-        vertical-align: middle;
-        
-        &amp;+li{
-          margin-left: 10px;
-        }
-
-        &amp;:hover{
-          filter: blur(2px);
-        }
-
-        &amp;.active{
-          width: 15px;
-          height: 15px;
-          
-          &amp;:hover{
-            filter: blur(0px);
-          }
-        }
-      }
-    }
-  }
+        <css>.h1{
+  text-align:center;
+  color: #88aaaa
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -305,60 +133,16 @@ function() {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-24 16:03:52</sys_created_on>
         <sys_id>36f723f8970f61102d93fcd0f053afad</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Sample</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_36f723f8970f61102d93fcd0f053afad</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-05-24 16:23:50</sys_updated_on>
-        <template><![CDATA[<head>
-  
-</head>
-<div class="slider">
-  <div class="items-group">
-    <div class="item">
-      <div class="block">
-        <span class="circleLight"></span>
-        <div class="text">
-          <h2>Hi</h2>
-          <p>I`m cool card</p>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="block">
-        <span class="circleLight"></span>
-        <div class="text">
-          <h2>Hi</h2>
-          <p>I`m cool card</p>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="block">
-        <span class="circleLight"></span>
-        <div class="text">
-          <h2>Hi</h2>
-          <p>I`m cool card</p>
-        </div>
-      </div>
-    </div>
-    <div class="item">
-      <div class="block">
-        <span class="circleLight"></span>
-        <div class="text">
-          <h2>Hi</h2>
-          <p>I`m cool card</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="navigations">
-    <ul class="dots"></ul>
-  </div>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-08 04:19:59</sys_updated_on>
+        <template><![CDATA[<div class="h1">
+   welcome to the arc
 </div>]]></template>
     </sp_widget>
 </record_update>
