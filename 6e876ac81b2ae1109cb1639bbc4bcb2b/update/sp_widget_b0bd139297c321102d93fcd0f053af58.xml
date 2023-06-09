@@ -118,18 +118,11 @@
         <public>false</public>
         <roles/>
         <script><![CDATA[(function() {
-	/* populate the 'data' object */
-	/* e.g., data.table = $sp.getValue('table'); */
-
-
-
 
 	var sysId = $sp.getParameter('sysId');
-
-
+	var c = this;
 
 	data.records = [];
-
 
 
 	var itemGr = new GlideRecord('x_1046400_auction_all_item');
@@ -145,58 +138,46 @@
 		var record = {};
 		record.name = itemGr.getValue('name');
 		record.image = itemGr.getValue('image');
-
-
-
 		record.startingbid = itemGr.getValue('u_currency_1');
 		record.minbid = itemGr.getValue('starting_bid');
+		record.wonby= itemGr.getValue('wonby');
 
-
-   data.startingbid = itemGr.getValue('u_currency_1');
+		data.startingbid = itemGr.getValue('u_currency_1');
 		data.records.push(record);
 	} 
 
-
-
-
 	if(input){
 
-
-
-		//    itemGr.addQuery('sys_id',sysId);
 		itemGr.query();
-
-
-
 
 		if(input.currency < data.startingbid){
 			data.errorMsg = 'Entered Bid is less than the Current Bid';
 		}else  if(input.currency > input.startingbid) {
+
 			if(itemGr.next()){
+				var userGr = new GlideRecord('sys_user');
+				userGr.get(gs.getUserID());
+				userGr.query();
+
+
+
+				var username = userGr.getValue('name');
+				c.data.username = username;
+
 				itemGr.setValue('u_currency_1',input.currency);
+				itemGr.setValue('wonby',username);
+
 				itemGr.update();
+
 			}
 
-
-
 			data.sucMsg  = 'Bid Updated';
-
-
-
-
-
-
-
 
 		}
 		else{
 			data.errorMsg  = 'Entered Bid amount is then current Bid ';
 
-
-
 		}
-
-
 
 	}
 })();]]></script>
@@ -205,14 +186,14 @@
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>598</sys_mod_count>
+        <sys_mod_count>626</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
-        <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-08 12:12:23</sys_updated_on>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-09 09:51:42</sys_updated_on>
         <template><![CDATA[<!--<div class="alertCenter">
 <center><div ng-if="c.sucMsg" class="alert-dismissible" role="alert">
 <!-- <center><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>{{ c.sucMsg }}</strong>
@@ -237,7 +218,9 @@
             <p><br>
               <span class="bolder">Minimum Bid: {{gr.minbid}} <i class="fa fa-dollar"></i></span>
             </p><br>
-            <h4>Current Bid: {{gr.startingbid}} <i class="fa fa-dollar"></i></h4>
+            <h4>Current Bid: {{gr.startingbid}}   <i class="fa fa-dollar"></i>     by {{gr.wonby}}
+              
+              </h4>
             <form ng-submit="currency()">
               <label for="currency-field">Enter Amount&nbsp;&nbsp;<i class="fa fa-dollar"></i></label>
               <input type="number" value="10" min="0" size="1" class="page-textinput" id="c2" required ng-model="data.currency">

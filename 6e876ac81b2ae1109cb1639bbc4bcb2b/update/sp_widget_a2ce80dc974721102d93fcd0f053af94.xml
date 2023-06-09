@@ -151,75 +151,82 @@ tr:nth-child(even) {
         <option_schema/>
         <public>false</public>
         <roles/>
-        <script><![CDATA[
-(function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
+        <script><![CDATA[(function() {
+  var sysId = $sp.getParameter('sysId');
 
- 
-var sysId = $sp.getParameter('sysId');
+  data.records = [];
 
-data.records = [];
+  var itemGr = new GlideRecord('x_1046400_auction_all_item');
+  itemGr.addQuery('auctioned_on', sysId);
+  itemGr.query();
 
-    var itemGr = new GlideRecord('x_1046400_auction_all_item');
-		itemGr.addQuery('auctioned_on',sysId);
-    itemGr.query();
+  while (itemGr.next()) {
+    var record = {};
+    record.name = itemGr.getValue('number');
+    record.image = itemGr.getValue('image');
+    record.description = itemGr.getValue('description');
+    record.category = itemGr.getValue('category');
+    record.startingbid = itemGr.getValue('starting_bid');
+    record.sysId = itemGr.getValue('sys_id');
 
-    while(itemGr.next()){
-         var record = {};
-        record.name = itemGr.getValue('number');
-        record.image = itemGr.getValue('image');
-        record.description = itemGr.getValue('description');        
-        record.category= itemGr.getValue('category');
-        record.startingbid = itemGr.getValue('starting_bid');
-        record.sysId = itemGr.getValue('sys_id');
+    var auctionTime;
 
-        data.records.push(record);
-    } 
-	})();
+    var gr = new GlideRecord('x_1046400_auction_auction');
+    gr.query();
+    if (gr.next()) {
+      auctionTime = gr.getValue('end_time');
+    }
+
+    // Get the current time
+    var currentTime = new GlideDateTime().getDisplayValue();
+
+    // Compare the values and set the variable indicating bid button disablement
+    record.disableBidButton = auctionTime <= currentTime;
+
+    data.records.push(record);
+  }
+})();
 ]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-22 10:56:50</sys_created_on>
         <sys_id>a2ce80dc974721102d93fcd0f053af94</sys_id>
-        <sys_mod_count>135</sys_mod_count>
+        <sys_mod_count>138</sys_mod_count>
         <sys_name>Item</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_a2ce80dc974721102d93fcd0f053af94</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-09 06:53:20</sys_updated_on>
-        <template><![CDATA[<div class="widget" >
-<table>
-  <tr>
-    <th>Image</th>
-    <th>Name</th>
-    <th>Short description</th>
-    <th>Category</th>   
-    <th>Starting Bid</th>
-    <th> <a href=""><button class="new button" id="button" ng-click="newRecord()">New</button></a></th>
-           
-    
-  </tr>
-  <tbody>
-    <!-- Use AngularJS ng-repeat to iterate over records -->
-    <tr ng-repeat="data in data.records">
-      <td><img src="/{{data.image}}.iix" height="200" width="150"></td>
-      <td>{{data.name}}</td>
-      <td>{{data.description}}</td>
-      <td>{{data.category}}</td>
-      <td>{{data.startingbid}}</td>
-        <td><a href="?id=bids&sysId={{data.sysId}}"><button class="bid-button" id="button">Bid </button></a></td>
-        
-        
-
-
+        <sys_updated_on>2023-06-09 09:42:20</sys_updated_on>
+        <template><![CDATA[<div class="widget">
+  <table>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Short description</th>
+      <th>Category</th>   
+      <th>Starting Bid</th>
+      <th><a href=""><button class="new button" id="button" ng-click="newRecord()">New</button></a></th>
     </tr>
-  </tbody>
-</table>
-
-</div>]]></template>
+    <tbody>
+      <!-- Use AngularJS ng-repeat to iterate over records -->
+      <tr ng-repeat="data in data.records">
+        <td><img src="/{{data.image}}.iix" height="200" width="150"></td>
+        <td>{{data.name}}</td>
+        <td>{{data.description}}</td>
+        <td>{{data.category}}</td>
+        <td>{{data.startingbid}}</td>
+        <td>
+          <a href="?id=bids&sysId={{data.sysId}}">
+            <button class="bid-button" id="button" ng-disabled="data.disableBidButton">Bid</button>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+]]></template>
     </sp_widget>
 </record_update>

@@ -201,20 +201,25 @@
 
 		data.records.push(record);
 	} 
+	
+
+// Retrieve the auction table time value using GlideRecord or GlideAggregate
+  
+
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-30 09:44:44</sys_created_on>
         <sys_id>280b8132974721102d93fcd0f053af65</sys_id>
-        <sys_mod_count>164</sys_mod_count>
+        <sys_mod_count>165</sys_mod_count>
         <sys_name>Auction1</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_280b8132974721102d93fcd0f053af65</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-09 06:42:33</sys_updated_on>
+        <sys_updated_on>2023-06-09 09:08:27</sys_updated_on>
         <template><![CDATA[
 <div class="widget">
   <div class="container">
