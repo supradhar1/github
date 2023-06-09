@@ -17,17 +17,18 @@
         <controller_as>c</controller_as>
         <css>.widget {
   padding: 10px;
-  max-width: 1000px; /* Adjusted width for 2x2 layout */
+  max-width: 1000px; 
   margin: 0 auto;
   background: linear-gradient(45deg, #e6e6e6, #f2f2f2);
   border-radius: 10px;
 }
+
 .container {
   display: grid;
   width:flex;
   height:auto;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
-  grid-gap: 20px; /* Gap between items */
+  grid-template-columns: repeat(2, 1fr); 
+  grid-gap: 20px; 
   width:100%;
   &amp;:after,
   &amp;:before {
@@ -151,13 +152,13 @@
   }
 
   .bid-button {
-    background-color: #007bff; /* Default button color */
-    color: #fff; /* Default text color */
+    background-color: #007bff; 
+    color: #fff; 
   }
 
   .bid-button:disabled {
-    background-color: #e9ecef; /* Disabled button color */
-    //color: #6c757d; /* Disabled text color */
+    background-color: #e9ecef;
+   
     border: 5px solid #ccc;
   }
 </css>
@@ -189,7 +190,7 @@
 	var field = 'state';
 	while(itemGr.next()){
 		var record = {};
-		record.name = itemGr.getValue('name');
+		record.name = itemGr.getValue('number');
 		record.starttime = itemGr.getValue('start_time');
 		record.endtime= itemGr.getValue('end_time');        
 		record.state = itemGr.getDisplayValue('state');
@@ -206,14 +207,14 @@
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-30 09:44:44</sys_created_on>
         <sys_id>280b8132974721102d93fcd0f053af65</sys_id>
-        <sys_mod_count>153</sys_mod_count>
+        <sys_mod_count>164</sys_mod_count>
         <sys_name>Auction1</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_280b8132974721102d93fcd0f053af65</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-08 06:24:40</sys_updated_on>
+        <sys_updated_on>2023-06-09 06:42:33</sys_updated_on>
         <template><![CDATA[
 <div class="widget">
   <div class="container">
@@ -222,7 +223,7 @@
         <img src="{{data.img}}.iix" alt="Image {{$index + 1}}" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="text-container">
-        <h3>{{ data.name }}</h3>
+        <h3>{{ data.name}}</h3>
         <p>Start Time: {{ data.starttime }}</p>
         <p>End Time: {{ data.endtime }}</p>
         <p>Status: {{ data.state }}</p>

@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="b3ccb221979fe1102d93fcd0f053af63" label="Query" max_length="40" name="x_1046400_auction_query" type="collection">
-        <element label="Category" max_length="40" name="category" type="string"/>
-        <element label="Role" max_length="40" name="number" type="string"/>
-        <element label="Query" max_length="40" name="query" type="string"/>
-        <element label="sub-category" max_length="40" name="sub_category" type="string"/>
+    <element db_object_id="f49523f597df25102d93fcd0f053afbf" extends="incident" max_length="40" name="x_1046400_auction_query" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Role" max_length="40" name="role" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="SubCategory" max_length="40" name="u_string_2" type="string"/>
     </element>
 </database>

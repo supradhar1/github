@@ -8,7 +8,7 @@
         <choice>1</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>state</column_label>
+        <column_label>State</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -47,13 +47,13 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-24 04:48:31</sys_created_on>
-        <sys_name>state</sys_name>
+        <sys_name>State</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sys_dictionary_x_1046400_auction_auction_state</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-05-24 04:48:32</sys_updated_on>
+        <sys_updated_on>2023-06-09 06:11:52</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Autonumber</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+  var numberField = 'name'; // Modify this field name according to your table schema
+
+  if (g_form.isNewRecord()) {
+    var gr = new GlideRecord(g_form.getTableName('x_1046400_auction_auction'));
+    gr.addQuery(numberField, 'ISNOTEMPTY');
+    gr.orderByDesc(numberField);
+    gr.setLimit(1);
+    gr.query();
+
+    var sequenceNumber = 1; // Set the initial sequence number
+
+    if (gr.next()) {
+      var lastNumber = gr.getValue(numberField);
+      sequenceNumber = parseInt(lastNumber, 10) + 1;
+    }
+
+    // Pad the sequence number with leading zeros if necessary
+    var paddedNumber = String(sequenceNumber).padStart(3, '0');
+
+    // Assign the sequence number to the name field
+    g_form.setValue(numberField, paddedNumber);
+  }
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>CC-Harsha</sys_created_by>
+        <sys_created_on>2023-06-09 04:43:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>27d5aff597df25102d93fcd0f053afde</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Autonumber</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_script_client_27d5aff597df25102d93fcd0f053afde</sys_update_name>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-09 05:49:12</sys_updated_on>
+        <table>x_1046400_auction_auction</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

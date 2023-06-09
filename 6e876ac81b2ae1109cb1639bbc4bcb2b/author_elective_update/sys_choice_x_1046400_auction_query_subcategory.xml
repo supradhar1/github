@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="subcategory" table="x_1046400_auction_query" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>subcategory</element>
+            <name>x_1046400_auction_query</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>CC-Supradhar</sys_created_by>
+            <sys_created_on>2023-06-09 05:06:39</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>subcategory</sys_name>
+            <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+            <sys_update_name>sys_choice_x_1046400_auction_query_subcategory</sys_update_name>
+            <sys_updated_by>CC-Supradhar</sys_updated_by>
+            <sys_updated_on>2023-06-09 05:06:39</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>Auction</dependent_value>
+            <element>subcategory</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>My bid</label>
+            <language>en</language>
+            <name>x_1046400_auction_query</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>CC-Supradhar</sys_created_by>
+            <sys_created_on>2023-06-09 05:07:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2e6b2bbd97df25102d93fcd0f053afde</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CC-Supradhar</sys_updated_by>
+            <sys_updated_on>2023-06-09 05:07:43</sys_updated_on>
+            <value>My bid</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value>Auction</dependent_value>
+            <element>subcategory</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unable to Auction</label>
+            <language>en</language>
+            <name>x_1046400_auction_query</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>CC-Supradhar</sys_created_by>
+            <sys_created_on>2023-06-09 05:06:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c7e9ab3d97df25102d93fcd0f053afb6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>CC-Supradhar</sys_updated_by>
+            <sys_updated_on>2023-06-09 05:06:39</sys_updated_on>
+            <value>unable to auction</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

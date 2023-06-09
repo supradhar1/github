@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="DELETE">
+        <active>true</active>
+        <answer>Query</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Query</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">d1998c87243021108c8bc6863d3fade0</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-06-09 04:39:07</sys_created_on>
+        <sys_id>8df423b597df25102d93fcd0f053af29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Query</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sys_wizard_answer_8df423b597df25102d93fcd0f053af29</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-09 04:39:07</sys_updated_on>
+        <table/>
+        <target_url>x_1046400_auction_query.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</application>
+        <file_path/>
+        <instance_id>c036af0fdb0613000e785d00cf9619a3</instance_id>
+        <instance_name>dev59662</instance_name>
+        <name>sys_wizard_answer_8df423b597df25102d93fcd0f053af29</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer"><sys_wizard_answer action="INSERT_OR_UPDATE"><active>true</active><answer>Query</answer><button_label/><dependent_value/><element/><name>Query</name><next_question/><order>100</order><payload_name/><question display_value="Task" name="Task">d1998c87243021108c8bc6863d3fade0</question><roles/><script/><sys_class_name>sys_wizard_answer</sys_class_name><sys_created_by>CC-Supradhar</sys_created_by><sys_created_on>2023-06-09 04:39:07</sys_created_on><sys_id>8df423b597df25102d93fcd0f053af29</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Query</sys_name><sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package><sys_policy/><sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope><sys_update_name>sys_wizard_answer_8df423b597df25102d93fcd0f053af29</sys_update_name><sys_updated_by>CC-Supradhar</sys_updated_by><sys_updated_on>2023-06-09 04:39:07</sys_updated_on><table/><target_url>x_1046400_auction_query.do</target_url><type>1</type></sys_wizard_answer></record_update>]]></payload>
+        <payload_hash>531229866</payload_hash>
+        <record_name>Query</record_name>
+        <reverted_from/>
+        <source>b52ccbc01b1221109cb1639bbc4bcb97</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2023-04-14 23:18:36</sys_created_on>
+        <sys_id>3a8527f597df25102d93fcd0f053afbf</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>187821040e00000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Answer</type>
+        <update_guid>f68527f509df251001e24eab05402cbf</update_guid>
+        <update_guid_history>f68527f509df251001e24eab05402cbf:531229866</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-06-09 04:41:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_wizard_answer">sys_wizard_answer</sys_db_object>
+        <sys_id>2fae987faa07404d812722fcdbd8cd11</sys_id>
+        <sys_metadata>8df423b597df25102d93fcd0f053af29</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Query</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_parent display_value="Task">d1998c87243021108c8bc6863d3fade0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_scope_delete display_value="">10c6971d357c4e70bbe797ff9cc0de90</sys_scope_delete>
+        <sys_update_name>sys_wizard_answer_8df423b597df25102d93fcd0f053af29</sys_update_name>
+        <sys_update_version display_value="sys_wizard_answer_8df423b597df25102d93fcd0f053af29">3a8527f597df25102d93fcd0f053afbf</sys_update_version>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-09 04:41:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

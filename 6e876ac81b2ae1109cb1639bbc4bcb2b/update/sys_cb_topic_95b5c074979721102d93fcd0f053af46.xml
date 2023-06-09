@@ -700,7 +700,7 @@
           "id": "6f8535efaad84c0c8b48e001676b0d38",
           "stepType": "CrudAction",
           "name": "Record1",
-          "template": "category={{vaInputs.choice_2}}^sub_category={{vaInputs.choice_5}}^query={{vaInputs.des2}}^number={{vaInputs.userpersonas}}",
+          "template": "category={{vaInputs.choice_2}}^u_string_2={{vaInputs.choice_5}}^description={{vaInputs.des2}}^role={{vaInputs.userpersonas}}^state=1",
           "mode": "create",
           "record": "",
           "applicability": {
@@ -758,7 +758,7 @@
           "id": "b528defdc3a04f9fa5df518297142219",
           "stepType": "CrudAction",
           "name": "Record2",
-          "template": "category={{vaInputs.choice_2}}^number={{vaInputs.userpersonas}}^sub_category={{vaInputs.choice_4}}^query={{vaInputs.desc2}}",
+          "template": "category={{vaInputs.choice_2}}^role=^u_string_2={{vaInputs.choice_4}}^description={{vaInputs.desc2}}^state=1",
           "mode": "create",
           "record": "",
           "applicability": {
@@ -816,7 +816,7 @@
           "id": "1c143571fc444650b861ab192e452f9e",
           "stepType": "CrudAction",
           "name": "Record3",
-          "template": "category={{vaInputs.choices}}^query={{vaInputs.desc3}}^number={{vaInputs.userpersonas}}^sub_category={{vaInputs.choice_3}}",
+          "template": "role={{vaInputs.userpersonas}}^description={{vaInputs.desc3}}^category={{vaInputs.choices}}^u_string_2={{vaInputs.choice_3}}",
           "mode": "create",
           "record": "",
           "applicability": {
@@ -829,7 +829,7 @@
           "id": "11d5a0fc9d9f49f8869b0c808656b14e",
           "stepType": "CrudAction",
           "name": "Record4",
-          "template": "category={{vaInputs.choices}}^query={{vaInputs.desc4}}^sub_category={{vaInputs.choice}}^number={{vaInputs.userpersonas}}",
+          "template": "category={{vaInputs.choices}}^description={{vaInputs.desc4}}^u_string_2={{vaInputs.choice}}^role=^state=1",
           "mode": "create",
           "record": "",
           "applicability": {
@@ -1363,14 +1363,14 @@
         <sys_created_on>2023-06-05 09:49:49</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>95b5c074979721102d93fcd0f053af46</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>Auction-Bot</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sys_cb_topic_95b5c074979721102d93fcd0f053af46</sys_update_name>
         <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-06-08 09:08:16</sys_updated_on>
+        <sys_updated_on>2023-06-09 06:02:54</sys_updated_on>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>SMALL_TALK</type>
         <variables/>

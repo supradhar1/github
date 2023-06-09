@@ -19,197 +19,91 @@
 
 ]]></client_script>
         <controller_as>c</controller_as>
-        <css>*{
-  color :
-  background -color :blue;
+        <css>.widget-container {
+  height: &lt;calculated-height&gt;px;
+  overflow: hidden;
 }
-
-
 .container {
-  width: auto;
   display: flex;
-  padding-left: 25px;
-  font-size:20px;
-    background-color: #8a2626;
-
-}
-
-img{
-   width: 200%;
-  height: 400px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  border: 1px solid red;
-}
-.alertCenter{
-  
- top: 0px;
-  left: 60px;
-  position: absolute;
-}
-
-.course {
-   top: 151px;
-  left: 900px;
-  width: 500px;
-  height: px;
-  position: absolute;
-
-
-}
-
-
-h5{ 
-  padding-top: 55px;
-  padding-right: 55px;
-  padding-bottom: 25px;
-  padding-left:150px;
-}
-.course img {
-  display: flex;
-  align-items: center;
-  padding: 100px;
-  width:auto;
-
-}
-h3{ 
-  font: bold 3rem sans-serif;
-  text-transform: uppercase;
-  padding-top: 50px;
- 
-  padding-left:160px;
-}
-.test{ 
- width: 100%;
-  display: flex;
-  overflow: auto;
-  align-items: center;
-  flex-direction: column;
   justify-content: center;
-}
-.input-container {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-}
-.bolder {
-    left: 170px;
-
-}
-/*
-.page-container {
- width: 100%;
-  display: flex;
-  overflow: auto;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
-}*/
-.page-textinput {
- top: 290px;
-  left: 170px;
-  position: absolute;
-}
-.page-text {
-top: 290px;
-  left: 40px;
-  position: absolute;
+  height: 100%;  
+  overflow: hidden;
+
 }
 
-.btn-3d{
-top: 350px;
-  left: 200px;
-  position: absolute;
-}
-.btn-3d {
-  display: inline-block;
-  background: white;
-  width: 100px;
-  padding: .75rem 1.25rem;
-  color: #4ac0ee;
-  border: 12px solid white;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-  text-transform: uppercase;
+.form-container {
+  display: flex;
+  flex-direction: row;
+  width: 950px;
+  padding: 20px;
+  border: transparent;
+  border-radius: 15px;
   text-align: center;
-  transition: all .15s .15s ease-out;
-
- 
-
-  &amp;:after,
-&amp;:before {
-    position: absolute;
-    width: 100%;
-    max-width: 100%;
-    top: 100%;
-    left: 0;
-    bottom: -10px;
-    content: '';
-    z-index: 1;
-    transition: all .15s .15s ease-out;
-  }
-
- 
-
-  &amp;:before {
-    background: white;
-    top: 10px;
-    left: -10px;
-    height: 100%;
-    width: 10px;
-  }
-
- 
-
-  &amp;:after {
-    width: 100%;
-    background: white;
-    right: 0px;
-    left: -10px;
-    height: 10px;
-  }
-
- 
-
-  &amp;:hover {
-    background: green;
-    color: #4ac0ee;
-    margin-left: -7.5px;
-    margin-bottom: -7.5px;
-
- 
-
-    &amp;:after,
-&amp;:before {
-      top: 100%;
-      left: 0;
-      bottom: 0px;
-  background: green;
-    }
-
- 
-
-    &amp;:before {
-      top: 0px;
-      left: 0px;
-      width: 0px;
-    }
-
- 
-
-    &amp;:after {
-      right: 0px;
-      left: 0px;
-      height: 0px;
-    }
-  }
 }
 
+.form-container img {
+  width: 500px;
+  height: 500px;
+  margin-right: 40px;
+}
 
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
 
-.</css>
+.form-container h3 {
+  margin-top: 0;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-container p,
+.form-container h4 {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.form-container form {
+  margin-top: 20px;
+}
+
+.form-container label {
+  font-size: 18px;
+}
+
+.form-container input[type="number"] {
+  width: 100px;
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.form-container button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+.form-container .alert {
+  margin-top: 20px;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -311,14 +205,14 @@ top: 350px;
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>571</sys_mod_count>
+        <sys_mod_count>598</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-06-08 09:00:54</sys_updated_on>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-08 12:12:23</sys_updated_on>
         <template><![CDATA[<!--<div class="alertCenter">
 <center><div ng-if="c.sucMsg" class="alert-dismissible" role="alert">
 <!-- <center><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>{{ c.sucMsg }}</strong>
@@ -330,46 +224,41 @@ top: 350px;
 <strong>{{ c.errMsg }}</strong>
 </div>-->
 
-
-<div class="image" ng-repeat="gr in c.data.records">
-  <img src="/{{gr.image}}.iix" alt="data"></div>
-<div class="course" ng-repeat="gr in c.data.records">
-  <div class="test">
-    <div class="alertCenter">
-      
-
-      <div ng-if="c.sucMsg" class="alert alert-success alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        {{ c.sucMsg }}
-      </div>
-
-      <div ng-if="c.errMsg" class="alert alert-danger alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <strong>{{ c.errMsg }}</strong>
-      </div>
-
-
-      <h3 align="center">{{gr.name}}</h3>
-
-<br>
-      
-      <p> <span class="bolder" > <p align="right" style="font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;">
-        
-        Minimum Bid : {{gr.minbid}}  <i class="fa fa-dollar" style="font-size:14px"></i></p></span>.</p>
-      <h4 align="right" style="font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;">Current Bid: {{gr.startingbid}} <i class="fa fa-dollar" style="font-size:14px"></i></h4><br><br>
-      <form ng-submit="currency()">
-        <div class="page-container">
-          <label  class ="page-text" for="currency-field" style="font-size:18px">Enter Amount  &nbsp;&nbsp;  <i class="fa fa-dollar" style="font-size:14px"></i>&nbsp;&nbsp;&nbsp;
-          </label>
-          <input type="number" value="10" min="0" size="1" class="page-textinput " id="c2" required ng-model="data.currency" />
+<div class="container">
+  <div class="form-container">
+    <div class="image" ng-repeat="gr in c.data.records">
+      <img src="/{{gr.image}}.iix" alt="data">
+    </div>
+    <div class="form-content">
+      <div class="course" ng-repeat="gr in c.data.records">
+        <div class="test">
+          <div class="alertCenter">
+            <h3><span style="text-transform: uppercase;">{{gr.name}}</span></h3>
+            <p><br>
+              <span class="bolder">Minimum Bid: {{gr.minbid}} <i class="fa fa-dollar"></i></span>
+            </p><br>
+            <h4>Current Bid: {{gr.startingbid}} <i class="fa fa-dollar"></i></h4>
+            <form ng-submit="currency()">
+              <label for="currency-field">Enter Amount&nbsp;&nbsp;<i class="fa fa-dollar"></i></label>
+              <input type="number" value="10" min="0" size="1" class="page-textinput" id="c2" required ng-model="data.currency">
+              <br>
+              <button type="submit" class="btn-3d">Bid</button>
+            </form>
+          </div>
         </div>
-        <br>
-        <button type="submit"  class="btn-3d">Bid</button>
-      </form>
+
+        <div ng-if="c.sucMsg" class="alert alert-success alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          {{ c.sucMsg }}
+        </div>
+
+        <div ng-if="c.errMsg" class="alert alert-danger alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>{{ c.errMsg }}</strong>
+        </div>
+      </div>
     </div>
   </div>
-
-
-]]></template>
+</div>]]></template>
     </sp_widget>
 </record_update>
