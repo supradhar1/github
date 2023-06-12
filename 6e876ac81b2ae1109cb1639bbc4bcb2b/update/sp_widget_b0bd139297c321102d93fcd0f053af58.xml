@@ -127,19 +127,10 @@
 
 	var sysId = $sp.getParameter('sysId');
 	var c = this;
-
 	data.records = [];
-
-
 	var itemGr = new GlideRecord('x_1046400_auction_all_item');
 	itemGr.addQuery('sys_id',sysId);
-
-
-
 	itemGr.query();
-
-
-
 	while(itemGr.next()){
 		var record = {};
 		record.name = itemGr.getValue('name');
@@ -158,7 +149,7 @@
 
 		if(input.currency < data.startingbid){
 			data.errorMsg = 'Entered Bid is less than the Current Bid';
-		}else  if(input.currency > input.startingbid) {
+		}else  if(input.currency > input.startingbid && input.currency >data.minbid ) {
 
 			if(itemGr.next()){
 				var userGr = new GlideRecord('sys_user');
@@ -173,14 +164,12 @@
 			}
 			data.sucMsg  = 'Bid Updated';
 
-
 		}
 
 		else{
 			data.errorMsg  = 'Entered Bid amount is then current Bid ';
 
 		}
-
 	}
 })();]]></script>
         <servicenow>false</servicenow>
@@ -188,14 +177,14 @@
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>650</sys_mod_count>
+        <sys_mod_count>651</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
-        <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-09 12:07:59</sys_updated_on>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-12 04:37:02</sys_updated_on>
         <template><![CDATA[
 <!--<div class="alertCenter">
 <center><div ng-if="c.sucMsg" class="alert-dismissible" role="alert">
