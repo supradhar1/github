@@ -10,7 +10,7 @@
 	}
 
    $scope.newRecord = function(){
-		 $location.search({id:'form',table:"x_1046400_auction_all_item",sys_id:'-1',auctioned_on:'1'});
+		 $location.search({id:'form',table:"x_1046400_auction_all_item",sys_id:'-1'});
 	 }
 	
 };]]></client_script>
@@ -169,37 +169,40 @@ tr:nth-child(even) {
     record.startingbid = itemGr.getValue('starting_bid');
     record.sysId = itemGr.getValue('sys_id');
 
-    var auctionTime={};
+    var auctionTime;
 
     var gr = new GlideRecord('x_1046400_auction_auction');
+		gr.get(itemGr.getValue('auctioned_on'));
     gr.query();
     if (gr.next()) {
       auctionTime = gr.getValue('end_time');
     }
 
-    // Get the current time
-    var currentTime = new GlideDateTime().getDisplayValue();
 
-    // Compare the values and set the variable indicating bid button disablement
+    var currentTime = new GlideDateTime();
+
+    
     record.disableBidButton = auctionTime <= currentTime;
+		
+		console.log("disableBidButton");
 
     data.records.push(record);
+		console.log("disableBidButton" + record.disableBidButton);
   }
-})();
-]]></script>
+})();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-22 10:56:50</sys_created_on>
         <sys_id>a2ce80dc974721102d93fcd0f053af94</sys_id>
-        <sys_mod_count>139</sys_mod_count>
+        <sys_mod_count>166</sys_mod_count>
         <sys_name>Item</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_a2ce80dc974721102d93fcd0f053af94</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-12 05:03:50</sys_updated_on>
+        <sys_updated_on>2023-06-13 06:14:28</sys_updated_on>
         <template><![CDATA[<div class="widget">
   <table>
     <tr>
@@ -211,7 +214,7 @@ tr:nth-child(even) {
       <th><a href=""><button class="new button" id="button" ng-click="newRecord()">New</button></a></th>
     </tr>
     <tbody>
-      <!-- Use AngularJS ng-repeat to iterate over records -->
+     
       <tr ng-repeat="data in data.records">
         <td><img src="/{{data.image}}.iix" height="200" width="150"></td>
         <td>{{data.name}}</td>

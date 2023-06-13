@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function($scope) {
+	/* widget controller */
+	var c = this;
+
+	
+};
+
+]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  width: 300px; /* Adjust the width as per your preference */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 10px; /* Adjust the margin as per your preference */
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px; /* Adjust the gap as per your preference */
+}
+
+.card {
+  flex: 0 0 calc(30.33% - 10px); /* Adjust the width as per your preference */
+  margin-bottom: 10px; /* Adjust the margin as per your preference */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Adjust the margin as per your preference */
+}
+
+.card h1 {
+  font-size: 18px;
+  margin-bottom: 5px; /* Adjust the margin as per your preference */
+}
+
+.card h2 {
+  font-size: 16px;
+  color: green; /* Adjust the color as per your preference */
+  margin-bottom: 10px; /* Adjust the margin as per your preference */
+}
+
+.card button {
+  padding: 5px 10px;
+  background-color: blue; /* Adjust the background color as per your preference */
+  color: white; /* Adjust the text color as per your preference */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>mybids</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Mybids</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	var c = this;
+	var userId = gs.getUserID();
+	data.records = [];
+
+	var grUser = new GlideRecord('sys_user');
+	grUser.addQuery('sys_id', userId);
+	grUser.query();
+
+	if (grUser.next()) {
+		var loggedInUser = grUser.getValue('name');
+		var itemGr = new GlideRecord('x_1046400_auction_all_item');
+		itemGr.addQuery('wonby', loggedInUser);
+		itemGr.query();
+
+		while (itemGr.next()) {
+			var record = {};
+			record.name = itemGr.getValue('name');
+			record.image = itemGr.getValue('image');
+			record.bid = itemGr.getValue('u_currency_1');
+			data.records.push(record);
+
+		}
+	}
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-06-12 07:00:35</sys_created_on>
+        <sys_id>e212ef76971f21102d93fcd0f053afa8</sys_id>
+        <sys_mod_count>61</sys_mod_count>
+        <sys_name>Mybids</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_e212ef76971f21102d93fcd0f053afa8</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-12 11:23:30</sys_updated_on>
+        <template><![CDATA[<div class="card-container">
+  <div class="card"  ng-repeat="gr in c.data.records">
+  <img src="/{{gr.image}}.iix" alt="data">
+  <h1>
+    {{gr.name}}
+  </h1>
+  <h2>
+    {{gr.bid}}$
+  </h2>
+  <button>
+    Pay
+  </button>
+  </div> </div>]]></template>
+    </sp_widget>
+</record_update>

@@ -81,7 +81,7 @@
     display: inline-block;
     background: #fff;
     width: 100px;
-    padding: .75rem 1.25rem;
+    padding: 1.75rem 1.25rem;
     border: 5px solid #4ac0ee;
     color: #4ac0ee;
     font-weight: bold;
@@ -161,7 +161,10 @@
    
     border: 5px solid #ccc;
   }
-</css>
+.button.close{
+ margin-top: 2rem;
+ padding: -0.75rem,1.25rem;
+  }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -203,7 +206,7 @@
 	} 
 	
 
-// Retrieve the auction table time value using GlideRecord or GlideAggregate
+
   
 
 })();]]></script>
@@ -212,14 +215,14 @@
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-30 09:44:44</sys_created_on>
         <sys_id>280b8132974721102d93fcd0f053af65</sys_id>
-        <sys_mod_count>165</sys_mod_count>
+        <sys_mod_count>178</sys_mod_count>
         <sys_name>Auction1</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_280b8132974721102d93fcd0f053af65</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-09 09:08:27</sys_updated_on>
+        <sys_updated_on>2023-06-13 05:35:47</sys_updated_on>
         <template><![CDATA[
 <div class="widget">
   <div class="container">

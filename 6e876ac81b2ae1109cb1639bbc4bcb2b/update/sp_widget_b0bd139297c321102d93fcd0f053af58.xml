@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function($scope) {
-	/* widget controller */
+        <client_script><![CDATA[/*api.controller=function($scope) {
+	/* widget controller 
 	var c = this;
 	c.errMsg = null;
 	c.sucMsg = null;
@@ -13,10 +13,39 @@
 
 			c.errMsg = response.errorMsg;
 			c.sucMsg = response.sucMsg;
+			
+			setTimeout(function() {
+      $('#bidConfirmationModal').modal('hide');
+    }, 3000);
 		});
 	}
-};
+};*/
 
+
+
+api.controller = function ($scope, $timeout) {
+  /* widget controller */
+  var c = this;
+  c.errMsg = null;
+  c.sucMsg = null;
+
+  $scope.currency = function () {
+    c.errMsg = null;
+    c.sucMsg = null;
+
+    c.server.update().then(function (response) {
+      c.errMsg = response.errorMsg;
+      c.sucMsg = response.sucMsg;
+	
+		
+      $timeout(function () {
+        $('#bidConfirmationModal').modal('hide');
+        c.errMsg = null;
+        c.sucMsg = null;
+      }, 3000);
+			});
+  };
+};
 ]]></client_script>
         <controller_as>c</controller_as>
         <css>.widget-container {
@@ -106,9 +135,12 @@
 }
 
 .close{
-
-  width:20px;
-  height:20px;
+  width: 2rem;
+  height: 3rem;
+  position: relative;
+  top: -3.2rem;
+  right: -3.1rem;
+}
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -131,7 +163,7 @@
 	var itemGr = new GlideRecord('x_1046400_auction_all_item');
 	itemGr.addQuery('sys_id',sysId);
 	itemGr.setValue('u_currency_1','starting_bid');
-	
+
 	itemGr.query();
 
 
@@ -144,7 +176,7 @@
 		record.minbid = itemGr.getValue('starting_bid');
 
 		record.wonby= itemGr.getValue('wonby');
-    
+
 		data.startingbid = itemGr.getValue('u_currency_1');
 		data.records.push(record);
 	} 
@@ -158,24 +190,27 @@
 		}else  if(input.currency > input.startingbid ) {
 
 			if(itemGr.next()){
+
 				var userGr = new GlideRecord('sys_user');
 				userGr.get(gs.getUserID());
 				userGr.query();
 				var username = userGr.getValue('name');
 				c.data.username = username;
+				data.sucMsg  = 'Bid Updated';
+
 				itemGr.setValue('u_currency_1',input.currency);
 				itemGr.setValue('wonby',username);
 				itemGr.update();
 
 			}
-			data.sucMsg  = 'Bid Updated';
 
 		}
 
 		else{
-			data.errorMsg  = 'Entered Bid amount is then Current Bid ';
+			data.errorMsg  = 'Entered Bid amount is less than Current Bid ';
 
 		}
+
 	}
 })();]]></script>
         <servicenow>false</servicenow>
@@ -183,28 +218,15 @@
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-29 07:08:41</sys_created_on>
         <sys_id>b0bd139297c321102d93fcd0f053af58</sys_id>
-        <sys_mod_count>661</sys_mod_count>
+        <sys_mod_count>752</sys_mod_count>
         <sys_name>bid</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_b0bd139297c321102d93fcd0f053af58</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-06-12 05:01:44</sys_updated_on>
-        <template><![CDATA[
-<!--<div class="alertCenter">
-<center><div ng-if="c.sucMsg" class="alert-dismissible" role="alert">
-<!-- <center><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>{{ c.sucMsg }}</strong>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span><strong>{{ c.sucMsg }}</strong></button>
-  </div></center>
-
- <div ng-if="c.errMsg" class="alert alert-danger alert-dismissible" role="alert">
-<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-<strong>{{ c.errMsg }}</strong>
-</div>-->
-
-
-<div class="container">
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-13 08:39:57</sys_updated_on>
+        <template><![CDATA[<div class="container">
   <div class="form-container">
     <div class="image" ng-repeat="gr in c.data.records">
       <img src="/{{gr.image}}.iix" alt="data">
@@ -217,33 +239,48 @@
             <p><br>
               <span class="bolder">Minimum Bid: {{gr.minbid}} <i class="fa fa-dollar"></i></span>
             </p><br>
-            <h4>Current Bid: {{gr.startingbid}}   <i class="fa fa-dollar"></i>     by {{gr.wonby}}
-
-            </h4>
+            <h4>Current Bid: {{gr.startingbid}}   <i class="fa fa-dollar"></i>     by {{gr.wonby}}</h4>
             <form ng-submit="currency()">
               <label for="currency-field">Enter Amount&nbsp;&nbsp;<i class="fa fa-dollar"></i></label>
               <input type="number" value="10" min="0" size="1" class="page-textinput" id="c2" required ng-model="data.currency">
               <br>
-              <button type="submit" class="btn-3d">Bid</button>
-
-
-
+              <button type="button" class="btn-3d" data-toggle="modal" data-target="#bidConfirmationModal" ng-click="currency(data.currency)">Bid</button>
             </form>
           </div>
         </div>
-
-        <div ng-if="c.sucMsg" class="alert alert-success alert-dismissible" role="alert">
+        <div ng-if="c.sucMsg" class="alert alert-success alert-dismissible"  role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           {{ c.sucMsg }}
         </div>
-
-        <div ng-if="c.errMsg" class="alert alert-danger alert-dismissible" role="alert">
+        <div ng-if="c.errMsg" class="alert alert-danger alert-dismissible"  role="alert">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <strong>{{ c.errMsg }}</strong>
         </div>
       </div>
     </div>
   </div>
-</div>]]></template>
+</div>
+
+<div class="modal fade" id="bidConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="bidConfirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="bidConfirmationModalLabel">Confirm Bid Placement</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to place a bid of {{data.currency}} dollars?
+      </div> 
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="submit" class="btn btn-primary" ng-click="currency(data.currency)">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+]]></template>
     </sp_widget>
 </record_update>

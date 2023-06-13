@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&amp;display=swap');
+
+* {
+    
+	box-sizing: border-box;
+  
+}
+
+body {
+	background-color: #28223F;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 62.5%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+ 
+}
+
+
+.card-container {
+    width :400px;
+
+	background-color: #231E39;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ 
+}
+.top-l{
+    display: flex;
+    align-items: center;
+    
+}
+.top-l svg{
+    background-color: transparent;
+    color: #fff;
+    height: 1.6rem;
+    border: 1.5px solid #fff;
+    border-radius:0.5rem;
+}
+.top-l h3 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #fff;
+    padding-left: 0.75rem;
+}
+
+.top-r{
+    display: flex;
+    align-items: center;
+}
+.top-r svg{
+    background-color: transparent;
+    color: #fff;
+    height: 1.6rem;
+    margin-right: 0.75rem;
+}
+.dot{
+    z-index: 1;
+    width: 7px;
+    height: 7px;
+    background: red;
+    border-radius: 50%;
+    transform: translate(-250%, -150%);
+}
+.middle{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -1rem;
+}
+.middle h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.extra-detail{
+    display: flex;
+    justify-content: center;
+}
+.detail {
+   padding-right: 2rem;
+   font-size: 0.8rem;
+   display: flex;
+   flex-direction: column;
+   align-items:flex-start
+}
+.detail p {
+    margin-bottom:0;
+    font-size: 0.9rem;
+    /* padding-bottom:0; */
+}
+.detail-price{
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end
+}
+.detail-price p{
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.border{
+    /* position: absolute; */
+    background-color:#535353;
+    border-radius: 0.4rem;
+    padding: 0.75rem;
+    width:60%;
+    height:auto;
+    margin: 0 auto;
+    transform: translateY(-90%);
+}
+#dark{
+    z-index: 2;
+}
+.form-box {
+	background-color: #1F1A36;
+	padding: 15px;
+	margin-top: 5px;
+} 
+.card-box{
+    background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+    padding-top: 20px;
+	width: 350px;
+	max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+.pay-btn{
+    background-color: #2D2747;
+    border-radius: 5px;
+    width: 79.5%;
+    height: auto;
+    padding:0.4rem;
+    margin-bottom: 1rem;
+    /* margin-left: 2rem; */
+}
+.pay-btn a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>payment</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>payment</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+	var sysId = $sp.getParameter('sysId');
+	var c = this;
+	var userId = gs.getUserID();
+
+	var grUser = new GlideRecord('sys_user');
+
+	grUser.addQuery('sys_id', userId);
+	grUser.query();
+
+	if (grUser.next()) {
+		var loggedInUser = grUser.getValue('name');
+
+		var itemGr = new GlideRecord('x_1046400_auction_all_item');
+		itemGr.addQuery('wonby', loggedInUser);
+		itemGr.query();
+
+
+		while(itemGr.next()){
+			var record = {};
+			record.name = itemGr.getValue('name');
+			record.image = itemGr.getValue('image');
+
+			record.startingbid = itemGr.getValue('u_currency_1');
+			record.minbid = itemGr.getValue('starting_bid');
+
+			record.wonby= itemGr.getValue('wonby');
+
+			data.startingbid = itemGr.getValue('u_currency_1');
+			data.records.push(record);
+		} 
+	}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>CC-Supradhar</sys_created_by>
+        <sys_created_on>2023-06-12 07:04:58</sys_created_on>
+        <sys_id>32132b7a971f21102d93fcd0f053af0b</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>payment</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_32132b7a971f21102d93fcd0f053af0b</sys_update_name>
+        <sys_updated_by>CC-Supradhar</sys_updated_by>
+        <sys_updated_on>2023-06-12 09:28:26</sys_updated_on>
+        <template><![CDATA[
+    
+${userId}]]></template>
+    </sp_widget>
+</record_update>
