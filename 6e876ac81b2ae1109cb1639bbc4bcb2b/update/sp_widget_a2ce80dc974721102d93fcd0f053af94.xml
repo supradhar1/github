@@ -137,7 +137,54 @@ tr:nth-child(even) {
     text-shadow: none;
   box-shadow: 0 0 0 1px black, inset 1px 1px 20px -3px black;
   }
-}</css>
+
+      &amp;:after,
+      &amp;:before {
+        top: 100%;
+        left: 0;
+        bottom: 0px;
+      }
+
+      &amp;:before {
+        top: 0px;
+        left: 0px;
+        width: 0px;
+      }
+
+      &amp;:after {
+        right: 0px;
+        left: 0px;
+        height: 0px;
+      }
+    }
+  }
+
+  .bid-button {
+    background-color: #007bff; 
+    color: #fff; 
+  }
+
+  .bid-button:disabled {
+    background-color: #e9ecef;
+   
+    border: 5px solid #ccc;
+  }
+.button.close{
+ margin-top: 2rem;
+ padding: -0.75rem,1.25rem;
+  }
+
+  
+  .bid-button:disabled {
+    background-color: #e9ecef;
+   
+    border: 5px solid #ccc;
+  }
+.button.close{
+ margin-top: 2rem;
+ padding: -0.75rem,1.25rem;
+  }
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -195,14 +242,14 @@ tr:nth-child(even) {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-05-22 10:56:50</sys_created_on>
         <sys_id>a2ce80dc974721102d93fcd0f053af94</sys_id>
-        <sys_mod_count>166</sys_mod_count>
+        <sys_mod_count>170</sys_mod_count>
         <sys_name>Item</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_a2ce80dc974721102d93fcd0f053af94</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-13 06:14:28</sys_updated_on>
+        <sys_updated_on>2023-06-13 09:21:56</sys_updated_on>
         <template><![CDATA[<div class="widget">
   <table>
     <tr>

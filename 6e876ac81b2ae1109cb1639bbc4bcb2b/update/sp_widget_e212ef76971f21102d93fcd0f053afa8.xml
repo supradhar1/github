@@ -5,66 +5,86 @@
 	/* widget controller */
 	var c = this;
 
-	
+
+
 };
 
 ]]></client_script>
         <controller_as>c</controller_as>
-        <css>.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 15px;
-  width: 300px; /* Adjust the width as per your preference */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  margin-bottom: 10px; /* Adjust the margin as per your preference */
-}
-.card-container {
-  display: flex;
+        <css>.container {
+   display: fixed;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px; /* Adjust the gap as per your preference */
+  border-size: 10px;
 }
 
 .card {
-  flex: 0 0 calc(30.33% - 10px); /* Adjust the width as per your preference */
-  margin-bottom: 10px; /* Adjust the margin as per your preference */
+  width: calc(50% - 10px); /* Adjust the width as needed */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px; /* Adjust the margin as per your preference */
+  margin-bottom: 10px;
 }
 
-.card h1 {
-  font-size: 18px;
-  margin-bottom: 5px; /* Adjust the margin as per your preference */
-}
-
-.card h2 {
-  font-size: 16px;
-  color: green; /* Adjust the color as per your preference */
-  margin-bottom: 10px; /* Adjust the margin as per your preference */
+.card h1, .card h2 {
+  margin: 0;
 }
 
 .card button {
-  padding: 5px 10px;
-  background-color: blue; /* Adjust the background color as per your preference */
-  color: white; /* Adjust the text color as per your preference */
+  background-color:black;
+  color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+  padding: 8px 16px;
   cursor: pointer;
 }
+
+.card button:hover {
+  background-color:green;
+}
+
+/* Style the label */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the dropdown menu */
+#custom-status {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style the status messages */
+#status-message {
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Style the successful message */
+#status-message.success {
+  color: green;
+  background-color: #e8f5e9;
+}
+
+/* Style the failed message */
+#status-message.failed {
+  color: red;
+  background-color: #ffebee;
+}
+
 </css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -102,6 +122,7 @@
 			data.records.push(record);
 
 		}
+		
 	}
 })();
 ]]></script>
@@ -110,26 +131,38 @@
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-06-12 07:00:35</sys_created_on>
         <sys_id>e212ef76971f21102d93fcd0f053afa8</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>106</sys_mod_count>
         <sys_name>Mybids</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_e212ef76971f21102d93fcd0f053afa8</sys_update_name>
-        <sys_updated_by>CC-Supradhar</sys_updated_by>
-        <sys_updated_on>2023-06-12 11:23:30</sys_updated_on>
-        <template><![CDATA[<div class="card-container">
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-14 04:42:43</sys_updated_on>
+        <template><![CDATA[
+<div class="container">
   <div class="card"  ng-repeat="gr in c.data.records">
-  <img src="/{{gr.image}}.iix" alt="data">
+    
+  <img src="/{{gr.image}}.iix" alt="data" style="width:80%;height:60%;object-fit:cover;" >
   <h1>
     {{gr.name}}
   </h1>
   <h2>
     {{gr.bid}}$
-  </h2>
-  <button>
-    Pay
-  </button>
-  </div> </div>]]></template>
+  </h2><br>
+  <button id="pay-button" onclick="startPayment()">Pay</button>
+  <br>
+    
+    <div class="custom-status-widget">
+  <label for="custom-status">Status:</label>
+  <select id="custom-status">
+    <option value="successful">Successful</option>
+    <option value="failed">Failed</option>
+  </select>
+
+  <div id="status-message"></div>
+</div>
+
+-------------------------------------------------------------------------------------------------------------------------]]></template>
     </sp_widget>
 </record_update>
