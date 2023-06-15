@@ -97,14 +97,14 @@ text-align: center;
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-05-24 09:19:03</sys_created_on>
         <sys_id>659b8eb497c761102d93fcd0f053afe1</sys_id>
-        <sys_mod_count>102</sys_mod_count>
+        <sys_mod_count>103</sys_mod_count>
         <sys_name>home</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_659b8eb497c761102d93fcd0f053afe1</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-08 07:12:53</sys_updated_on>
+        <sys_updated_on>2023-06-14 11:15:27</sys_updated_on>
         <template><![CDATA[
     <div class="home-container1">
       <h1 class="home-text">
@@ -124,187 +124,72 @@ text-align: center;
 
 
 
-
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
-    body {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      height: 100px;
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .options {
-      display: flex;
-      flex-direction: row;
-      align-items: stretch;
-      overflow: hidden;
-      min-width: 750px;
-      max-width: 1000px;
-      width: calc(100% - 100px);
-      height: 400px;
-    }
-
-    .option {
-      position: relative;
-      overflow: hidden;
-      min-width: 60px;
-      margin: 10px;
-      background: var(--optionBackground, var(--defaultBackground, #E6E9ED));
-      background-size: auto 120%;
-      background-position: center;
-      cursor: pointer;
-      transition: .2s cubic-bezier(0.05, 0.61, 0.41,);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    .option.active {
-      flex-grow: 10000;
-      transform: scale(1);
-      max-width: 600px;
-      margin: 0;
-      border-radius: 40px;
-      background-size: auto 100%;
-    }
-
-    .option:not(.active) {
-      flex-grow: 1;
-      border-radius: 30px;
-    }
-
-    .option .shadow {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 120px;
-      transition: .2s cubic-bezier(0.05, 0.61, 0.41,);
-    }
-
-    .option .label {
-      display: flex;
-      position: absolute;
-      right: 0;
-      bottom: 10px;
-      left: 10px;
-      height: 40px;
-      transition: .2s cubic-bezier(0.05, 0.61, 0.41,);
-    }
-
-    .option .label .icon {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      min-width: 40px;
-      max-width: 40px;
-      height: 40px;
-      border-radius: 100%;
-
-      color: var(--defaultBackground);
-    }
-
-    .option .label .info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin-left: 10px;
-      color: white;
-      white-space: pre;
-    }
-
-    .option .label .info > div {
-      position: relative;
-      transition: .2s cubic-bezier(0.05, 0.61, 0.41,), opacity .2s ease-out;
-    }
-
-    .option .label .info .main {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .option .label .info .sub {
-      transition-delay: .1s;
-    }
+    /* Styles for the carousel */
+    /* ... */
   </style>
 </head>
 <body>
   <div class="options">
-    <div class="option active" style="background:url('watch12.jpg');">
-      <div class="shadow"></div>
-      <div class="label">
-        <div class="icon">
-          <i class=""></i>
-        </div>
-        <div class="info">
-          <div class="a">FOSSIL</div>
-          <div class="a">$499</div>
-        </div>
-      </div>
-    </div>
-    <div class="option" style="background:url('cosmeticss.jpg');">
-      <div class="shadow"></div>
-      <div class="label">
-        <div class="icon">
-        </div>
-        <div class="info">
-          <div class="main">COSMETICS</div>
-          <div class="sub">$299</div>
-        </div>
-      </div> 
-    </div>
-    <div class="option" style="background:url('blackberryy.jpg');">
-      <div class="shadow"></div>
-      <div class="label">
-        <div class="icon">
-          <i class="" style="background:url('fontawesome.svg');"></i>
-        </div>
-        <div class="info">
-          <div class="main">BLACKBERRY</div>
-          <div class="sub">$399</div>
-        </div>
-      </div>
-    </div>
+    <!-- The carousel options will be dynamically populated here -->
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     $(document).ready(function() {
-      var options = $(".option"); 
-      var activeIndex = 0; 
+      var optionsContainer = $(".options");
+      var activeIndex = 0;
 
       function setActiveCard(index) {
-        options.removeClass("active"); 
-        options.eq(index).addClass("active"); 
+        optionsContainer.find('.option').removeClass("active");
+        optionsContainer.find('.option').eq(index).addClass("active");
       }
 
       function updateActiveCard() {
-        setActiveCard(activeIndex); 
+        // Fetch bid data from your backend or ServiceNow widget
+        $.ajax({
+          url: 'https://dev59662.service-now.com/arc/?id=all_bids',
+          method: 'GET',
+          success: function(response) {
+            var myBids = response.bids; // Assuming the response contains an array of bids
 
-        setInterval(function() {
-          activeIndex = (activeIndex + 1) % options.length; 
-          setActiveCard(activeIndex); 
-        },3000); 
+            // Create the carousel options dynamically
+            var carouselOptions = myBids.map(function(bid) {
+              var option = $('<div class="option"></div>');
+              option.css('background-image', `url('${bid.image}')`);
+              option.append('<div class="shadow"></div>');
+              option.append('<div class="label">' +
+                '<div class="icon"><i class=""></i></div>' +
+                '<div class="info">' +
+                `<div class="a">${bid.name}</div>` +
+                `<div class="a">${bid.price}</div>` +
+                '</div>' +
+                '</div>');
+              return option;
+            });
+
+            // Clear existing options and add the new ones
+            optionsContainer.empty().append(carouselOptions);
+
+            setActiveCard(activeIndex);
+
+            setInterval(function() {
+              activeIndex = (activeIndex + 1) % carouselOptions.length;
+              setActiveCard(activeIndex);
+            }, 3000);
+          },
+          error: function(error) {
+            console.error('Failed to fetch bid data:', error);
+          }
+        });
       }
 
       updateActiveCard();
     });
   </script>
 </body>
-
-<div class="h1">
-  
-
-
-  <a href="https://dev59662.service-now.com/arc/?id=all_auction" class="button">&nbsp;&nbsp;GO TO AUCTION</a>
-
-           
-</div>
 ]]></template>
     </sp_widget>
 </record_update>

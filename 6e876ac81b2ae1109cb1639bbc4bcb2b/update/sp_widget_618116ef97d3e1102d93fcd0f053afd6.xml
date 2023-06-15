@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f2f2f2;
+  color: #333;
+  
+}
+
+main {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about-section,
+#benefits-section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+ul {
+  margin-bottom: 15px;
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Additional Styles */
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#about-section p:first-of-type {
+  font-size: 18px;
+}
+
+#benefits-section ul {
+  font-weight: bold;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>auctionabout</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Auctionabout</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-14 09:03:59</sys_created_on>
+        <sys_id>618116ef97d3e1102d93fcd0f053afd6</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Auctionabout</sys_name>
+        <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
+        <sys_update_name>sp_widget_618116ef97d3e1102d93fcd0f053afd6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-14 09:13:05</sys_updated_on>
+        <template><![CDATA[
+  <body>
+    
+<main>
+    <section id="about-section">
+      <h2>About Our Reuse and Recycling Initiative</h2>
+      <p>
+        Welcome to our auction application, where we promote reuse and recycling among our employees. We believe in
+        creating a sustainable workplace and reducing our environmental impact.
+      </p>
+      <p>
+        Our auction platform allows employees to sell their unwanted items to their colleagues instead of throwing them
+        away. This helps to reduce waste and encourages a culture of reusing and recycling within our organization.
+      </p>
+      <p>
+        By participating in our auctions, employees can find great deals on pre-loved items and give them a new lease of
+        life. It's a win-win situation that benefits both the sellers and the buyers, while also contributing to a
+        greener future.
+      </p>
+    </section>
+
+    <section id="benefits-section">
+      <h2>Benefits of Reuse and Recycling</h2>
+      <ul>
+        <li>Reduces waste and landfill usage</li>
+        <li>Conserves natural resources</li>
+        <li>Reduces energy consumption and greenhouse gas emissions</li>
+        <li>Promotes a sustainable workplace culture</li>
+        <li>Encourages cost-saving and smart consumption</li>
+        <li>Fosters community and collaboration among employees</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Auction Application. All rights reserved.</p>
+  </footer></body>
+
+]]></template>
+    </sp_widget>
+</record_update>

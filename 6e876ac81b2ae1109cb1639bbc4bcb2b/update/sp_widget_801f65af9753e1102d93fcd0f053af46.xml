@@ -3,7 +3,60 @@
         <category>custom</category>
         <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
         <controller_as>c</controller_as>
-        <css>footer {
+        <css>&lt;style&gt;
+    /* Set the background image */
+    body {
+      background-color:grey;
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Container styles */
+    .container {
+      max-width: 1200px;
+      margin: 100px auto;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding-left:30px;
+      text-align: center;
+    }
+
+    /* Image styles */
+    .image-container {
+      margin-bottom: 20px;
+    }
+
+    .image-container img {
+      max-width: 100%;
+    }
+
+    /* Text styles */
+    h1 {
+      color: #333333;
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    p {
+      color: #666666;
+      font-size: 16px;
+      text-align: justify; 
+    }
+
+    /* Footer styles */
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .footer a {
+      color: #ffffff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  &lt;/style&gt;
+footer {
   background: rgb(55,55,55);
   margin-top: auto;
   width: 100%
@@ -42,8 +95,8 @@
 .footer-social-overlap {
   position: relative;
   z-index: 2;
-  background: rgb(55,55,55);
-  padding: 0 20px
+ 
+ 
 }
 .footer-social-connect {
   display: flex;
@@ -72,7 +125,6 @@
 }
 .footer-bottom-wrapper {
   font-size: 1.5em;
-  color: #fff
 }
 .footer-address {
   display: inline;
@@ -187,14 +239,14 @@
         <sys_created_by>CC-Harsha</sys_created_by>
         <sys_created_on>2023-06-14 06:33:25</sys_created_on>
         <sys_id>801f65af9753e1102d93fcd0f053af46</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>58</sys_mod_count>
         <sys_name>about</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_801f65af9753e1102d93fcd0f053af46</sys_update_name>
         <sys_updated_by>CC-Harsha</sys_updated_by>
-        <sys_updated_on>2023-06-14 07:21:06</sys_updated_on>
+        <sys_updated_on>2023-06-14 10:21:19</sys_updated_on>
         <template><![CDATA[<!DOCTYPE html>
 <html>
 <head>
@@ -255,20 +307,21 @@
 </head>
 <body>
     <div class="image-container">
-      <img src="we12.jpg" alt="Image">
+      <img src="122.jpg" alt="Image">
     </div>
-    <h1>About Us</h1>
+   <h1><strong>About Our Reuse and Recycling Initiative</strong></h1>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Aenean sagittis tellus vel nulla consectetur, vitae blandit neque pulvinar.
-      Donec lobortis consectetur eros eget faucibus. Vestibulum id luctus risus.
-    </p>
-  </body> 
+     
+Welcome to our auction application, where we promote reuse and recycling among our employees. We believe in creating a sustainable workplace and reducing our environmental impact.
+Our auction platform allows employees to sell their unwanted items to their colleagues instead of throwing them away. This helps to reduce waste and encourages a culture of reusing and recycling within our organization.
+By participating in our auctions, employees can find great deals on pre-loved items and give them a new lease of life. It's a win-win situation that benefits both the sellers and the buyers, while also contributing to a greener future.
 </html>
-      <a class="generic-anchor" target="_blank" href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+<section class="footer-social-section flex-rw">
+  <span class="footer-social-overlap footer-social-icons-wrapper">
+     <a class="generic-anchor" target="_blank" href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
     <a class="generic-anchor" target="_blank" href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
     <a class="generic-anchor" target="_blank" href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
-
-]]></template>
+</span>
+  </section>]]></template>
     </sp_widget>
 </record_update>

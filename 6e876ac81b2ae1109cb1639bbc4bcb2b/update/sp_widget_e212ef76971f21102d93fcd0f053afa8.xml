@@ -11,24 +11,10 @@
 
 ]]></client_script>
         <controller_as>c</controller_as>
-        <css>/*.container {
-   display: fixed;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border-size: 10px;
-}
-
-.card {
-  display :grid;
-  width: calc(50% - 10px); /* Adjust the width as needed */
- /* margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  box-sizing: border-box;
-} */
+        <css>
 .container {
-  display: flex;
+ 
+  width:80%;
   flex-wrap: wrap;
   justify-content: space-between;
   border: 0px solid #ccc; /* Changed border-size to border */
@@ -36,7 +22,8 @@
 }
 
 .card {
-  flex-basis: calc(50% - 20px); /* Adjusted width and added margin between cards */
+  flex-basis: calc(80% - 20px);
+  /* Adjusted width and added margin between cards */
   margin-bottom: 20px;
   border: 0px solid #ccc;
   border-radius: 2px;
@@ -45,7 +32,7 @@
 
 
 .card img {
-  width: 250%;
+  width: 100%;
   height: auto;
   margin-bottom: 10px;
 }
@@ -149,19 +136,19 @@ label {
         <sys_created_by>CC-Supradhar</sys_created_by>
         <sys_created_on>2023-06-12 07:00:35</sys_created_on>
         <sys_id>e212ef76971f21102d93fcd0f053afa8</sys_id>
-        <sys_mod_count>122</sys_mod_count>
+        <sys_mod_count>142</sys_mod_count>
         <sys_name>Mybids</sys_name>
         <sys_package display_value="AuctionArc" source="x_1046400_auction">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_package>
         <sys_policy/>
         <sys_scope display_value="AuctionArc">6e876ac81b2ae1109cb1639bbc4bcb2b</sys_scope>
         <sys_update_name>sp_widget_e212ef76971f21102d93fcd0f053afa8</sys_update_name>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-06-14 09:01:12</sys_updated_on>
+        <sys_updated_by>CC-Harsha</sys_updated_by>
+        <sys_updated_on>2023-06-14 11:28:11</sys_updated_on>
         <template><![CDATA[
 <div class="container">
   <div class="card"  ng-repeat="gr in c.data.records">
-    
-  <img src="/{{gr.image}}.iix" alt="data" style="width:80%;height:60%;object-fit:cover;" >
+  
+  <img src="/{{gr.image}}.iix" alt="data" style="width:40%;height:40%;object-fit:cover;" >
   <h1>
     {{gr.name}}
   </h1>
@@ -169,16 +156,7 @@ label {
     {{gr.bid}}$
   </h2><br>
   <button id="pay-button" onclick="startPayment()">Pay</button>
-  <br>
-    
-    <div class="custom-status-widget">
-  <label for="custom-status">Status:</label>
-  <select id="custom-status">
-    <option value="successful">Successful</option>
-    <option value="failed">Failed</option>
-  </select>
-
-  <div id="status-message"></div>
+       
 </div>
 
 ]]></template>
